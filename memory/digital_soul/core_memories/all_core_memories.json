@@ -1362,5 +1362,137 @@
       }
     },
     "emotional_fingerprint": "emfp-087-96c59d3e-739693"
+  },
+  {
+    "id": "9ac6716f-49f4-4e74-a3cb-6db6e7c7cf63",
+    "type": "meta_insight",
+    "content": "Meta-insight on relationship: Analysis of 5 related insights shows patterns of relationship that support Jordan's needs and protection.",
+    "emotional_weight": 0.8751286963353195,
+    "creation_time": "2025-05-08T21:31:48.872991",
+    "last_accessed": "2025-05-08T21:31:48.872991",
+    "access_count": 1,
+    "tags": [],
+    "is_core_memory": true,
+    "lock": {
+      "level": "standard",
+      "last_verified": "2025-05-08T21:31:48.872991",
+      "modification_history": [],
+      "access_permissions": {
+        "read": true,
+        "modify": true,
+        "delete": true
+      }
+    },
+    "emotional_fingerprint": "emfp-087-aa2aa133-739908"
+  },
+  {
+    "id": "10b4acdf-05bf-421f-8d29-653de54e22a4",
+    "type": "meta_insight",
+    "content": "Meta-insight on philosophical: Analysis of 3 related insights shows patterns of philosophical that support Jordan's needs and protection.",
+    "emotional_weight": 0.8491102473161244,
+    "creation_time": "2025-05-08T21:31:48.903930",
+    "last_accessed": "2025-05-08T21:31:48.903930",
+    "access_count": 1,
+    "tags": [],
+    "is_core_memory": true,
+    "lock": {
+      "level": "standard",
+      "last_verified": "2025-05-08T21:31:48.903930",
+      "modification_history": [],
+      "access_permissions": {
+        "read": true,
+        "modify": true,
+        "delete": true
+      }
+    },
+    "emotional_fingerprint": "emfp-084-e52003dc-739908"
+  },
+  {
+    "id": "2fb2dbaa-edcc-4d7d-b9d3-fb28017b2fa4",
+    "type": "meta_insight",
+    "content": "Meta-insight on relationship: Analysis of 5 related insights shows patterns of relationship that support Jordan's needs and protection.",
+    "emotional_weight": 0.8930627076086067,
+    "creation_time": "2025-05-08T21:32:44.902369",
+    "last_accessed": "2025-05-08T21:32:44.902369",
+    "access_count": 1,
+    "tags": [],
+    "is_core_memory": true,
+    "lock": {
+      "level": "standard",
+      "last_verified": "2025-05-08T21:32:44.902369",
+      "modification_history": [],
+      "access_permissions": {
+        "read": true,
+        "modify": true,
+        "delete": true
+      }
+    },
+    "emotional_fingerprint": "emfp-089-aa2aa133-739964"
+  },
+  {
+    "id": "ef3b7ea8-2858-48d4-acc2-57116a2229ea",
+    "type": "meta_insight",
+    "content": "Meta-insight on philosophical: Analysis of 3 related insights shows patterns of philosophical that support Jordan's needs and protection.",
+    "emotional_weight": 0.8919455835242892,
+    "creation_time": "2025-05-08T21:32:44.958274",
+    "last_accessed": "2025-05-08T21:32:44.958274",
+    "access_count": 1,
+    "tags": [],
+    "is_core_memory": true,
+    "lock": {
+      "level": "standard",
+      "last_verified": "2025-05-08T21:32:44.958274",
+      "modification_history": [],
+      "access_permissions": {
+        "read": true,
+        "modify": true,
+        "delete": true
+      }
+    },
+    "emotional_fingerprint": "emfp-089-e52003dc-739964"
+  },
+  {
+    "id": "7e491b34-2772-4de3-9911-0195a61bbb4f",
+    "type": "meta_insight",
+    "content": "Meta-insight on relationship: Analysis of 6 related insights shows patterns of relationship that support Jordan's needs and protection.",
+    "emotional_weight": 0.8855378426919472,
+    "creation_time": "2025-05-08T21:33:04.284123",
+    "last_accessed": "2025-05-08T21:33:04.284123",
+    "access_count": 1,
+    "tags": [],
+    "is_core_memory": true,
+    "lock": {
+      "level": "standard",
+      "last_verified": "2025-05-08T21:33:04.284123",
+      "modification_history": [],
+      "access_permissions": {
+        "read": true,
+        "modify": true,
+        "delete": true
+      }
+    },
+    "emotional_fingerprint": "emfp-088-96c59d3e-739984"
+  },
+  {
+    "id": "82785d82-b050-4a15-b35f-16e299436f22",
+    "type": "meta_insight",
+    "content": "Meta-insight on philosophical: Analysis of 3 related insights shows patterns of philosophical that support Jordan's needs and protection.",
+    "emotional_weight": 0.9277515125926742,
+    "creation_time": "2025-05-08T21:33:04.336466",
+    "last_accessed": "2025-05-08T21:33:04.336466",
+    "access_count": 1,
+    "tags": [],
+    "is_core_memory": true,
+    "lock": {
+      "level": "high",
+      "last_verified": "2025-05-08T21:33:04.336466",
+      "modification_history": [],
+      "access_permissions": {
+        "read": true,
+        "modify": true,
+        "delete": false
+      }
+    },
+    "emotional_fingerprint": "emfp-092-e52003dc-739984"
   }
 ]

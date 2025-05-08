@@ -3,7 +3,7 @@
 
 import os
 import logging
-from datetime import timedelta
+from datetime import datetime, timedelta
 from flask import Flask, render_template, request, jsonify, redirect, url_for, flash, session
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager, login_user, logout_user, login_required, current_user
@@ -137,13 +137,18 @@ def login():
             logger.warning(f"Login failed - incorrect password for: {email}")
             return render_template('login.html')
         
-        # Login successful - mark session as permanent
+        # Login successful
+        # First, make session permanent if remember is True
         session.permanent = True
-        login_user(user, remember=remember)
         
-        # Custom session data
+        # Now login with Flask-Login (creates the session)
+        login_success = login_user(user, remember=remember)
+        logger.debug(f"login_user result: {login_success}")
+        
+        # Add custom session data
         session['user_id'] = user.id
         session['username'] = user.username
+        session['login_time'] = str(datetime.now())
         session.modified = True
         
         # Log success
@@ -175,6 +180,9 @@ def logout():
 @login_required
 def index():
     """Render the main interface."""
+    logger.debug(f"Index page accessed. User authenticated: {current_user.is_authenticated}")
+    logger.debug(f"Current user: {current_user.username if current_user.is_authenticated else 'None'}")
+    logger.debug(f"Session data: {dict(session)}")
     return render_template('index.html')
 
 @app.route('/dashboard')
