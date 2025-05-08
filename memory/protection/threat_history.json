@@ -50,5 +50,18 @@
       "location": "network",
       "details": "Unusual network activity detected"
     }
+  },
+  {
+    "id": "c22df94c-9caf-445e-aeba-c5f6fd57a05a",
+    "type": "integrity",
+    "level": 2,
+    "description": "Potential system integrity threat detected",
+    "detection_time": "2025-05-08T21:36:00.603979",
+    "confidence": 0.8706953815513951,
+    "neutralized": true,
+    "source": {
+      "location": "system",
+      "details": "Unexpected system file modification detected"
+    }
   }
 ]

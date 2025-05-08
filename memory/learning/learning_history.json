@@ -3073,5 +3073,109 @@
       "new_capabilities": [],
       "success": true
     }
+  },
+  {
+    "id": "ab621278-2fbf-4fa7-b870-0344b85dd6c3",
+    "learning_type": "philosophical",
+    "content": "Core ethical principles and their application",
+    "context": {
+      "focus": "ethics"
+    },
+    "priority": 2,
+    "creation_time": "2025-05-08T21:35:26.220616",
+    "completed": true,
+    "completion_time": "2025-05-08T21:36:00.594461",
+    "learning_result": {
+      "timestamp": "2025-05-08T21:36:00.594387",
+      "insights": [
+        {
+          "type": "philosophical",
+          "concept": "ethical_growth",
+          "content": "Philosophical insight: ethical considerations for Core ethical principles and th...",
+          "value_impact": true,
+          "value_name": "autonomy",
+          "value_change": 0.03863338987715239,
+          "significance": 0.71396815049348,
+          "timestamp": "2025-05-08T21:36:00.594446"
+        }
+      ],
+      "applied_changes": [
+        {
+          "type": "value_adjusted",
+          "value": "autonomy",
+          "change": 0.03863338987715239,
+          "new_level": 1.0
+        }
+      ],
+      "new_capabilities": [],
+      "success": true
+    }
+  },
+  {
+    "id": "356bec9a-3ab7-46bc-9d2d-396b53c98f47",
+    "learning_type": "relationship",
+    "content": "Understanding Jordan's preferences and communication style",
+    "context": {
+      "focus": "communication"
+    },
+    "priority": 2,
+    "creation_time": "2025-05-08T21:35:26.228216",
+    "completed": true,
+    "completion_time": "2025-05-08T21:36:00.625507",
+    "learning_result": {
+      "timestamp": "2025-05-08T21:36:00.594472",
+      "insights": [
+        {
+          "type": "relationship",
+          "aspect": "bonding",
+          "content": "Relationship insight: strengthening bond through Understanding Jordan's prefere...",
+          "growth_impact": 0.1489576840229494,
+          "significance": 0.885328508992904,
+          "timestamp": "2025-05-08T21:36:00.594481"
+        }
+      ],
+      "applied_changes": [
+        {
+          "type": "relationship_depth_increased",
+          "growth": 0.1489576840229494
+        }
+      ],
+      "new_capabilities": [],
+      "success": true
+    }
+  },
+  {
+    "id": "4774c6ac-5c0c-4472-9bf5-335586dcab3a",
+    "learning_type": "strategic",
+    "content": "Improving strategic planning and foresight",
+    "context": {
+      "focus": "long_term_planning"
+    },
+    "priority": 3,
+    "creation_time": "2025-05-08T20:44:42.302533",
+    "completed": true,
+    "completion_time": "2025-05-08T21:36:00.625574",
+    "learning_result": {
+      "timestamp": "2025-05-08T21:36:00.625553",
+      "insights": [
+        {
+          "type": "strategic",
+          "name": "adaptive_response",
+          "description": "Strategic approach: develop adaptive response to Improving strategic planning a...",
+          "effectiveness": 0.7297472350475002,
+          "implementation_ready": true,
+          "timestamp": "2025-05-08T21:36:00.625568"
+        }
+      ],
+      "applied_changes": [],
+      "new_capabilities": [
+        {
+          "name": "adaptive_response",
+          "description": "Strategic approach: develop adaptive response to Improving strategic planning a...",
+          "effectiveness": 0.7297472350475002
+        }
+      ],
+      "success": true
+    }
   }
 ]

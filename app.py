@@ -42,6 +42,10 @@ app.config["SQLALCHEMY_ENGINE_OPTIONS"] = {
 # Initialize the database with the app
 db.init_app(app)
 
+# Initialize CSRF protection
+csrf = CSRFProtect()
+csrf.init_app(app)
+
 # Initialize Flask-Login
 login_manager = LoginManager()
 login_manager.init_app(app)
