@@ -1,7 +1,10 @@
 """
-Core package for the AI Companion System.
+Core Package for Padronique
 
-This package contains the central components that orchestrate the overall
-functioning of the system, including the core orchestrator, security manager,
-and configuration manager.
+This package contains the core components of Padronique, including the central
+orchestrator that coordinates all modules and functionalities.
 """
+
+from core.orchestrator import Orchestrator
+
+__all__ = ['Orchestrator']

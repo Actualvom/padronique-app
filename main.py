@@ -19,6 +19,23 @@ def initialize_system():
     from memory.backup_manager import get_backup_manager
     backup_manager = get_backup_manager()
     backup_manager.start_scheduled_backups()
+    
+    # Initialize modules
+    logger.info("Initializing AI Companion System...")
+    
+    # Import core components
+    from core.orchestrator import Orchestrator
+    from digital_soul.core import get_soul
+    
+    # Initialize the orchestrator
+    orchestrator = Orchestrator()
+    orchestrator.initialize_system()
+    
+    # Log system components
+    logger.info("System components initialized:")
+    logger.info(f"- Digital Soul: {get_soul().soul_id}")
+    
+    return orchestrator
     logger.info("Initializing AI Companion System...")
     
     # Load configuration
