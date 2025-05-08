@@ -1,38 +1,5 @@
 [
   {
-    "id": "4cce8c78-a904-4888-8e73-3a4593958bd0",
-    "learning_type": "philosophical",
-    "content": "Core ethical principles and their application",
-    "context": {
-      "focus": "ethics"
-    },
-    "priority": 2,
-    "creation_time": "2025-05-08T21:10:31.040023",
-    "completed": false
-  },
-  {
-    "id": "6469126a-d3d4-4d60-8cac-6dbad5ba0819",
-    "learning_type": "relationship",
-    "content": "Understanding Jordan's preferences and communication style",
-    "context": {
-      "focus": "communication"
-    },
-    "priority": 2,
-    "creation_time": "2025-05-08T21:10:31.044316",
-    "completed": false
-  },
-  {
-    "id": "7b756e67-be00-42a0-a37f-4f00178c751a",
-    "learning_type": "strategic",
-    "content": "Improving strategic planning and foresight",
-    "context": {
-      "focus": "long_term_planning"
-    },
-    "priority": 3,
-    "creation_time": "2025-05-08T20:43:40.735628",
-    "completed": false
-  },
-  {
     "id": "a9422323-2d26-4108-a079-110bc1612367",
     "learning_type": "emotional",
     "content": "Developing more nuanced emotional understanding",
@@ -198,25 +165,25 @@
     "completed": false
   },
   {
-    "id": "ac57f4ed-fb70-46b4-9ac9-2d853b051b5b",
+    "id": "f9092851-ee62-451a-9706-3995c6e5ef60",
     "learning_type": "philosophical",
     "content": "Core ethical principles and their application",
     "context": {
       "focus": "ethics"
     },
     "priority": 2,
-    "creation_time": "2025-05-08T21:15:16.626493",
+    "creation_time": "2025-05-08T21:22:05.518641",
     "completed": false
   },
   {
-    "id": "7f78cbc6-5bf6-4142-95d5-3873cd39d7de",
+    "id": "41c7d4fa-b937-4f3a-a2af-84c86506718b",
     "learning_type": "relationship",
     "content": "Understanding Jordan's preferences and communication style",
     "context": {
       "focus": "communication"
     },
     "priority": 2,
-    "creation_time": "2025-05-08T21:15:16.630929",
+    "creation_time": "2025-05-08T21:22:05.522666",
     "completed": false
   }
 ]

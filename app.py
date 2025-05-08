@@ -57,15 +57,17 @@ with app.app_context():
     try:
         default_user = models.User.query.filter_by(email='jordyfshears@gmail.com').first()
         if not default_user:
-            default_user = models.User(
-                username='Jordan',
-                email='jordyfshears@gmail.com'
-            )
+            # Create a new user object
+            default_user = models.User()
+            default_user.username = 'Jordan'
+            default_user.email = 'jordyfshears@gmail.com'
             default_user.set_password('Pterodactyl1ke$ha')
             db.session.add(default_user)
+            db.session.flush()  # Flush to get the ID
             
             # Create default settings for the user
-            user_settings = models.UserSettings(user=default_user)
+            user_settings = models.UserSettings()
+            user_settings.user_id = default_user.id
             db.session.add(user_settings)
             
             db.session.commit()
@@ -102,17 +104,23 @@ def login():
         from models import User
         user = User.query.filter_by(email=email).first()
         
-        if user and user.check_password(password):
+        if not user:
+            # User not found
+            flash('User not found. Please check your email address.', 'error')
+            logger.warning(f"Login attempt failed - user not found: {email}")
+        elif not user.check_password(password):
+            # Password incorrect
+            flash('Incorrect password. Please try again.', 'error')
+            logger.warning(f"Login attempt failed - incorrect password for user: {email}")
+        else:
             # Login successful
             login_user(user, remember=remember)
-            flash('Login successful!')
+            flash('Login successful!', 'success')
+            logger.info(f"User logged in successfully: {email}")
             
             # Redirect to requested page or default to index
             next_page = request.args.get('next')
             return redirect(next_page or url_for('index'))
-        else:
-            # Login failed
-            flash('Invalid email or password. Please try again.')
     
     return render_template('login.html')
 

@@ -24,5 +24,18 @@
       "location": "system",
       "details": "Attempt to modify core system parameters detected"
     }
+  },
+  {
+    "id": "d8d42006-28ad-4f55-b60d-488f33f08347",
+    "type": "digital",
+    "level": 3,
+    "description": "Potential unauthorized data access detected",
+    "detection_time": "2025-05-08T21:21:46.443995",
+    "confidence": 0.7739118276641254,
+    "neutralized": true,
+    "source": {
+      "location": "network",
+      "details": "Unusual network activity detected"
+    }
   }
 ]

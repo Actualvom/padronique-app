@@ -1,10 +1,11 @@
 from datetime import datetime
-from app import db
 from flask_login import UserMixin
-from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import Column, Integer, String, Text, DateTime, ForeignKey, Float, Boolean
 from sqlalchemy.orm import relationship
 from werkzeug.security import generate_password_hash, check_password_hash
+
+# Import this after other imports to prevent circular imports
+from app import db
 
 
 class User(UserMixin, db.Model):
@@ -22,7 +23,9 @@ class User(UserMixin, db.Model):
         self.password_hash = generate_password_hash(password)
         
     def check_password(self, password):
-        return check_password_hash(self.password_hash, password)
+        if not self.password_hash:
+            return False
+        return check_password_hash(str(self.password_hash), password)
 
 
 class UserSettings(db.Model):

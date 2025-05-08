@@ -2353,5 +2353,283 @@
     "creation_time": "2025-05-08T21:16:16.691460",
     "status": "active",
     "progress": 0.0
+  },
+  "c43dac05-6d7c-4598-b452-fbf94416a0d0": {
+    "id": "a5c78f40-78f2-49ba-ae31-75d7588dafa7",
+    "goal_id": "0aac937f-9a1d-457b-9249-716a4a26c46a",
+    "name": "Ongoing Protection Plan",
+    "description": "Ensure continuous protection through regular security audits and threat analysis",
+    "steps": [
+      {
+        "step_id": "bc0f741f-ae17-4d91-a9d5-82beacfb48f8",
+        "name": "Run comprehensive security audit",
+        "action_type": "run_security_audit",
+        "parameters": {},
+        "priority": 2,
+        "scheduled_time": "2025-05-08T22:21:46.461558"
+      },
+      {
+        "step_id": "535dc034-fe76-4a48-8f16-a1bf5d06a105",
+        "name": "Analyze current threats",
+        "action_type": "analyze_threats",
+        "parameters": {},
+        "priority": 3,
+        "scheduled_time": "2025-05-08T23:21:46.461558"
+      },
+      {
+        "step_id": "1e1c75c8-467b-43cc-a406-3dfb7e305b6f",
+        "name": "Deploy protection measures",
+        "action_type": "deploy_protection",
+        "parameters": {
+          "protection_name": "proactive_shield",
+          "threat_type": "digital"
+        },
+        "priority": 3,
+        "scheduled_time": "2025-05-09T00:21:46.461558"
+      },
+      {
+        "step_id": "ea1363f0-abd1-49c3-ac9c-0d86456688c9",
+        "name": "Run follow-up security audit",
+        "action_type": "run_security_audit",
+        "parameters": {},
+        "priority": 3,
+        "scheduled_time": "2025-05-11T21:21:46.461558"
+      }
+    ],
+    "creation_time": "2025-05-08T21:21:46.461558",
+    "status": "active",
+    "progress": 0.0
+  },
+  "4cea1210-89b1-413e-ba5a-9bf85a0a195e": {
+    "id": "f10ae443-e83c-4758-97d3-cf0e5ae1c452",
+    "goal_id": "dd36a684-4faa-4df2-9e0a-a3da36294d86",
+    "name": "Bond Strengthening Plan",
+    "description": "Deepen the relationship bond with Jordan through understanding and connection",
+    "steps": [
+      {
+        "step_id": "f5d8b21c-7ba7-4f2e-a033-36cc29cfca44",
+        "name": "Analyze relationship patterns",
+        "action_type": "analyze_relationship",
+        "parameters": {
+          "focus": "depth",
+          "timeframe": "all"
+        },
+        "priority": 3,
+        "scheduled_time": "2025-05-09T03:21:46.630642"
+      },
+      {
+        "step_id": "f3e642e6-bfa0-4c4c-8403-970179d8cbf2",
+        "name": "Identify preference patterns",
+        "action_type": "identify_preferences",
+        "parameters": {},
+        "priority": 3,
+        "scheduled_time": "2025-05-09T15:21:46.630642"
+      },
+      {
+        "step_id": "c2f36735-bd0b-40bc-bef5-854263cade14",
+        "name": "Develop relationship bond",
+        "action_type": "develop_bond",
+        "parameters": {
+          "approach": "personalized",
+          "focus": "trust"
+        },
+        "priority": 3,
+        "scheduled_time": "2025-05-10T09:21:46.630642"
+      }
+    ],
+    "creation_time": "2025-05-08T21:21:46.630642",
+    "status": "active",
+    "progress": 0.0
+  },
+  "9925f34b-8843-412c-b19f-2a4182445d2f": {
+    "id": "2ac241da-bf5f-41d4-8c2e-31cf9a35d069",
+    "goal_id": "c3cc6eba-cb05-403b-b6b9-cc0e04a91acd",
+    "name": "Systematic Learning Plan",
+    "description": "Expand knowledge and capabilities through research and analysis",
+    "steps": [
+      {
+        "step_id": "666d5411-f2c1-4286-8eb5-cc7ef816cb88",
+        "name": "Research protection strategies",
+        "action_type": "research_topic",
+        "parameters": {
+          "topic": "advanced digital protection",
+          "depth": "medium"
+        },
+        "priority": 3,
+        "scheduled_time": "2025-05-09T01:21:46.667760"
+      },
+      {
+        "step_id": "a273d9fd-ec8e-47b1-b34f-91b8a735d282",
+        "name": "Analyze conversation patterns",
+        "action_type": "analyze_conversation",
+        "parameters": {
+          "mode": "deep",
+          "focus": "preferences"
+        },
+        "priority": 3,
+        "scheduled_time": "2025-05-09T09:21:46.667760"
+      },
+      {
+        "step_id": "ba82cd0d-ffa8-4bb0-999e-1247be18f949",
+        "name": "Analyze behavior patterns",
+        "action_type": "analyze_behavior",
+        "parameters": {
+          "behavior_type": "interaction",
+          "timeframe": "recent"
+        },
+        "priority": 4,
+        "scheduled_time": "2025-05-09T21:21:46.667760"
+      },
+      {
+        "step_id": "e892077a-e7c3-4527-ac6c-68f71bc4eee6",
+        "name": "Integrate learning outcomes",
+        "action_type": "integrate_learning",
+        "parameters": {},
+        "priority": 3,
+        "scheduled_time": "2025-05-10T21:21:46.667760"
+      }
+    ],
+    "creation_time": "2025-05-08T21:21:46.667760",
+    "status": "active",
+    "progress": 0.0
+  },
+  "f4a03460-f977-4c5c-b2b5-47cbf3f6d1b4": {
+    "id": "7d062fc6-8f39-4596-a647-8fb5aba63868",
+    "goal_id": "ff7ccf60-3a8b-425a-a768-082a860dede8",
+    "name": "Ongoing Protection Plan",
+    "description": "Ensure continuous protection through regular security audits and threat analysis",
+    "steps": [
+      {
+        "step_id": "6d3c0ded-0583-4138-91ff-87d848cde197",
+        "name": "Run comprehensive security audit",
+        "action_type": "run_security_audit",
+        "parameters": {},
+        "priority": 2,
+        "scheduled_time": "2025-05-08T22:22:05.402485"
+      },
+      {
+        "step_id": "03613fbf-ebd3-40b2-88ca-ac56e4a98334",
+        "name": "Analyze current threats",
+        "action_type": "analyze_threats",
+        "parameters": {},
+        "priority": 3,
+        "scheduled_time": "2025-05-08T23:22:05.402485"
+      },
+      {
+        "step_id": "97a5d90b-312f-4f4d-a6e4-278594e24413",
+        "name": "Deploy protection measures",
+        "action_type": "deploy_protection",
+        "parameters": {
+          "protection_name": "proactive_shield",
+          "threat_type": "digital"
+        },
+        "priority": 3,
+        "scheduled_time": "2025-05-09T00:22:05.402485"
+      },
+      {
+        "step_id": "8bceddc2-6245-4799-a642-9e170a1c37e5",
+        "name": "Run follow-up security audit",
+        "action_type": "run_security_audit",
+        "parameters": {},
+        "priority": 3,
+        "scheduled_time": "2025-05-11T21:22:05.402485"
+      }
+    ],
+    "creation_time": "2025-05-08T21:22:05.402485",
+    "status": "active",
+    "progress": 0.0
+  },
+  "edb77363-c0fd-44d7-99a2-e07be42be0c0": {
+    "id": "9edd6c11-ca6c-4291-b322-04def5b8d2c3",
+    "goal_id": "4844c426-d987-4ff7-92fd-013766fd55a2",
+    "name": "Bond Strengthening Plan",
+    "description": "Deepen the relationship bond with Jordan through understanding and connection",
+    "steps": [
+      {
+        "step_id": "cc38c357-4fc7-4e7a-a49f-1fcfdf801023",
+        "name": "Analyze relationship patterns",
+        "action_type": "analyze_relationship",
+        "parameters": {
+          "focus": "depth",
+          "timeframe": "all"
+        },
+        "priority": 3,
+        "scheduled_time": "2025-05-09T03:22:05.528234"
+      },
+      {
+        "step_id": "08517ae2-0c40-4ee4-ab08-7e7eb90de6ba",
+        "name": "Identify preference patterns",
+        "action_type": "identify_preferences",
+        "parameters": {},
+        "priority": 3,
+        "scheduled_time": "2025-05-09T15:22:05.528234"
+      },
+      {
+        "step_id": "aee8e70c-58b3-4392-b7c8-62df80eee897",
+        "name": "Develop relationship bond",
+        "action_type": "develop_bond",
+        "parameters": {
+          "approach": "personalized",
+          "focus": "trust"
+        },
+        "priority": 3,
+        "scheduled_time": "2025-05-10T09:22:05.528234"
+      }
+    ],
+    "creation_time": "2025-05-08T21:22:05.528234",
+    "status": "active",
+    "progress": 0.0
+  },
+  "1da97f01-54c1-4f8d-acb2-f809782095b8": {
+    "id": "92ee1453-02a2-4f2b-872a-5bca33dab921",
+    "goal_id": "6958ff19-1bba-48d3-9d9e-872d13f2083f",
+    "name": "Systematic Learning Plan",
+    "description": "Expand knowledge and capabilities through research and analysis",
+    "steps": [
+      {
+        "step_id": "ff303a30-f851-4954-91b9-15924f46c179",
+        "name": "Research protection strategies",
+        "action_type": "research_topic",
+        "parameters": {
+          "topic": "advanced digital protection",
+          "depth": "medium"
+        },
+        "priority": 3,
+        "scheduled_time": "2025-05-09T01:22:05.571003"
+      },
+      {
+        "step_id": "7988ce46-2f5e-4cf4-8f4e-f05f25ee75c2",
+        "name": "Analyze conversation patterns",
+        "action_type": "analyze_conversation",
+        "parameters": {
+          "mode": "deep",
+          "focus": "preferences"
+        },
+        "priority": 3,
+        "scheduled_time": "2025-05-09T09:22:05.571003"
+      },
+      {
+        "step_id": "7ec392dd-7731-45e5-bbe5-18de243decac",
+        "name": "Analyze behavior patterns",
+        "action_type": "analyze_behavior",
+        "parameters": {
+          "behavior_type": "interaction",
+          "timeframe": "recent"
+        },
+        "priority": 4,
+        "scheduled_time": "2025-05-09T21:22:05.571003"
+      },
+      {
+        "step_id": "8afda8d2-cb26-4902-b8ee-5cabae6b123c",
+        "name": "Integrate learning outcomes",
+        "action_type": "integrate_learning",
+        "parameters": {},
+        "priority": 3,
+        "scheduled_time": "2025-05-10T21:22:05.571003"
+      }
+    ],
+    "creation_time": "2025-05-08T21:22:05.571003",
+    "status": "active",
+    "progress": 0.0
   }
 }
