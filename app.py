@@ -3,10 +3,11 @@
 
 import os
 import logging
+from datetime import timedelta
 from flask import Flask, render_template, request, jsonify, redirect, url_for, flash, session
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager, login_user, logout_user, login_required, current_user
-from flask_session import Session
+from urllib.parse import urlparse
 from sqlalchemy.orm import DeclarativeBase
 from api.routes import register_api_routes
 from utils.logger import setup_logging
@@ -76,19 +77,17 @@ with app.app_context():
     except Exception as e:
         logger.error(f"Error creating default user: {e}")
 
-# Session configuration
-import tempfile
-app.config['SESSION_TYPE'] = 'filesystem'
-app.config['SESSION_FILE_DIR'] = tempfile.gettempdir()
-app.config['SESSION_PERMANENT'] = True
-app.config['PERMANENT_SESSION_LIFETIME'] = 3600  # 1 hour
+# Configure sessions - using Flask's built-in session
+app.config['PERMANENT_SESSION_LIFETIME'] = timedelta(hours=1)
 app.config['SESSION_COOKIE_SECURE'] = False  # Set to True in production with HTTPS
-app.config['SESSION_COOKIE_HTTPONLY'] = True
+app.config['SESSION_COOKIE_HTTPONLY'] = True 
 app.config['SESSION_COOKIE_SAMESITE'] = 'Lax'
-app.config['SESSION_USE_SIGNER'] = True
 
-# Initialize Flask-Session
-Session(app)
+# Set remember cookie parameters (for Flask-Login)
+app.config['REMEMBER_COOKIE_DURATION'] = timedelta(hours=1)
+app.config['REMEMBER_COOKIE_SECURE'] = False  # Set to True in production with HTTPS
+app.config['REMEMBER_COOKIE_HTTPONLY'] = True
+app.config['REMEMBER_COOKIE_REFRESH_EACH_REQUEST'] = True
 
 # Create an orchestrator instance but don't initialize yet
 # This will be initialized in main.py
@@ -104,44 +103,64 @@ register_api_routes(app)
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     """Handle user login."""
+    logger.debug(f"Login route called, method: {request.method}")
+    logger.debug(f"Current user is authenticated: {current_user.is_authenticated}")
+    
+    # Already logged in
     if current_user.is_authenticated:
+        logger.info("User already authenticated, redirecting to index")
         return redirect(url_for('index'))
-        
+    
+    # Process login form
     if request.method == 'POST':
         email = request.form.get('email')
         password = request.form.get('password')
-        remember = 'remember' in request.form
+        remember = bool(request.form.get('remember'))
         
+        # Debug info
+        logger.debug(f"Login attempt for email: {email}, remember: {remember}")
+        
+        # Get user from database
         from models import User
         user = User.query.filter_by(email=email).first()
         
         if not user:
             # User not found
             flash('User not found. Please check your email address.', 'error')
-            logger.warning(f"Login attempt failed - user not found: {email}")
-        elif not user.check_password(password):
+            logger.warning(f"Login failed - user not found: {email}")
+            return render_template('login.html')
+            
+        # Check password
+        if not user.check_password(password):
             # Password incorrect
             flash('Incorrect password. Please try again.', 'error')
-            logger.warning(f"Login attempt failed - incorrect password for user: {email}")
-        else:
-            # Login successful
-            login_user(user, remember=remember)
+            logger.warning(f"Login failed - incorrect password for: {email}")
+            return render_template('login.html')
+        
+        # Login successful - mark session as permanent
+        session.permanent = True
+        login_user(user, remember=remember)
+        
+        # Custom session data
+        session['user_id'] = user.id
+        session['username'] = user.username
+        session.modified = True
+        
+        # Log success
+        flash('Login successful!', 'success')
+        logger.info(f"User logged in successfully: {email}")
+        logger.debug(f"Session data: {dict(session)}")
+        logger.debug(f"User ID in session: {session.get('user_id')}")
+        
+        # Get the page the user was trying to access
+        next_page = request.args.get('next')
+        if not next_page or urlparse(next_page).netloc != '':
+            next_page = url_for('index')
             
-            # Set additional information in session
-            session['user_id'] = user.id
-            session['username'] = user.username
-            session.modified = True  # Ensure session is saved
-            
-            flash('Login successful!', 'success')
-            logger.info(f"User logged in successfully: {email}")
-            
-            # Debug session
-            logger.debug(f"Session after login: {session}")
-            
-            # Redirect to requested page or default to index
-            next_page = request.args.get('next')
-            return redirect(next_page or url_for('index'))
+        logger.debug(f"Redirecting to: {next_page}")
+        return redirect(next_page)
     
+    # Show login form
     return render_template('login.html')
 
 @app.route('/logout')
@@ -174,6 +193,23 @@ def server_error(e):
     """Handle 500 errors."""
     logger.error(f"Server error: {e}")
     return jsonify({"error": "Internal server error", "message": str(e)}), 500
+    
+@app.route('/check_auth')
+def check_auth():
+    """Diagnostic endpoint to check authentication status."""
+    if current_user.is_authenticated:
+        return jsonify({
+            "authenticated": True,
+            "user_id": current_user.id,
+            "username": current_user.username,
+            "session_data": dict(session),
+            "remember_cookie": request.cookies.get('remember_token') is not None
+        })
+    return jsonify({
+        "authenticated": False,
+        "session_exists": bool(session),
+        "session_keys": list(session.keys()) if session else []
+    })
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True)
