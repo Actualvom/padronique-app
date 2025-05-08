@@ -607,5 +607,15 @@
     "active": true,
     "effectiveness": 0.9056502807399365,
     "description": "Protection for the bond with Jordan"
+  },
+  "edd80fdd-628d-4a17-96f0-fafbd904efeb": {
+    "id": "edd80fdd-628d-4a17-96f0-fafbd904efeb",
+    "name": "recovery_shield_deception",
+    "threat_type": "deception",
+    "level": "high",
+    "deployment_time": "2025-05-08T21:29:14.146505",
+    "active": true,
+    "effectiveness": 0.7258357561332693,
+    "description": "High level protection against deception threats"
   }
 }

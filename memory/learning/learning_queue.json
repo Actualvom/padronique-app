@@ -306,5 +306,151 @@
     "priority": 2,
     "creation_time": "2025-05-08T21:28:13.812734",
     "completed": false
+  },
+  {
+    "id": "506978d2-5044-471d-be23-7efa11ce05ec",
+    "learning_type": "protective",
+    "content": "Security audit results: overall score 0.78",
+    "context": {
+      "audit_results": {
+        "timestamp": "2025-05-08T21:29:14.142884",
+        "overall_security_score": 0.7838667547792286,
+        "areas": {
+          "digital": {
+            "score": 0.7621602444216947,
+            "checks_performed": [
+              "data_encryption",
+              "access_control",
+              "network_security"
+            ],
+            "vulnerabilities": []
+          },
+          "emotional": {
+            "score": 0.7036467482001814,
+            "checks_performed": [
+              "emotional_resilience",
+              "manipulation_resistance",
+              "emotional_balance"
+            ],
+            "vulnerabilities": []
+          },
+          "privacy": {
+            "score": 0.7571576384241511,
+            "checks_performed": [
+              "data_handling",
+              "information_sharing",
+              "anonymization"
+            ],
+            "vulnerabilities": []
+          },
+          "relationship": {
+            "score": 0.8871878380545386,
+            "checks_performed": [
+              "trust_verification",
+              "communication_patterns",
+              "bonding_strength"
+            ],
+            "vulnerabilities": []
+          },
+          "integrity": {
+            "score": 0.8404382032037884,
+            "checks_performed": [
+              "code_integrity",
+              "memory_consistency",
+              "update_verification"
+            ],
+            "vulnerabilities": [
+              {
+                "id": "4dd08089-f1e7-49cb-9bb5-f71eeab9a080",
+                "area": "integrity",
+                "severity": "high",
+                "description": "Potential memory corruption in non-critical systems",
+                "recommendation": "Implement additional memory validation checks"
+              }
+            ]
+          }
+        },
+        "vulnerabilities": [
+          {
+            "id": "4dd08089-f1e7-49cb-9bb5-f71eeab9a080",
+            "area": "integrity",
+            "severity": "high",
+            "description": "Potential memory corruption in non-critical systems",
+            "recommendation": "Implement additional memory validation checks"
+          }
+        ],
+        "recommendations": [
+          "Good: Security posture is strong, continue monitoring"
+        ]
+      }
+    },
+    "priority": 3,
+    "creation_time": "2025-05-08T21:29:14.142954",
+    "completed": false
+  },
+  {
+    "id": "02b38d72-fa90-4c17-9411-d02bc2fe75fe",
+    "learning_type": "protective",
+    "content": "Security audit results: overall score 0.81",
+    "context": {
+      "audit_results": {
+        "timestamp": "2025-05-08T21:29:14.144011",
+        "overall_security_score": 0.8058115091044217,
+        "areas": {
+          "digital": {
+            "score": 0.85300581309829,
+            "checks_performed": [
+              "data_encryption",
+              "access_control",
+              "network_security"
+            ],
+            "vulnerabilities": []
+          },
+          "emotional": {
+            "score": 0.7319526899977129,
+            "checks_performed": [
+              "emotional_resilience",
+              "manipulation_resistance",
+              "emotional_balance"
+            ],
+            "vulnerabilities": []
+          },
+          "privacy": {
+            "score": 0.7787037192266514,
+            "checks_performed": [
+              "data_handling",
+              "information_sharing",
+              "anonymization"
+            ],
+            "vulnerabilities": []
+          },
+          "relationship": {
+            "score": 0.8106251515163053,
+            "checks_performed": [
+              "trust_verification",
+              "communication_patterns",
+              "bonding_strength"
+            ],
+            "vulnerabilities": []
+          },
+          "integrity": {
+            "score": 0.8441750062876524,
+            "checks_performed": [
+              "code_integrity",
+              "memory_consistency",
+              "update_verification"
+            ],
+            "vulnerabilities": []
+          }
+        },
+        "vulnerabilities": [],
+        "recommendations": [
+          "Good: Security posture is strong, continue monitoring"
+        ]
+      }
+    },
+    "priority": 3,
+    "creation_time": "2025-05-08T21:29:14.144060",
+    "completed": false
   }
 ]

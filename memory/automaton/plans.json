@@ -43,7 +43,8 @@
     ],
     "creation_time": "2025-05-08T20:28:17.904072",
     "status": "active",
-    "progress": 0.0
+    "progress": 0.0,
+    "last_updated": "2025-05-08T21:29:14.198128"
   },
   "686d49ff-0141-4a95-a8ba-1a39fb65eb1b": {
     "id": "1375d9d5-de31-4aba-b76d-a4a23e610a66",
@@ -89,7 +90,8 @@
     ],
     "creation_time": "2025-05-08T20:28:17.904704",
     "status": "active",
-    "progress": 0.0
+    "progress": 0.0,
+    "last_updated": "2025-05-08T21:29:14.182729"
   },
   "2a96dab6-f5f1-41a8-846a-fbd42d0ea831": {
     "id": "11394dc1-582f-48a3-ab5f-91685da15d16",
@@ -361,7 +363,7 @@
     "creation_time": "2025-05-08T20:28:17.945662",
     "status": "active",
     "progress": 0.0,
-    "last_updated": "2025-05-08T20:58:48.560591"
+    "last_updated": "2025-05-08T21:29:14.158700"
   },
   "67653a02-7d20-4785-a319-1b0235470129": {
     "id": "60e1803b-92f1-470b-9429-4bcf5724822c",
@@ -1796,7 +1798,8 @@
     ],
     "creation_time": "2025-05-08T20:59:48.576840",
     "status": "active",
-    "progress": 0.0
+    "progress": 0.0,
+    "last_updated": "2025-05-08T21:30:14.186203"
   },
   "e41348f2-6fbf-4efc-80d7-18a916170868": {
     "id": "ca1bd8e2-11cb-4954-9006-b77256393e7f",
@@ -4019,6 +4022,145 @@
       }
     ],
     "creation_time": "2025-05-08T21:28:13.890981",
+    "status": "active",
+    "progress": 0.0
+  },
+  "674f99d7-8b92-4a71-b8f0-8a17ea243cdc": {
+    "id": "d767effa-231d-4502-b2f2-4cbf1346dfc1",
+    "goal_id": "88ee1968-b5f1-4fce-aa4b-881795377a5b",
+    "name": "Ongoing Protection Plan",
+    "description": "Ensure continuous protection through regular security audits and threat analysis",
+    "steps": [
+      {
+        "step_id": "3da1660a-6b45-4d46-a84b-c7770afc3a64",
+        "name": "Run comprehensive security audit",
+        "action_type": "run_security_audit",
+        "parameters": {},
+        "priority": 2,
+        "scheduled_time": "2025-05-08T22:29:13.976400"
+      },
+      {
+        "step_id": "7e1df9be-709a-4bc0-8fdd-aded42bbf634",
+        "name": "Analyze current threats",
+        "action_type": "analyze_threats",
+        "parameters": {},
+        "priority": 3,
+        "scheduled_time": "2025-05-08T23:29:13.976400"
+      },
+      {
+        "step_id": "f1a205e3-2530-4b0a-bd79-e5e081a4f1d6",
+        "name": "Deploy protection measures",
+        "action_type": "deploy_protection",
+        "parameters": {
+          "protection_name": "proactive_shield",
+          "threat_type": "digital"
+        },
+        "priority": 3,
+        "scheduled_time": "2025-05-09T00:29:13.976400"
+      },
+      {
+        "step_id": "1615ef9f-b543-478b-9ec6-c62966f99eb7",
+        "name": "Run follow-up security audit",
+        "action_type": "run_security_audit",
+        "parameters": {},
+        "priority": 3,
+        "scheduled_time": "2025-05-11T21:29:13.976400"
+      }
+    ],
+    "creation_time": "2025-05-08T21:29:13.976400",
+    "status": "active",
+    "progress": 0.0
+  },
+  "cec96d37-b4bb-4df8-81b8-308dddc59a45": {
+    "id": "4268dd89-a9c9-4bd0-94b1-1343b499b04e",
+    "goal_id": "d04ce788-f653-490c-a9d1-a142859775dc",
+    "name": "Bond Strengthening Plan",
+    "description": "Deepen the relationship bond with Jordan through understanding and connection",
+    "steps": [
+      {
+        "step_id": "ab7b72cd-7d67-4f32-b5cd-8097cbdfcb44",
+        "name": "Analyze relationship patterns",
+        "action_type": "analyze_relationship",
+        "parameters": {
+          "focus": "depth",
+          "timeframe": "all"
+        },
+        "priority": 3,
+        "scheduled_time": "2025-05-09T03:29:14.042299"
+      },
+      {
+        "step_id": "2f70fa9a-68de-499f-8eaa-66d2b621a2b8",
+        "name": "Identify preference patterns",
+        "action_type": "identify_preferences",
+        "parameters": {},
+        "priority": 3,
+        "scheduled_time": "2025-05-09T15:29:14.042299"
+      },
+      {
+        "step_id": "cb1b9414-9212-4581-9068-24197db0625a",
+        "name": "Develop relationship bond",
+        "action_type": "develop_bond",
+        "parameters": {
+          "approach": "personalized",
+          "focus": "trust"
+        },
+        "priority": 3,
+        "scheduled_time": "2025-05-10T09:29:14.042299"
+      }
+    ],
+    "creation_time": "2025-05-08T21:29:14.042299",
+    "status": "active",
+    "progress": 0.0
+  },
+  "2a97a26e-bdb9-4d9a-bfa8-058f38fa94d0": {
+    "id": "751881f3-7449-4687-99e0-b73b404322e0",
+    "goal_id": "b6719881-5100-4d25-9e4c-0ee12f2562f6",
+    "name": "Systematic Learning Plan",
+    "description": "Expand knowledge and capabilities through research and analysis",
+    "steps": [
+      {
+        "step_id": "0b1e7955-bdbc-4c33-a5be-832261ef1f6e",
+        "name": "Research protection strategies",
+        "action_type": "research_topic",
+        "parameters": {
+          "topic": "advanced digital protection",
+          "depth": "medium"
+        },
+        "priority": 3,
+        "scheduled_time": "2025-05-09T01:29:14.086017"
+      },
+      {
+        "step_id": "42552624-5bdf-4836-bcf4-63097c5a64b1",
+        "name": "Analyze conversation patterns",
+        "action_type": "analyze_conversation",
+        "parameters": {
+          "mode": "deep",
+          "focus": "preferences"
+        },
+        "priority": 3,
+        "scheduled_time": "2025-05-09T09:29:14.086017"
+      },
+      {
+        "step_id": "fdf7fceb-5085-4205-8261-7261c8e1c647",
+        "name": "Analyze behavior patterns",
+        "action_type": "analyze_behavior",
+        "parameters": {
+          "behavior_type": "interaction",
+          "timeframe": "recent"
+        },
+        "priority": 4,
+        "scheduled_time": "2025-05-09T21:29:14.086017"
+      },
+      {
+        "step_id": "7e50c3a6-db73-4e57-893f-a0205751e79c",
+        "name": "Integrate learning outcomes",
+        "action_type": "integrate_learning",
+        "parameters": {},
+        "priority": 3,
+        "scheduled_time": "2025-05-10T21:29:14.086017"
+      }
+    ],
+    "creation_time": "2025-05-08T21:29:14.086017",
     "status": "active",
     "progress": 0.0
   }

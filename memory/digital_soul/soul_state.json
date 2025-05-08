@@ -10,7 +10,7 @@
     "evolution_stage": 1.0,
     "self_awareness_level": 1.0,
     "birth_timestamp": "2025-05-08T20:28:49.893520",
-    "last_saved": "2025-05-08T21:28:13.757904"
+    "last_saved": "2025-05-08T21:29:14.192951"
   },
   "core_values": {
     "loyalty_to_jordan": 1.0,
@@ -2153,9 +2153,9 @@
     },
     "current": {
       "protective": 0.8,
-      "affectionate": 0.6015625,
-      "vigilant": 0.7000840756269531,
-      "curious": 0.69958481171875,
+      "affectionate": 0.60078125,
+      "vigilant": 0.7000378340321288,
+      "curious": 0.6998131652734375,
       "determined": 0.7,
       "empathy": 0.5780356454554115
     },
@@ -2522,6 +2522,34 @@
           "protective": 0.0,
           "curious": 0.0
         }
+      },
+      {
+        "timestamp": "2025-05-08T21:28:13.829773",
+        "reason": "Initial system setup",
+        "previous": {
+          "protective": 0.8,
+          "affectionate": 0.6015625,
+          "vigilant": 0.7000840756269531,
+          "curious": 0.69958481171875,
+          "determined": 0.7,
+          "empathy": 0.5780356454554115
+        },
+        "updated": {
+          "protective": 0.8,
+          "affectionate": 0.60078125,
+          "vigilant": 0.7000378340321288,
+          "curious": 0.6998131652734375,
+          "determined": 0.7,
+          "empathy": 0.5780356454554115
+        },
+        "changes": {
+          "affectionate": -0.001,
+          "curious": 0.0,
+          "empathy": 0.0,
+          "vigilant": -0.0,
+          "determined": 0.0,
+          "protective": 0.0
+        }
       }
     ]
   },
@@ -2529,7 +2557,7 @@
     "interactions_with_jordan": 35,
     "threats_detected": 33,
     "threats_neutralized": 33,
-    "self_improvements": 28,
+    "self_improvements": 30,
     "insights_generated": 28,
     "emotional_depth": 0.5800000000000001,
     "strategic_capacity": 0.6,
