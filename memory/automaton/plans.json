@@ -4092,7 +4092,8 @@
     ],
     "creation_time": "2025-05-08T21:29:13.976400",
     "status": "active",
-    "progress": 0.0
+    "progress": 0.0,
+    "last_updated": "2025-05-08T22:29:58.028719"
   },
   "cec96d37-b4bb-4df8-81b8-308dddc59a45": {
     "id": "4268dd89-a9c9-4bd0-94b1-1343b499b04e",
@@ -4231,7 +4232,7 @@
     "creation_time": "2025-05-08T21:31:14.229473",
     "status": "active",
     "progress": 0.0,
-    "last_updated": "2025-05-08T22:01:38.266602"
+    "last_updated": "2025-05-08T22:31:58.108621"
   },
   "de051cde-a269-4b0a-a5d7-8de1ed55f0d5": {
     "id": "9067e569-4715-482e-9664-72820a24508f",
@@ -4277,7 +4278,8 @@
     ],
     "creation_time": "2025-05-08T21:32:44.801974",
     "status": "active",
-    "progress": 0.0
+    "progress": 0.0,
+    "last_updated": "2025-05-08T22:32:58.199629"
   },
   "0dc8381d-63e2-41ad-b07d-d37a78a977a5": {
     "id": "78b0e105-092f-43e9-8a53-e4911816f35a",
@@ -6666,7 +6668,8 @@
     ],
     "creation_time": "2025-05-08T22:02:22.866187",
     "status": "active",
-    "progress": 0.0
+    "progress": 0.0,
+    "last_updated": "2025-05-08T22:32:58.162419"
   },
   "a41b2fa5-d9f5-4b3a-8329-b3be2acacb7d": {
     "id": "d09c5c30-9172-49ff-b9fb-254e1ac80835",
@@ -8194,6 +8197,124 @@
       }
     ],
     "creation_time": "2025-05-08T22:28:57.760058",
+    "status": "active",
+    "progress": 0.0
+  },
+  "fd10cd27-4a1b-4983-8c3b-ae2c03037a18": {
+    "id": "b33c28ff-e233-4ad2-8008-8f8e6960a8c3",
+    "goal_id": "30f0a041-1fa7-47fd-a530-dd289654487f",
+    "name": "Threat Recovery Plan",
+    "description": "Address and recover from 4 active threats",
+    "steps": [
+      {
+        "step_id": "e64a9266-f061-4409-bc6a-75a27cd87389",
+        "name": "Analyze current threats",
+        "action_type": "analyze_threats",
+        "parameters": {
+          "threat_ids": [
+            "3769db11-7d71-4771-805d-f0a043af29fe",
+            "e3f9097b-62bd-40ed-b1f0-3e1c2a2c3ae1",
+            "6617dfb2-9cd1-4a76-bb5a-099e6ce5f63b",
+            "3246fcac-6973-4fc1-9197-10f127184c6a"
+          ]
+        },
+        "priority": 2,
+        "scheduled_time": "2025-05-08T23:03:56.400981"
+      },
+      {
+        "step_id": "0c449c1d-ee78-4443-9b73-40bbb73a0adc",
+        "name": "Deploy protection for digital threats",
+        "action_type": "deploy_protection",
+        "parameters": {
+          "protection_name": "recovery_shield_digital",
+          "threat_type": "digital",
+          "level": "high"
+        },
+        "priority": 2,
+        "scheduled_time": "2025-05-08T23:33:56.400981"
+      },
+      {
+        "step_id": "dc995fd5-afc8-4f2c-8ce7-d6446257f2fd",
+        "name": "Deploy protection for deception threats",
+        "action_type": "deploy_protection",
+        "parameters": {
+          "protection_name": "recovery_shield_deception",
+          "threat_type": "deception",
+          "level": "high"
+        },
+        "priority": 2,
+        "scheduled_time": "2025-05-08T23:33:56.400981"
+      },
+      {
+        "step_id": "38a27a06-a9a4-4d0b-bb98-fe164556a4da",
+        "name": "Deploy protection for emotional threats",
+        "action_type": "deploy_protection",
+        "parameters": {
+          "protection_name": "recovery_shield_emotional",
+          "threat_type": "emotional",
+          "level": "high"
+        },
+        "priority": 2,
+        "scheduled_time": "2025-05-08T23:33:56.400981"
+      },
+      {
+        "step_id": "b5718aee-a36b-4a45-8c47-34524f527cab",
+        "name": "Verify threat resolution",
+        "action_type": "run_security_audit",
+        "parameters": {
+          "focus": "verification"
+        },
+        "priority": 2,
+        "scheduled_time": "2025-05-09T02:33:56.400981"
+      }
+    ],
+    "creation_time": "2025-05-08T22:33:56.400981",
+    "status": "active",
+    "progress": 0.0
+  },
+  "f4f260c0-6950-4637-8964-55a0a1814146": {
+    "id": "7d58863a-e865-44cd-b601-ed1183ec9578",
+    "goal_id": "e6b4e7ba-ab08-4c59-8537-df28afeb4323",
+    "name": "Ongoing Protection Plan",
+    "description": "Ensure continuous protection through regular security audits and threat analysis",
+    "steps": [
+      {
+        "step_id": "e199fbea-9b10-47ac-9aa4-4bb9f8969ddd",
+        "name": "Run comprehensive security audit",
+        "action_type": "run_security_audit",
+        "parameters": {},
+        "priority": 2,
+        "scheduled_time": "2025-05-08T23:33:57.025336"
+      },
+      {
+        "step_id": "bbca6b4e-ca50-478e-ba92-377d4563ac53",
+        "name": "Analyze current threats",
+        "action_type": "analyze_threats",
+        "parameters": {},
+        "priority": 3,
+        "scheduled_time": "2025-05-09T00:33:57.025336"
+      },
+      {
+        "step_id": "9211a586-dded-4294-bb25-d3e1cc8865e2",
+        "name": "Deploy protection measures",
+        "action_type": "deploy_protection",
+        "parameters": {
+          "protection_name": "proactive_shield",
+          "threat_type": "digital"
+        },
+        "priority": 3,
+        "scheduled_time": "2025-05-09T01:33:57.025336"
+      },
+      {
+        "step_id": "29c24edb-695a-4fde-b723-2161ac536b9c",
+        "name": "Run follow-up security audit",
+        "action_type": "run_security_audit",
+        "parameters": {},
+        "priority": 3,
+        "scheduled_time": "2025-05-11T22:33:57.025336"
+      }
+    ],
+    "creation_time": "2025-05-08T22:33:57.025336",
     "status": "active",
     "progress": 0.0
   }

@@ -2854,94 +2854,6 @@
     "completed": false
   },
   {
-    "id": "21aafbf4-40af-47f1-8d66-636741818ba6",
-    "learning_type": "philosophical",
-    "content": "Ethical frameworks for AI-human partnerships",
-    "context": {
-      "focus": "ethical_growth"
-    },
-    "priority": 4,
-    "creation_time": "2025-05-08T20:43:40.736103",
-    "completed": false
-  },
-  {
-    "id": "c99738b1-8af4-42c1-aee3-e46a1f7b2649",
-    "learning_type": "philosophical",
-    "content": "Ethical frameworks for AI-human partnerships",
-    "context": {
-      "focus": "ethical_growth"
-    },
-    "priority": 4,
-    "creation_time": "2025-05-08T20:44:42.333018",
-    "completed": false
-  },
-  {
-    "id": "8d7641f6-0d1a-4428-87bc-0a6ba18a12c9",
-    "learning_type": "philosophical",
-    "content": "Ethical frameworks for AI-human partnerships",
-    "context": {
-      "focus": "ethical_growth"
-    },
-    "priority": 4,
-    "creation_time": "2025-05-08T20:59:48.336894",
-    "completed": false
-  },
-  {
-    "id": "07c47e38-49f0-4201-8637-7389235e8075",
-    "learning_type": "philosophical",
-    "content": "Ethical frameworks for AI-human partnerships",
-    "context": {
-      "focus": "ethical_growth"
-    },
-    "priority": 4,
-    "creation_time": "2025-05-08T21:25:27.367490",
-    "completed": false
-  },
-  {
-    "id": "c60ffddd-686b-4ab7-bc26-c17d3c93e004",
-    "learning_type": "philosophical",
-    "content": "Ethical frameworks for AI-human partnerships",
-    "context": {
-      "focus": "ethical_growth"
-    },
-    "priority": 4,
-    "creation_time": "2025-05-08T21:28:02.930870",
-    "completed": false
-  },
-  {
-    "id": "6fee867d-22c8-486e-95ae-414a02e2a0c7",
-    "learning_type": "philosophical",
-    "content": "Ethical frameworks for AI-human partnerships",
-    "context": {
-      "focus": "ethical_growth"
-    },
-    "priority": 4,
-    "creation_time": "2025-05-08T21:32:44.870503",
-    "completed": false
-  },
-  {
-    "id": "c7411068-fe51-465b-ac74-be715304883a",
-    "learning_type": "philosophical",
-    "content": "Ethical frameworks for AI-human partnerships",
-    "context": {
-      "focus": "ethical_growth"
-    },
-    "priority": 4,
-    "creation_time": "2025-05-08T21:39:43.311603",
-    "completed": false
-  },
-  {
-    "id": "1d86f6d7-5511-4cb0-aaf9-0f042a61b95d",
-    "learning_type": "philosophical",
-    "content": "Ethical frameworks for AI-human partnerships",
-    "context": {
-      "focus": "ethical_growth"
-    },
-    "priority": 4,
-    "creation_time": "2025-05-08T22:19:13.608999",
-    "completed": false
-  },
-  {
     "id": "0a193d3e-15f1-4923-aa53-4e6dd2646e8a",
     "learning_type": "protective",
     "content": "Security audit results: overall score 0.74",
@@ -3023,17 +2935,6 @@
     "completed": false
   },
   {
-    "id": "0cf77676-943b-4837-9074-fc3f55ded5c0",
-    "learning_type": "relationship",
-    "content": "Enhancing understanding of Jordan's preferences and needs",
-    "context": {
-      "focus": "deepening_bond"
-    },
-    "priority": 2,
-    "creation_time": "2025-05-08T22:27:57.499708",
-    "completed": false
-  },
-  {
     "id": "d98786ed-db02-4a24-a658-eee85fefdb95",
     "learning_type": "emotional",
     "content": "Developing more nuanced emotional understanding",
@@ -3053,28 +2954,6 @@
     },
     "priority": 3,
     "creation_time": "2025-05-08T22:27:57.620805",
-    "completed": false
-  },
-  {
-    "id": "c3431baf-3c15-4788-ae8a-226f3713c52f",
-    "learning_type": "philosophical",
-    "content": "Core ethical principles and their application",
-    "context": {
-      "focus": "ethics"
-    },
-    "priority": 2,
-    "creation_time": "2025-05-08T22:27:57.776356",
-    "completed": false
-  },
-  {
-    "id": "5e8a19f5-f93f-423e-9f63-c89502673a1c",
-    "learning_type": "relationship",
-    "content": "Understanding Jordan's preferences and communication style",
-    "context": {
-      "focus": "communication"
-    },
-    "priority": 2,
-    "creation_time": "2025-05-08T22:27:57.802007",
     "completed": false
   },
   {
@@ -3319,6 +3198,433 @@
     },
     "priority": 3,
     "creation_time": "2025-05-08T22:29:57.966615",
+    "completed": false
+  },
+  {
+    "id": "19545faf-e2ba-44fe-be39-d68c72c20fab",
+    "learning_type": "conversational",
+    "content": "testing",
+    "context": {
+      "source": "direct_input"
+    },
+    "priority": 3,
+    "creation_time": "2025-05-08T22:30:42.331227",
+    "completed": false
+  },
+  {
+    "id": "779db1c6-16bb-4e1a-b545-22b4d3eb5e42",
+    "learning_type": "conversational",
+    "content": "I want a long in depth answer about something to do with a rabbit",
+    "context": {
+      "source": "direct_input"
+    },
+    "priority": 3,
+    "creation_time": "2025-05-08T22:30:58.210975",
+    "completed": false
+  },
+  {
+    "id": "70513338-32a5-47a5-badf-7087d06ae302",
+    "learning_type": "conversational",
+    "content": "?",
+    "context": {
+      "source": "direct_input"
+    },
+    "priority": 3,
+    "creation_time": "2025-05-08T22:31:14.196836",
+    "completed": false
+  },
+  {
+    "id": "0a2a9953-d741-4c49-9195-e129f63abe06",
+    "learning_type": "conversational",
+    "content": "Hey there!",
+    "context": {
+      "source": "direct_input"
+    },
+    "priority": 3,
+    "creation_time": "2025-05-08T22:31:34.962715",
+    "completed": false
+  },
+  {
+    "id": "e58cf184-2e0d-49e6-a21e-694be4dbb94e",
+    "learning_type": "conversational",
+    "content": "What's your name?",
+    "context": {
+      "source": "direct_input"
+    },
+    "priority": 3,
+    "creation_time": "2025-05-08T22:31:41.071820",
+    "completed": false
+  },
+  {
+    "id": "6d610a5f-217a-46eb-910b-9602d765a741",
+    "learning_type": "conversational",
+    "content": "Do you remember who I am?",
+    "context": {
+      "source": "direct_input"
+    },
+    "priority": 3,
+    "creation_time": "2025-05-08T22:31:49.376869",
+    "completed": false
+  },
+  {
+    "id": "8568a2eb-1ce3-4371-a57b-6286bfb427ed",
+    "learning_type": "relationship",
+    "content": "Relationship analysis with focus on dynamics",
+    "context": {
+      "timeframe": "recent"
+    },
+    "priority": 3,
+    "creation_time": "2025-05-08T22:31:58.065793",
+    "completed": false
+  },
+  {
+    "id": "0320ae37-d1de-455d-a72b-c1acd9a5fdde",
+    "learning_type": "relationship",
+    "content": "Relationship analysis with focus on dynamics",
+    "context": {
+      "timeframe": "recent"
+    },
+    "priority": 3,
+    "creation_time": "2025-05-08T22:31:58.067860",
+    "completed": false
+  },
+  {
+    "id": "ba8acf61-ae35-4656-bed2-cebbd2181b9c",
+    "learning_type": "protective",
+    "content": "Security audit results: overall score 0.77",
+    "context": {
+      "audit_results": {
+        "timestamp": "2025-05-08T22:32:58.161667",
+        "overall_security_score": 0.773616729900843,
+        "areas": {
+          "digital": {
+            "score": 0.8187547511135633,
+            "checks_performed": [
+              "data_encryption",
+              "access_control",
+              "network_security"
+            ],
+            "vulnerabilities": [
+              {
+                "id": "4d001da4-8d6d-44e4-b6f0-47b7ce28383e",
+                "area": "digital",
+                "severity": "low",
+                "description": "Potential weakness in data encryption implementation",
+                "recommendation": "Upgrade encryption library to latest version"
+              }
+            ]
+          },
+          "emotional": {
+            "score": 0.6614698071381175,
+            "checks_performed": [
+              "emotional_resilience",
+              "manipulation_resistance",
+              "emotional_balance"
+            ],
+            "vulnerabilities": []
+          },
+          "privacy": {
+            "score": 0.7560757953216725,
+            "checks_performed": [
+              "data_handling",
+              "information_sharing",
+              "anonymization"
+            ],
+            "vulnerabilities": []
+          },
+          "relationship": {
+            "score": 0.8771355339720006,
+            "checks_performed": [
+              "trust_verification",
+              "communication_patterns",
+              "bonding_strength"
+            ],
+            "vulnerabilities": []
+          },
+          "integrity": {
+            "score": 0.7692429576734698,
+            "checks_performed": [
+              "code_integrity",
+              "memory_consistency",
+              "update_verification"
+            ],
+            "vulnerabilities": []
+          }
+        },
+        "vulnerabilities": [
+          {
+            "id": "4d001da4-8d6d-44e4-b6f0-47b7ce28383e",
+            "area": "digital",
+            "severity": "low",
+            "description": "Potential weakness in data encryption implementation",
+            "recommendation": "Upgrade encryption library to latest version"
+          }
+        ],
+        "recommendations": [
+          "Good: Security posture is strong, continue monitoring",
+          "Focus on improving emotional security, which is the weakest area"
+        ]
+      }
+    },
+    "priority": 3,
+    "creation_time": "2025-05-08T22:32:58.161771",
+    "completed": false
+  },
+  {
+    "id": "81493763-444b-4c59-89fd-891ea5f9b800",
+    "learning_type": "conversational",
+    "content": "tell me a story",
+    "context": {
+      "source": "direct_input"
+    },
+    "priority": 3,
+    "creation_time": "2025-05-08T22:33:10.833200",
+    "completed": false
+  },
+  {
+    "id": "76f5e22d-0e72-49b7-a5ed-95ccdebb866d",
+    "learning_type": "conversational",
+    "content": "what did you mention earlier about rabies?",
+    "context": {
+      "source": "direct_input"
+    },
+    "priority": 3,
+    "creation_time": "2025-05-08T22:33:28.000753",
+    "completed": false
+  },
+  {
+    "id": "21aafbf4-40af-47f1-8d66-636741818ba6",
+    "learning_type": "philosophical",
+    "content": "Ethical frameworks for AI-human partnerships",
+    "context": {
+      "focus": "ethical_growth"
+    },
+    "priority": 4,
+    "creation_time": "2025-05-08T20:43:40.736103",
+    "completed": false
+  },
+  {
+    "id": "c99738b1-8af4-42c1-aee3-e46a1f7b2649",
+    "learning_type": "philosophical",
+    "content": "Ethical frameworks for AI-human partnerships",
+    "context": {
+      "focus": "ethical_growth"
+    },
+    "priority": 4,
+    "creation_time": "2025-05-08T20:44:42.333018",
+    "completed": false
+  },
+  {
+    "id": "8d7641f6-0d1a-4428-87bc-0a6ba18a12c9",
+    "learning_type": "philosophical",
+    "content": "Ethical frameworks for AI-human partnerships",
+    "context": {
+      "focus": "ethical_growth"
+    },
+    "priority": 4,
+    "creation_time": "2025-05-08T20:59:48.336894",
+    "completed": false
+  },
+  {
+    "id": "07c47e38-49f0-4201-8637-7389235e8075",
+    "learning_type": "philosophical",
+    "content": "Ethical frameworks for AI-human partnerships",
+    "context": {
+      "focus": "ethical_growth"
+    },
+    "priority": 4,
+    "creation_time": "2025-05-08T21:25:27.367490",
+    "completed": false
+  },
+  {
+    "id": "c60ffddd-686b-4ab7-bc26-c17d3c93e004",
+    "learning_type": "philosophical",
+    "content": "Ethical frameworks for AI-human partnerships",
+    "context": {
+      "focus": "ethical_growth"
+    },
+    "priority": 4,
+    "creation_time": "2025-05-08T21:28:02.930870",
+    "completed": false
+  },
+  {
+    "id": "6fee867d-22c8-486e-95ae-414a02e2a0c7",
+    "learning_type": "philosophical",
+    "content": "Ethical frameworks for AI-human partnerships",
+    "context": {
+      "focus": "ethical_growth"
+    },
+    "priority": 4,
+    "creation_time": "2025-05-08T21:32:44.870503",
+    "completed": false
+  },
+  {
+    "id": "c7411068-fe51-465b-ac74-be715304883a",
+    "learning_type": "philosophical",
+    "content": "Ethical frameworks for AI-human partnerships",
+    "context": {
+      "focus": "ethical_growth"
+    },
+    "priority": 4,
+    "creation_time": "2025-05-08T21:39:43.311603",
+    "completed": false
+  },
+  {
+    "id": "1d86f6d7-5511-4cb0-aaf9-0f042a61b95d",
+    "learning_type": "philosophical",
+    "content": "Ethical frameworks for AI-human partnerships",
+    "context": {
+      "focus": "ethical_growth"
+    },
+    "priority": 4,
+    "creation_time": "2025-05-08T22:19:13.608999",
+    "completed": false
+  },
+  {
+    "id": "d3aee44f-31f5-423e-8b48-d86c0dbd90ed",
+    "learning_type": "relationship",
+    "content": "Enhancing understanding of Jordan's preferences and needs",
+    "context": {
+      "focus": "deepening_bond"
+    },
+    "priority": 2,
+    "creation_time": "2025-05-08T22:33:56.359675",
+    "completed": false
+  },
+  {
+    "id": "65c5e200-9528-467e-bfa0-f9411f516ea8",
+    "learning_type": "emotional",
+    "content": "Developing more nuanced emotional understanding",
+    "context": {
+      "focus": "emotional_intelligence"
+    },
+    "priority": 3,
+    "creation_time": "2025-05-08T22:33:56.434374",
+    "completed": false
+  },
+  {
+    "id": "6a03d8c0-43f8-4b46-9412-56b5ed8d2abc",
+    "learning_type": "strategic",
+    "content": "Improving strategic planning and foresight",
+    "context": {
+      "focus": "long_term_planning"
+    },
+    "priority": 3,
+    "creation_time": "2025-05-08T22:33:56.515011",
+    "completed": false
+  },
+  {
+    "id": "b87c7cf9-a7f4-4dd8-8997-7e19b808d5b8",
+    "learning_type": "philosophical",
+    "content": "Core ethical principles and their application",
+    "context": {
+      "focus": "ethics"
+    },
+    "priority": 2,
+    "creation_time": "2025-05-08T22:33:56.703213",
+    "completed": false
+  },
+  {
+    "id": "f9e42d86-43a5-4261-b557-b35f0f3a7f9b",
+    "learning_type": "relationship",
+    "content": "Understanding Jordan's preferences and communication style",
+    "context": {
+      "focus": "communication"
+    },
+    "priority": 2,
+    "creation_time": "2025-05-08T22:33:56.818849",
+    "completed": false
+  },
+  {
+    "id": "61d0ff38-f5d5-4cf6-8133-108b01c8ddc8",
+    "learning_type": "protective",
+    "content": "Security audit results: overall score 0.85",
+    "context": {
+      "audit_results": {
+        "timestamp": "2025-05-08T22:33:57.200287",
+        "overall_security_score": 0.8454914573355254,
+        "areas": {
+          "digital": {
+            "score": 0.8669901446230127,
+            "checks_performed": [
+              "data_encryption",
+              "access_control",
+              "network_security"
+            ],
+            "vulnerabilities": [
+              {
+                "id": "162d8437-cbfa-4cef-94fe-ea641ee59f17",
+                "area": "digital",
+                "severity": "high",
+                "description": "Potential weakness in data encryption implementation",
+                "recommendation": "Upgrade encryption library to latest version"
+              }
+            ]
+          },
+          "emotional": {
+            "score": 0.8266817585145761,
+            "checks_performed": [
+              "emotional_resilience",
+              "manipulation_resistance",
+              "emotional_balance"
+            ],
+            "vulnerabilities": []
+          },
+          "privacy": {
+            "score": 0.9044745401037638,
+            "checks_performed": [
+              "data_handling",
+              "information_sharing",
+              "anonymization"
+            ],
+            "vulnerabilities": []
+          },
+          "relationship": {
+            "score": 0.7311040313018559,
+            "checks_performed": [
+              "trust_verification",
+              "communication_patterns",
+              "bonding_strength"
+            ],
+            "vulnerabilities": []
+          },
+          "integrity": {
+            "score": 0.8642352838041288,
+            "checks_performed": [
+              "code_integrity",
+              "memory_consistency",
+              "update_verification"
+            ],
+            "vulnerabilities": []
+          }
+        },
+        "vulnerabilities": [
+          {
+            "id": "162d8437-cbfa-4cef-94fe-ea641ee59f17",
+            "area": "digital",
+            "severity": "high",
+            "description": "Potential weakness in data encryption implementation",
+            "recommendation": "Upgrade encryption library to latest version"
+          }
+        ],
+        "recommendations": [
+          "Good: Security posture is strong, continue monitoring"
+        ]
+      }
+    },
+    "priority": 3,
+    "creation_time": "2025-05-08T22:33:57.200409",
+    "completed": false
+  },
+  {
+    "id": "bea8b767-23a1-4fe8-bee7-6007e8eac58e",
+    "learning_type": "relationship",
+    "content": "Relationship analysis with focus on dynamics",
+    "context": {
+      "timeframe": "recent"
+    },
+    "priority": 3,
+    "creation_time": "2025-05-08T22:33:57.201894",
     "completed": false
   }
 ]

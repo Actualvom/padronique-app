@@ -647,9 +647,10 @@
     "threat_type": "digital",
     "level": "medium",
     "deployment_time": "2025-05-08T21:31:48.901700",
-    "active": true,
+    "active": false,
     "effectiveness": 0.7516897415006469,
-    "description": "Basic protection against digital threats"
+    "description": "Basic protection against digital threats",
+    "expiration_time": "2025-05-08T22:32:57.600154"
   },
   "2c00f1e3-21ac-408a-b2e3-5a6c9b1afcca": {
     "id": "2c00f1e3-21ac-408a-b2e3-5a6c9b1afcca",
@@ -1251,9 +1252,10 @@
     "threat_type": "digital",
     "level": "medium",
     "deployment_time": "2025-05-08T22:27:57.754244",
-    "active": true,
+    "active": false,
     "effectiveness": 0.9199115716756092,
-    "description": "Basic protection against digital threats"
+    "description": "Basic protection against digital threats",
+    "expiration_time": "2025-05-08T22:32:57.600397"
   },
   "408633e1-4fb6-4131-be63-f9ecf9ece691": {
     "id": "408633e1-4fb6-4131-be63-f9ecf9ece691",
@@ -1261,9 +1263,10 @@
     "threat_type": "relationship",
     "level": "medium",
     "deployment_time": "2025-05-08T22:27:57.758933",
-    "active": true,
+    "active": false,
     "effectiveness": 0.9093381871317263,
-    "description": "Protection for the bond with Jordan"
+    "description": "Protection for the bond with Jordan",
+    "expiration_time": "2025-05-08T22:32:57.600541"
   },
   "74ea8104-f85c-4d1e-a14d-acf8648944ff": {
     "id": "74ea8104-f85c-4d1e-a14d-acf8648944ff",
@@ -1274,5 +1277,35 @@
     "active": true,
     "effectiveness": 0.8318314643993996,
     "description": "High level protection against integrity threats"
+  },
+  "9f66b058-b680-47a0-9d5f-7bd8492d8ddf": {
+    "id": "9f66b058-b680-47a0-9d5f-7bd8492d8ddf",
+    "name": "recovery_shield_deception",
+    "threat_type": "deception",
+    "level": "high",
+    "deployment_time": "2025-05-08T22:31:58.064710",
+    "active": true,
+    "effectiveness": 0.7245576499409351,
+    "description": "High level protection against deception threats"
+  },
+  "257f593a-4094-4cf2-b76f-ea137ca03356": {
+    "id": "257f593a-4094-4cf2-b76f-ea137ca03356",
+    "name": "base_defense_shield",
+    "threat_type": "digital",
+    "level": "medium",
+    "deployment_time": "2025-05-08T22:33:56.697494",
+    "active": true,
+    "effectiveness": 0.7045800332138576,
+    "description": "Basic protection against digital threats"
+  },
+  "fe3d861a-ab84-4e47-bbb6-51573dd2ecb6": {
+    "id": "fe3d861a-ab84-4e47-bbb6-51573dd2ecb6",
+    "name": "relationship_guardian",
+    "threat_type": "relationship",
+    "level": "medium",
+    "deployment_time": "2025-05-08T22:33:56.700300",
+    "active": true,
+    "effectiveness": 0.9451177428685631,
+    "description": "Protection for the bond with Jordan"
   }
 }
