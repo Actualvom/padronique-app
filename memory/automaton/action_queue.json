@@ -65,6 +65,105 @@
     "status": "pending"
   },
   {
+    "id": "7d62df70-0e74-4bd2-bc6c-7fa511c8e362",
+    "action_type": "run_security_audit",
+    "parameters": {},
+    "goal_id": "aacfcbba-f7df-4cba-a5a7-47b91528b327",
+    "plan_id": "67653a02-7d20-4785-a319-1b0235470129",
+    "priority": 2,
+    "scheduled_time": "2025-05-08T21:43:40.755689",
+    "creation_time": "2025-05-08T20:43:40.755832",
+    "status": "pending"
+  },
+  {
+    "id": "99ba9f64-3716-4c1a-9222-d7ae33d8d51b",
+    "action_type": "run_security_audit",
+    "parameters": {},
+    "goal_id": "5917c151-7824-4aaa-a544-1cef00c1bb9c",
+    "plan_id": "c23b79a5-51b0-44af-96a2-8208124bcef6",
+    "priority": 2,
+    "scheduled_time": "2025-05-08T21:43:58.230392",
+    "creation_time": "2025-05-08T20:43:58.230490",
+    "status": "pending"
+  },
+  {
+    "id": "6fdd5117-d1b8-4b74-989d-932091572603",
+    "action_type": "run_security_audit",
+    "parameters": {},
+    "goal_id": "2d00d87d-9e20-4673-bbc3-24cc5a75ebad",
+    "plan_id": "231d8914-166d-4cb4-a5b5-76801ce47288",
+    "priority": 2,
+    "scheduled_time": "2025-05-08T21:43:58.286671",
+    "creation_time": "2025-05-08T20:43:58.286726",
+    "status": "pending"
+  },
+  {
+    "id": "4dd8b8b7-de36-4355-89c7-34950770ca7d",
+    "action_type": "run_security_audit",
+    "parameters": {},
+    "goal_id": "207ff88d-5130-4f7b-96dc-88035b780f95",
+    "plan_id": "e4e445af-86c5-4e15-8180-baf76f6310ca",
+    "priority": 2,
+    "scheduled_time": "2025-05-08T21:43:58.356287",
+    "creation_time": "2025-05-08T20:43:58.356337",
+    "status": "pending"
+  },
+  {
+    "id": "ac646dfc-5d66-4b2d-af4d-a40eb88b1f62",
+    "action_type": "run_security_audit",
+    "parameters": {},
+    "goal_id": "7673dde5-b492-4dcf-ab58-ff889e5d2a6b",
+    "plan_id": "1540c7cd-e4f3-4b3d-a892-de905c22c305",
+    "priority": 2,
+    "scheduled_time": "2025-05-08T21:43:58.425623",
+    "creation_time": "2025-05-08T20:43:58.425694",
+    "status": "pending"
+  },
+  {
+    "id": "a8b2f282-2dd0-4edf-9507-f2f40d60e01b",
+    "action_type": "run_security_audit",
+    "parameters": {},
+    "goal_id": "fc3bde38-edc6-4e35-b555-6a1fac3334c4",
+    "plan_id": "85514dc4-1026-452a-b730-930db8146b58",
+    "priority": 2,
+    "scheduled_time": "2025-05-08T21:43:58.513674",
+    "creation_time": "2025-05-08T20:43:58.513725",
+    "status": "pending"
+  },
+  {
+    "id": "1ea25e44-5598-4cdd-ba8a-4fc0c09689c5",
+    "action_type": "run_security_audit",
+    "parameters": {},
+    "goal_id": "75fde29c-949c-4917-8a53-bad0f33b55b4",
+    "plan_id": "972d5260-acc6-4ae8-b760-c808ad555830",
+    "priority": 2,
+    "scheduled_time": "2025-05-08T21:43:58.567776",
+    "creation_time": "2025-05-08T20:43:58.567842",
+    "status": "pending"
+  },
+  {
+    "id": "cce24796-85cf-43a8-9934-b141c939a22b",
+    "action_type": "run_security_audit",
+    "parameters": {},
+    "goal_id": "f33e179a-241e-4530-bd0b-76594ee30766",
+    "plan_id": "4f5bda2e-abf0-40fe-a15a-691827323b98",
+    "priority": 2,
+    "scheduled_time": "2025-05-08T21:44:42.267516",
+    "creation_time": "2025-05-08T20:44:42.267569",
+    "status": "pending"
+  },
+  {
+    "id": "b2075eb7-7fcf-4542-9daa-153b9a1de11e",
+    "action_type": "run_security_audit",
+    "parameters": {},
+    "goal_id": "8ad2cea5-ef5b-4b12-af70-b6183d9a27f4",
+    "plan_id": "3ce1db5e-57a6-4844-acea-604a3bf41750",
+    "priority": 2,
+    "scheduled_time": "2025-05-08T21:44:48.238289",
+    "creation_time": "2025-05-08T20:44:48.238754",
+    "status": "pending"
+  },
+  {
     "id": "f8f6c294-5c0f-44cc-803d-3da8fbf4427a",
     "action_type": "analyze_threats",
     "parameters": {},
@@ -293,6 +392,1032 @@
     "status": "pending"
   },
   {
+    "id": "82f79923-07e2-4cfb-9205-3526508e5f03",
+    "action_type": "analyze_threats",
+    "parameters": {},
+    "goal_id": "aacfcbba-f7df-4cba-a5a7-47b91528b327",
+    "plan_id": "67653a02-7d20-4785-a319-1b0235470129",
+    "priority": 3,
+    "scheduled_time": "2025-05-08T22:43:40.755689",
+    "creation_time": "2025-05-08T20:43:40.768403",
+    "status": "pending"
+  },
+  {
+    "id": "d72c7f9d-13ba-4190-8fc4-e9755c5131ac",
+    "action_type": "deploy_protection",
+    "parameters": {
+      "protection_name": "proactive_shield",
+      "threat_type": "digital"
+    },
+    "goal_id": "aacfcbba-f7df-4cba-a5a7-47b91528b327",
+    "plan_id": "67653a02-7d20-4785-a319-1b0235470129",
+    "priority": 3,
+    "scheduled_time": "2025-05-08T23:43:40.755689",
+    "creation_time": "2025-05-08T20:43:40.780018",
+    "status": "pending"
+  },
+  {
+    "id": "44ffca80-96bc-43ee-bbf3-63741b62685c",
+    "action_type": "run_security_audit",
+    "parameters": {},
+    "goal_id": "aacfcbba-f7df-4cba-a5a7-47b91528b327",
+    "plan_id": "67653a02-7d20-4785-a319-1b0235470129",
+    "priority": 3,
+    "scheduled_time": "2025-05-11T20:43:40.755689",
+    "creation_time": "2025-05-08T20:43:40.789002",
+    "status": "pending"
+  },
+  {
+    "id": "9fd01439-9f3c-46f1-b024-e09795907c67",
+    "action_type": "analyze_relationship",
+    "parameters": {
+      "focus": "depth",
+      "timeframe": "all"
+    },
+    "goal_id": "d35728c1-2550-4fe6-9f22-0b0005073bff",
+    "plan_id": "5f2ad6d8-4648-43b6-a6ac-8c2bcc5ca903",
+    "priority": 3,
+    "scheduled_time": "2025-05-09T02:43:47.746935",
+    "creation_time": "2025-05-08T20:43:47.746997",
+    "status": "pending"
+  },
+  {
+    "id": "7660763b-d32d-4cf2-a174-ab3bab1ae466",
+    "action_type": "identify_preferences",
+    "parameters": {},
+    "goal_id": "d35728c1-2550-4fe6-9f22-0b0005073bff",
+    "plan_id": "5f2ad6d8-4648-43b6-a6ac-8c2bcc5ca903",
+    "priority": 3,
+    "scheduled_time": "2025-05-09T14:43:47.746935",
+    "creation_time": "2025-05-08T20:43:47.764645",
+    "status": "pending"
+  },
+  {
+    "id": "5e40e239-2b36-4128-ab99-20dc23af5575",
+    "action_type": "develop_bond",
+    "parameters": {
+      "approach": "personalized",
+      "focus": "trust"
+    },
+    "goal_id": "d35728c1-2550-4fe6-9f22-0b0005073bff",
+    "plan_id": "5f2ad6d8-4648-43b6-a6ac-8c2bcc5ca903",
+    "priority": 3,
+    "scheduled_time": "2025-05-10T08:43:47.746935",
+    "creation_time": "2025-05-08T20:43:47.777135",
+    "status": "pending"
+  },
+  {
+    "id": "034990fb-314f-4820-a6c8-bb25ab49d76a",
+    "action_type": "research_topic",
+    "parameters": {
+      "topic": "advanced digital protection",
+      "depth": "medium"
+    },
+    "goal_id": "047d0069-c734-4c8a-90cb-93f74f40ccdc",
+    "plan_id": "3c6516d5-52e8-4d85-adc8-b1be8ec105ff",
+    "priority": 3,
+    "scheduled_time": "2025-05-09T00:43:58.179245",
+    "creation_time": "2025-05-08T20:43:58.181010",
+    "status": "pending"
+  },
+  {
+    "id": "6c9ef874-772d-4663-96c7-a8e47c0ad183",
+    "action_type": "analyze_conversation",
+    "parameters": {
+      "mode": "deep",
+      "focus": "preferences"
+    },
+    "goal_id": "047d0069-c734-4c8a-90cb-93f74f40ccdc",
+    "plan_id": "3c6516d5-52e8-4d85-adc8-b1be8ec105ff",
+    "priority": 3,
+    "scheduled_time": "2025-05-09T08:43:58.179245",
+    "creation_time": "2025-05-08T20:43:58.193853",
+    "status": "pending"
+  },
+  {
+    "id": "20d6c5be-3c92-49bd-82ff-eee2d2d9fc20",
+    "action_type": "integrate_learning",
+    "parameters": {},
+    "goal_id": "047d0069-c734-4c8a-90cb-93f74f40ccdc",
+    "plan_id": "3c6516d5-52e8-4d85-adc8-b1be8ec105ff",
+    "priority": 3,
+    "scheduled_time": "2025-05-10T20:43:58.179245",
+    "creation_time": "2025-05-08T20:43:58.218553",
+    "status": "pending"
+  },
+  {
+    "id": "d32e72f6-ee98-47e1-9934-2a12d26804a6",
+    "action_type": "analyze_threats",
+    "parameters": {},
+    "goal_id": "5917c151-7824-4aaa-a544-1cef00c1bb9c",
+    "plan_id": "c23b79a5-51b0-44af-96a2-8208124bcef6",
+    "priority": 3,
+    "scheduled_time": "2025-05-08T22:43:58.230392",
+    "creation_time": "2025-05-08T20:43:58.247690",
+    "status": "pending"
+  },
+  {
+    "id": "9cc1309c-6d1c-412a-9b5a-da35168bcf83",
+    "action_type": "deploy_protection",
+    "parameters": {
+      "protection_name": "proactive_shield",
+      "threat_type": "digital"
+    },
+    "goal_id": "5917c151-7824-4aaa-a544-1cef00c1bb9c",
+    "plan_id": "c23b79a5-51b0-44af-96a2-8208124bcef6",
+    "priority": 3,
+    "scheduled_time": "2025-05-08T23:43:58.230392",
+    "creation_time": "2025-05-08T20:43:58.252198",
+    "status": "pending"
+  },
+  {
+    "id": "c884a005-fb7d-4cdb-81dd-d2b724f6a3ff",
+    "action_type": "run_security_audit",
+    "parameters": {},
+    "goal_id": "5917c151-7824-4aaa-a544-1cef00c1bb9c",
+    "plan_id": "c23b79a5-51b0-44af-96a2-8208124bcef6",
+    "priority": 3,
+    "scheduled_time": "2025-05-11T20:43:58.230392",
+    "creation_time": "2025-05-08T20:43:58.255437",
+    "status": "pending"
+  },
+  {
+    "id": "1d2bf8e0-17f9-4f89-9290-691fe1f4b5ec",
+    "action_type": "analyze_relationship",
+    "parameters": {
+      "focus": "depth",
+      "timeframe": "all"
+    },
+    "goal_id": "0f6f3f8b-f985-4999-963e-215acffe9656",
+    "plan_id": "bb1816ca-1287-4713-8ac2-1df051da7356",
+    "priority": 3,
+    "scheduled_time": "2025-05-09T02:43:58.258612",
+    "creation_time": "2025-05-08T20:43:58.258655",
+    "status": "pending"
+  },
+  {
+    "id": "eac1fc88-8d10-4beb-8e35-8c671c59e10b",
+    "action_type": "identify_preferences",
+    "parameters": {},
+    "goal_id": "0f6f3f8b-f985-4999-963e-215acffe9656",
+    "plan_id": "bb1816ca-1287-4713-8ac2-1df051da7356",
+    "priority": 3,
+    "scheduled_time": "2025-05-09T14:43:58.258612",
+    "creation_time": "2025-05-08T20:43:58.263476",
+    "status": "pending"
+  },
+  {
+    "id": "ded56bb9-3c50-493e-9155-03e151e1c963",
+    "action_type": "develop_bond",
+    "parameters": {
+      "approach": "personalized",
+      "focus": "trust"
+    },
+    "goal_id": "0f6f3f8b-f985-4999-963e-215acffe9656",
+    "plan_id": "bb1816ca-1287-4713-8ac2-1df051da7356",
+    "priority": 3,
+    "scheduled_time": "2025-05-10T08:43:58.258612",
+    "creation_time": "2025-05-08T20:43:58.266805",
+    "status": "pending"
+  },
+  {
+    "id": "9a89edf7-6b1d-4b4b-b4fa-dd29317cfc1e",
+    "action_type": "research_topic",
+    "parameters": {
+      "topic": "advanced digital protection",
+      "depth": "medium"
+    },
+    "goal_id": "c627b962-d28a-48c1-96b5-91e236ffce48",
+    "plan_id": "8d632ebf-ccf5-4c36-9b22-526bc3cc084a",
+    "priority": 3,
+    "scheduled_time": "2025-05-09T00:43:58.271777",
+    "creation_time": "2025-05-08T20:43:58.271856",
+    "status": "pending"
+  },
+  {
+    "id": "e8d5baea-c4e4-46f0-9da6-a2e28a0e50e4",
+    "action_type": "analyze_conversation",
+    "parameters": {
+      "mode": "deep",
+      "focus": "preferences"
+    },
+    "goal_id": "c627b962-d28a-48c1-96b5-91e236ffce48",
+    "plan_id": "8d632ebf-ccf5-4c36-9b22-526bc3cc084a",
+    "priority": 3,
+    "scheduled_time": "2025-05-09T08:43:58.271777",
+    "creation_time": "2025-05-08T20:43:58.274945",
+    "status": "pending"
+  },
+  {
+    "id": "29e387e6-b446-4113-acb0-1a3f8d4f03a9",
+    "action_type": "integrate_learning",
+    "parameters": {},
+    "goal_id": "c627b962-d28a-48c1-96b5-91e236ffce48",
+    "plan_id": "8d632ebf-ccf5-4c36-9b22-526bc3cc084a",
+    "priority": 3,
+    "scheduled_time": "2025-05-10T20:43:58.271777",
+    "creation_time": "2025-05-08T20:43:58.283749",
+    "status": "pending"
+  },
+  {
+    "id": "c06f4a09-c3fe-40e9-89e5-0cdd97cf555b",
+    "action_type": "analyze_threats",
+    "parameters": {},
+    "goal_id": "2d00d87d-9e20-4673-bbc3-24cc5a75ebad",
+    "plan_id": "231d8914-166d-4cb4-a5b5-76801ce47288",
+    "priority": 3,
+    "scheduled_time": "2025-05-08T22:43:58.286671",
+    "creation_time": "2025-05-08T20:43:58.291127",
+    "status": "pending"
+  },
+  {
+    "id": "5e87fa59-4160-4d70-8eb7-f0dc2902ca9a",
+    "action_type": "deploy_protection",
+    "parameters": {
+      "protection_name": "proactive_shield",
+      "threat_type": "digital"
+    },
+    "goal_id": "2d00d87d-9e20-4673-bbc3-24cc5a75ebad",
+    "plan_id": "231d8914-166d-4cb4-a5b5-76801ce47288",
+    "priority": 3,
+    "scheduled_time": "2025-05-08T23:43:58.286671",
+    "creation_time": "2025-05-08T20:43:58.293982",
+    "status": "pending"
+  },
+  {
+    "id": "5994f7df-42cd-4b26-b605-9db41c07c6cf",
+    "action_type": "run_security_audit",
+    "parameters": {},
+    "goal_id": "2d00d87d-9e20-4673-bbc3-24cc5a75ebad",
+    "plan_id": "231d8914-166d-4cb4-a5b5-76801ce47288",
+    "priority": 3,
+    "scheduled_time": "2025-05-11T20:43:58.286671",
+    "creation_time": "2025-05-08T20:43:58.298873",
+    "status": "pending"
+  },
+  {
+    "id": "f7590575-2340-4da2-aa68-c7ac2ea0a29b",
+    "action_type": "analyze_relationship",
+    "parameters": {
+      "focus": "depth",
+      "timeframe": "all"
+    },
+    "goal_id": "bc212ffe-ab71-4c62-a5ca-8b825bae8e25",
+    "plan_id": "cb437887-10f8-431f-bbe2-37f017e73adc",
+    "priority": 3,
+    "scheduled_time": "2025-05-09T02:43:58.301847",
+    "creation_time": "2025-05-08T20:43:58.301911",
+    "status": "pending"
+  },
+  {
+    "id": "44d570a2-360a-4c75-9ea5-041359bf46f2",
+    "action_type": "identify_preferences",
+    "parameters": {},
+    "goal_id": "bc212ffe-ab71-4c62-a5ca-8b825bae8e25",
+    "plan_id": "cb437887-10f8-431f-bbe2-37f017e73adc",
+    "priority": 3,
+    "scheduled_time": "2025-05-09T14:43:58.301847",
+    "creation_time": "2025-05-08T20:43:58.306467",
+    "status": "pending"
+  },
+  {
+    "id": "87246c4f-5afc-4740-8f6b-da56e6ed4572",
+    "action_type": "develop_bond",
+    "parameters": {
+      "approach": "personalized",
+      "focus": "trust"
+    },
+    "goal_id": "bc212ffe-ab71-4c62-a5ca-8b825bae8e25",
+    "plan_id": "cb437887-10f8-431f-bbe2-37f017e73adc",
+    "priority": 3,
+    "scheduled_time": "2025-05-10T08:43:58.301847",
+    "creation_time": "2025-05-08T20:43:58.327738",
+    "status": "pending"
+  },
+  {
+    "id": "6c070146-bddc-4596-a4e4-49680c3e0225",
+    "action_type": "research_topic",
+    "parameters": {
+      "topic": "advanced digital protection",
+      "depth": "medium"
+    },
+    "goal_id": "f9480c89-efeb-42e1-a906-c1653b60e878",
+    "plan_id": "b0c3f47d-87ac-4446-afe2-6ed2b8adda86",
+    "priority": 3,
+    "scheduled_time": "2025-05-09T00:43:58.331834",
+    "creation_time": "2025-05-08T20:43:58.332139",
+    "status": "pending"
+  },
+  {
+    "id": "1f1eb7d2-a0b9-48cf-afed-97259d216af1",
+    "action_type": "analyze_conversation",
+    "parameters": {
+      "mode": "deep",
+      "focus": "preferences"
+    },
+    "goal_id": "f9480c89-efeb-42e1-a906-c1653b60e878",
+    "plan_id": "b0c3f47d-87ac-4446-afe2-6ed2b8adda86",
+    "priority": 3,
+    "scheduled_time": "2025-05-09T08:43:58.331834",
+    "creation_time": "2025-05-08T20:43:58.338118",
+    "status": "pending"
+  },
+  {
+    "id": "fd398da5-8f12-4e3c-ab54-f9a05cf92d66",
+    "action_type": "integrate_learning",
+    "parameters": {},
+    "goal_id": "f9480c89-efeb-42e1-a906-c1653b60e878",
+    "plan_id": "b0c3f47d-87ac-4446-afe2-6ed2b8adda86",
+    "priority": 3,
+    "scheduled_time": "2025-05-10T20:43:58.331834",
+    "creation_time": "2025-05-08T20:43:58.349020",
+    "status": "pending"
+  },
+  {
+    "id": "b1b5f31a-0b04-4ab4-bd6e-8d12fa8b4aad",
+    "action_type": "analyze_threats",
+    "parameters": {},
+    "goal_id": "207ff88d-5130-4f7b-96dc-88035b780f95",
+    "plan_id": "e4e445af-86c5-4e15-8180-baf76f6310ca",
+    "priority": 3,
+    "scheduled_time": "2025-05-08T22:43:58.356287",
+    "creation_time": "2025-05-08T20:43:58.360623",
+    "status": "pending"
+  },
+  {
+    "id": "e8ae1175-09f7-4f3a-aaec-ce38f9ad2dca",
+    "action_type": "deploy_protection",
+    "parameters": {
+      "protection_name": "proactive_shield",
+      "threat_type": "digital"
+    },
+    "goal_id": "207ff88d-5130-4f7b-96dc-88035b780f95",
+    "plan_id": "e4e445af-86c5-4e15-8180-baf76f6310ca",
+    "priority": 3,
+    "scheduled_time": "2025-05-08T23:43:58.356287",
+    "creation_time": "2025-05-08T20:43:58.368409",
+    "status": "pending"
+  },
+  {
+    "id": "78aa7f54-9d90-40d2-99f5-7e99fcc5b7fd",
+    "action_type": "run_security_audit",
+    "parameters": {},
+    "goal_id": "207ff88d-5130-4f7b-96dc-88035b780f95",
+    "plan_id": "e4e445af-86c5-4e15-8180-baf76f6310ca",
+    "priority": 3,
+    "scheduled_time": "2025-05-11T20:43:58.356287",
+    "creation_time": "2025-05-08T20:43:58.380228",
+    "status": "pending"
+  },
+  {
+    "id": "446164d8-642e-4495-a00e-2c336a84d594",
+    "action_type": "analyze_relationship",
+    "parameters": {
+      "focus": "depth",
+      "timeframe": "all"
+    },
+    "goal_id": "7d9985a9-85bf-4d14-ae94-2f7fd30f423b",
+    "plan_id": "dd32ee8b-07ca-4fad-97c1-fce153f689aa",
+    "priority": 3,
+    "scheduled_time": "2025-05-09T02:43:58.383461",
+    "creation_time": "2025-05-08T20:43:58.383500",
+    "status": "pending"
+  },
+  {
+    "id": "674bd97c-1934-4d93-92c7-8cfa8b25f7d1",
+    "action_type": "identify_preferences",
+    "parameters": {},
+    "goal_id": "7d9985a9-85bf-4d14-ae94-2f7fd30f423b",
+    "plan_id": "dd32ee8b-07ca-4fad-97c1-fce153f689aa",
+    "priority": 3,
+    "scheduled_time": "2025-05-09T14:43:58.383461",
+    "creation_time": "2025-05-08T20:43:58.389046",
+    "status": "pending"
+  },
+  {
+    "id": "c0ac4ca6-efa6-43d8-ad82-859d8fe09e3c",
+    "action_type": "develop_bond",
+    "parameters": {
+      "approach": "personalized",
+      "focus": "trust"
+    },
+    "goal_id": "7d9985a9-85bf-4d14-ae94-2f7fd30f423b",
+    "plan_id": "dd32ee8b-07ca-4fad-97c1-fce153f689aa",
+    "priority": 3,
+    "scheduled_time": "2025-05-10T08:43:58.383461",
+    "creation_time": "2025-05-08T20:43:58.392627",
+    "status": "pending"
+  },
+  {
+    "id": "1a35066b-1aa0-444e-963a-b3a9a94e0eca",
+    "action_type": "research_topic",
+    "parameters": {
+      "topic": "advanced digital protection",
+      "depth": "medium"
+    },
+    "goal_id": "5c244e94-1707-4c06-b310-0885178463ba",
+    "plan_id": "e18b25c4-4252-413a-9054-17129a7056f3",
+    "priority": 3,
+    "scheduled_time": "2025-05-09T00:43:58.405214",
+    "creation_time": "2025-05-08T20:43:58.405293",
+    "status": "pending"
+  },
+  {
+    "id": "80f53dc3-b3d8-44b7-81df-cdc9f75e79db",
+    "action_type": "analyze_conversation",
+    "parameters": {
+      "mode": "deep",
+      "focus": "preferences"
+    },
+    "goal_id": "5c244e94-1707-4c06-b310-0885178463ba",
+    "plan_id": "e18b25c4-4252-413a-9054-17129a7056f3",
+    "priority": 3,
+    "scheduled_time": "2025-05-09T08:43:58.405214",
+    "creation_time": "2025-05-08T20:43:58.411334",
+    "status": "pending"
+  },
+  {
+    "id": "0fff68c7-8fb2-4297-a10d-f7c4b2e53342",
+    "action_type": "integrate_learning",
+    "parameters": {},
+    "goal_id": "5c244e94-1707-4c06-b310-0885178463ba",
+    "plan_id": "e18b25c4-4252-413a-9054-17129a7056f3",
+    "priority": 3,
+    "scheduled_time": "2025-05-10T20:43:58.405214",
+    "creation_time": "2025-05-08T20:43:58.421383",
+    "status": "pending"
+  },
+  {
+    "id": "a71e866d-c762-4b70-b963-59901d509ceb",
+    "action_type": "analyze_threats",
+    "parameters": {},
+    "goal_id": "7673dde5-b492-4dcf-ab58-ff889e5d2a6b",
+    "plan_id": "1540c7cd-e4f3-4b3d-a892-de905c22c305",
+    "priority": 3,
+    "scheduled_time": "2025-05-08T22:43:58.425623",
+    "creation_time": "2025-05-08T20:43:58.441071",
+    "status": "pending"
+  },
+  {
+    "id": "f13fcdd8-d2d8-48b8-9234-743f020c8512",
+    "action_type": "deploy_protection",
+    "parameters": {
+      "protection_name": "proactive_shield",
+      "threat_type": "digital"
+    },
+    "goal_id": "7673dde5-b492-4dcf-ab58-ff889e5d2a6b",
+    "plan_id": "1540c7cd-e4f3-4b3d-a892-de905c22c305",
+    "priority": 3,
+    "scheduled_time": "2025-05-08T23:43:58.425623",
+    "creation_time": "2025-05-08T20:43:58.448707",
+    "status": "pending"
+  },
+  {
+    "id": "62856466-0893-4016-90f5-6a9f8ba84548",
+    "action_type": "run_security_audit",
+    "parameters": {},
+    "goal_id": "7673dde5-b492-4dcf-ab58-ff889e5d2a6b",
+    "plan_id": "1540c7cd-e4f3-4b3d-a892-de905c22c305",
+    "priority": 3,
+    "scheduled_time": "2025-05-11T20:43:58.425623",
+    "creation_time": "2025-05-08T20:43:58.453363",
+    "status": "pending"
+  },
+  {
+    "id": "7191c9a0-7e73-4583-a48d-b9e66de50b2d",
+    "action_type": "analyze_relationship",
+    "parameters": {
+      "focus": "depth",
+      "timeframe": "all"
+    },
+    "goal_id": "84befdbe-1284-45ba-8e83-1044c5cab05d",
+    "plan_id": "f6ca3206-ad0b-408e-ad4a-34b28b33b0d9",
+    "priority": 3,
+    "scheduled_time": "2025-05-09T02:43:58.462075",
+    "creation_time": "2025-05-08T20:43:58.462133",
+    "status": "pending"
+  },
+  {
+    "id": "b48c6b1f-0557-4ba0-ba9a-f8348ce406b7",
+    "action_type": "identify_preferences",
+    "parameters": {},
+    "goal_id": "84befdbe-1284-45ba-8e83-1044c5cab05d",
+    "plan_id": "f6ca3206-ad0b-408e-ad4a-34b28b33b0d9",
+    "priority": 3,
+    "scheduled_time": "2025-05-09T14:43:58.462075",
+    "creation_time": "2025-05-08T20:43:58.473613",
+    "status": "pending"
+  },
+  {
+    "id": "f7f1b02f-e235-4a57-a3e6-b7118da22b9a",
+    "action_type": "develop_bond",
+    "parameters": {
+      "approach": "personalized",
+      "focus": "trust"
+    },
+    "goal_id": "84befdbe-1284-45ba-8e83-1044c5cab05d",
+    "plan_id": "f6ca3206-ad0b-408e-ad4a-34b28b33b0d9",
+    "priority": 3,
+    "scheduled_time": "2025-05-10T08:43:58.462075",
+    "creation_time": "2025-05-08T20:43:58.478581",
+    "status": "pending"
+  },
+  {
+    "id": "56da2730-15fe-4123-a42d-5b8579a033f8",
+    "action_type": "research_topic",
+    "parameters": {
+      "topic": "advanced digital protection",
+      "depth": "medium"
+    },
+    "goal_id": "01e35f90-f343-44e7-8c31-a9ccaef73867",
+    "plan_id": "ac6cbcc3-d10e-41dc-be0e-354faeb336fa",
+    "priority": 3,
+    "scheduled_time": "2025-05-09T00:43:58.485567",
+    "creation_time": "2025-05-08T20:43:58.485649",
+    "status": "pending"
+  },
+  {
+    "id": "206c8700-fc13-4748-bed9-90c24db791f4",
+    "action_type": "analyze_conversation",
+    "parameters": {
+      "mode": "deep",
+      "focus": "preferences"
+    },
+    "goal_id": "01e35f90-f343-44e7-8c31-a9ccaef73867",
+    "plan_id": "ac6cbcc3-d10e-41dc-be0e-354faeb336fa",
+    "priority": 3,
+    "scheduled_time": "2025-05-09T08:43:58.485567",
+    "creation_time": "2025-05-08T20:43:58.496034",
+    "status": "pending"
+  },
+  {
+    "id": "5f9e8cfd-76fa-46b3-a32f-0dfa53adb9ef",
+    "action_type": "integrate_learning",
+    "parameters": {},
+    "goal_id": "01e35f90-f343-44e7-8c31-a9ccaef73867",
+    "plan_id": "ac6cbcc3-d10e-41dc-be0e-354faeb336fa",
+    "priority": 3,
+    "scheduled_time": "2025-05-10T20:43:58.485567",
+    "creation_time": "2025-05-08T20:43:58.506171",
+    "status": "pending"
+  },
+  {
+    "id": "f8a3502c-11b1-4c23-b710-8627a94408a4",
+    "action_type": "analyze_threats",
+    "parameters": {},
+    "goal_id": "fc3bde38-edc6-4e35-b555-6a1fac3334c4",
+    "plan_id": "85514dc4-1026-452a-b730-930db8146b58",
+    "priority": 3,
+    "scheduled_time": "2025-05-08T22:43:58.513674",
+    "creation_time": "2025-05-08T20:43:58.519094",
+    "status": "pending"
+  },
+  {
+    "id": "b474cf08-a61f-4d68-bb41-dc95e93f7596",
+    "action_type": "deploy_protection",
+    "parameters": {
+      "protection_name": "proactive_shield",
+      "threat_type": "digital"
+    },
+    "goal_id": "fc3bde38-edc6-4e35-b555-6a1fac3334c4",
+    "plan_id": "85514dc4-1026-452a-b730-930db8146b58",
+    "priority": 3,
+    "scheduled_time": "2025-05-08T23:43:58.513674",
+    "creation_time": "2025-05-08T20:43:58.525115",
+    "status": "pending"
+  },
+  {
+    "id": "d49b7c62-0ad3-4699-a18b-278b5dcaa4fe",
+    "action_type": "run_security_audit",
+    "parameters": {},
+    "goal_id": "fc3bde38-edc6-4e35-b555-6a1fac3334c4",
+    "plan_id": "85514dc4-1026-452a-b730-930db8146b58",
+    "priority": 3,
+    "scheduled_time": "2025-05-11T20:43:58.513674",
+    "creation_time": "2025-05-08T20:43:58.530653",
+    "status": "pending"
+  },
+  {
+    "id": "973bfff4-b907-4932-b97a-82a1159dadd2",
+    "action_type": "analyze_relationship",
+    "parameters": {
+      "focus": "depth",
+      "timeframe": "all"
+    },
+    "goal_id": "f72f56d7-e3ec-40d7-a16a-72149b2515e8",
+    "plan_id": "5008adf1-1eaa-4f54-8632-c88b87810066",
+    "priority": 3,
+    "scheduled_time": "2025-05-09T02:43:58.534130",
+    "creation_time": "2025-05-08T20:43:58.534174",
+    "status": "pending"
+  },
+  {
+    "id": "1688c49d-6571-4cfe-a1dc-3ca40eefd33f",
+    "action_type": "identify_preferences",
+    "parameters": {},
+    "goal_id": "f72f56d7-e3ec-40d7-a16a-72149b2515e8",
+    "plan_id": "5008adf1-1eaa-4f54-8632-c88b87810066",
+    "priority": 3,
+    "scheduled_time": "2025-05-09T14:43:58.534130",
+    "creation_time": "2025-05-08T20:43:58.540229",
+    "status": "pending"
+  },
+  {
+    "id": "288d5c08-1a04-4933-9f68-1bf304c7d33d",
+    "action_type": "develop_bond",
+    "parameters": {
+      "approach": "personalized",
+      "focus": "trust"
+    },
+    "goal_id": "f72f56d7-e3ec-40d7-a16a-72149b2515e8",
+    "plan_id": "5008adf1-1eaa-4f54-8632-c88b87810066",
+    "priority": 3,
+    "scheduled_time": "2025-05-10T08:43:58.534130",
+    "creation_time": "2025-05-08T20:43:58.545071",
+    "status": "pending"
+  },
+  {
+    "id": "835ea2d1-a7d6-4466-87c0-825b161e9611",
+    "action_type": "research_topic",
+    "parameters": {
+      "topic": "advanced digital protection",
+      "depth": "medium"
+    },
+    "goal_id": "e273ece0-7a56-4fb8-9ae5-dab74c44ae78",
+    "plan_id": "f04ea55c-36af-426f-b620-3461cc765f24",
+    "priority": 3,
+    "scheduled_time": "2025-05-09T00:43:58.549369",
+    "creation_time": "2025-05-08T20:43:58.549431",
+    "status": "pending"
+  },
+  {
+    "id": "2027eaa6-51ad-4689-867f-102ea00110ee",
+    "action_type": "analyze_conversation",
+    "parameters": {
+      "mode": "deep",
+      "focus": "preferences"
+    },
+    "goal_id": "e273ece0-7a56-4fb8-9ae5-dab74c44ae78",
+    "plan_id": "f04ea55c-36af-426f-b620-3461cc765f24",
+    "priority": 3,
+    "scheduled_time": "2025-05-09T08:43:58.549369",
+    "creation_time": "2025-05-08T20:43:58.553088",
+    "status": "pending"
+  },
+  {
+    "id": "9f43daab-14f0-4732-bfd8-d81921f1dc7a",
+    "action_type": "integrate_learning",
+    "parameters": {},
+    "goal_id": "e273ece0-7a56-4fb8-9ae5-dab74c44ae78",
+    "plan_id": "f04ea55c-36af-426f-b620-3461cc765f24",
+    "priority": 3,
+    "scheduled_time": "2025-05-10T20:43:58.549369",
+    "creation_time": "2025-05-08T20:43:58.563183",
+    "status": "pending"
+  },
+  {
+    "id": "0d656206-32a9-49b6-ae46-854346ff1ca4",
+    "action_type": "analyze_threats",
+    "parameters": {},
+    "goal_id": "75fde29c-949c-4917-8a53-bad0f33b55b4",
+    "plan_id": "972d5260-acc6-4ae8-b760-c808ad555830",
+    "priority": 3,
+    "scheduled_time": "2025-05-08T22:43:58.567776",
+    "creation_time": "2025-05-08T20:43:58.571731",
+    "status": "pending"
+  },
+  {
+    "id": "b2129917-7d87-417d-88a6-81d3cb1b1c78",
+    "action_type": "deploy_protection",
+    "parameters": {
+      "protection_name": "proactive_shield",
+      "threat_type": "digital"
+    },
+    "goal_id": "75fde29c-949c-4917-8a53-bad0f33b55b4",
+    "plan_id": "972d5260-acc6-4ae8-b760-c808ad555830",
+    "priority": 3,
+    "scheduled_time": "2025-05-08T23:43:58.567776",
+    "creation_time": "2025-05-08T20:43:58.576602",
+    "status": "pending"
+  },
+  {
+    "id": "945313a8-47ad-47de-9afd-efc2bb97c2a3",
+    "action_type": "run_security_audit",
+    "parameters": {},
+    "goal_id": "75fde29c-949c-4917-8a53-bad0f33b55b4",
+    "plan_id": "972d5260-acc6-4ae8-b760-c808ad555830",
+    "priority": 3,
+    "scheduled_time": "2025-05-11T20:43:58.567776",
+    "creation_time": "2025-05-08T20:43:58.580667",
+    "status": "pending"
+  },
+  {
+    "id": "80b7572f-cf9c-43ac-b5d0-f7e3f4e95b57",
+    "action_type": "analyze_relationship",
+    "parameters": {
+      "focus": "depth",
+      "timeframe": "all"
+    },
+    "goal_id": "a342e796-fe8b-4c1d-9f8b-9d3778d5ce0f",
+    "plan_id": "2806a5c2-9731-4a4a-a551-d90a74cca234",
+    "priority": 3,
+    "scheduled_time": "2025-05-09T02:43:58.585364",
+    "creation_time": "2025-05-08T20:43:58.585439",
+    "status": "pending"
+  },
+  {
+    "id": "d745d8b1-dd0d-464f-bf1f-58013ccdc70c",
+    "action_type": "identify_preferences",
+    "parameters": {},
+    "goal_id": "a342e796-fe8b-4c1d-9f8b-9d3778d5ce0f",
+    "plan_id": "2806a5c2-9731-4a4a-a551-d90a74cca234",
+    "priority": 3,
+    "scheduled_time": "2025-05-09T14:43:58.585364",
+    "creation_time": "2025-05-08T20:43:58.590683",
+    "status": "pending"
+  },
+  {
+    "id": "0eebd1f1-179d-43b9-94d3-35e786ecebc3",
+    "action_type": "develop_bond",
+    "parameters": {
+      "approach": "personalized",
+      "focus": "trust"
+    },
+    "goal_id": "a342e796-fe8b-4c1d-9f8b-9d3778d5ce0f",
+    "plan_id": "2806a5c2-9731-4a4a-a551-d90a74cca234",
+    "priority": 3,
+    "scheduled_time": "2025-05-10T08:43:58.585364",
+    "creation_time": "2025-05-08T20:43:58.596722",
+    "status": "pending"
+  },
+  {
+    "id": "20e24cce-cfad-4e6d-9f36-d852178ebeb4",
+    "action_type": "research_topic",
+    "parameters": {
+      "topic": "advanced digital protection",
+      "depth": "medium"
+    },
+    "goal_id": "3a6f4106-53b6-42dd-901e-3a4b736a2d77",
+    "plan_id": "617b9f92-3273-46e2-8ae5-3c8121d32399",
+    "priority": 3,
+    "scheduled_time": "2025-05-09T00:43:58.603690",
+    "creation_time": "2025-05-08T20:43:58.603756",
+    "status": "pending"
+  },
+  {
+    "id": "5abc01f4-fb6f-43f1-a790-d6a134f46a08",
+    "action_type": "analyze_conversation",
+    "parameters": {
+      "mode": "deep",
+      "focus": "preferences"
+    },
+    "goal_id": "3a6f4106-53b6-42dd-901e-3a4b736a2d77",
+    "plan_id": "617b9f92-3273-46e2-8ae5-3c8121d32399",
+    "priority": 3,
+    "scheduled_time": "2025-05-09T08:43:58.603690",
+    "creation_time": "2025-05-08T20:43:58.609891",
+    "status": "pending"
+  },
+  {
+    "id": "9a5e79e8-24d9-470a-b4d1-cef297935a8f",
+    "action_type": "integrate_learning",
+    "parameters": {},
+    "goal_id": "3a6f4106-53b6-42dd-901e-3a4b736a2d77",
+    "plan_id": "617b9f92-3273-46e2-8ae5-3c8121d32399",
+    "priority": 3,
+    "scheduled_time": "2025-05-10T20:43:58.603690",
+    "creation_time": "2025-05-08T20:43:58.623420",
+    "status": "pending"
+  },
+  {
+    "id": "7efd3c0a-9e95-4ab6-84d1-27a3610016b4",
+    "action_type": "analyze_threats",
+    "parameters": {},
+    "goal_id": "f33e179a-241e-4530-bd0b-76594ee30766",
+    "plan_id": "4f5bda2e-abf0-40fe-a15a-691827323b98",
+    "priority": 3,
+    "scheduled_time": "2025-05-08T22:44:42.267516",
+    "creation_time": "2025-05-08T20:44:42.288049",
+    "status": "pending"
+  },
+  {
+    "id": "41a8cf7f-15ee-45bd-89ae-3d74270328a7",
+    "action_type": "deploy_protection",
+    "parameters": {
+      "protection_name": "proactive_shield",
+      "threat_type": "digital"
+    },
+    "goal_id": "f33e179a-241e-4530-bd0b-76594ee30766",
+    "plan_id": "4f5bda2e-abf0-40fe-a15a-691827323b98",
+    "priority": 3,
+    "scheduled_time": "2025-05-08T23:44:42.267516",
+    "creation_time": "2025-05-08T20:44:42.319145",
+    "status": "pending"
+  },
+  {
+    "id": "0b51fff9-6741-492d-8b51-4c3758a887fb",
+    "action_type": "run_security_audit",
+    "parameters": {},
+    "goal_id": "f33e179a-241e-4530-bd0b-76594ee30766",
+    "plan_id": "4f5bda2e-abf0-40fe-a15a-691827323b98",
+    "priority": 3,
+    "scheduled_time": "2025-05-11T20:44:42.267516",
+    "creation_time": "2025-05-08T20:44:42.338377",
+    "status": "pending"
+  },
+  {
+    "id": "cc35d737-b120-407d-85e4-b93b23db8ebb",
+    "action_type": "analyze_relationship",
+    "parameters": {
+      "focus": "depth",
+      "timeframe": "all"
+    },
+    "goal_id": "5ac23c19-904b-4728-adc3-fee1ab41ac83",
+    "plan_id": "9d4fc765-028c-4260-8809-ff52f91ca6e0",
+    "priority": 3,
+    "scheduled_time": "2025-05-09T02:44:42.352399",
+    "creation_time": "2025-05-08T20:44:42.352456",
+    "status": "pending"
+  },
+  {
+    "id": "e6f17296-b5ff-463b-8b60-5e428b29bc68",
+    "action_type": "identify_preferences",
+    "parameters": {},
+    "goal_id": "5ac23c19-904b-4728-adc3-fee1ab41ac83",
+    "plan_id": "9d4fc765-028c-4260-8809-ff52f91ca6e0",
+    "priority": 3,
+    "scheduled_time": "2025-05-09T14:44:42.352399",
+    "creation_time": "2025-05-08T20:44:42.370596",
+    "status": "pending"
+  },
+  {
+    "id": "de49772f-ea98-41d7-9441-04d60babe662",
+    "action_type": "develop_bond",
+    "parameters": {
+      "approach": "personalized",
+      "focus": "trust"
+    },
+    "goal_id": "5ac23c19-904b-4728-adc3-fee1ab41ac83",
+    "plan_id": "9d4fc765-028c-4260-8809-ff52f91ca6e0",
+    "priority": 3,
+    "scheduled_time": "2025-05-10T08:44:42.352399",
+    "creation_time": "2025-05-08T20:44:42.378152",
+    "status": "pending"
+  },
+  {
+    "id": "fb6bce09-7d58-4d32-9bfd-2a7483c3e95a",
+    "action_type": "research_topic",
+    "parameters": {
+      "topic": "advanced digital protection",
+      "depth": "medium"
+    },
+    "goal_id": "806af2b8-0228-4932-84ae-7f93f3e55572",
+    "plan_id": "9cceeb1a-3790-4e04-8b2f-93130161e982",
+    "priority": 3,
+    "scheduled_time": "2025-05-09T00:44:42.383571",
+    "creation_time": "2025-05-08T20:44:42.383659",
+    "status": "pending"
+  },
+  {
+    "id": "3d35966c-7f04-40de-b8b0-9f0d1945c902",
+    "action_type": "analyze_conversation",
+    "parameters": {
+      "mode": "deep",
+      "focus": "preferences"
+    },
+    "goal_id": "806af2b8-0228-4932-84ae-7f93f3e55572",
+    "plan_id": "9cceeb1a-3790-4e04-8b2f-93130161e982",
+    "priority": 3,
+    "scheduled_time": "2025-05-09T08:44:42.383571",
+    "creation_time": "2025-05-08T20:44:42.388712",
+    "status": "pending"
+  },
+  {
+    "id": "160d1d8a-169c-4bd5-9499-d2b23ff002dd",
+    "action_type": "integrate_learning",
+    "parameters": {},
+    "goal_id": "806af2b8-0228-4932-84ae-7f93f3e55572",
+    "plan_id": "9cceeb1a-3790-4e04-8b2f-93130161e982",
+    "priority": 3,
+    "scheduled_time": "2025-05-10T20:44:42.383571",
+    "creation_time": "2025-05-08T20:44:42.408518",
+    "status": "pending"
+  },
+  {
+    "id": "686752b0-a146-4d21-8de4-de78bf6180b5",
+    "action_type": "analyze_threats",
+    "parameters": {},
+    "goal_id": "8ad2cea5-ef5b-4b12-af70-b6183d9a27f4",
+    "plan_id": "3ce1db5e-57a6-4844-acea-604a3bf41750",
+    "priority": 3,
+    "scheduled_time": "2025-05-08T22:44:48.238289",
+    "creation_time": "2025-05-08T20:44:48.272906",
+    "status": "pending"
+  },
+  {
+    "id": "72b406b3-8d78-4f9a-9eee-6d2a5d583632",
+    "action_type": "deploy_protection",
+    "parameters": {
+      "protection_name": "proactive_shield",
+      "threat_type": "digital"
+    },
+    "goal_id": "8ad2cea5-ef5b-4b12-af70-b6183d9a27f4",
+    "plan_id": "3ce1db5e-57a6-4844-acea-604a3bf41750",
+    "priority": 3,
+    "scheduled_time": "2025-05-08T23:44:48.238289",
+    "creation_time": "2025-05-08T20:44:48.293417",
+    "status": "pending"
+  },
+  {
+    "id": "ea6f3d6a-4b78-4611-b9ba-b7e64f9eafd9",
+    "action_type": "run_security_audit",
+    "parameters": {},
+    "goal_id": "8ad2cea5-ef5b-4b12-af70-b6183d9a27f4",
+    "plan_id": "3ce1db5e-57a6-4844-acea-604a3bf41750",
+    "priority": 3,
+    "scheduled_time": "2025-05-11T20:44:48.238289",
+    "creation_time": "2025-05-08T20:44:48.309554",
+    "status": "pending"
+  },
+  {
+    "id": "11e574d7-0b19-40be-a8e0-5c0f835a168f",
+    "action_type": "analyze_relationship",
+    "parameters": {
+      "focus": "depth",
+      "timeframe": "all"
+    },
+    "goal_id": "ed913df8-d8a1-439e-bdb7-156e3041d498",
+    "plan_id": "a3efa59a-d9f7-469b-bcdd-3a3fc6949e48",
+    "priority": 3,
+    "scheduled_time": "2025-05-09T02:44:48.328174",
+    "creation_time": "2025-05-08T20:44:48.328243",
+    "status": "pending"
+  },
+  {
+    "id": "5941b84f-ba54-4e23-9e01-6f53a9ef82ee",
+    "action_type": "identify_preferences",
+    "parameters": {},
+    "goal_id": "ed913df8-d8a1-439e-bdb7-156e3041d498",
+    "plan_id": "a3efa59a-d9f7-469b-bcdd-3a3fc6949e48",
+    "priority": 3,
+    "scheduled_time": "2025-05-09T14:44:48.328174",
+    "creation_time": "2025-05-08T20:44:48.337452",
+    "status": "pending"
+  },
+  {
+    "id": "b064171c-1f7a-41ac-a749-0bb71c7438a3",
+    "action_type": "develop_bond",
+    "parameters": {
+      "approach": "personalized",
+      "focus": "trust"
+    },
+    "goal_id": "ed913df8-d8a1-439e-bdb7-156e3041d498",
+    "plan_id": "a3efa59a-d9f7-469b-bcdd-3a3fc6949e48",
+    "priority": 3,
+    "scheduled_time": "2025-05-10T08:44:48.328174",
+    "creation_time": "2025-05-08T20:44:48.342640",
+    "status": "pending"
+  },
+  {
+    "id": "9e549af0-d419-4bad-94b4-b30fd2ea644f",
+    "action_type": "research_topic",
+    "parameters": {
+      "topic": "advanced digital protection",
+      "depth": "medium"
+    },
+    "goal_id": "56210898-5fe9-448b-b0d9-f50747599a5b",
+    "plan_id": "94e63379-1292-4c32-a2ff-b03d739f4dc3",
+    "priority": 3,
+    "scheduled_time": "2025-05-09T00:44:48.349571",
+    "creation_time": "2025-05-08T20:44:48.349637",
+    "status": "pending"
+  },
+  {
+    "id": "2324e078-e2b7-4b8d-9ef5-3854446dcbf8",
+    "action_type": "analyze_conversation",
+    "parameters": {
+      "mode": "deep",
+      "focus": "preferences"
+    },
+    "goal_id": "56210898-5fe9-448b-b0d9-f50747599a5b",
+    "plan_id": "94e63379-1292-4c32-a2ff-b03d739f4dc3",
+    "priority": 3,
+    "scheduled_time": "2025-05-09T08:44:48.349571",
+    "creation_time": "2025-05-08T20:44:48.355137",
+    "status": "pending"
+  },
+  {
+    "id": "624f5ad9-6abd-4885-9676-7205b5653e7c",
+    "action_type": "integrate_learning",
+    "parameters": {},
+    "goal_id": "56210898-5fe9-448b-b0d9-f50747599a5b",
+    "plan_id": "94e63379-1292-4c32-a2ff-b03d739f4dc3",
+    "priority": 3,
+    "scheduled_time": "2025-05-10T20:44:48.349571",
+    "creation_time": "2025-05-08T20:44:48.369177",
+    "status": "pending"
+  },
+  {
     "id": "ddf96077-55d0-4a10-894b-08eff1c96d32",
     "action_type": "analyze_behavior",
     "parameters": {
@@ -356,6 +1481,132 @@
     "priority": 4,
     "scheduled_time": "2025-05-10T20:28:17.936836",
     "creation_time": "2025-05-08T20:28:17.942523",
+    "status": "pending"
+  },
+  {
+    "id": "f61f6798-b5a0-4cfd-a114-f18373dc3b9c",
+    "action_type": "analyze_behavior",
+    "parameters": {
+      "behavior_type": "interaction",
+      "timeframe": "recent"
+    },
+    "goal_id": "047d0069-c734-4c8a-90cb-93f74f40ccdc",
+    "plan_id": "3c6516d5-52e8-4d85-adc8-b1be8ec105ff",
+    "priority": 4,
+    "scheduled_time": "2025-05-09T20:43:58.179245",
+    "creation_time": "2025-05-08T20:43:58.209244",
+    "status": "pending"
+  },
+  {
+    "id": "5c4fe16e-a74a-454f-a2e5-ee41ee3e2f1a",
+    "action_type": "analyze_behavior",
+    "parameters": {
+      "behavior_type": "interaction",
+      "timeframe": "recent"
+    },
+    "goal_id": "c627b962-d28a-48c1-96b5-91e236ffce48",
+    "plan_id": "8d632ebf-ccf5-4c36-9b22-526bc3cc084a",
+    "priority": 4,
+    "scheduled_time": "2025-05-09T20:43:58.271777",
+    "creation_time": "2025-05-08T20:43:58.278343",
+    "status": "pending"
+  },
+  {
+    "id": "74812aa5-f92a-447e-91dc-b280a6c2eb49",
+    "action_type": "analyze_behavior",
+    "parameters": {
+      "behavior_type": "interaction",
+      "timeframe": "recent"
+    },
+    "goal_id": "f9480c89-efeb-42e1-a906-c1653b60e878",
+    "plan_id": "b0c3f47d-87ac-4446-afe2-6ed2b8adda86",
+    "priority": 4,
+    "scheduled_time": "2025-05-09T20:43:58.331834",
+    "creation_time": "2025-05-08T20:43:58.345287",
+    "status": "pending"
+  },
+  {
+    "id": "f1674710-e93f-4630-b5d1-692b43489e85",
+    "action_type": "analyze_behavior",
+    "parameters": {
+      "behavior_type": "interaction",
+      "timeframe": "recent"
+    },
+    "goal_id": "5c244e94-1707-4c06-b310-0885178463ba",
+    "plan_id": "e18b25c4-4252-413a-9054-17129a7056f3",
+    "priority": 4,
+    "scheduled_time": "2025-05-09T20:43:58.405214",
+    "creation_time": "2025-05-08T20:43:58.416487",
+    "status": "pending"
+  },
+  {
+    "id": "b629aba5-4091-43f2-a6c1-70df61771e37",
+    "action_type": "analyze_behavior",
+    "parameters": {
+      "behavior_type": "interaction",
+      "timeframe": "recent"
+    },
+    "goal_id": "01e35f90-f343-44e7-8c31-a9ccaef73867",
+    "plan_id": "ac6cbcc3-d10e-41dc-be0e-354faeb336fa",
+    "priority": 4,
+    "scheduled_time": "2025-05-09T20:43:58.485567",
+    "creation_time": "2025-05-08T20:43:58.501026",
+    "status": "pending"
+  },
+  {
+    "id": "e6645391-f38b-4c57-9e4d-b4ed8d655265",
+    "action_type": "analyze_behavior",
+    "parameters": {
+      "behavior_type": "interaction",
+      "timeframe": "recent"
+    },
+    "goal_id": "e273ece0-7a56-4fb8-9ae5-dab74c44ae78",
+    "plan_id": "f04ea55c-36af-426f-b620-3461cc765f24",
+    "priority": 4,
+    "scheduled_time": "2025-05-09T20:43:58.549369",
+    "creation_time": "2025-05-08T20:43:58.557736",
+    "status": "pending"
+  },
+  {
+    "id": "4f1be3d5-5c46-4d8d-bbc4-4f25ed080ade",
+    "action_type": "analyze_behavior",
+    "parameters": {
+      "behavior_type": "interaction",
+      "timeframe": "recent"
+    },
+    "goal_id": "3a6f4106-53b6-42dd-901e-3a4b736a2d77",
+    "plan_id": "617b9f92-3273-46e2-8ae5-3c8121d32399",
+    "priority": 4,
+    "scheduled_time": "2025-05-09T20:43:58.603690",
+    "creation_time": "2025-05-08T20:43:58.617217",
+    "status": "pending"
+  },
+  {
+    "id": "81d4eea2-d10f-4ee6-9c52-0b1856f8e147",
+    "action_type": "analyze_behavior",
+    "parameters": {
+      "behavior_type": "interaction",
+      "timeframe": "recent"
+    },
+    "goal_id": "806af2b8-0228-4932-84ae-7f93f3e55572",
+    "plan_id": "9cceeb1a-3790-4e04-8b2f-93130161e982",
+    "priority": 4,
+    "scheduled_time": "2025-05-09T20:44:42.383571",
+    "creation_time": "2025-05-08T20:44:42.400486",
+    "status": "pending"
+  },
+  {
+    "id": "429daafb-83e5-4a6c-82a8-070edd3fe526",
+    "action_type": "analyze_behavior",
+    "parameters": {
+      "behavior_type": "interaction",
+      "timeframe": "recent"
+    },
+    "goal_id": "56210898-5fe9-448b-b0d9-f50747599a5b",
+    "plan_id": "94e63379-1292-4c32-a2ff-b03d739f4dc3",
+    "priority": 4,
+    "scheduled_time": "2025-05-09T20:44:48.349571",
+    "creation_time": "2025-05-08T20:44:48.362610",
     "status": "pending"
   }
 ]

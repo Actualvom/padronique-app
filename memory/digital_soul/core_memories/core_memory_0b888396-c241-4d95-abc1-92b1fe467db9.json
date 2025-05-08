@@ -1,0 +1,22 @@
+{
+  "id": "0b888396-c241-4d95-abc1-92b1fe467db9",
+  "type": "meta_insight",
+  "content": "Meta-insight on emotional: Analysis of 2 related insights shows patterns of emotional that support Jordan's needs and protection.",
+  "emotional_weight": 0.9911436088824083,
+  "creation_time": "2025-05-08T20:43:40.772277",
+  "last_accessed": "2025-05-08T20:43:40.772277",
+  "access_count": 1,
+  "tags": [],
+  "is_core_memory": true,
+  "lock": {
+    "level": "high",
+    "last_verified": "2025-05-08T20:43:40.772277",
+    "modification_history": [],
+    "access_permissions": {
+      "read": true,
+      "modify": true,
+      "delete": false
+    }
+  },
+  "emotional_fingerprint": "emfp-099-f5218ac4-737020"
+}

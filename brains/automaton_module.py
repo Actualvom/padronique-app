@@ -284,11 +284,15 @@ class AutomatonModule:
     
     def _update_goals(self) -> None:
         """Review and update goals based on current state and needs."""
+        # Create a copy of the goals to avoid dictionary modification during iteration
+        active_goals_list = list(self.active_goals.items())
+        
         # Review existing goals
-        for goal_id, goal in list(self.active_goals.items()):
+        for goal_id, goal in active_goals_list:
             # Check if goal is completed or expired
             if goal["status"] == "completed" or (
-                    "expiration_time" in goal and 
+                    "expiration_time" in goal and goal["expiration_time"] and
+                    isinstance(goal["expiration_time"], str) and
                     datetime.fromisoformat(goal["expiration_time"]) < datetime.now()
                 ):
                 # Archive completed goals
@@ -297,7 +301,7 @@ class AutomatonModule:
                     self.stats["goals_achieved"] += 1
             
             # Check if goal needs to be updated
-            if goal["status"] == "active" and "last_updated" in goal:
+            if goal["status"] == "active" and "last_updated" in goal and goal["last_updated"] and isinstance(goal["last_updated"], str):
                 last_updated = datetime.fromisoformat(goal["last_updated"])
                 if (datetime.now() - last_updated) > timedelta(hours=24):
                     # Update goal progress and priority
@@ -393,7 +397,10 @@ class AutomatonModule:
     
     def _generate_plans(self) -> None:
         """Generate plans for active goals that don't have plans."""
-        for goal_id, goal in self.active_goals.items():
+        # Create a copy of the goals to avoid dictionary modification during iteration
+        active_goals = {goal_id: goal for goal_id, goal in self.active_goals.items()}
+        
+        for goal_id, goal in active_goals.items():
             if goal["status"] != "active":
                 continue
             
