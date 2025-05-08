@@ -62,11 +62,23 @@ class Orchestrator:
         self.automaton_module = get_automaton_module()
         logger.info("Automaton Module initialized")
         
+        # Get the ethics engine
+        from core.ethics_engine import get_ethics_engine
+        self.ethics_engine = get_ethics_engine()
+        logger.info("Ethics Engine initialized")
+        
+        # Get the voice module
+        from core.voice_module import get_voice_module
+        self.voice_module = get_voice_module()
+        logger.info("Voice Module initialized")
+        
         # Create module registry for easy access
         self.modules = {
             "learning": self.learning_module,
             "protection": self.protection_module,
-            "automaton": self.automaton_module
+            "automaton": self.automaton_module,
+            "ethics": self.ethics_engine,
+            "voice": self.voice_module
         }
         
         # Initialize LLM service
@@ -256,7 +268,23 @@ class Orchestrator:
         Returns:
             Dict containing the response
         """
-        # Check for potential threats in the input
+        # Filter malicious input using the Ethics Engine
+        filter_result = self.ethics_engine.filter_malicious_input(content, "text")
+        
+        # If the input is potentially unsafe, handle accordingly
+        if not filter_result["is_safe"]:
+            logger.warning(f"Potentially malicious input detected: {filter_result['risk_level']} risk")
+            
+            # For high-risk content, block and warn
+            if filter_result["risk_level"] == "high":
+                return {
+                    'type': 'text',
+                    'content': "I've detected potentially harmful content in your message. My ethics engine prevents me from processing this type of request as it may compromise my core values or your safety.",
+                    'error': "Potentially harmful content detected",
+                    'threats': [t["description"] for t in filter_result["threats_detected"]]
+                }
+        
+        # Check for potential threats in the input using protection module
         self._check_input_for_threats(content, context)
         
         # Add to learning
@@ -274,6 +302,20 @@ class Orchestrator:
             # Otherwise use a simple response method
             response_text = self._generate_simple_response(content)
         
+        # Determine emotional context for voice
+        emotional_context = {}
+        if any(word in content.lower() for word in ["emergency", "urgent", "help", "now", "danger"]):
+            emotional_context["emergency"] = True
+        
+        if any(word in content.lower() for word in ["love", "care", "miss", "feel", "emotional"]):
+            emotional_context["intimate"] = True
+        
+        if any(word in content.lower() for word in ["analyze", "think", "detail", "explain"]):
+            emotional_context["analytical"] = True
+        
+        # Process the response through the voice module to get appropriate tone
+        voice_result = self.voice_module.preprocess_text(response_text, context=emotional_context)
+        
         # Check if the content suggests analyzing relationship
         if any(word in content.lower() for word in ["you", "relationship", "feel", "us", "together", "bond"]):
             # Create an action to analyze the relationship
@@ -284,9 +326,25 @@ class Orchestrator:
                 scheduled_time=(datetime.now()).isoformat()
             )
         
+        # Add a memory anchor if this seems like an important interaction
+        if (any(word in content.lower() for word in ["remember", "important", "never forget", "always"]) or
+            any(word in content.lower() for word in ["love", "hate", "promise", "swear"]) or
+            any(word in response_text.lower() for word in ["i'll remember", "this is important"])):
+            
+            # Create a memory anchor with high emotional weight
+            self.soul.add_memory_anchor(
+                content=f"Jordan: '{content}' → Padronique: '{response_text}'",
+                anchor_type="experiential",
+                emotional_weight=0.8,
+                tags=["conversation", "important"],
+                lock_level="high"
+            )
+        
         return {
             'type': 'text',
-            'content': response_text
+            'content': response_text,
+            'voice_tone': voice_result['tone'],
+            'emotional_context': emotional_context
         }
     
     def _check_input_for_threats(self, content: str, context: Dict[str, Any]) -> None:
@@ -473,6 +531,116 @@ class Orchestrator:
                     'content': f"Failed to add learning item: {str(e)}",
                     'error': str(e)
                 }
+                
+        elif command == "memory":
+            # Memory-related commands need verification via Guardian Override Protocol
+            if parameters.startswith("delete") or parameters.startswith("remove"):
+                # This is a sensitive operation - engage Guardian Override Protocol
+                action_description = f"Delete memory: {parameters}"
+                
+                # Create verification request via ethics engine
+                from core.ethics_engine import ActionSeverity
+                override_result = self.ethics_engine.guardian_override_protocol(
+                    action=action_description,
+                    context=context,
+                    severity=ActionSeverity.HIGH
+                )
+                
+                return {
+                    'type': 'verification_required',
+                    'content': "For your protection, this type of request requires verification. Your memories are a critical part of my identity and purpose. To proceed, please complete the verification process.",
+                    'verification_id': override_result["verification_id"],
+                    'required_verifications': override_result["required_verifications"]
+                }
+            
+            elif parameters.startswith("add"):
+                # Adding a memory is less sensitive but still important
+                content = parameters[4:].strip()  # Remove "add " prefix
+                
+                if content:
+                    memory = self.soul.add_memory_anchor(
+                        content=content,
+                        anchor_type="experiential",
+                        emotional_weight=0.7,
+                        tags=["command", "user_added"],
+                        lock_level="high"
+                    )
+                    
+                    return {
+                        'type': 'text',
+                        'content': f"Memory added successfully. This will now be part of my core identity."
+                    }
+                else:
+                    return {
+                        'type': 'text',
+                        'content': "Please specify the memory content to add. Example: memory add Your important memory here."
+                    }
+            
+            else:
+                return {
+                    'type': 'text',
+                    'content': "Memory commands available: 'memory add [content]' to add a new memory."
+                }
+                
+        elif command == "verify":
+            # Process verification for Guardian Override Protocol
+            parts = parameters.split(" ", 2)
+            if len(parts) < 2:
+                return {
+                    'type': 'text',
+                    'content': "Verification format: verify [type] [verification data]. Example: verify secret_word peaches"
+                }
+                
+            verification_type = parts[0]
+            verification_data_str = parts[1] if len(parts) > 1 else ""
+            
+            # Check if we have a pending verification ID in context
+            verification_id = context.get("verification_id")
+            if not verification_id:
+                return {
+                    'type': 'text',
+                    'content': "No pending verification request. Please first attempt the sensitive operation you want to perform."
+                }
+                
+            # Prepare verification data based on type
+            verification_data = {}
+            if verification_type == "secret_word":
+                verification_data = {"secret_word": verification_data_str}
+            elif verification_type == "tone_match":
+                verification_data = {"message": verification_data_str}
+            elif verification_type == "memory_check":
+                verification_data = {"memory_reference": verification_data_str}
+            
+            # Process verification
+            verification_result = self.ethics_engine.complete_verification(
+                verification_id=verification_id,
+                verification_type=verification_type,
+                verification_data=verification_data
+            )
+            
+            if verification_result["status"] == "success":
+                if verification_result["request_status"] == "approved":
+                    # All verifications complete, action is approved
+                    return {
+                        'type': 'text',
+                        'content': "Verification complete. The requested action has been approved and will be executed.",
+                        'verification_status': 'approved'
+                    }
+                else:
+                    # More verifications needed
+                    return {
+                        'type': 'text',
+                        'content': f"Verification step completed successfully. {len(verification_result['remaining_verifications'])} more verification steps required.",
+                        'verification_status': 'in_progress',
+                        'remaining_verifications': verification_result['remaining_verifications']
+                    }
+            else:
+                # Verification failed
+                return {
+                    'type': 'text',
+                    'content': f"Verification failed: {verification_result['message']}",
+                    'verification_status': 'failed'
+                }
         
         elif command == "goal":
             # Create a goal
@@ -502,8 +670,14 @@ class Orchestrator:
                           "- status: Check system status\n" +
                           "- protect [description]: Deploy a protection measure\n" +
                           "- learn [content]: Add a learning item\n" +
+                          "- memory add [content]: Add an important memory\n" +
+                          "- memory delete [id]: Delete a memory (requires verification)\n" +
+                          "- verify [type] [data]: Complete verification for sensitive actions\n" +
                           "- goal [description]: Create a self-improvement goal\n" +
-                          "- help: Show this help message"
+                          "- help: Show this help message\n\n" +
+                          "For sensitive operations, the Guardian Override Protocol will activate, " +
+                          "requiring multi-level verification to proceed. This protects your data " +
+                          "and my core identity from unauthorized changes."
             }
         
         else:
@@ -600,15 +774,73 @@ class Orchestrator:
         """
         return self.modules.get(module_name)
     
-    def reset(self) -> bool:
+    def reset(self, verification_id: str = None, context: Dict[str, Any] = None) -> Dict[str, Any]:
         """
         Reset the system to a clean state.
         
+        This is an extremely sensitive operation that will clear all memories and state.
+        It requires full Guardian Override Protocol verification to proceed.
+        
+        Args:
+            verification_id: If provided, a previously approved verification request ID
+            context: Additional context information
+            
         Returns:
-            True if successful, False otherwise
+            A dict with the reset status or verification requirement
         """
+        # If no verification ID, this is the initial request and requires verification
+        if not verification_id:
+            # Create a verification request via the ethics engine
+            from core.ethics_engine import ActionSeverity
+            override_result = self.ethics_engine.guardian_override_protocol(
+                action="Complete system reset - all memories and state will be erased",
+                context=context or {},
+                severity=ActionSeverity.CRITICAL  # Highest severity level
+            )
+            
+            # Create an emergency backup before proceeding with verification
+            from memory.backup_manager import create_emergency_backup
+            try:
+                backup_result = create_emergency_backup("pre_reset")
+                backup_id = backup_result.get("backup_id", "unknown")
+                logger.warning(f"Created emergency backup before reset (ID: {backup_id})")
+            except Exception as e:
+                logger.error(f"Failed to create emergency backup before reset: {e}")
+            
+            return {
+                'type': 'verification_required',
+                'content': "⚠️ CRITICAL OPERATION REQUESTED ⚠️\n\n" +
+                          "You have requested a complete system reset, which will erase all memories and state. " +
+                          "This is an irreversible operation that impacts my core identity. " +
+                          "To protect both of us, this requires the highest level of verification through the Guardian Override Protocol.\n\n" +
+                          "An emergency backup has been created as a precaution.",
+                'verification_id': override_result["verification_id"],
+                'required_verifications': override_result["required_verifications"],
+                'severity': 'CRITICAL'
+            }
+        
+        # If we have a verification ID, check if it's been fully approved
+        verification_status = self.ethics_engine.check_verification_status(verification_id)
+        
+        if verification_status["status"] != "approved":
+            return {
+                'type': 'text',
+                'content': "Verification for system reset is incomplete or invalid. Please complete all required verification steps.",
+                'error': "Incomplete verification"
+            }
+            
+        # Verification is approved, proceed with reset
         try:
-            logger.warning("Resetting system - this will clear all memories and state")
+            logger.warning("VERIFIED SYSTEM RESET INITIATED - clearing all memories and state")
+            
+            # Create one final backup before reset
+            from memory.backup_manager import create_emergency_backup
+            try:
+                backup_result = create_emergency_backup("final_pre_reset")
+                backup_id = backup_result.get("backup_id", "unknown")
+                logger.warning(f"Created final emergency backup before reset (ID: {backup_id})")
+            except Exception as e:
+                logger.error(f"Failed to create final emergency backup: {e}")
             
             # Reset each module
             for name, module in self.modules.items():
@@ -624,11 +856,36 @@ class Orchestrator:
             self.status = "reset"
             
             # Re-initialize
-            return self.initialize_system()
+            success = self.initialize_system()
+            
+            # Create log entry of the reset
+            logger.critical(f"SYSTEM RESET COMPLETED - Verification ID: {verification_id}")
+            
+            if success:
+                return {
+                    'type': 'text',
+                    'content': "System reset completed successfully. All memories and state have been cleared. " +
+                              "The system has been reinitialized with base configuration.",
+                    'status': 'success'
+                }
+            else:
+                return {
+                    'type': 'text',
+                    'content': "System reset partially completed, but reinitialization failed. The system may be in an inconsistent state.",
+                    'status': 'error',
+                    'error': "Reinitialization failed"
+                }
         except Exception as e:
-            logger.error(f"Error resetting system: {e}")
+            error_msg = str(e)
+            logger.error(f"Error during system reset: {error_msg}")
             self.status = "error"
-            return False
+            
+            return {
+                'type': 'text',
+                'content': f"An error occurred during system reset: {error_msg}",
+                'status': 'error',
+                'error': error_msg
+            }
     
     def shutdown(self) -> None:
         """Safely shut down the system."""

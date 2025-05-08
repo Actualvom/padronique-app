@@ -716,6 +716,67 @@ class DigitalSoul:
             'selected_phrase': selected_phrase
         }
     
+    def _generate_emotional_fingerprint(self, content: str, emotional_weight: float) -> str:
+        """
+        Generate a unique emotional fingerprint for a memory anchor.
+        This helps maintain continuity by allowing memories to be identified by their 
+        emotional significance even if details change.
+        
+        Args:
+            content: The memory content
+            emotional_weight: The emotional significance
+            
+        Returns:
+            A fingerprint string
+        """
+        # Create a hash based on content and emotional weight
+        content_hash = hashlib.md5(content.encode()).hexdigest()
+        weight_component = str(int(emotional_weight * 100)).zfill(3)
+        timestamp_component = str(int(time.time()))[-6:]
+        
+        return f"emfp-{weight_component}-{content_hash[:8]}-{timestamp_component}"
+        
+    def _backup_core_memory(self, anchor: Dict[str, Any]) -> None:
+        """
+        Create a special backup of core memories.
+        These are stored separately from regular backups to ensure they're preserved.
+        
+        Args:
+            anchor: The memory anchor to back up
+        """
+        try:
+            # Create core memories directory if it doesn't exist
+            core_memory_path = os.path.join(self.soul_path, "core_memories")
+            os.makedirs(core_memory_path, exist_ok=True)
+            
+            # Save the anchor to a dedicated file
+            memory_file = os.path.join(core_memory_path, f"core_memory_{anchor['id']}.json")
+            with open(memory_file, 'w') as f:
+                json.dump(anchor, f, indent=2)
+                
+            # Also save a version in a consolidated file for recovery
+            consolidated_file = os.path.join(core_memory_path, "all_core_memories.json")
+            
+            # Load existing consolidated memories if available
+            all_memories = []
+            if os.path.exists(consolidated_file):
+                try:
+                    with open(consolidated_file, 'r') as f:
+                        all_memories = json.load(f)
+                except:
+                    all_memories = []
+            
+            # Add the new memory
+            all_memories.append(anchor)
+            
+            # Save the updated consolidated file
+            with open(consolidated_file, 'w') as f:
+                json.dump(all_memories, f, indent=2)
+                
+            logger.info(f"Core memory backup created for memory {anchor['id']}")
+        except Exception as e:
+            logger.error(f"Failed to backup core memory: {e}")
+    
     def generate_identity_fingerprint(self) -> str:
         """
         Generate a unique identity fingerprint that represents the current state of Padronique.
