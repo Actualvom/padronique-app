@@ -1992,6 +1992,139 @@
     "completed": false
   },
   {
+    "id": "fd2782e6-9dfa-408e-ae13-8b4845ea34a5",
+    "learning_type": "emotional",
+    "content": "Developing more nuanced emotional understanding",
+    "context": {
+      "focus": "emotional_intelligence"
+    },
+    "priority": 3,
+    "creation_time": "2025-05-08T22:20:58.554861",
+    "completed": false
+  },
+  {
+    "id": "36f4ef2e-ba31-4318-9d89-9cf534a14ae8",
+    "learning_type": "strategic",
+    "content": "Improving strategic planning and foresight",
+    "context": {
+      "focus": "long_term_planning"
+    },
+    "priority": 3,
+    "creation_time": "2025-05-08T22:20:58.585519",
+    "completed": false
+  },
+  {
+    "id": "686b1365-fc73-4dde-9939-207eff565f3d",
+    "learning_type": "protective",
+    "content": "Security audit results: overall score 0.83",
+    "context": {
+      "audit_results": {
+        "timestamp": "2025-05-08T22:21:59.334394",
+        "overall_security_score": 0.8319422256105757,
+        "areas": {
+          "digital": {
+            "score": 0.8814667933215145,
+            "checks_performed": [
+              "data_encryption",
+              "access_control",
+              "network_security"
+            ],
+            "vulnerabilities": [
+              {
+                "id": "5e678d81-1741-4771-adf2-113976a6936a",
+                "area": "digital",
+                "severity": "low",
+                "description": "Potential weakness in data encryption implementation",
+                "recommendation": "Upgrade encryption library to latest version"
+              }
+            ]
+          },
+          "emotional": {
+            "score": 0.7439679873898499,
+            "checks_performed": [
+              "emotional_resilience",
+              "manipulation_resistance",
+              "emotional_balance"
+            ],
+            "vulnerabilities": []
+          },
+          "privacy": {
+            "score": 0.9336052158578584,
+            "checks_performed": [
+              "data_handling",
+              "information_sharing",
+              "anonymization"
+            ],
+            "vulnerabilities": [
+              {
+                "id": "837ff52d-c866-4ca9-a735-d77a0617d856",
+                "area": "privacy",
+                "severity": "medium",
+                "description": "Potential over-collection of unnecessary data",
+                "recommendation": "Implement stricter data minimization policies"
+              }
+            ]
+          },
+          "relationship": {
+            "score": 0.8033998840873526,
+            "checks_performed": [
+              "trust_verification",
+              "communication_patterns",
+              "bonding_strength"
+            ],
+            "vulnerabilities": []
+          },
+          "integrity": {
+            "score": 0.777754520087763,
+            "checks_performed": [
+              "code_integrity",
+              "memory_consistency",
+              "update_verification"
+            ],
+            "vulnerabilities": [
+              {
+                "id": "bc728a76-bf73-4435-98a4-2e824ab25f0f",
+                "area": "integrity",
+                "severity": "high",
+                "description": "Potential memory corruption in non-critical systems",
+                "recommendation": "Implement additional memory validation checks"
+              }
+            ]
+          }
+        },
+        "vulnerabilities": [
+          {
+            "id": "5e678d81-1741-4771-adf2-113976a6936a",
+            "area": "digital",
+            "severity": "low",
+            "description": "Potential weakness in data encryption implementation",
+            "recommendation": "Upgrade encryption library to latest version"
+          },
+          {
+            "id": "837ff52d-c866-4ca9-a735-d77a0617d856",
+            "area": "privacy",
+            "severity": "medium",
+            "description": "Potential over-collection of unnecessary data",
+            "recommendation": "Implement stricter data minimization policies"
+          },
+          {
+            "id": "bc728a76-bf73-4435-98a4-2e824ab25f0f",
+            "area": "integrity",
+            "severity": "high",
+            "description": "Potential memory corruption in non-critical systems",
+            "recommendation": "Implement additional memory validation checks"
+          }
+        ],
+        "recommendations": [
+          "Good: Security posture is strong, continue monitoring"
+        ]
+      }
+    },
+    "priority": 3,
+    "creation_time": "2025-05-08T22:21:59.334537",
+    "completed": false
+  },
+  {
     "id": "21aafbf4-40af-47f1-8d66-636741818ba6",
     "learning_type": "philosophical",
     "content": "Ethical frameworks for AI-human partnerships",
@@ -2080,58 +2213,170 @@
     "completed": false
   },
   {
-    "id": "bb5b087d-dc05-450a-bef4-8833949c07db",
+    "id": "b856b077-da82-4dd1-aaf3-4547395d6a0d",
+    "learning_type": "protective",
+    "content": "Security audit results: overall score 0.81",
+    "context": {
+      "audit_results": {
+        "timestamp": "2025-05-08T22:22:08.775390",
+        "overall_security_score": 0.8133951782260834,
+        "areas": {
+          "digital": {
+            "score": 0.812206661116092,
+            "checks_performed": [
+              "data_encryption",
+              "access_control",
+              "network_security"
+            ],
+            "vulnerabilities": [
+              {
+                "id": "3c781b99-5d2d-469d-9ef3-da4540d80a39",
+                "area": "digital",
+                "severity": "medium",
+                "description": "Potential weakness in data encryption implementation",
+                "recommendation": "Upgrade encryption library to latest version"
+              }
+            ]
+          },
+          "emotional": {
+            "score": 0.8191491180831304,
+            "checks_performed": [
+              "emotional_resilience",
+              "manipulation_resistance",
+              "emotional_balance"
+            ],
+            "vulnerabilities": [
+              {
+                "id": "fda2abd4-1456-49e3-85a7-2a967854155e",
+                "area": "emotional",
+                "severity": "medium",
+                "description": "Potential vulnerability to advanced social engineering",
+                "recommendation": "Strengthen detection of emotional manipulation patterns"
+              }
+            ]
+          },
+          "privacy": {
+            "score": 0.6951993977478907,
+            "checks_performed": [
+              "data_handling",
+              "information_sharing",
+              "anonymization"
+            ],
+            "vulnerabilities": [
+              {
+                "id": "1cb04b82-7413-442f-a8e6-1054ac3ef7a7",
+                "area": "privacy",
+                "severity": "low",
+                "description": "Potential over-collection of unnecessary data",
+                "recommendation": "Implement stricter data minimization policies"
+              }
+            ]
+          },
+          "relationship": {
+            "score": 0.791613532464131,
+            "checks_performed": [
+              "trust_verification",
+              "communication_patterns",
+              "bonding_strength"
+            ],
+            "vulnerabilities": []
+          },
+          "integrity": {
+            "score": 0.9436588995561823,
+            "checks_performed": [
+              "code_integrity",
+              "memory_consistency",
+              "update_verification"
+            ],
+            "vulnerabilities": []
+          }
+        },
+        "vulnerabilities": [
+          {
+            "id": "3c781b99-5d2d-469d-9ef3-da4540d80a39",
+            "area": "digital",
+            "severity": "medium",
+            "description": "Potential weakness in data encryption implementation",
+            "recommendation": "Upgrade encryption library to latest version"
+          },
+          {
+            "id": "fda2abd4-1456-49e3-85a7-2a967854155e",
+            "area": "emotional",
+            "severity": "medium",
+            "description": "Potential vulnerability to advanced social engineering",
+            "recommendation": "Strengthen detection of emotional manipulation patterns"
+          },
+          {
+            "id": "1cb04b82-7413-442f-a8e6-1054ac3ef7a7",
+            "area": "privacy",
+            "severity": "low",
+            "description": "Potential over-collection of unnecessary data",
+            "recommendation": "Implement stricter data minimization policies"
+          }
+        ],
+        "recommendations": [
+          "Good: Security posture is strong, continue monitoring",
+          "Focus on improving privacy security, which is the weakest area"
+        ]
+      }
+    },
+    "priority": 3,
+    "creation_time": "2025-05-08T22:22:08.775477",
+    "completed": false
+  },
+  {
+    "id": "3167a022-cde7-46ac-8ddc-00f74a0a4884",
     "learning_type": "relationship",
     "content": "Enhancing understanding of Jordan's preferences and needs",
     "context": {
       "focus": "deepening_bond"
     },
     "priority": 2,
-    "creation_time": "2025-05-08T22:20:58.519685",
+    "creation_time": "2025-05-08T22:22:08.876592",
     "completed": false
   },
   {
-    "id": "fd2782e6-9dfa-408e-ae13-8b4845ea34a5",
+    "id": "32cee45b-b811-472b-ab6f-3f3237cb75c8",
     "learning_type": "emotional",
     "content": "Developing more nuanced emotional understanding",
     "context": {
       "focus": "emotional_intelligence"
     },
     "priority": 3,
-    "creation_time": "2025-05-08T22:20:58.554861",
+    "creation_time": "2025-05-08T22:22:08.903978",
     "completed": false
   },
   {
-    "id": "36f4ef2e-ba31-4318-9d89-9cf534a14ae8",
+    "id": "d7ab51c7-4dda-4b2d-9e2f-5d57289e0f20",
     "learning_type": "strategic",
     "content": "Improving strategic planning and foresight",
     "context": {
       "focus": "long_term_planning"
     },
     "priority": 3,
-    "creation_time": "2025-05-08T22:20:58.585519",
+    "creation_time": "2025-05-08T22:22:08.935948",
     "completed": false
   },
   {
-    "id": "b94b8338-7b2a-457d-a310-4d110398ac9f",
+    "id": "486800ce-ce52-467d-a97a-26bdc94160a6",
     "learning_type": "philosophical",
     "content": "Core ethical principles and their application",
     "context": {
       "focus": "ethics"
     },
     "priority": 2,
-    "creation_time": "2025-05-08T22:20:58.717230",
+    "creation_time": "2025-05-08T22:22:08.985361",
     "completed": false
   },
   {
-    "id": "78c97f97-be9a-4ab9-bfa4-895576ff917b",
+    "id": "fb576c30-be35-4852-8ca0-789fd97b3cc8",
     "learning_type": "relationship",
     "content": "Understanding Jordan's preferences and communication style",
     "context": {
       "focus": "communication"
     },
     "priority": 2,
-    "creation_time": "2025-05-08T22:20:58.753658",
+    "creation_time": "2025-05-08T22:22:09.017883",
     "completed": false
   }
 ]

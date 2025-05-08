@@ -313,6 +313,9 @@ body {
     max-width: 80%;
     margin: 0.5rem 0;
     position: relative;
+    direction: ltr !important;
+    writing-mode: horizontal-tb !important;
+    text-orientation: mixed !important;
 }
 
 .message.user {
@@ -393,8 +396,13 @@ body {
 
 .message.user p {
     color: var(--text-primary);
-    white-space: normal;
-    word-break: break-word;
+    white-space: normal !important;
+    word-break: break-word !important;
+    display: block !important;
+    width: 100% !important;
+    text-orientation: mixed !important;
+    writing-mode: horizontal-tb !important;
+    direction: ltr !important;
 }
 
 .message.system p {

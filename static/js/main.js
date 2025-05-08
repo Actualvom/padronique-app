@@ -178,9 +178,22 @@ function initChat() {
         const contentElement = document.createElement('div');
         contentElement.className = 'message-content';
         
+        // Apply styles directly to the content element to fix vertical text issue
+        contentElement.style.display = 'block';
+        contentElement.style.whiteSpace = 'normal';
+        contentElement.style.wordBreak = 'break-word';
+        contentElement.style.width = '100%';
+        contentElement.style.textOrientation = 'initial';
+        contentElement.style.writingMode = 'horizontal-tb';
+        
         const textElement = document.createElement('p');
-        textElement.style.whiteSpace = 'normal'; // Force normal text wrapping
-        textElement.style.wordBreak = 'break-word'; // Allow word breaking if needed
+        // More aggressive style overrides for the paragraph element
+        textElement.style.whiteSpace = 'normal !important';
+        textElement.style.wordBreak = 'break-word !important';
+        textElement.style.display = 'block !important';
+        textElement.style.width = '100% !important';
+        textElement.style.textOrientation = 'initial !important';
+        textElement.style.writingMode = 'horizontal-tb !important';
         
         // Handle different types of messages
         if (message === null || message === undefined) {

@@ -1,1 +1,14 @@
-{}
+{
+  "75c3284f-1593-4a3a-903d-d56dc3c7a6b1": {
+    "id": "75c3284f-1593-4a3a-903d-d56dc3c7a6b1",
+    "action_type": "run_security_audit",
+    "parameters": {},
+    "goal_id": "0aac937f-9a1d-457b-9249-716a4a26c46a",
+    "plan_id": "c43dac05-6d7c-4598-b452-fbf94416a0d0",
+    "priority": 2,
+    "scheduled_time": "2025-05-08T22:21:46.461558",
+    "creation_time": "2025-05-08T21:21:46.461640",
+    "status": "in_progress",
+    "start_time": "2025-05-08T22:21:59.332327"
+  }
+}
