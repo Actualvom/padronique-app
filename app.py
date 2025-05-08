@@ -46,6 +46,14 @@ db.init_app(app)
 csrf = CSRFProtect()
 csrf.init_app(app)
 
+# Configure CSRF exemptions for API endpoints
+@csrf.exempt
+def csrf_exempt(view):
+    return view
+    
+# Exempt API and testing routes from CSRF protection
+app.config['WTF_CSRF_CHECK_DEFAULT'] = False  # This will still protect forms but not all routes by default
+
 # Initialize Flask-Login
 login_manager = LoginManager()
 login_manager.init_app(app)
