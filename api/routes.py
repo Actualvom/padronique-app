@@ -177,35 +177,60 @@ def process_input():
 
 @api_bp.route('/reset', methods=['POST'])
 def reset_system():
-    """Reset the system."""
+    """Reset the system with Guardian Override Protocol protection."""
     orchestrator = current_app.config.get('ORCHESTRATOR')
     
-    if orchestrator:
-        try:
-            # Call orchestrator reset method if it exists
-            if hasattr(orchestrator, 'reset') and callable(orchestrator.reset):
-                orchestrator.reset()
-                return jsonify({
-                    'status': 'ok',
-                    'message': 'System reset successfully'
-                })
-            else:
-                return jsonify({
-                    'status': 'ok',
-                    'message': 'System reset functionality not implemented yet'
-                })
-        except Exception as e:
-            logger.error(f"Error resetting system: {e}")
+    if not orchestrator:
+        return jsonify({
+            'status': 'ok',
+            'message': 'System reset simulation successful'
+        })
+    
+    try:
+        # Check if we have a valid reset method
+        if not hasattr(orchestrator, 'reset') or not callable(orchestrator.reset):
             return jsonify({
                 'status': 'error',
-                'message': f'Error resetting system: {str(e)}'
+                'message': 'System reset functionality not implemented yet'
+            }), 501
+        
+        # Get request data for verification
+        data = request.json or {}
+        verification_id = data.get('verification_id')
+        
+        # Call the reset method with appropriate parameters
+        result = orchestrator.reset(verification_id=verification_id, context=data)
+        
+        # Reset method now returns a dict with status information
+        if result.get('type') == 'verification_required':
+            # Return the verification requirements
+            return jsonify({
+                'status': 'verification_required',
+                'message': result.get('content'),
+                'verification_id': result.get('verification_id'),
+                'required_verifications': result.get('required_verifications'),
+                'severity': result.get('severity', 'HIGH')
+            })
+        elif result.get('status') == 'success':
+            # Reset was successful
+            return jsonify({
+                'status': 'ok',
+                'message': result.get('content', 'System reset successfully')
+            })
+        else:
+            # Some error occurred
+            return jsonify({
+                'status': 'error',
+                'message': result.get('content', 'Error during system reset'),
+                'error': result.get('error')
             }), 500
-    
-    # Mock reset if orchestrator is not available
-    return jsonify({
-        'status': 'ok',
-        'message': 'System reset simulation successful'
-    })
+            
+    except Exception as e:
+        logger.error(f"Error resetting system: {e}")
+        return jsonify({
+            'status': 'error',
+            'message': f'Error resetting system: {str(e)}'
+        }), 500
 
 
 def simple_response_handler(message):
@@ -441,6 +466,77 @@ def add_tags(memory_id):
         return jsonify({
             'status': 'error',
             'message': f'Error adding tags: {str(e)}'
+        }), 500
+
+
+@api_bp.route('/verify', methods=['POST'])
+def verify_guardian_override():
+    """Complete a verification step for the Guardian Override Protocol."""
+    orchestrator = current_app.config.get('ORCHESTRATOR')
+    
+    if not orchestrator:
+        return jsonify({
+            'status': 'error',
+            'message': 'Orchestrator not initialized'
+        }), 500
+    
+    try:
+        # Get verification data
+        data = request.json
+        
+        if not data or 'verification_id' not in data or 'verification_type' not in data or 'verification_data' not in data:
+            return jsonify({
+                'status': 'error',
+                'message': 'Missing required verification parameters'
+            }), 400
+        
+        # Get the ethics engine module if available directly
+        ethics_engine = orchestrator.get_module('ethics')
+        
+        # If no direct access to ethics engine, try via the orchestrator
+        if not ethics_engine and hasattr(orchestrator, 'ethics_engine'):
+            ethics_engine = orchestrator.ethics_engine
+        
+        if not ethics_engine:
+            return jsonify({
+                'status': 'error',
+                'message': 'Ethics engine not available'
+            }), 500
+        
+        # Process the verification
+        verification_result = ethics_engine.complete_verification(
+            verification_id=data['verification_id'],
+            verification_type=data['verification_type'],
+            verification_data=data['verification_data']
+        )
+        
+        # Return the verification result
+        if verification_result['status'] == 'success':
+            if verification_result.get('request_status') == 'approved':
+                return jsonify({
+                    'status': 'approved',
+                    'message': 'Verification complete. The requested action has been approved.',
+                    'next_steps': verification_result.get('next_steps', [])
+                })
+            else:
+                return jsonify({
+                    'status': 'in_progress',
+                    'message': 'Verification step completed successfully',
+                    'remaining_verifications': verification_result.get('remaining_verifications', []),
+                    'next_verification': verification_result.get('next_verification')
+                })
+        else:
+            return jsonify({
+                'status': 'failed',
+                'message': verification_result.get('message', 'Verification failed'),
+                'reason': verification_result.get('reason')
+            }), 400
+    
+    except Exception as e:
+        logger.error(f"Error processing verification: {e}")
+        return jsonify({
+            'status': 'error',
+            'message': f'Error processing verification: {str(e)}'
         }), 500
 
 

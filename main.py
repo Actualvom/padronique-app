@@ -23,21 +23,6 @@ def initialize_system():
     # Initialize modules
     logger.info("Initializing AI Companion System...")
     
-    # Import core components
-    from core.orchestrator import Orchestrator
-    from digital_soul.core import get_soul
-    
-    # Initialize the orchestrator
-    orchestrator = Orchestrator()
-    orchestrator.initialize_system()
-    
-    # Log system components
-    logger.info("System components initialized:")
-    logger.info(f"- Digital Soul: {get_soul().soul_id}")
-    
-    return orchestrator
-    logger.info("Initializing AI Companion System...")
-    
     # Load configuration
     config_path = os.path.join(os.path.dirname(__file__), 'config.yaml')
     config_manager = ConfigManager(config_path)
@@ -53,6 +38,10 @@ def initialize_system():
         logger.warning("The system will continue without LLM capabilities")
         llm_service = None
     
+    # Import core components
+    from core.orchestrator import Orchestrator
+    from digital_soul.core import get_soul
+    
     # Initialize the orchestrator (core of the system)
     orchestrator = Orchestrator(config)
     
@@ -60,8 +49,12 @@ def initialize_system():
     if llm_service:
         orchestrator.llm_service = llm_service
     
-    # Initialize and register all modules
-    orchestrator.initialize_modules()
+    # Run the system initialization
+    success = orchestrator.initialize_system()
+    if success:
+        logger.info("System initialization completed successfully")
+    else:
+        logger.error("System initialization failed")
     
     # If we have an external_comm module and LLM service, connect them
     external_comm = orchestrator.get_module('external_comm')
@@ -69,7 +62,11 @@ def initialize_system():
         external_comm.llm_service = llm_service
         logger.info("Connected LLM service to External Communication module")
     
-    logger.info("AI Companion System initialized successfully")
+    # Log system components
+    logger.info("System components initialized:")
+    logger.info(f"- Digital Soul: {get_soul().soul_id}")
+    
+    logger.info("AI Companion System initialization complete")
     return orchestrator
 
 if __name__ == '__main__':

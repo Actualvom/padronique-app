@@ -15,6 +15,25 @@ logger = logging.getLogger(__name__)
 app = Flask(__name__)
 app.secret_key = os.environ.get("SESSION_SECRET", os.urandom(24).hex())
 
+# Setup the database
+app.config["SQLALCHEMY_DATABASE_URI"] = os.environ.get("DATABASE_URL")
+app.config["SQLALCHEMY_ENGINE_OPTIONS"] = {
+    "pool_recycle": 300,
+    "pool_pre_ping": True,
+}
+
+# In production, set this to a secure value
+app.config['SESSION_TYPE'] = 'filesystem'
+app.config['PERMANENT_SESSION_LIFETIME'] = 3600  # 1 hour
+
+# Create an orchestrator instance but don't initialize yet
+# This will be initialized in main.py
+app.config['ORCHESTRATOR'] = None
+
+# Enable better debugging
+if app.debug:
+    app.config['TEMPLATES_AUTO_RELOAD'] = True
+
 # Register API routes
 register_api_routes(app)
 
