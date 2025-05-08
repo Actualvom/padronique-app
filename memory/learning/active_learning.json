@@ -1,1 +1,9 @@
-{}
+{
+  "protections": {
+    "digital_shield": {
+      "level": "high",
+      "implemented_at": "2025-05-08T20:29:47.620581",
+      "active": true
+    }
+  }
+}

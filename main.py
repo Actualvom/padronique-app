@@ -3,8 +3,6 @@
 
 import logging
 import os
-from app import app
-from core.orchestrator import Orchestrator
 from core.config_manager import ConfigManager
 from utils.logger import setup_logging
 from utils.ai import get_llm_service
@@ -71,6 +69,9 @@ def initialize_system():
 
 # Initialize the orchestrator early to make it available to Flask
 orchestrator = initialize_system()
+
+# Import Flask app after orchestrator initialization to avoid circular dependencies
+from app import app
 
 # Register orchestrator with the Flask app
 app.config['ORCHESTRATOR'] = orchestrator

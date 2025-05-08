@@ -1,0 +1,22 @@
+{
+  "id": "d2b8f3a5-2b09-4d6b-88e1-0440b04c7e0a",
+  "type": "meta_insight",
+  "content": "Meta-insight on protective: Analysis of 2 related insights shows patterns of protective that support Jordan's needs and protection.",
+  "emotional_weight": 0.963201425434855,
+  "creation_time": "2025-05-08T20:31:33.165090",
+  "last_accessed": "2025-05-08T20:31:33.165090",
+  "access_count": 1,
+  "tags": [],
+  "is_core_memory": true,
+  "lock": {
+    "level": "high",
+    "last_verified": "2025-05-08T20:31:33.165090",
+    "modification_history": [],
+    "access_permissions": {
+      "read": true,
+      "modify": true,
+      "delete": false
+    }
+  },
+  "emotional_fingerprint": "emfp-096-12b603ed-736293"
+}

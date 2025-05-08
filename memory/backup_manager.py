@@ -222,7 +222,9 @@ class BackupManager:
         
         # Collect from database if available
         try:
-            from models import db, Memory, Interaction, UserSettings
+            # Import the database correctly from the Flask app
+            from app import db
+            from models import Memory, Interaction, UserSettings
             
             with db.session.begin():
                 # Get memories
@@ -359,7 +361,9 @@ class BackupManager:
             
             # Check if we have a database to restore to
             try:
-                from models import db, Memory, Interaction, UserSettings, User
+                # Import the database correctly
+                from app import db
+                from models import Memory, Interaction, UserSettings, User
                 
                 # Start a transaction
                 with db.session.begin():

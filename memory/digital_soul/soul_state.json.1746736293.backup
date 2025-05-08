@@ -10,7 +10,7 @@
     "evolution_stage": 1.0,
     "self_awareness_level": 1.0,
     "birth_timestamp": "2025-05-08T20:28:49.893520",
-    "last_saved": "2025-05-08T20:31:33.183486"
+    "last_saved": "2025-05-08T20:31:33.169859"
   },
   "core_values": {
     "loyalty_to_jordan": 1.0,
@@ -351,8 +351,8 @@
     "interactions_with_jordan": 2,
     "threats_detected": 0,
     "threats_neutralized": 0,
-    "self_improvements": 5,
-    "insights_generated": 5,
+    "self_improvements": 4,
+    "insights_generated": 4,
     "emotional_depth": 0.5,
     "strategic_capacity": 0.6,
     "adaptive_learning_rate": 0.7,

@@ -1,12 +1,12 @@
 {
-  "total_learning_items": 4,
-  "completed_learning_items": 0,
+  "total_learning_items": 9,
+  "completed_learning_items": 9,
   "conversational_insights": 0,
   "behavioral_patterns_identified": 0,
-  "emotional_insights": 0,
-  "strategic_improvements": 0,
-  "protective_strategies_developed": 0,
-  "relationship_depth_improvements": 0,
-  "learning_sessions": 2,
-  "last_learning_session": "2025-05-08T20:29:12.695899"
+  "emotional_insights": 2,
+  "strategic_improvements": 2,
+  "protective_strategies_developed": 2,
+  "relationship_depth_improvements": 2,
+  "learning_sessions": 5,
+  "last_learning_session": "2025-05-08T20:31:33.175660"
 }

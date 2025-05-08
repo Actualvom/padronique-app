@@ -4,8 +4,17 @@
 import os
 import logging
 from flask import Flask, render_template, request, jsonify
+from flask_sqlalchemy import SQLAlchemy
+from sqlalchemy.orm import DeclarativeBase
 from api.routes import register_api_routes
 from utils.logger import setup_logging
+
+# Create a base class for SQLAlchemy models to use
+class Base(DeclarativeBase):
+    pass
+
+# Initialize SQLAlchemy with the custom base class
+db = SQLAlchemy(model_class=Base)
 
 # Initialize logging
 setup_logging()
@@ -21,6 +30,15 @@ app.config["SQLALCHEMY_ENGINE_OPTIONS"] = {
     "pool_recycle": 300,
     "pool_pre_ping": True,
 }
+
+# Initialize the database with the app
+db.init_app(app)
+
+# Create database tables
+with app.app_context():
+    # Import models to register them with SQLAlchemy
+    import models
+    db.create_all()
 
 # In production, set this to a secure value
 app.config['SESSION_TYPE'] = 'filesystem'
