@@ -1,0 +1,15 @@
+[
+  {
+    "id": "3769db11-7d71-4771-805d-f0a043af29fe",
+    "type": "deception",
+    "level": 3,
+    "description": "Potential deception attempt detected",
+    "detection_time": "2025-05-08T20:28:17.854850",
+    "confidence": 0.7137150951812586,
+    "neutralized": false,
+    "source": {
+      "location": "communication",
+      "details": "Inconsistent information pattern detected"
+    }
+  }
+]

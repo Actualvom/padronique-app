@@ -69,12 +69,12 @@ def initialize_system():
     logger.info("AI Companion System initialization complete")
     return orchestrator
 
+# Initialize the orchestrator early to make it available to Flask
+orchestrator = initialize_system()
+
+# Register orchestrator with the Flask app
+app.config['ORCHESTRATOR'] = orchestrator
+
 if __name__ == '__main__':
-    # Initialize the AI system
-    orchestrator = initialize_system()
-    
-    # Register the orchestrator with the Flask app
-    app.config['ORCHESTRATOR'] = orchestrator
-    
     # Run the Flask app
     app.run(host='0.0.0.0', port=5000, debug=True)

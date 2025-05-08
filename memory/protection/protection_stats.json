@@ -1,0 +1,15 @@
+{
+  "threats_detected": 0,
+  "threats_neutralized": 0,
+  "false_positives": 0,
+  "protection_measures_active": 6,
+  "protection_measures_deployed": 6,
+  "digital_threats": 0,
+  "emotional_threats": 0,
+  "privacy_threats": 0,
+  "existential_threats": 0,
+  "relationship_threats": 0,
+  "deception_attempts": 1,
+  "integrity_threats": 0,
+  "last_scan_time": "2025-05-08T20:29:12.696516"
+}
