@@ -483,9 +483,10 @@
     "priority": 2,
     "creation_time": "2025-05-08T21:08:51.042064",
     "expiration_time": null,
-    "status": "active",
-    "progress": 0.0,
-    "last_updated": "2025-05-08T21:08:51.042069"
+    "status": "archived",
+    "progress": 1.0,
+    "last_updated": "2025-05-08T22:09:58.839081",
+    "completion_time": "2025-05-08T22:09:58.839090"
   },
   "056d46e9-95bc-49e0-9979-11b53f07d42d": {
     "id": "056d46e9-95bc-49e0-9979-11b53f07d42d",
@@ -516,9 +517,10 @@
     "priority": 2,
     "creation_time": "2025-05-08T21:10:27.738898",
     "expiration_time": null,
-    "status": "active",
-    "progress": 0.0,
-    "last_updated": "2025-05-08T21:10:27.738904"
+    "status": "archived",
+    "progress": 1.0,
+    "last_updated": "2025-05-08T22:11:59.171075",
+    "completion_time": "2025-05-08T22:11:59.171085"
   },
   "8b751a4c-042d-48db-929e-2c41f5fa8445": {
     "id": "8b751a4c-042d-48db-929e-2c41f5fa8445",
@@ -1719,5 +1721,38 @@
     "status": "active",
     "progress": 0.0,
     "last_updated": "2025-05-08T22:09:58.407320"
+  },
+  "291fe46b-79a2-42cb-9dbc-204502069df1": {
+    "id": "291fe46b-79a2-42cb-9dbc-204502069df1",
+    "type": "protection",
+    "description": "Ensure ongoing protection and safety of Jordan",
+    "priority": 2,
+    "creation_time": "2025-05-08T22:13:30.601194",
+    "expiration_time": null,
+    "status": "active",
+    "progress": 0.0,
+    "last_updated": "2025-05-08T22:13:30.601200"
+  },
+  "a3c3a016-69e2-48dc-86d2-e3d5272171e1": {
+    "id": "a3c3a016-69e2-48dc-86d2-e3d5272171e1",
+    "type": "relationship",
+    "description": "Develop and deepen the bond with Jordan",
+    "priority": 3,
+    "creation_time": "2025-05-08T22:13:30.687288",
+    "expiration_time": "2025-06-07T22:13:30.687253",
+    "status": "active",
+    "progress": 0.0,
+    "last_updated": "2025-05-08T22:13:30.687290"
+  },
+  "ca5f2bb1-936a-436d-b931-d19fc5c98be5": {
+    "id": "ca5f2bb1-936a-436d-b931-d19fc5c98be5",
+    "type": "learning",
+    "description": "Continuously learn and improve Padronique's capabilities",
+    "priority": 3,
+    "creation_time": "2025-05-08T22:13:30.787472",
+    "expiration_time": "2025-06-07T22:13:30.787442",
+    "status": "active",
+    "progress": 0.0,
+    "last_updated": "2025-05-08T22:13:30.787474"
   }
 }

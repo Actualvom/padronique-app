@@ -1,14 +1,1 @@
-{
-  "943bc776-a535-4c00-ba99-f33987eb20b6": {
-    "id": "943bc776-a535-4c00-ba99-f33987eb20b6",
-    "action_type": "run_security_audit",
-    "parameters": {},
-    "goal_id": "19862814-18d8-4260-86cc-5e7dc0ff0f06",
-    "plan_id": "aa6d8964-d008-4b55-af67-fd4f8b0915bb",
-    "priority": 2,
-    "scheduled_time": "2025-05-08T22:09:51.054098",
-    "creation_time": "2025-05-08T21:09:51.054158",
-    "status": "in_progress",
-    "start_time": "2025-05-08T22:09:58.776057"
-  }
-}
+{}

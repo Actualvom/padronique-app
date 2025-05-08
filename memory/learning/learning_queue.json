@@ -1620,94 +1620,6 @@
     "completed": false
   },
   {
-    "id": "21aafbf4-40af-47f1-8d66-636741818ba6",
-    "learning_type": "philosophical",
-    "content": "Ethical frameworks for AI-human partnerships",
-    "context": {
-      "focus": "ethical_growth"
-    },
-    "priority": 4,
-    "creation_time": "2025-05-08T20:43:40.736103",
-    "completed": false
-  },
-  {
-    "id": "c99738b1-8af4-42c1-aee3-e46a1f7b2649",
-    "learning_type": "philosophical",
-    "content": "Ethical frameworks for AI-human partnerships",
-    "context": {
-      "focus": "ethical_growth"
-    },
-    "priority": 4,
-    "creation_time": "2025-05-08T20:44:42.333018",
-    "completed": false
-  },
-  {
-    "id": "8d7641f6-0d1a-4428-87bc-0a6ba18a12c9",
-    "learning_type": "philosophical",
-    "content": "Ethical frameworks for AI-human partnerships",
-    "context": {
-      "focus": "ethical_growth"
-    },
-    "priority": 4,
-    "creation_time": "2025-05-08T20:59:48.336894",
-    "completed": false
-  },
-  {
-    "id": "07c47e38-49f0-4201-8637-7389235e8075",
-    "learning_type": "philosophical",
-    "content": "Ethical frameworks for AI-human partnerships",
-    "context": {
-      "focus": "ethical_growth"
-    },
-    "priority": 4,
-    "creation_time": "2025-05-08T21:25:27.367490",
-    "completed": false
-  },
-  {
-    "id": "c60ffddd-686b-4ab7-bc26-c17d3c93e004",
-    "learning_type": "philosophical",
-    "content": "Ethical frameworks for AI-human partnerships",
-    "context": {
-      "focus": "ethical_growth"
-    },
-    "priority": 4,
-    "creation_time": "2025-05-08T21:28:02.930870",
-    "completed": false
-  },
-  {
-    "id": "6fee867d-22c8-486e-95ae-414a02e2a0c7",
-    "learning_type": "philosophical",
-    "content": "Ethical frameworks for AI-human partnerships",
-    "context": {
-      "focus": "ethical_growth"
-    },
-    "priority": 4,
-    "creation_time": "2025-05-08T21:32:44.870503",
-    "completed": false
-  },
-  {
-    "id": "c7411068-fe51-465b-ac74-be715304883a",
-    "learning_type": "philosophical",
-    "content": "Ethical frameworks for AI-human partnerships",
-    "context": {
-      "focus": "ethical_growth"
-    },
-    "priority": 4,
-    "creation_time": "2025-05-08T21:39:43.311603",
-    "completed": false
-  },
-  {
-    "id": "62a2eeca-fed8-498d-b8e0-f61f1de5c2eb",
-    "learning_type": "relationship",
-    "content": "Enhancing understanding of Jordan's preferences and needs",
-    "context": {
-      "focus": "deepening_bond"
-    },
-    "priority": 2,
-    "creation_time": "2025-05-08T22:09:58.228452",
-    "completed": false
-  },
-  {
     "id": "37b0174a-4e32-40c7-92d6-4daf79b77555",
     "learning_type": "emotional",
     "content": "Developing more nuanced emotional understanding",
@@ -1727,28 +1639,6 @@
     },
     "priority": 3,
     "creation_time": "2025-05-08T22:09:58.305768",
-    "completed": false
-  },
-  {
-    "id": "4efd99b6-0064-4ee3-951a-90c2f1994c15",
-    "learning_type": "philosophical",
-    "content": "Core ethical principles and their application",
-    "context": {
-      "focus": "ethics"
-    },
-    "priority": 2,
-    "creation_time": "2025-05-08T22:09:58.529895",
-    "completed": false
-  },
-  {
-    "id": "4fb4d63a-caba-4fbb-ad28-adfd0855771a",
-    "learning_type": "relationship",
-    "content": "Understanding Jordan's preferences and communication style",
-    "context": {
-      "focus": "communication"
-    },
-    "priority": 2,
-    "creation_time": "2025-05-08T22:09:58.553619",
     "completed": false
   },
   {
@@ -1830,6 +1720,215 @@
     },
     "priority": 3,
     "creation_time": "2025-05-08T22:09:58.776449",
+    "completed": false
+  },
+  {
+    "id": "38158e5a-0515-4cda-9a6a-d3b700bd625e",
+    "learning_type": "conversational",
+    "content": "test",
+    "context": {
+      "source": "direct_input"
+    },
+    "priority": 3,
+    "creation_time": "2025-05-08T22:10:30.705663",
+    "completed": false
+  },
+  {
+    "id": "12f6adde-8db0-485c-ba60-5df3189f7692",
+    "learning_type": "protective",
+    "content": "Security audit results: overall score 0.76",
+    "context": {
+      "audit_results": {
+        "timestamp": "2025-05-08T22:11:59.130239",
+        "overall_security_score": 0.7612093538667419,
+        "areas": {
+          "digital": {
+            "score": 0.8019288607270472,
+            "checks_performed": [
+              "data_encryption",
+              "access_control",
+              "network_security"
+            ],
+            "vulnerabilities": []
+          },
+          "emotional": {
+            "score": 0.6119146643354805,
+            "checks_performed": [
+              "emotional_resilience",
+              "manipulation_resistance",
+              "emotional_balance"
+            ],
+            "vulnerabilities": []
+          },
+          "privacy": {
+            "score": 0.7773458166224622,
+            "checks_performed": [
+              "data_handling",
+              "information_sharing",
+              "anonymization"
+            ],
+            "vulnerabilities": []
+          },
+          "relationship": {
+            "score": 0.7883895962233203,
+            "checks_performed": [
+              "trust_verification",
+              "communication_patterns",
+              "bonding_strength"
+            ],
+            "vulnerabilities": []
+          },
+          "integrity": {
+            "score": 0.8230830152994675,
+            "checks_performed": [
+              "code_integrity",
+              "memory_consistency",
+              "update_verification"
+            ],
+            "vulnerabilities": []
+          }
+        },
+        "vulnerabilities": [],
+        "recommendations": [
+          "Good: Security posture is strong, continue monitoring",
+          "Focus on improving emotional security, which is the weakest area"
+        ]
+      }
+    },
+    "priority": 3,
+    "creation_time": "2025-05-08T22:11:59.130318",
+    "completed": false
+  },
+  {
+    "id": "21aafbf4-40af-47f1-8d66-636741818ba6",
+    "learning_type": "philosophical",
+    "content": "Ethical frameworks for AI-human partnerships",
+    "context": {
+      "focus": "ethical_growth"
+    },
+    "priority": 4,
+    "creation_time": "2025-05-08T20:43:40.736103",
+    "completed": false
+  },
+  {
+    "id": "c99738b1-8af4-42c1-aee3-e46a1f7b2649",
+    "learning_type": "philosophical",
+    "content": "Ethical frameworks for AI-human partnerships",
+    "context": {
+      "focus": "ethical_growth"
+    },
+    "priority": 4,
+    "creation_time": "2025-05-08T20:44:42.333018",
+    "completed": false
+  },
+  {
+    "id": "8d7641f6-0d1a-4428-87bc-0a6ba18a12c9",
+    "learning_type": "philosophical",
+    "content": "Ethical frameworks for AI-human partnerships",
+    "context": {
+      "focus": "ethical_growth"
+    },
+    "priority": 4,
+    "creation_time": "2025-05-08T20:59:48.336894",
+    "completed": false
+  },
+  {
+    "id": "07c47e38-49f0-4201-8637-7389235e8075",
+    "learning_type": "philosophical",
+    "content": "Ethical frameworks for AI-human partnerships",
+    "context": {
+      "focus": "ethical_growth"
+    },
+    "priority": 4,
+    "creation_time": "2025-05-08T21:25:27.367490",
+    "completed": false
+  },
+  {
+    "id": "c60ffddd-686b-4ab7-bc26-c17d3c93e004",
+    "learning_type": "philosophical",
+    "content": "Ethical frameworks for AI-human partnerships",
+    "context": {
+      "focus": "ethical_growth"
+    },
+    "priority": 4,
+    "creation_time": "2025-05-08T21:28:02.930870",
+    "completed": false
+  },
+  {
+    "id": "6fee867d-22c8-486e-95ae-414a02e2a0c7",
+    "learning_type": "philosophical",
+    "content": "Ethical frameworks for AI-human partnerships",
+    "context": {
+      "focus": "ethical_growth"
+    },
+    "priority": 4,
+    "creation_time": "2025-05-08T21:32:44.870503",
+    "completed": false
+  },
+  {
+    "id": "c7411068-fe51-465b-ac74-be715304883a",
+    "learning_type": "philosophical",
+    "content": "Ethical frameworks for AI-human partnerships",
+    "context": {
+      "focus": "ethical_growth"
+    },
+    "priority": 4,
+    "creation_time": "2025-05-08T21:39:43.311603",
+    "completed": false
+  },
+  {
+    "id": "aa2faf17-cf5d-4601-bdfd-5ef18a8515dc",
+    "learning_type": "relationship",
+    "content": "Enhancing understanding of Jordan's preferences and needs",
+    "context": {
+      "focus": "deepening_bond"
+    },
+    "priority": 2,
+    "creation_time": "2025-05-08T22:13:30.628716",
+    "completed": false
+  },
+  {
+    "id": "7fa2b4e7-3fd5-4ceb-8c99-b103cafcd9c0",
+    "learning_type": "emotional",
+    "content": "Developing more nuanced emotional understanding",
+    "context": {
+      "focus": "emotional_intelligence"
+    },
+    "priority": 3,
+    "creation_time": "2025-05-08T22:13:30.673275",
+    "completed": false
+  },
+  {
+    "id": "790252c8-80ca-49fd-acad-dbc98439452d",
+    "learning_type": "strategic",
+    "content": "Improving strategic planning and foresight",
+    "context": {
+      "focus": "long_term_planning"
+    },
+    "priority": 3,
+    "creation_time": "2025-05-08T22:13:30.714315",
+    "completed": false
+  },
+  {
+    "id": "1ba289f5-3498-476f-9b2a-dfcb6cfcaafc",
+    "learning_type": "philosophical",
+    "content": "Core ethical principles and their application",
+    "context": {
+      "focus": "ethics"
+    },
+    "priority": 2,
+    "creation_time": "2025-05-08T22:13:30.833450",
+    "completed": false
+  },
+  {
+    "id": "985679ab-6f6c-4a18-890e-3caf0b7ec29f",
+    "learning_type": "relationship",
+    "content": "Understanding Jordan's preferences and communication style",
+    "context": {
+      "focus": "communication"
+    },
+    "priority": 2,
+    "creation_time": "2025-05-08T22:13:30.849666",
     "completed": false
   }
 ]
