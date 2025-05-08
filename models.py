@@ -1,12 +1,13 @@
 from datetime import datetime
 from app import db
+from flask_login import UserMixin
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import Column, Integer, String, Text, DateTime, ForeignKey, Float, Boolean
 from sqlalchemy.orm import relationship
 from werkzeug.security import generate_password_hash, check_password_hash
 
 
-class User(db.Model):
+class User(UserMixin, db.Model):
     """User model for authentication and personalization"""
     id = Column(Integer, primary_key=True)
     username = Column(String(64), unique=True, nullable=False)

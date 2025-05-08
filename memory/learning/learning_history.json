@@ -914,5 +914,108 @@
       "new_capabilities": [],
       "success": true
     }
+  },
+  {
+    "id": "8422299e-445e-4813-9885-297930cca036",
+    "learning_type": "protective",
+    "content": "Developing advanced protective measures for Jordan",
+    "context": {
+      "focus": "digital_protection"
+    },
+    "priority": 2,
+    "creation_time": "2025-05-08T20:59:48.334399",
+    "completed": true,
+    "completion_time": "2025-05-08T21:08:51.014774",
+    "learning_result": {
+      "timestamp": "2025-05-08T21:08:51.014520",
+      "insights": [
+        {
+          "type": "protective",
+          "name": "digital_shield",
+          "content": "Protection strategy: implement digital shield for Developing advanced protective...",
+          "protection_level": "medium",
+          "actionable": true,
+          "significance": 0.8534865277907343,
+          "timestamp": "2025-05-08T21:08:51.014579"
+        }
+      ],
+      "applied_changes": [
+        {
+          "type": "protection_implemented",
+          "name": "digital_shield",
+          "level": "medium"
+        }
+      ],
+      "new_capabilities": [],
+      "success": true
+    }
+  },
+  {
+    "id": "3fb622cb-1f60-4dc4-9920-298860debffc",
+    "learning_type": "relationship",
+    "content": "Enhancing understanding of Jordan's preferences and needs",
+    "context": {
+      "focus": "deepening_bond"
+    },
+    "priority": 2,
+    "creation_time": "2025-05-08T21:04:05.473080",
+    "completed": true,
+    "completion_time": "2025-05-08T21:08:51.023726",
+    "learning_result": {
+      "timestamp": "2025-05-08T21:08:51.014855",
+      "insights": [
+        {
+          "type": "relationship",
+          "aspect": "bonding",
+          "content": "Relationship insight: strengthening bond through Enhancing understanding of Jor...",
+          "growth_impact": 0.09372581239103625,
+          "significance": 0.6870679832996727,
+          "timestamp": "2025-05-08T21:08:51.014869"
+        }
+      ],
+      "applied_changes": [
+        {
+          "type": "relationship_depth_increased",
+          "growth": 0.09372581239103625
+        }
+      ],
+      "new_capabilities": [],
+      "success": true
+    }
+  },
+  {
+    "id": "e094f851-f6ce-465c-a7f8-df9b9c8c6e55",
+    "learning_type": "protective",
+    "content": "Developing advanced protective measures for Jordan",
+    "context": {
+      "focus": "digital_protection"
+    },
+    "priority": 2,
+    "creation_time": "2025-05-08T21:04:05.500618",
+    "completed": true,
+    "completion_time": "2025-05-08T21:08:51.023956",
+    "learning_result": {
+      "timestamp": "2025-05-08T21:08:51.023746",
+      "insights": [
+        {
+          "type": "protective",
+          "name": "digital_shield",
+          "content": "Protection strategy: implement digital shield for Developing advanced protective...",
+          "protection_level": "medium",
+          "actionable": true,
+          "significance": 0.8457426321932497,
+          "timestamp": "2025-05-08T21:08:51.023774"
+        }
+      ],
+      "applied_changes": [
+        {
+          "type": "protection_implemented",
+          "name": "digital_shield",
+          "level": "medium"
+        }
+      ],
+      "new_capabilities": [],
+      "success": true
+    }
   }
 ]

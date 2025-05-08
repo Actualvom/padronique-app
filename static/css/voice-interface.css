@@ -1,0 +1,194 @@
+/* Voice Interface Styling */
+
+.voice-recording-container {
+    margin-top: 15px;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: rgba(33, 37, 41, 0.8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.voice-animation {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.voice-circle {
+    width: 50px;
+    height: 50px;
+    background-color: var(--bs-danger);
+    border-radius: 50%;
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+.voice-pulse-ring {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 2px solid var(--bs-danger);
+    opacity: 0.7;
+    animation: pulse-ring 1.5s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+}
+
+.voice-status {
+    font-size: 1.1rem;
+    color: var(--bs-light);
+    font-weight: 500;
+}
+
+.voice-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.voice-preview {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.preview-text {
+    font-size: 0.9rem;
+    color: var(--bs-light);
+    margin-bottom: 10px;
+    max-height: 100px;
+    overflow-y: auto;
+}
+
+.preview-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 5px;
+}
+
+/* Web Search Results */
+.web-search-container {
+    margin-top: 15px;
+    width: 100%;
+    background-color: rgba(33, 37, 41, 0.8);
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.web-search-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.web-search-input-group {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 15px;
+}
+
+.web-search-results {
+    max-height: 300px;
+    overflow-y: auto;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.search-result-item {
+    padding: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 5px;
+}
+
+.search-result-title {
+    font-weight: bold;
+    color: var(--bs-info);
+    margin-bottom: 5px;
+}
+
+.search-result-url {
+    font-size: 0.8rem;
+    color: var(--bs-success);
+    margin-bottom: 5px;
+    word-break: break-all;
+}
+
+.search-result-snippet {
+    font-size: 0.9rem;
+}
+
+.camera-container {
+    margin-top: 15px;
+    width: 100%;
+    background-color: rgba(33, 37, 41, 0.8);
+    border-radius: 10px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.camera-preview {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: #000;
+    margin-bottom: 15px;
+}
+
+.camera-preview video {
+    width: 100%;
+    height: auto;
+}
+
+.camera-buttons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.captured-image {
+    max-width: 100%;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+/* Animations */
+@keyframes pulse {
+    0% {
+        transform: scale(0.8);
+        opacity: 0.8;
+    }
+    50% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(0.8);
+        opacity: 0.8;
+    }
+}
+
+@keyframes pulse-ring {
+    0% {
+        transform: scale(0.7);
+        opacity: 0.7;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.3;
+    }
+    100% {
+        transform: scale(0.7);
+        opacity: 0.7;
+    }
+}

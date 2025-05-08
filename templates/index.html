@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/confirmation-dialogs.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/voice-interface.css') }}">
 </head>
 <body>
     <div class="app-container">
@@ -124,6 +125,7 @@
                                 <i class="fas fa-paper-plane"></i>
                             </button>
                         </div>
+                        <!-- Voice Recording Container -->
                         <div class="voice-recording-container" style="display: none;">
                             <div class="voice-animation">
                                 <div class="voice-circle"></div>
@@ -143,6 +145,61 @@
                                 <div class="preview-actions">
                                     <button class="btn btn-sm btn-primary" id="sendVoiceBtn">Send</button>
                                     <button class="btn btn-sm btn-outline-secondary" id="editVoiceBtn">Edit</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Web Search Container -->
+                        <div class="web-search-container" style="display: none;" id="webSearchContainer">
+                            <div class="web-search-header">
+                                <h5>Web Search</h5>
+                                <button class="btn btn-sm btn-close" id="closeWebSearchBtn"></button>
+                            </div>
+                            <div class="web-search-input-group">
+                                <input type="text" class="form-control" id="webSearchInput" placeholder="Search the web...">
+                                <button class="btn btn-primary" id="executeWebSearchBtn">
+                                    <i class="fas fa-search"></i>
+                                </button>
+                            </div>
+                            <div class="web-search-results" id="webSearchResults">
+                                <div class="text-center p-3">
+                                    <i class="fas fa-search fa-2x mb-3"></i>
+                                    <p>Enter a search term to find information on the web</p>
+                                </div>
+                            </div>
+                            <div class="mt-2 d-flex justify-content-end">
+                                <button class="btn btn-sm btn-primary" id="useWebSearchResultsBtn">
+                                    <i class="fas fa-paper-plane me-1"></i> Use Results
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <!-- Camera Container -->
+                        <div class="camera-container" style="display: none;" id="cameraContainer">
+                            <div class="d-flex justify-content-between w-100 mb-3">
+                                <h5>Camera</h5>
+                                <button class="btn btn-sm btn-close" id="closeCameraBtn"></button>
+                            </div>
+                            <div class="camera-preview">
+                                <video id="cameraPreview" autoplay playsinline></video>
+                            </div>
+                            <div class="camera-buttons">
+                                <button class="btn btn-primary" id="takePictureBtn">
+                                    <i class="fas fa-camera me-1"></i> Take Photo
+                                </button>
+                                <button class="btn btn-outline-secondary" id="switchCameraBtn">
+                                    <i class="fas fa-sync me-1"></i> Switch Camera
+                                </button>
+                            </div>
+                            <div id="capturedImageContainer" style="display: none;">
+                                <img id="capturedImage" class="captured-image">
+                                <div class="d-flex justify-content-end mt-2">
+                                    <button class="btn btn-sm btn-outline-secondary me-2" id="retakePictureBtn">
+                                        <i class="fas fa-redo me-1"></i> Retake
+                                    </button>
+                                    <button class="btn btn-sm btn-primary" id="usePictureBtn">
+                                        <i class="fas fa-check me-1"></i> Use Photo
+                                    </button>
                                 </div>
                             </div>
                         </div>
