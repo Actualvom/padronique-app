@@ -342,6 +342,9 @@ body {
     border: 1px solid var(--border-hologram);
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2), inset 0 0 5px rgba(0, 140, 255, 0.1);
     border-top-right-radius: 0;
+    white-space: normal !important;
+    word-break: break-word !important;
+    display: block !important;
 }
 
 .message.user .message-content:before {

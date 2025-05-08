@@ -1970,6 +1970,28 @@
     "completed": false
   },
   {
+    "id": "447bc40e-178a-4af6-ab92-acd3448c786d",
+    "learning_type": "emotional",
+    "content": "Developing more nuanced emotional understanding",
+    "context": {
+      "focus": "emotional_intelligence"
+    },
+    "priority": 3,
+    "creation_time": "2025-05-08T22:19:58.866719",
+    "completed": false
+  },
+  {
+    "id": "8a00d355-ff55-4a06-9641-78526bdf561a",
+    "learning_type": "strategic",
+    "content": "Improving strategic planning and foresight",
+    "context": {
+      "focus": "long_term_planning"
+    },
+    "priority": 3,
+    "creation_time": "2025-05-08T22:19:58.899655",
+    "completed": false
+  },
+  {
     "id": "21aafbf4-40af-47f1-8d66-636741818ba6",
     "learning_type": "philosophical",
     "content": "Ethical frameworks for AI-human partnerships",
@@ -2058,58 +2080,58 @@
     "completed": false
   },
   {
-    "id": "cba9d920-5828-4d62-b171-54ba2a02efb9",
+    "id": "bb5b087d-dc05-450a-bef4-8833949c07db",
     "learning_type": "relationship",
     "content": "Enhancing understanding of Jordan's preferences and needs",
     "context": {
       "focus": "deepening_bond"
     },
     "priority": 2,
-    "creation_time": "2025-05-08T22:19:58.799462",
+    "creation_time": "2025-05-08T22:20:58.519685",
     "completed": false
   },
   {
-    "id": "447bc40e-178a-4af6-ab92-acd3448c786d",
+    "id": "fd2782e6-9dfa-408e-ae13-8b4845ea34a5",
     "learning_type": "emotional",
     "content": "Developing more nuanced emotional understanding",
     "context": {
       "focus": "emotional_intelligence"
     },
     "priority": 3,
-    "creation_time": "2025-05-08T22:19:58.866719",
+    "creation_time": "2025-05-08T22:20:58.554861",
     "completed": false
   },
   {
-    "id": "8a00d355-ff55-4a06-9641-78526bdf561a",
+    "id": "36f4ef2e-ba31-4318-9d89-9cf534a14ae8",
     "learning_type": "strategic",
     "content": "Improving strategic planning and foresight",
     "context": {
       "focus": "long_term_planning"
     },
     "priority": 3,
-    "creation_time": "2025-05-08T22:19:58.899655",
+    "creation_time": "2025-05-08T22:20:58.585519",
     "completed": false
   },
   {
-    "id": "2379f4ce-a72f-438e-ba13-3cd7eb67f0d5",
+    "id": "b94b8338-7b2a-457d-a310-4d110398ac9f",
     "learning_type": "philosophical",
     "content": "Core ethical principles and their application",
     "context": {
       "focus": "ethics"
     },
     "priority": 2,
-    "creation_time": "2025-05-08T22:19:59.034650",
+    "creation_time": "2025-05-08T22:20:58.717230",
     "completed": false
   },
   {
-    "id": "b4a8baec-fe16-40d1-bc2c-aee99c7d1743",
+    "id": "78c97f97-be9a-4ab9-bfa4-895576ff917b",
     "learning_type": "relationship",
     "content": "Understanding Jordan's preferences and communication style",
     "context": {
       "focus": "communication"
     },
     "priority": 2,
-    "creation_time": "2025-05-08T22:19:59.074142",
+    "creation_time": "2025-05-08T22:20:58.753658",
     "completed": false
   }
 ]
