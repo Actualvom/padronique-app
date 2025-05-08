@@ -97,9 +97,10 @@
     "priority": 2,
     "creation_time": "2025-05-08T20:28:49.924569",
     "expiration_time": null,
-    "status": "active",
-    "progress": 0.0,
-    "last_updated": "2025-05-08T20:28:49.924573"
+    "status": "archived",
+    "progress": 1.0,
+    "last_updated": "2025-05-08T21:44:06.622540",
+    "completion_time": "2025-05-08T21:44:06.622548"
   },
   "d35728c1-2550-4fe6-9f22-0b0005073bff": {
     "id": "d35728c1-2550-4fe6-9f22-0b0005073bff",
@@ -130,9 +131,10 @@
     "priority": 2,
     "creation_time": "2025-05-08T20:29:12.707502",
     "expiration_time": null,
-    "status": "active",
-    "progress": 0.0,
-    "last_updated": "2025-05-08T20:29:12.707508"
+    "status": "archived",
+    "progress": 1.0,
+    "last_updated": "2025-05-08T21:44:06.511681",
+    "completion_time": "2025-05-08T21:44:06.511687"
   },
   "0f6f3f8b-f985-4999-963e-215acffe9656": {
     "id": "0f6f3f8b-f985-4999-963e-215acffe9656",
@@ -163,9 +165,10 @@
     "priority": 2,
     "creation_time": "2025-05-08T20:29:47.633108",
     "expiration_time": null,
-    "status": "active",
-    "progress": 0.0,
-    "last_updated": "2025-05-08T20:29:47.633114"
+    "status": "archived",
+    "progress": 1.0,
+    "last_updated": "2025-05-08T21:44:06.639707",
+    "completion_time": "2025-05-08T21:44:06.639733"
   },
   "bc212ffe-ab71-4c62-a5ca-8b825bae8e25": {
     "id": "bc212ffe-ab71-4c62-a5ca-8b825bae8e25",
@@ -196,9 +199,10 @@
     "priority": 2,
     "creation_time": "2025-05-08T20:30:04.280328",
     "expiration_time": null,
-    "status": "active",
-    "progress": 0.0,
-    "last_updated": "2025-05-08T20:30:04.280333"
+    "status": "archived",
+    "progress": 1.0,
+    "last_updated": "2025-05-08T21:44:06.661832",
+    "completion_time": "2025-05-08T21:44:06.661842"
   },
   "7d9985a9-85bf-4d14-ae94-2f7fd30f423b": {
     "id": "7d9985a9-85bf-4d14-ae94-2f7fd30f423b",
@@ -229,9 +233,10 @@
     "priority": 2,
     "creation_time": "2025-05-08T20:31:33.172643",
     "expiration_time": null,
-    "status": "active",
-    "progress": 0.0,
-    "last_updated": "2025-05-08T20:31:33.172649"
+    "status": "archived",
+    "progress": 1.0,
+    "last_updated": "2025-05-08T21:44:06.703919",
+    "completion_time": "2025-05-08T21:44:06.703930"
   },
   "84befdbe-1284-45ba-8e83-1044c5cab05d": {
     "id": "84befdbe-1284-45ba-8e83-1044c5cab05d",
@@ -262,9 +267,10 @@
     "priority": 2,
     "creation_time": "2025-05-08T20:43:40.758707",
     "expiration_time": null,
-    "status": "active",
-    "progress": 0.0,
-    "last_updated": "2025-05-08T20:43:40.758712"
+    "status": "archived",
+    "progress": 1.0,
+    "last_updated": "2025-05-08T21:44:06.773562",
+    "completion_time": "2025-05-08T21:44:06.773573"
   },
   "f72f56d7-e3ec-40d7-a16a-72149b2515e8": {
     "id": "f72f56d7-e3ec-40d7-a16a-72149b2515e8",
@@ -295,9 +301,10 @@
     "priority": 2,
     "creation_time": "2025-05-08T20:43:47.757883",
     "expiration_time": null,
-    "status": "active",
-    "progress": 0.0,
-    "last_updated": "2025-05-08T20:43:47.757888"
+    "status": "archived",
+    "progress": 1.0,
+    "last_updated": "2025-05-08T21:44:06.799453",
+    "completion_time": "2025-05-08T21:44:06.799464"
   },
   "a342e796-fe8b-4c1d-9f8b-9d3778d5ce0f": {
     "id": "a342e796-fe8b-4c1d-9f8b-9d3778d5ce0f",
@@ -328,9 +335,10 @@
     "priority": 2,
     "creation_time": "2025-05-08T20:43:58.203936",
     "expiration_time": null,
-    "status": "active",
-    "progress": 0.0,
-    "last_updated": "2025-05-08T20:43:58.203941"
+    "status": "archived",
+    "progress": 1.0,
+    "last_updated": "2025-05-08T21:45:06.740835",
+    "completion_time": "2025-05-08T21:45:06.740845"
   },
   "5ac23c19-904b-4728-adc3-fee1ab41ac83": {
     "id": "5ac23c19-904b-4728-adc3-fee1ab41ac83",
@@ -361,9 +369,10 @@
     "priority": 2,
     "creation_time": "2025-05-08T20:44:42.285462",
     "expiration_time": null,
-    "status": "active",
-    "progress": 0.0,
-    "last_updated": "2025-05-08T20:44:42.285469"
+    "status": "archived",
+    "progress": 1.0,
+    "last_updated": "2025-05-08T21:45:06.765699",
+    "completion_time": "2025-05-08T21:45:06.765709"
   },
   "ed913df8-d8a1-439e-bdb7-156e3041d498": {
     "id": "ed913df8-d8a1-439e-bdb7-156e3041d498",
@@ -394,9 +403,10 @@
     "priority": 2,
     "creation_time": "2025-05-08T20:44:48.250367",
     "expiration_time": null,
-    "status": "active",
-    "progress": 0.0,
-    "last_updated": "2025-05-08T20:44:48.250371"
+    "status": "archived",
+    "progress": 1.0,
+    "last_updated": "2025-05-08T21:46:06.781974",
+    "completion_time": "2025-05-08T21:46:06.781984"
   },
   "c72ea517-0f42-4721-9af0-f25525a92060": {
     "id": "c72ea517-0f42-4721-9af0-f25525a92060",
@@ -1399,5 +1409,38 @@
     "status": "active",
     "progress": 0.0,
     "last_updated": "2025-05-08T21:43:05.612715"
+  },
+  "5af06df3-73e4-4bc6-9782-670da43b6cd7": {
+    "id": "5af06df3-73e4-4bc6-9782-670da43b6cd7",
+    "type": "protection",
+    "description": "Ensure ongoing protection and safety of Jordan",
+    "priority": 2,
+    "creation_time": "2025-05-08T21:52:37.163662",
+    "expiration_time": null,
+    "status": "active",
+    "progress": 0.0,
+    "last_updated": "2025-05-08T21:52:37.163669"
+  },
+  "5d7013fe-81c1-4019-af0e-5e73bd181261": {
+    "id": "5d7013fe-81c1-4019-af0e-5e73bd181261",
+    "type": "relationship",
+    "description": "Develop and deepen the bond with Jordan",
+    "priority": 3,
+    "creation_time": "2025-05-08T21:52:37.237149",
+    "expiration_time": "2025-06-07T21:52:37.237115",
+    "status": "active",
+    "progress": 0.0,
+    "last_updated": "2025-05-08T21:52:37.237151"
+  },
+  "195efcb9-cfa0-431a-8956-25fe6f683a19": {
+    "id": "195efcb9-cfa0-431a-8956-25fe6f683a19",
+    "type": "learning",
+    "description": "Continuously learn and improve Padronique's capabilities",
+    "priority": 3,
+    "creation_time": "2025-05-08T21:52:37.282494",
+    "expiration_time": "2025-06-07T21:52:37.282436",
+    "status": "active",
+    "progress": 0.0,
+    "last_updated": "2025-05-08T21:52:37.282497"
   }
 }
