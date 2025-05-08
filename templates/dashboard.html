@@ -3,18 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard - Ignis AI Companion</title>
+    <title>Dashboard - Padronique</title>
     <link rel="stylesheet" href="https://cdn.replit.com/agent/bootstrap-agent-dark-theme.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg mb-4">
         <div class="container">
             <a class="navbar-brand system-name" href="/">
-                <i class="fas fa-brain me-2"></i>Ignis
+                <i class="fas fa-brain me-2"></i>Padronique
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -33,141 +32,171 @@
     </nav>
 
     <div class="container">
+        <!-- Particle effects for futuristic look -->
+        <div id="particle-container"></div>
+        
         <!-- Dashboard Header -->
         <div class="system-banner text-center">
-            <h1 class="system-name">System Dashboard</h1>
-            <p class="system-version">Monitoring and Management</p>
+            <h1 class="system-name">Neural Command Center</h1>
+            <p class="mt-3">Advanced monitoring and control for Padronique AI System</p>
         </div>
         
-        <!-- System Metrics -->
+        <!-- Status Overview -->
         <div class="row mb-4">
             <div class="col-md-3">
-                <div class="metric-card">
-                    <div class="metric-label">Uptime</div>
-                    <div class="metric-value" id="metric-uptime">00:00:00</div>
+                <div class="card module-card h-100">
+                    <div class="module-header">
+                        <span><i class="fas fa-heartbeat me-2"></i>System Status</span>
+                    </div>
+                    <div class="card-body text-center">
+                        <div class="status-badge" id="system-status-badge">
+                            <span class="status-indicator status-active"></span>
+                            <span class="status-text module-active">ONLINE</span>
+                        </div>
+                        <div class="mt-3">
+                            <div class="small text-muted">Uptime</div>
+                            <div id="uptime-display">00:00:00</div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="col-md-3">
-                <div class="metric-card">
-                    <div class="metric-label">Active Memories</div>
-                    <div class="metric-value" id="metric-memories">0</div>
+                <div class="card module-card h-100">
+                    <div class="module-header">
+                        <span><i class="fas fa-memory me-2"></i>Memory Usage</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="progress-stats">
+                            <div class="d-flex justify-content-between">
+                                <div>Storage Used</div>
+                                <div id="memory-usage-percent">0%</div>
+                            </div>
+                            <div class="progress quantum-progress">
+                                <div class="progress-bar" id="memory-usage-bar" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                        <div class="mt-3 small" id="memory-counts">
+                            Memory entries: 0
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="col-md-3">
-                <div class="metric-card">
-                    <div class="metric-label">Active Modules</div>
-                    <div class="metric-value" id="metric-modules">0</div>
+                <div class="card module-card h-100">
+                    <div class="module-header">
+                        <span><i class="fas fa-microchip me-2"></i>Neural Load</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="progress-stats">
+                            <div class="d-flex justify-content-between">
+                                <div>CPU Usage</div>
+                                <div id="cpu-usage-percent">0%</div>
+                            </div>
+                            <div class="progress quantum-progress">
+                                <div class="progress-bar" id="cpu-usage-bar" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                        <div class="mt-3 small">
+                            Active modules: <span id="active-modules-count">0</span>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="col-md-3">
-                <div class="metric-card">
-                    <div class="metric-label">Processing Count</div>
-                    <div class="metric-value" id="metric-processing">0</div>
+                <div class="card module-card h-100">
+                    <div class="module-header">
+                        <span><i class="fas fa-comment-dots me-2"></i>Interaction</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="stats-number" id="interactions-count">0</div>
+                        <div class="small text-muted">Total interactions</div>
+                        <div class="mt-2">
+                            <div class="small">Last active: <span id="last-interaction-time">Never</span></div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
         
-        <div class="row">
-            <!-- Module Management -->
-            <div class="col-lg-7">
+        <!-- Neural Network Modules -->
+        <div class="row mb-4">
+            <div class="col-12">
                 <div class="card module-card">
                     <div class="module-header">
-                        <span><i class="fas fa-cogs me-2"></i>Module Management</span>
-                        <button class="btn btn-sm btn-outline-info" id="refresh-modules">
+                        <span><i class="fas fa-project-diagram me-2"></i>Neural Network Modules</span>
+                        <button class="btn btn-sm btn-outline-info" id="refresh-modules-dashboard">
                             <i class="fas fa-sync-alt"></i>
                         </button>
                     </div>
                     <div class="card-body">
-                        <div class="table-responsive">
-                            <table class="table table-dark table-hover">
-                                <thead>
-                                    <tr>
-                                        <th>Module</th>
-                                        <th>Status</th>
-                                        <th>Processing</th>
-                                        <th>Errors</th>
-                                        <th>Actions</th>
-                                    </tr>
-                                </thead>
-                                <tbody id="modules-table">
-                                    <tr>
-                                        <td colspan="5" class="text-center">
-                                            <div class="spinner-border spinner-border-sm text-info" role="status">
-                                                <span class="visually-hidden">Loading...</span>
-                                            </div>
-                                            Loading modules...
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                        <div class="row" id="modules-dashboard-container">
+                            <div class="d-flex justify-content-center">
+                                <div class="spinner-border text-info" role="status">
+                                    <span class="visually-hidden">Loading...</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                
-                <!-- Module Details -->
-                <div class="card module-card mt-4" id="module-details-card" style="display: none;">
+            </div>
+        </div>
+        
+        <!-- Memory Analysis & Recent Activity -->
+        <div class="row">
+            <!-- Memory Analysis -->
+            <div class="col-lg-6">
+                <div class="card module-card">
                     <div class="module-header">
-                        <span><i class="fas fa-info-circle me-2"></i>Module Details: <span id="detail-module-name">-</span></span>
-                        <button class="btn btn-sm btn-outline-danger" id="close-details">
-                            <i class="fas fa-times"></i>
-                        </button>
+                        <span><i class="fas fa-database me-2"></i>Memory Analysis</span>
                     </div>
                     <div class="card-body">
-                        <div id="module-details-content">
-                            <!-- Module details will be loaded here -->
+                        <div class="holographic-container">
+                            <div class="circuit-lines"></div>
                         </div>
-                        <div class="mt-3">
-                            <h6>Configuration</h6>
-                            <div id="module-config">
-                                <!-- Module configuration will be loaded here -->
+                        
+                        <div class="memory-stats-container">
+                            <div class="row text-center">
+                                <div class="col">
+                                    <div class="stat-circle">
+                                        <span id="fact-memory-count">0</span>
+                                    </div>
+                                    <div class="mt-2">Facts</div>
+                                </div>
+                                <div class="col">
+                                    <div class="stat-circle">
+                                        <span id="conversation-memory-count">0</span>
+                                    </div>
+                                    <div class="mt-2">Conversations</div>
+                                </div>
+                                <div class="col">
+                                    <div class="stat-circle">
+                                        <span id="preference-memory-count">0</span>
+                                    </div>
+                                    <div class="mt-2">Preferences</div>
+                                </div>
+                                <div class="col">
+                                    <div class="stat-circle">
+                                        <span id="experience-memory-count">0</span>
+                                    </div>
+                                    <div class="mt-2">Experiences</div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             
-            <!-- Memory and Analytics -->
-            <div class="col-lg-5">
-                <!-- Memory Stats -->
+            <!-- Recent Activity -->
+            <div class="col-lg-6">
                 <div class="card module-card">
                     <div class="module-header">
-                        <span><i class="fas fa-memory me-2"></i>Memory Analytics</span>
+                        <span><i class="fas fa-history me-2"></i>Recent Activity</span>
+                        <button class="btn btn-sm btn-outline-info" id="refresh-activity">
+                            <i class="fas fa-sync-alt"></i>
+                        </button>
                     </div>
                     <div class="card-body">
-                        <canvas id="memory-chart" height="200"></canvas>
-                        <div class="mt-3" id="memory-stats">
-                            <div class="d-flex justify-content-center">
-                                <div class="spinner-border text-info" role="status">
-                                    <span class="visually-hidden">Loading...</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Tag Cloud -->
-                <div class="card module-card mt-4">
-                    <div class="module-header">
-                        <span><i class="fas fa-tags me-2"></i>Memory Tags</span>
-                    </div>
-                    <div class="card-body">
-                        <div id="tag-cloud">
-                            <div class="d-flex justify-content-center">
-                                <div class="spinner-border text-info" role="status">
-                                    <span class="visually-hidden">Loading...</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Learning Progress -->
-                <div class="card module-card mt-4">
-                    <div class="module-header">
-                        <span><i class="fas fa-graduation-cap me-2"></i>Learning Progress</span>
-                    </div>
-                    <div class="card-body">
-                        <div id="learning-stats">
+                        <div id="activity-list">
                             <div class="d-flex justify-content-center">
                                 <div class="spinner-border text-info" role="status">
                                     <span class="visually-hidden">Loading...</span>
@@ -179,32 +208,59 @@
             </div>
         </div>
         
-        <!-- Sandbox Testing Section -->
+        <!-- Configuration Panel -->
         <div class="row mt-4">
             <div class="col-12">
                 <div class="card module-card">
                     <div class="module-header">
-                        <span><i class="fas fa-vial me-2"></i>Sandbox Testing</span>
+                        <span><i class="fas fa-sliders-h me-2"></i>System Configuration</span>
+                        <button class="btn btn-sm btn-info" id="save-config">
+                            <i class="fas fa-save me-1"></i> Save Changes
+                        </button>
                     </div>
                     <div class="card-body">
                         <div class="row">
-                            <div class="col-md-8">
-                                <label for="sandbox-code" class="form-label">Test Code</label>
-                                <textarea id="sandbox-code" class="form-control code-editor" placeholder="# Enter Python code to test here"></textarea>
-                            </div>
-                            <div class="col-md-4">
-                                <label for="sandbox-input" class="form-label">Input Data (JSON)</label>
-                                <textarea id="sandbox-input" class="form-control" rows="5" placeholder='{"key": "value"}'></textarea>
-                                <div class="mt-3">
-                                    <button id="run-sandbox" class="btn btn-info"><i class="fas fa-play me-2"></i>Run in Sandbox</button>
+                            <div class="col-md-6">
+                                <h5 class="mb-3">Neural Network Settings</h5>
+                                <div class="mb-3">
+                                    <label for="ai-provider" class="form-label">AI Provider</label>
+                                    <select class="form-select" id="ai-provider">
+                                        <option value="openai">OpenAI</option>
+                                        <option value="anthropic">Anthropic</option>
+                                        <option value="local">Local Model</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="ai-model" class="form-label">Default Model</label>
+                                    <select class="form-select" id="ai-model">
+                                        <option value="gpt-4o">GPT-4o</option>
+                                        <option value="gpt-3.5-turbo">GPT-3.5 Turbo</option>
+                                        <option value="claude-3-opus">Claude 3 Opus</option>
+                                        <option value="claude-3-sonnet">Claude 3 Sonnet</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="temperature-slider" class="form-label">Temperature: <span id="temperature-value">0.7</span></label>
+                                    <input type="range" class="form-range" min="0" max="1" step="0.1" value="0.7" id="temperature-slider">
                                 </div>
                             </div>
-                        </div>
-                        
-                        <div class="mt-4">
-                            <label class="form-label">Output</label>
-                            <div id="sandbox-output" class="sandbox-output">
-                                <!-- Sandbox output will appear here -->
+                            <div class="col-md-6">
+                                <h5 class="mb-3">Memory Settings</h5>
+                                <div class="mb-3">
+                                    <label for="memory-expiry" class="form-label">Memory Expiry (days)</label>
+                                    <input type="number" class="form-control" id="memory-expiry" value="365">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="memory-encryption" class="form-label">Memory Encryption</label>
+                                    <div class="form-check form-switch">
+                                        <input class="form-check-input" type="checkbox" role="switch" id="memory-encryption" checked>
+                                        <label class="form-check-label" for="memory-encryption">Enable encryption for sensitive data</label>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="max-memories" class="form-label">Maximum Memories</label>
+                                    <input type="number" class="form-control" id="max-memories" value="10000">
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -213,12 +269,41 @@
         </div>
         
         <footer class="mt-5 text-center text-muted">
-            <p><small>Ignis AI Companion System &copy; 2023</small></p>
+            <p><small>Padronique AI System &copy; 2025</small></p>
         </footer>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
+        // Create particle effects for futuristic look
+        function createParticles() {
+            const container = document.getElementById('particle-container');
+            const particleCount = 30;
+            
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.classList.add('particle');
+                
+                // Random positioning
+                const x = Math.random() * 100;
+                const y = Math.random() * 100;
+                
+                particle.style.left = `${x}%`;
+                particle.style.top = `${y}%`;
+                
+                // Random size variation
+                const size = Math.random() * 4 + 2;
+                particle.style.width = `${size}px`;
+                particle.style.height = `${size}px`;
+                
+                // Random animation delay
+                const delay = Math.random() * 5;
+                particle.style.animationDelay = `${delay}s`;
+                
+                container.appendChild(particle);
+            }
+        }
+        
         // Helper function to format timestamps
         function formatTimestamp(timestamp) {
             const date = new Date(timestamp * 1000);
@@ -233,46 +318,8 @@
             return `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
         }
         
-        // Initialize charts
-        let memoryChart = null;
-        
-        function initCharts() {
-            // Memory chart
-            const ctx = document.getElementById('memory-chart').getContext('2d');
-            memoryChart = new Chart(ctx, {
-                type: 'doughnut',
-                data: {
-                    labels: ['Active', 'Expired'],
-                    datasets: [{
-                        data: [0, 0],
-                        backgroundColor: [
-                            'rgba(54, 162, 235, 0.6)',
-                            'rgba(255, 99, 132, 0.6)'
-                        ],
-                        borderColor: [
-                            'rgba(54, 162, 235, 1)',
-                            'rgba(255, 99, 132, 1)'
-                        ],
-                        borderWidth: 1
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    plugins: {
-                        legend: {
-                            position: 'bottom',
-                        },
-                        title: {
-                            display: true,
-                            text: 'Memory Distribution'
-                        }
-                    }
-                }
-            });
-        }
-        
-        // Update system metrics
-        function updateSystemMetrics() {
+        // Update system status and metrics
+        function updateSystemStatus() {
             fetch('/api/status')
                 .then(response => response.json())
                 .then(data => {
@@ -280,76 +327,40 @@
                         const stats = data.system;
                         
                         // Update uptime
-                        document.getElementById('metric-uptime').textContent = formatUptime(stats.uptime);
+                        document.getElementById('uptime-display').textContent = formatUptime(stats.uptime);
                         
-                        // Update memory count
-                        document.getElementById('metric-memories').textContent = stats.memory.active_memories;
+                        // Update memory usage
+                        const memoryPercent = (stats.memory.total_memories / stats.memory.max_memories * 100).toFixed(1);
+                        document.getElementById('memory-usage-percent').textContent = `${memoryPercent}%`;
+                        document.getElementById('memory-usage-bar').style.width = `${memoryPercent}%`;
+                        document.getElementById('memory-usage-bar').setAttribute('aria-valuenow', memoryPercent);
+                        document.getElementById('memory-counts').textContent = `Memory entries: ${stats.memory.total_memories} / ${stats.memory.max_memories}`;
                         
-                        // Update module count
-                        let activeModules = 0;
-                        let totalProcessing = 0;
+                        // Update CPU usage (mock data for demonstration)
+                        const cpuPercent = Math.min(100, (stats.uptime % 100)).toFixed(1);
+                        document.getElementById('cpu-usage-percent').textContent = `${cpuPercent}%`;
+                        document.getElementById('cpu-usage-bar').style.width = `${cpuPercent}%`;
+                        document.getElementById('cpu-usage-bar').setAttribute('aria-valuenow', cpuPercent);
                         
-                        for (const [name, module] of Object.entries(stats.modules)) {
-                            if (module.active) {
-                                activeModules++;
-                            }
-                            totalProcessing += module.stats.processing_count;
+                        // Update modules
+                        updateModules(stats.modules);
+                        
+                        // Count active modules
+                        let activeCount = 0;
+                        for (const module of Object.values(stats.modules)) {
+                            if (module.active) activeCount++;
                         }
+                        document.getElementById('active-modules-count').textContent = activeCount;
                         
-                        document.getElementById('metric-modules').textContent = activeModules;
-                        document.getElementById('metric-processing').textContent = totalProcessing;
+                        // Update memory type counts (mock data for demonstration)
+                        document.getElementById('fact-memory-count').textContent = Math.floor(stats.memory.total_memories * 0.4);
+                        document.getElementById('conversation-memory-count').textContent = Math.floor(stats.memory.total_memories * 0.3);
+                        document.getElementById('preference-memory-count').textContent = Math.floor(stats.memory.total_memories * 0.2);
+                        document.getElementById('experience-memory-count').textContent = Math.floor(stats.memory.total_memories * 0.1);
                         
-                        // Update memory chart
-                        if (memoryChart) {
-                            memoryChart.data.datasets[0].data = [
-                                stats.memory.active_memories,
-                                stats.memory.expired_memories
-                            ];
-                            memoryChart.update();
-                        }
-                        
-                        // Update memory stats
-                        let memoryStatsHtml = `
-                            <div class="row">
-                                <div class="col-6">
-                                    <div class="mb-2">
-                                        <strong>Total Memories:</strong> ${stats.memory.total_memories}
-                                    </div>
-                                    <div class="mb-2">
-                                        <strong>Active Memories:</strong> ${stats.memory.active_memories}
-                                    </div>
-                                </div>
-                                <div class="col-6">
-                                    <div class="mb-2">
-                                        <strong>Expired Memories:</strong> ${stats.memory.expired_memories}
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="mt-3">
-                                <h6>Memory Types</h6>
-                                <div class="row">
-                        `;
-                        
-                        for (const [type, count] of Object.entries(stats.memory.memory_types)) {
-                            memoryStatsHtml += `
-                                <div class="col-6 mb-1">
-                                    <small>${type}: ${count}</small>
-                                </div>
-                            `;
-                        }
-                        
-                        memoryStatsHtml += `
-                                </div>
-                            </div>
-                        `;
-                        
-                        document.getElementById('memory-stats').innerHTML = memoryStatsHtml;
-                        
-                        // Update tag cloud
-                        updateTagCloud(stats.memory.tags);
-                        
-                        // Update module table
-                        updateModuleTable(stats.modules);
+                        // Update interaction count (mock data for demonstration)
+                        document.getElementById('interactions-count').textContent = Math.floor(stats.uptime / 10);
+                        document.getElementById('last-interaction-time').textContent = formatTimestamp(Math.floor(Date.now() / 1000) - 60);
                     }
                 })
                 .catch(error => {
@@ -357,147 +368,53 @@
                 });
         }
         
-        // Update tag cloud
-        function updateTagCloud(tagStats) {
-            if (!tagStats || !tagStats.popular_tags) {
-                document.getElementById('tag-cloud').innerHTML = 
-                    '<div class="text-center text-muted">No tags available</div>';
-                return;
-            }
-            
-            let tagsHtml = '';
-            tagStats.popular_tags.forEach(tag => {
-                const tagName = tag[0];
-                const count = tag[1];
-                const size = Math.max(1, Math.min(2, 0.8 + (count / 20))); // Scale between 0.8 and 2em
-                
-                tagsHtml += `
-                    <span class="memory-tag me-2 mb-2" style="font-size: ${size}em;" title="${count} memories">
-                        ${tagName} (${count})
-                    </span>
-                `;
-            });
-            
-            if (tagsHtml) {
-                document.getElementById('tag-cloud').innerHTML = tagsHtml;
-            } else {
-                document.getElementById('tag-cloud').innerHTML = 
-                    '<div class="text-center text-muted">No tags available</div>';
-            }
-        }
-        
-        // Update module table
-        function updateModuleTable(modules) {
-            let tableHtml = '';
+        // Update brain modules
+        function updateModules(modules) {
+            let modulesHtml = '';
             
             for (const [name, module] of Object.entries(modules)) {
-                const statusClass = module.active ? 'text-success' : 'text-danger';
-                const statusText = module.active ? 'Active' : 'Inactive';
-                const btnClass = module.active ? 'btn-danger' : 'btn-success';
-                const btnText = module.active ? 'Deactivate' : 'Activate';
+                const statusClass = module.active ? 'module-active' : 'module-inactive';
+                const statusIndicator = module.active ? 'status-active' : 'status-inactive';
                 
-                tableHtml += `
-                    <tr>
-                        <td class="text-capitalize">${name}</td>
-                        <td><span class="${statusClass}">${statusText}</span></td>
-                        <td>${module.stats.processing_count}</td>
-                        <td>${module.stats.error_count}</td>
-                        <td>
-                            <button class="btn btn-sm btn-info me-1 view-module" data-module="${name}">
-                                <i class="fas fa-info-circle"></i>
-                            </button>
-                            <button class="btn btn-sm ${btnClass} toggle-module" data-module="${name}" data-active="${module.active}">
-                                ${btnText}
-                            </button>
-                        </td>
-                    </tr>
+                modulesHtml += `
+                    <div class="col-md-4 col-lg-3 mb-4">
+                        <div class="module-box">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <h5 class="mb-0 text-capitalize">${name}</h5>
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" role="switch" id="module-${name}" ${module.active ? 'checked' : ''}>
+                                </div>
+                            </div>
+                            <div class="module-stats">
+                                <div><span class="status-indicator ${statusIndicator}"></span>
+                                <span class="${statusClass}">${module.active ? 'Active' : 'Inactive'}</span></div>
+                                <div class="small mt-2">
+                                    <div>Processed: ${module.stats.processing_count}</div>
+                                    <div>Errors: ${module.stats.error_count}</div>
+                                    <div>Last used: ${module.last_used ? formatTimestamp(module.last_used) : 'Never'}</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 `;
             }
             
-            document.getElementById('modules-table').innerHTML = tableHtml;
+            document.getElementById('modules-dashboard-container').innerHTML = modulesHtml;
             
-            // Add event listeners for module actions
-            document.querySelectorAll('.view-module').forEach(button => {
-                button.addEventListener('click', function() {
-                    const moduleName = this.getAttribute('data-module');
-                    viewModuleDetails(moduleName);
-                });
-            });
-            
-            document.querySelectorAll('.toggle-module').forEach(button => {
-                button.addEventListener('click', function() {
-                    const moduleName = this.getAttribute('data-module');
-                    const isActive = this.getAttribute('data-active') === 'true';
-                    toggleModule(moduleName, !isActive);
-                });
-            });
-        }
-        
-        // View module details
-        function viewModuleDetails(moduleName) {
-            fetch(`/api/modules/${moduleName}`)
-                .then(response => response.json())
-                .then(data => {
-                    if (data.status === 'ok') {
-                        const module = data.module;
-                        
-                        // Update module name
-                        document.getElementById('detail-module-name').textContent = moduleName;
-                        
-                        // Update details content
-                        let detailsHtml = `
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="mb-2">
-                                        <strong>Status:</strong> 
-                                        <span class="${module.active ? 'text-success' : 'text-danger'}">
-                                            ${module.active ? 'Active' : 'Inactive'}
-                                        </span>
-                                    </div>
-                                    <div class="mb-2">
-                                        <strong>Processing Count:</strong> ${module.stats.processing_count}
-                                    </div>
-                                    <div class="mb-2">
-                                        <strong>Error Count:</strong> ${module.stats.error_count}
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="mb-2">
-                                        <strong>Last Used:</strong> 
-                                        ${module.stats.last_used ? formatTimestamp(module.stats.last_used) : 'Never'}
-                                    </div>
-                                    <div class="mb-2">
-                                        <strong>Avg. Processing Time:</strong> 
-                                        ${module.stats.avg_processing_time ? module.stats.avg_processing_time.toFixed(4) + 's' : 'N/A'}
-                                    </div>
-                                </div>
-                            </div>
-                        `;
-                        
-                        document.getElementById('module-details-content').innerHTML = detailsHtml;
-                        
-                        // Update config section
-                        let configHtml = '<pre class="bg-dark p-3 rounded"><code>';
-                        configHtml += JSON.stringify(module.config, null, 2);
-                        configHtml += '</code></pre>';
-                        
-                        document.getElementById('module-config').innerHTML = configHtml;
-                        
-                        // Show details card
-                        document.getElementById('module-details-card').style.display = 'block';
-                    } else {
-                        alert(`Error: ${data.message}`);
-                    }
-                })
-                .catch(error => {
-                    console.error(`Error fetching module details: ${error}`);
-                    alert('Error fetching module details. See console for details.');
-                });
+            // Add event listeners to module toggles
+            for (const [name, module] of Object.entries(modules)) {
+                const toggleElement = document.getElementById(`module-${name}`);
+                if (toggleElement) {
+                    toggleElement.addEventListener('change', function() {
+                        toggleModule(name, this.checked);
+                    });
+                }
+            }
         }
         
         // Toggle module active state
-        function toggleModule(moduleName, active) {
-            fetch(`/api/modules/${moduleName}/toggle`, {
+        function toggleModule(name, active) {
+            fetch(`/api/modules/${name}/toggle`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -507,209 +424,231 @@
             .then(response => response.json())
             .then(data => {
                 if (data.status === 'ok') {
-                    // Refresh module data
-                    updateSystemMetrics();
-                    
-                    // If details are open for this module, refresh them
-                    if (document.getElementById('detail-module-name').textContent === moduleName) {
-                        viewModuleDetails(moduleName);
-                    }
+                    console.log(`Module ${name} toggled successfully`);
                 } else {
-                    alert(`Error: ${data.message}`);
+                    console.error(`Error toggling module ${name}: ${data.error || 'Unknown error'}`);
+                    // Reset the checkbox to its previous state
+                    const toggleElement = document.getElementById(`module-${name}`);
+                    if (toggleElement) toggleElement.checked = !active;
                 }
             })
             .catch(error => {
-                console.error(`Error toggling module: ${error}`);
-                alert('Error toggling module. See console for details.');
+                console.error(`Error toggling module ${name}:`, error);
+                // Reset the checkbox to its previous state
+                const toggleElement = document.getElementById(`module-${name}`);
+                if (toggleElement) toggleElement.checked = !active;
             });
         }
         
-        // Update learning stats
-        function updateLearningStats() {
-            fetch('/api/modules/learning')
-                .then(response => response.json())
-                .then(data => {
-                    if (data.status === 'ok') {
-                        const module = data.module;
-                        
-                        if (!module) {
-                            document.getElementById('learning-stats').innerHTML = 
-                                '<div class="text-center text-muted">Learning module not available</div>';
-                            return;
-                        }
-                        
-                        // Get improvement areas from learning module
-                        let learningHtml = `
-                            <div class="mb-3">
-                                <div><strong>Learning Rate:</strong> ${module.config.learning_rate}</div>
-                                <div><strong>Method:</strong> ${module.config.reinforcement_method}</div>
-                                <div><strong>Status:</strong> 
-                                    <span class="${module.active ? 'text-success' : 'text-danger'}">
-                                        ${module.active ? 'Active' : 'Inactive'}
-                                    </span>
-                                </div>
-                            </div>
-                        `;
-                        
-                        // If the module has stats about improvement areas, show them
-                        if (module.stats && module.stats.improvement_areas) {
-                            const areas = module.stats.improvement_areas;
-                            
-                            learningHtml += `<h6>Improvement Areas</h6>`;
-                            
-                            if (areas.length === 0) {
-                                learningHtml += `<div class="text-muted">No improvement areas identified yet</div>`;
-                            } else {
-                                learningHtml += `<ul class="list-group list-group-flush">`;
-                                areas.forEach(area => {
-                                    learningHtml += `
-                                        <li class="list-group-item bg-dark">
-                                            <div><strong>${area.area}</strong></div>
-                                            <div class="small">
-                                                Performance: ${area.current_performance.toFixed(2)} / 
-                                                Target: ${area.overall_average.toFixed(2)}
-                                            </div>
-                                            <div class="progress mt-1" style="height: 6px;">
-                                                <div class="progress-bar bg-info" role="progressbar" 
-                                                    style="width: ${(area.current_performance / area.overall_average * 100).toFixed(0)}%">
-                                                </div>
-                                            </div>
-                                        </li>
-                                    `;
-                                });
-                                learningHtml += `</ul>`;
-                            }
-                        } else {
-                            learningHtml += `<div class="text-muted">Learning progress data not available</div>`;
-                        }
-                        
-                        document.getElementById('learning-stats').innerHTML = learningHtml;
-                    } else {
-                        document.getElementById('learning-stats').innerHTML = 
-                            `<div class="text-center text-danger">Error: ${data.message}</div>`;
-                    }
-                })
-                .catch(error => {
-                    console.error('Error fetching learning stats:', error);
-                    document.getElementById('learning-stats').innerHTML = 
-                        '<div class="text-center text-danger">Error fetching learning data</div>';
-                });
-        }
-        
-        // Run code in sandbox
-        function runInSandbox() {
-            const code = document.getElementById('sandbox-code').value.trim();
-            let inputs = {};
+        // Load recent activity
+        function loadRecentActivity() {
+            // Mock data for demonstration
+            const activities = [
+                { type: 'interaction', message: 'User asked about the weather', timestamp: Math.floor(Date.now() / 1000) - 120 },
+                { type: 'memory', message: 'New memory created: User preference for music', timestamp: Math.floor(Date.now() / 1000) - 300 },
+                { type: 'system', message: 'Language module updated', timestamp: Math.floor(Date.now() / 1000) - 600 },
+                { type: 'learning', message: 'Learned new concept: Quantum computing', timestamp: Math.floor(Date.now() / 1000) - 1800 },
+                { type: 'interaction', message: 'User requested information about AI advances', timestamp: Math.floor(Date.now() / 1000) - 3600 }
+            ];
             
-            // Parse input JSON if provided
-            const inputText = document.getElementById('sandbox-input').value.trim();
-            if (inputText) {
-                try {
-                    inputs = JSON.parse(inputText);
-                } catch (e) {
-                    document.getElementById('sandbox-output').innerHTML = 
-                        `<span class="text-danger">Error parsing input JSON: ${e.message}</span>`;
-                    return;
-                }
-            }
+            let activityHtml = '';
             
-            // Show loading indicator
-            document.getElementById('sandbox-output').innerHTML = 
-                `<div class="d-flex align-items-center">
-                    <div class="spinner-border spinner-border-sm text-info me-2" role="status">
-                        <span class="visually-hidden">Loading...</span>
+            activities.forEach(activity => {
+                const icon = activity.type === 'interaction' ? 'comment' :
+                           (activity.type === 'memory' ? 'database' :
+                           (activity.type === 'learning' ? 'graduation-cap' : 'cog'));
+                
+                activityHtml += `
+                    <div class="activity-item">
+                        <div class="activity-icon">
+                            <i class="fas fa-${icon}"></i>
+                        </div>
+                        <div class="activity-content">
+                            <div>${activity.message}</div>
+                            <div class="activity-time">${formatTimestamp(activity.timestamp)}</div>
+                        </div>
                     </div>
-                    Running code in sandbox...
-                </div>`;
-            
-            // Send to API
-            fetch('/api/sandbox/test', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({
-                    code: code,
-                    inputs: inputs
-                })
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.status === 'ok') {
-                    const result = data.result;
-                    
-                    let outputHtml = '';
-                    if (result.success) {
-                        outputHtml += `<div class="text-success mb-2">✓ Execution successful (${result.execution_time.toFixed(3)}s)</div>`;
-                        
-                        // Show stdout
-                        if (result.stdout) {
-                            outputHtml += `<div class="mb-2"><strong>Standard Output:</strong></div>`;
-                            outputHtml += `<pre class="bg-black p-2 rounded text-light">${result.stdout}</pre>`;
-                        }
-                        
-                        // Show result
-                        outputHtml += `<div class="mb-2"><strong>Result:</strong></div>`;
-                        outputHtml += `<pre class="bg-black p-2 rounded text-light">${JSON.stringify(result.result, null, 2)}</pre>`;
-                    } else {
-                        outputHtml += `<div class="text-danger mb-2">✗ Execution failed</div>`;
-                        
-                        // Show error
-                        outputHtml += `<div class="mb-2"><strong>Error:</strong></div>`;
-                        outputHtml += `<pre class="bg-black p-2 rounded text-danger">${result.error}</pre>`;
-                        
-                        // Show traceback if available
-                        if (result.traceback) {
-                            outputHtml += `<div class="mb-2"><strong>Traceback:</strong></div>`;
-                            outputHtml += `<pre class="bg-black p-2 rounded text-danger">${result.traceback}</pre>`;
-                        }
-                        
-                        // Show stdout if available
-                        if (result.stdout) {
-                            outputHtml += `<div class="mb-2"><strong>Standard Output:</strong></div>`;
-                            outputHtml += `<pre class="bg-black p-2 rounded text-light">${result.stdout}</pre>`;
-                        }
-                        
-                        // Show stderr if available
-                        if (result.stderr) {
-                            outputHtml += `<div class="mb-2"><strong>Standard Error:</strong></div>`;
-                            outputHtml += `<pre class="bg-black p-2 rounded text-danger">${result.stderr}</pre>`;
-                        }
-                    }
-                    
-                    document.getElementById('sandbox-output').innerHTML = outputHtml;
-                } else {
-                    document.getElementById('sandbox-output').innerHTML = 
-                        `<div class="text-danger">Error: ${data.message}</div>`;
-                }
-            })
-            .catch(error => {
-                console.error('Error running sandbox code:', error);
-                document.getElementById('sandbox-output').innerHTML = 
-                    `<div class="text-danger">Error communicating with server: ${error.message}</div>`;
+                `;
             });
+            
+            document.getElementById('activity-list').innerHTML = activityHtml;
         }
         
-        // Initialize the page
+        // Initialize the dashboard
         document.addEventListener('DOMContentLoaded', function() {
-            // Initialize charts
-            initCharts();
+            // Create particle effects
+            createParticles();
             
-            // Set up event listeners
-            document.getElementById('refresh-modules').addEventListener('click', updateSystemMetrics);
-            document.getElementById('close-details').addEventListener('click', function() {
-                document.getElementById('module-details-card').style.display = 'none';
+            // Initialize system status
+            updateSystemStatus();
+            
+            // Load recent activity
+            loadRecentActivity();
+            
+            // Set up periodic updates
+            setInterval(updateSystemStatus, 10000); // Every 10 seconds
+            
+            // Update temperature display when slider changes
+            document.getElementById('temperature-slider').addEventListener('input', function() {
+                document.getElementById('temperature-value').textContent = this.value;
             });
-            document.getElementById('run-sandbox').addEventListener('click', runInSandbox);
             
-            // Initial data loading
-            updateSystemMetrics();
-            updateLearningStats();
+            // Add event listeners for refresh buttons
+            document.getElementById('refresh-modules-dashboard').addEventListener('click', updateSystemStatus);
+            document.getElementById('refresh-activity').addEventListener('click', loadRecentActivity);
             
-            // Set interval to update system metrics
-            setInterval(updateSystemMetrics, 30000); // Every 30 seconds
-            setInterval(updateLearningStats, 60000); // Every minute
+            // Add event listener for save configuration button
+            document.getElementById('save-config').addEventListener('click', function() {
+                const config = {
+                    ai: {
+                        provider: document.getElementById('ai-provider').value,
+                        model: document.getElementById('ai-model').value,
+                        temperature: parseFloat(document.getElementById('temperature-slider').value)
+                    },
+                    memory: {
+                        expiry_days: parseInt(document.getElementById('memory-expiry').value),
+                        encryption_enabled: document.getElementById('memory-encryption').checked,
+                        max_memories: parseInt(document.getElementById('max-memories').value)
+                    }
+                };
+                
+                // In a real application, you would send this to the server
+                console.log('Saving configuration:', config);
+                alert('Configuration saved successfully!');
+            });
         });
     </script>
+    <style>
+        /* Additional Dashboard styles */
+        .stat-circle {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, rgba(0, 194, 255, 0.1), rgba(173, 0, 255, 0.1));
+            border: 1px solid var(--card-border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+            font-size: 1.5rem;
+            color: var(--accent-blue);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .stat-circle::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(57, 240, 255, 0.1), transparent);
+            animation: pulse 4s infinite;
+        }
+        
+        .status-badge {
+            display: inline-block;
+            padding: 0.5rem 1.5rem;
+            border-radius: 20px;
+            background: linear-gradient(to right, rgba(0, 194, 255, 0.1), rgba(57, 240, 255, 0.05));
+            border: 1px solid var(--accent-blue);
+        }
+        
+        .status-text {
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+        
+        .stats-number {
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: var(--accent-blue);
+            margin-bottom: 0.5rem;
+        }
+        
+        .quantum-progress {
+            height: 8px;
+            background-color: rgba(13, 19, 33, 0.5);
+            overflow: hidden;
+        }
+        
+        .quantum-progress .progress-bar {
+            background: linear-gradient(to right, var(--accent-blue), var(--accent-purple));
+            position: relative;
+        }
+        
+        .quantum-progress .progress-bar::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            animation: progressLight 2s infinite;
+        }
+        
+        @keyframes progressLight {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+        
+        .module-box {
+            background-color: rgba(16, 23, 41, 0.7);
+            border: 1px solid var(--card-border);
+            border-radius: 8px;
+            padding: 1rem;
+            height: 100%;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .module-box:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 194, 255, 0.1);
+        }
+        
+        .form-check-input:checked {
+            background-color: var(--accent-blue);
+            border-color: var(--accent-blue);
+        }
+        
+        .activity-item {
+            display: flex;
+            margin-bottom: 1rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid rgba(57, 240, 255, 0.1);
+        }
+        
+        .activity-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        
+        .activity-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, rgba(0, 194, 255, 0.1), rgba(173, 0, 255, 0.1));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+            color: var(--accent-blue);
+        }
+        
+        .activity-content {
+            flex: 1;
+        }
+        
+        .activity-time {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            margin-top: 0.3rem;
+        }
+        
+        .progress-stats {
+            margin-bottom: 1rem;
+        }
+    </style>
 </body>
 </html>
