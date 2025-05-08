@@ -6,79 +6,200 @@
     <title>Padronique - Login</title>
     <link rel="stylesheet" href="https://cdn.replit.com/agent/bootstrap-agent-dark-theme.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700&display=swap">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/cyberpunk-theme.css') }}">
     <style>
         body {
             min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            background-color: var(--background-main);
+            background-image: 
+                linear-gradient(0deg, rgba(7, 8, 22, 0.95) 0%, rgba(10, 12, 35, 0.8) 100%),
+                url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h100v100H0z' fill='none'/%3E%3Cpath d='M0 0h1v1H0z' fill='rgba(56, 92, 125, 0.1)'/%3E%3Cpath d='M0 99h1v1H0z' fill='rgba(56, 92, 125, 0.1)'/%3E%3Cpath d='M99 0h1v1h-1z' fill='rgba(56, 92, 125, 0.1)'/%3E%3Cpath d='M99 99h1v1h-1z' fill='rgba(56, 92, 125, 0.1)'/%3E%3Cpath d='M10 0v100M20 0v100M30 0v100M40 0v100M50 0v100M60 0v100M70 0v100M80 0v100M90 0v100M0 10h100M0 20h100M0 30h100M0 40h100M0 50h100M0 60h100M0 70h100M0 80h100M0 90h100' stroke='rgba(56, 92, 125, 0.05)' stroke-width='0.5'/%3E%3C/svg%3E");
+            overflow: hidden;
+            position: relative;
+            font-family: 'Rajdhani', sans-serif;
+        }
+        
+        body:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 20%, rgba(0, 140, 255, 0.1) 0%, transparent 40%),
+                radial-gradient(circle at 80% 80%, rgba(123, 77, 255, 0.1) 0%, transparent 40%);
+            pointer-events: none;
         }
         
         .login-container {
             width: 100%;
             max-width: 420px;
-            padding: 2rem;
-            border-radius: 12px;
-            background-color: rgba(26, 27, 38, 0.8);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+            padding: 2.5rem;
+            background: linear-gradient(135deg, rgba(16, 20, 40, 0.7), rgba(26, 30, 50, 0.7));
+            border: 1px solid var(--border-hologram);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4), 0 0 30px rgba(0, 140, 255, 0.2);
+            position: relative;
+            overflow: hidden;
             backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            z-index: 10;
+            border-radius: 12px;
+        }
+        
+        .login-container:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--primary-glow), transparent);
+        }
+        
+        .login-container:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                linear-gradient(180deg, transparent 50%, rgba(0, 0, 0, 0.1) 100%);
+            pointer-events: none;
+        }
+        
+        .hexagon-decoration {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            overflow: hidden;
+            opacity: 0.2;
+        }
+        
+        .hexagon-decoration:before {
+            content: '';
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            top: -150px;
+            right: -150px;
+            background: linear-gradient(135deg, transparent, rgba(123, 77, 255, 0.2));
+            border: 1px solid rgba(123, 77, 255, 0.3);
+            transform: rotate(45deg);
+            pointer-events: none;
+        }
+        
+        .hexagon-decoration:after {
+            content: '';
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            bottom: -100px;
+            left: -100px;
+            background: linear-gradient(135deg, transparent, rgba(0, 140, 255, 0.2));
+            border: 1px solid rgba(0, 140, 255, 0.3);
+            transform: rotate(45deg);
+            pointer-events: none;
         }
         
         .logo-container {
             text-align: center;
             margin-bottom: 2rem;
+            position: relative;
         }
         
         .logo {
+            font-family: 'Orbitron', sans-serif;
             font-size: 2.5rem;
             font-weight: 700;
-            background: linear-gradient(45deg, #00aeff, #a200ff);
+            background: linear-gradient(90deg, #00c6ff, #7b4dff);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            position: relative;
+        }
+        
+        .logo:after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 25%;
+            width: 50%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--primary-glow), transparent);
         }
         
         .tagline {
-            font-size: 1rem;
-            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
         
         .form-label {
-            color: rgba(255, 255, 255, 0.8);
+            color: var(--text-primary);
             font-size: 0.9rem;
             margin-bottom: 0.5rem;
+            letter-spacing: 0.5px;
+            font-weight: 500;
         }
         
         .form-control {
-            background-color: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            color: white;
+            background: rgba(16, 20, 40, 0.5);
+            border: 1px solid var(--border-hologram);
+            color: var(--text-primary);
             padding: 0.8rem 1rem;
+            transition: all 0.3s ease;
+            font-family: 'Rajdhani', sans-serif;
         }
         
         .form-control:focus {
-            background-color: rgba(255, 255, 255, 0.1);
-            box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
-            border-color: rgba(255, 255, 255, 0.2);
+            background: rgba(26, 30, 50, 0.7);
+            box-shadow: 0 0 15px rgba(0, 140, 255, 0.2);
+            border-color: var(--primary-glow);
         }
         
         .btn-primary {
-            background: linear-gradient(45deg, #00aeff, #a200ff);
+            background: linear-gradient(135deg, var(--primary-glow), var(--secondary-glow));
             border: none;
             padding: 0.8rem;
             font-weight: 600;
-            letter-spacing: 0.03em;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            letter-spacing: 0.05em;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
             transition: all 0.3s ease;
+            font-family: 'Rajdhani', sans-serif;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn-primary:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: all 0.5s ease;
         }
         
         .btn-primary:hover {
             transform: translateY(-2px);
-            box-shadow: 0 7px 14px rgba(0, 0, 0, 0.2);
-            background: linear-gradient(45deg, #0095dd, #8a00dd);
+            box-shadow: 0 7px 20px rgba(0, 0, 0, 0.3), 0 0 15px rgba(0, 140, 255, 0.3);
+        }
+        
+        .btn-primary:hover:before {
+            left: 100%;
         }
         
         .btn-primary:active {
@@ -86,9 +207,9 @@
         }
         
         .input-group-text {
-            background-color: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            color: rgba(255, 255, 255, 0.7);
+            background: rgba(16, 20, 40, 0.5);
+            border: 1px solid var(--border-hologram);
+            color: var(--primary-glow);
         }
         
         .alert {
@@ -96,11 +217,58 @@
             padding: 1rem;
             margin-bottom: 1.5rem;
             font-size: 0.9rem;
+            border: 1px solid var(--border-hologram);
+            background: rgba(16, 20, 40, 0.5);
+        }
+        
+        .alert-danger {
+            border-color: rgba(231, 76, 60, 0.3);
+            color: #e74c3c;
+        }
+        
+        .form-check-input:checked {
+            background-color: var(--primary-glow);
+            border-color: var(--primary-glow);
+        }
+        
+        /* Scanlines overlay */
+        .scanlines {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                to bottom,
+                transparent 50%,
+                rgba(0, 0, 0, 0.02) 51%,
+                transparent 51%
+            );
+            background-size: 100% 4px;
+            z-index: 999;
+            pointer-events: none;
+            opacity: 0.3;
+        }
+        
+        /* Glitch effect on the logo on hover */
+        .logo:hover {
+            animation: glitch 0.5s linear 1;
+        }
+        
+        @keyframes glitch {
+            0% { transform: translate(0); }
+            20% { transform: translate(-2px, 2px); }
+            40% { transform: translate(-2px, -2px); }
+            60% { transform: translate(2px, 2px); }
+            80% { transform: translate(2px, -2px); }
+            100% { transform: translate(0); }
         }
     </style>
 </head>
 <body>
+    <div class="scanlines"></div>
     <div class="login-container">
+        <div class="hexagon-decoration"></div>
         <div class="logo-container">
             <h1 class="logo">Padronique</h1>
             <div class="tagline">Your AI Companion</div>
