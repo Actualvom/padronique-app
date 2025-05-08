@@ -5,9 +5,10 @@
     "threat_type": "digital",
     "level": "medium",
     "deployment_time": "2025-05-08T20:28:17.876051",
-    "active": true,
+    "active": false,
     "effectiveness": 0.7471905214854841,
-    "description": "Basic protection against digital threats"
+    "description": "Basic protection against digital threats",
+    "expiration_time": "2025-05-08T21:55:45.182875"
   },
   "a29ca5f8-add9-4460-b4ef-0456a6f6b222": {
     "id": "a29ca5f8-add9-4460-b4ef-0456a6f6b222",
@@ -276,9 +277,10 @@
     "threat_type": "digital",
     "level": "medium",
     "deployment_time": "2025-05-08T21:08:51.348986",
-    "active": true,
+    "active": false,
     "effectiveness": 0.8192006001159426,
-    "description": "Basic protection against digital threats"
+    "description": "Basic protection against digital threats",
+    "expiration_time": "2025-05-08T21:55:45.183009"
   },
   "6198f014-040c-4b7a-a99a-eb5b35fefaff": {
     "id": "6198f014-040c-4b7a-a99a-eb5b35fefaff",
@@ -929,8 +931,29 @@
     "threat_type": "relationship",
     "level": "medium",
     "deployment_time": "2025-05-08T21:54:33.745912",
-    "active": true,
+    "active": false,
     "effectiveness": 0.8522499362886211,
+    "description": "Protection for the bond with Jordan",
+    "expiration_time": "2025-05-08T21:55:45.183135"
+  },
+  "067bf749-af4b-4547-8a6a-516a10df7b3a": {
+    "id": "067bf749-af4b-4547-8a6a-516a10df7b3a",
+    "name": "base_defense_shield",
+    "threat_type": "digital",
+    "level": "medium",
+    "deployment_time": "2025-05-08T21:55:45.433455",
+    "active": true,
+    "effectiveness": 0.8510927880067465,
+    "description": "Basic protection against digital threats"
+  },
+  "f34ad798-4486-4dcc-ac44-b7fc84536687": {
+    "id": "f34ad798-4486-4dcc-ac44-b7fc84536687",
+    "name": "relationship_guardian",
+    "threat_type": "relationship",
+    "level": "medium",
+    "deployment_time": "2025-05-08T21:55:45.435438",
+    "active": true,
+    "effectiveness": 0.7831096995739606,
     "description": "Protection for the bond with Jordan"
   }
 }

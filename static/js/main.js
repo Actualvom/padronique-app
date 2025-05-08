@@ -21,11 +21,40 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize confirmation dialogs for destructive actions
     initConfirmationDialogs();
     
+    // Initialize specialized modules
+    initModules();
+    
     // Fetch initial system status
     fetchSystemStatus();
     
     console.log('Padronique AI Companion initialized');
 });
+
+/**
+ * Initialize specialized functional modules
+ */
+function initModules() {
+    // Voice Interface
+    if (window.VoiceInterface && document.getElementById('voiceBtn')) {
+        window.voiceInterface = new VoiceInterface();
+        console.log('Voice Interface initialized');
+    } else {
+        console.warn('Voice Interface not available or voiceBtn not found');
+    }
+    
+    // File Handler
+    if (window.FileHandler && document.getElementById('fileUploadBtn')) {
+        window.fileHandler = new FileHandler();
+        console.log('File Handler initialized');
+    } else {
+        console.warn('File Handler not available or fileUploadBtn not found');
+    }
+    
+    // Make sendMessage global for module use
+    if (typeof sendMessage === 'function') {
+        window.sendMessage = sendMessage;
+    }
+}
 
 /**
  * Initialize navigation between pages

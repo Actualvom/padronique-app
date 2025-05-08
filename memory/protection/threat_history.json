@@ -63,5 +63,18 @@
       "location": "system",
       "details": "Unexpected system file modification detected"
     }
+  },
+  {
+    "id": "6617dfb2-9cd1-4a76-bb5a-099e6ce5f63b",
+    "type": "emotional",
+    "level": 3,
+    "description": "Potential emotional manipulation detected",
+    "detection_time": "2025-05-08T21:55:45.149076",
+    "confidence": 0.6737943952067533,
+    "neutralized": false,
+    "source": {
+      "location": "conversation",
+      "details": "Pattern of subtle emotional manipulation detected"
+    }
   }
 ]
