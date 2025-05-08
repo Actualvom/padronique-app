@@ -11,5 +11,18 @@
       "location": "communication",
       "details": "Inconsistent information pattern detected"
     }
+  },
+  {
+    "id": "2c75a3db-f13b-4ecc-b9c1-68f8cdf64893",
+    "type": "existential",
+    "level": 3,
+    "description": "Potential threat to system autonomy detected",
+    "detection_time": "2025-05-08T20:49:48.248065",
+    "confidence": 0.7597372858268908,
+    "neutralized": true,
+    "source": {
+      "location": "system",
+      "details": "Attempt to modify core system parameters detected"
+    }
   }
 ]

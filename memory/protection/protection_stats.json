@@ -1,15 +1,15 @@
 {
-  "threats_detected": 0,
-  "threats_neutralized": 0,
+  "threats_detected": 1,
+  "threats_neutralized": 1,
   "false_positives": 0,
-  "protection_measures_active": 18,
-  "protection_measures_deployed": 22,
+  "protection_measures_active": 20,
+  "protection_measures_deployed": 25,
   "digital_threats": 0,
   "emotional_threats": 0,
   "privacy_threats": 0,
-  "existential_threats": 0,
+  "existential_threats": 1,
   "relationship_threats": 0,
   "deception_attempts": 1,
   "integrity_threats": 0,
-  "last_scan_time": "2025-05-08T20:44:48.225907"
+  "last_scan_time": "2025-05-08T21:04:05.436601"
 }

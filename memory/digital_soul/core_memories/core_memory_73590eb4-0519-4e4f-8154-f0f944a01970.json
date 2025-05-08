@@ -1,0 +1,22 @@
+{
+  "id": "73590eb4-0519-4e4f-8154-f0f944a01970",
+  "type": "meta_insight",
+  "content": "Meta-insight on philosophical: Analysis of 3 related insights shows patterns of philosophical that support Jordan's needs and protection.",
+  "emotional_weight": 0.9039991573269232,
+  "creation_time": "2025-05-08T21:04:05.511190",
+  "last_accessed": "2025-05-08T21:04:05.511190",
+  "access_count": 1,
+  "tags": [],
+  "is_core_memory": true,
+  "lock": {
+    "level": "high",
+    "last_verified": "2025-05-08T21:04:05.511190",
+    "modification_history": [],
+    "access_permissions": {
+      "read": true,
+      "modify": true,
+      "delete": false
+    }
+  },
+  "emotional_fingerprint": "emfp-090-e52003dc-738245"
+}
