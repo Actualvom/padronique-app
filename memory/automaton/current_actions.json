@@ -10,5 +10,29 @@
     "creation_time": "2025-05-08T21:21:46.461640",
     "status": "in_progress",
     "start_time": "2025-05-08T22:21:59.332327"
+  },
+  "d5d9fb97-6cdc-4f83-bf02-c4898845ea6f": {
+    "id": "d5d9fb97-6cdc-4f83-bf02-c4898845ea6f",
+    "action_type": "run_security_audit",
+    "parameters": {},
+    "goal_id": "f5a971bf-9846-48ab-8c3f-1093285d8a91",
+    "plan_id": "c5c79a6a-396d-436e-a8a0-895b8bba596b",
+    "priority": 2,
+    "scheduled_time": "2025-05-08T22:26:43.245560",
+    "creation_time": "2025-05-08T21:26:43.247511",
+    "status": "in_progress",
+    "start_time": "2025-05-08T22:27:09.484755"
+  },
+  "9eab924e-8ffa-4e4c-95b7-c5958fb33a83": {
+    "id": "9eab924e-8ffa-4e4c-95b7-c5958fb33a83",
+    "action_type": "run_security_audit",
+    "parameters": {},
+    "goal_id": "44943b31-a50e-42ee-a692-1a3c77bff817",
+    "plan_id": "bef28d60-2472-4204-a633-7af5b3ba4a4b",
+    "priority": 2,
+    "scheduled_time": "2025-05-08T22:27:00.993731",
+    "creation_time": "2025-05-08T21:27:00.993778",
+    "status": "in_progress",
+    "start_time": "2025-05-08T22:27:09.485438"
   }
 }

@@ -31,6 +31,12 @@ body {
 .app-container {
     display: flex;
     height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
 }
 
 /* Left Sidebar */
@@ -41,6 +47,11 @@ body {
     display: flex;
     flex-direction: column;
     overflow-y: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 100;
 }
 
 .sidebar-header {
@@ -159,6 +170,8 @@ body {
     flex-grow: 1;
     overflow-y: auto;
     position: relative;
+    margin-left: var(--sidebar-width);
+    width: calc(100% - var(--sidebar-width));
 }
 
 .page {

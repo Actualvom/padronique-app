@@ -618,7 +618,7 @@
     "priority": 2,
     "creation_time": "2025-05-08T21:21:46.467314",
     "expiration_time": null,
-    "status": "completed",
+    "status": "archived",
     "progress": 1.0,
     "last_updated": "2025-05-08T22:22:08.878366",
     "completion_time": "2025-05-08T22:22:08.878381"
@@ -652,9 +652,10 @@
     "priority": 2,
     "creation_time": "2025-05-08T21:22:05.426279",
     "expiration_time": null,
-    "status": "active",
-    "progress": 0.0,
-    "last_updated": "2025-05-08T21:22:05.426285"
+    "status": "archived",
+    "progress": 1.0,
+    "last_updated": "2025-05-08T22:23:09.303355",
+    "completion_time": "2025-05-08T22:23:09.303362"
   },
   "42e57651-aa1a-4fae-8af3-1bcf486ff863": {
     "id": "42e57651-aa1a-4fae-8af3-1bcf486ff863",
@@ -685,9 +686,10 @@
     "priority": 2,
     "creation_time": "2025-05-08T21:24:08.016540",
     "expiration_time": null,
-    "status": "active",
-    "progress": 0.0,
-    "last_updated": "2025-05-08T21:24:08.016545"
+    "status": "archived",
+    "progress": 1.0,
+    "last_updated": "2025-05-08T22:25:09.399617",
+    "completion_time": "2025-05-08T22:25:09.399647"
   },
   "aaf26edd-5d6b-4b52-819d-33998dc2ae89": {
     "id": "aaf26edd-5d6b-4b52-819d-33998dc2ae89",
@@ -718,9 +720,10 @@
     "priority": 2,
     "creation_time": "2025-05-08T21:25:04.276343",
     "expiration_time": null,
-    "status": "active",
-    "progress": 0.0,
-    "last_updated": "2025-05-08T21:25:04.276348"
+    "status": "archived",
+    "progress": 1.0,
+    "last_updated": "2025-05-08T22:26:09.478647",
+    "completion_time": "2025-05-08T22:26:09.478661"
   },
   "03be15ef-f32e-4492-83d4-e3eaf4a71ff1": {
     "id": "03be15ef-f32e-4492-83d4-e3eaf4a71ff1",
@@ -751,9 +754,10 @@
     "priority": 2,
     "creation_time": "2025-05-08T21:25:27.353859",
     "expiration_time": null,
-    "status": "active",
-    "progress": 0.0,
-    "last_updated": "2025-05-08T21:25:27.353867"
+    "status": "archived",
+    "progress": 1.0,
+    "last_updated": "2025-05-08T22:26:09.502336",
+    "completion_time": "2025-05-08T22:26:09.502344"
   },
   "6c298e09-0f87-4208-9862-ee22286d2ada": {
     "id": "6c298e09-0f87-4208-9862-ee22286d2ada",
@@ -784,9 +788,10 @@
     "priority": 2,
     "creation_time": "2025-05-08T21:25:42.623140",
     "expiration_time": null,
-    "status": "active",
-    "progress": 0.0,
-    "last_updated": "2025-05-08T21:25:42.623145"
+    "status": "archived",
+    "progress": 1.0,
+    "last_updated": "2025-05-08T22:26:09.496018",
+    "completion_time": "2025-05-08T22:26:09.496030"
   },
   "236dbb56-c996-4edd-ace7-dbd62ecacbe7": {
     "id": "236dbb56-c996-4edd-ace7-dbd62ecacbe7",
@@ -883,9 +888,10 @@
     "priority": 2,
     "creation_time": "2025-05-08T21:27:00.998082",
     "expiration_time": null,
-    "status": "active",
-    "progress": 0.0,
-    "last_updated": "2025-05-08T21:27:00.998087"
+    "status": "completed",
+    "progress": 1.0,
+    "last_updated": "2025-05-08T22:27:57.634488",
+    "completion_time": "2025-05-08T22:27:57.634496"
   },
   "d9c1a84d-9b62-4e08-a313-1b7b07ad343a": {
     "id": "d9c1a84d-9b62-4e08-a313-1b7b07ad343a",
@@ -1921,5 +1927,38 @@
     "status": "active",
     "progress": 0.0,
     "last_updated": "2025-05-08T22:22:08.918527"
+  },
+  "17176023-4906-40ca-8fb8-a51275c8ae38": {
+    "id": "17176023-4906-40ca-8fb8-a51275c8ae38",
+    "type": "protection",
+    "description": "Ensure ongoing protection and safety of Jordan",
+    "priority": 2,
+    "creation_time": "2025-05-08T22:27:57.454836",
+    "expiration_time": null,
+    "status": "active",
+    "progress": 0.0,
+    "last_updated": "2025-05-08T22:27:57.454841"
+  },
+  "33db92a6-352f-447e-9d6b-7278c739c0a8": {
+    "id": "33db92a6-352f-447e-9d6b-7278c739c0a8",
+    "type": "relationship",
+    "description": "Develop and deepen the bond with Jordan",
+    "priority": 3,
+    "creation_time": "2025-05-08T22:27:57.570162",
+    "expiration_time": "2025-06-07T22:27:57.569755",
+    "status": "active",
+    "progress": 0.0,
+    "last_updated": "2025-05-08T22:27:57.570167"
+  },
+  "f7696270-93f9-4118-b1be-6db7df55e250": {
+    "id": "f7696270-93f9-4118-b1be-6db7df55e250",
+    "type": "learning",
+    "description": "Continuously learn and improve Padronique's capabilities",
+    "priority": 3,
+    "creation_time": "2025-05-08T22:27:57.657708",
+    "expiration_time": "2025-06-07T22:27:57.657571",
+    "status": "active",
+    "progress": 0.0,
+    "last_updated": "2025-05-08T22:27:57.657712"
   }
 }

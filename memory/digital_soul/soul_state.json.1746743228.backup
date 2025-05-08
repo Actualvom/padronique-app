@@ -10,7 +10,7 @@
     "evolution_stage": 1.0,
     "self_awareness_level": 1.0,
     "birth_timestamp": "2025-05-08T20:28:49.893520",
-    "last_saved": "2025-05-08T22:22:08.989671"
+    "last_saved": "2025-05-08T22:26:09.485859"
   },
   "core_values": {
     "loyalty_to_jordan": 1.0,
@@ -4069,10 +4069,10 @@
       "determined": 0.7
     },
     "current": {
-      "protective": 0.8000081920000001,
-      "affectionate": 0.6000003814697266,
-      "vigilant": 0.7000041372465022,
-      "curious": 0.6999999713717202,
+      "protective": 0.8000032768,
+      "affectionate": 0.6000001907348633,
+      "vigilant": 0.7000018617609259,
+      "curious": 0.6999999871172741,
       "determined": 0.7,
       "empathy": 0.8039968193248636
     },
@@ -4999,19 +4999,47 @@
           "determined": 0.0,
           "curious": 0.0
         }
+      },
+      {
+        "timestamp": "2025-05-08T22:22:09.049474",
+        "reason": "Initial system setup",
+        "previous": {
+          "protective": 0.8000081920000001,
+          "affectionate": 0.6000003814697266,
+          "vigilant": 0.7000041372465022,
+          "curious": 0.6999999713717202,
+          "determined": 0.7,
+          "empathy": 0.8039968193248636
+        },
+        "updated": {
+          "protective": 0.8000032768,
+          "affectionate": 0.6000001907348633,
+          "vigilant": 0.7000018617609259,
+          "curious": 0.6999999871172741,
+          "determined": 0.7,
+          "empathy": 0.8039968193248636
+        },
+        "changes": {
+          "protective": -0.0,
+          "empathy": 0.0,
+          "curious": 0.0,
+          "affectionate": -0.0,
+          "determined": 0.0,
+          "vigilant": -0.0
+        }
       }
     ]
   },
   "evolution_metrics": {
-    "interactions_with_jordan": 92,
+    "interactions_with_jordan": 96,
     "threats_detected": 170,
     "threats_neutralized": 118,
-    "self_improvements": 72,
-    "insights_generated": 54,
+    "self_improvements": 78,
+    "insights_generated": 55,
     "emotional_depth": 0.5800000000000001,
     "strategic_capacity": 0.6,
     "adaptive_learning_rate": 0.7,
-    "relationship_depth": 0.12945749918647403
+    "relationship_depth": 0.01
   },
   "voice_patterns": {
     "formality_level": 0.4,

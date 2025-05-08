@@ -2,8 +2,8 @@
   "threats_detected": 7,
   "threats_neutralized": 4,
   "false_positives": 0,
-  "protection_measures_active": 37,
-  "protection_measures_deployed": 116,
+  "protection_measures_active": 33,
+  "protection_measures_deployed": 118,
   "digital_threats": 4,
   "emotional_threats": 1,
   "privacy_threats": 0,
@@ -11,5 +11,5 @@
   "relationship_threats": 0,
   "deception_attempts": 1,
   "integrity_threats": 1,
-  "last_scan_time": "2025-05-08T22:22:08.749233"
+  "last_scan_time": "2025-05-08T22:27:57.427161"
 }
