@@ -1,0 +1,308 @@
+"""
+API routes for multimedia processing including voice, images, files, and web search
+"""
+
+import os
+import json
+import logging
+import base64
+import tempfile
+import uuid
+from datetime import datetime
+from flask import request, jsonify, current_app
+import requests
+from werkzeug.utils import secure_filename
+from utils.web_scraper import get_website_text_content
+
+# Initialize logging
+logger = logging.getLogger(__name__)
+
+def register_multimedia_routes(app):
+    """Register multimedia processing routes with the Flask app."""
+    
+    @app.route('/api/transcribe', methods=['POST'])
+    def transcribe_audio():
+        """Transcribe audio to text using OpenAI."""
+        if 'audio' not in request.files:
+            return jsonify({"status": "error", "message": "No audio file provided"}), 400
+            
+        audio_file = request.files['audio']
+        if not audio_file.filename:
+            return jsonify({"status": "error", "message": "No audio file selected"}), 400
+            
+        # Create a temporary file to store the audio
+        temp_file = tempfile.NamedTemporaryFile(delete=False, suffix='.webm')
+        temp_path = temp_file.name
+        audio_file.save(temp_path)
+        temp_file.close()
+        
+        try:
+            # Get the orchestrator from the app config
+            orchestrator = current_app.config.get('ORCHESTRATOR')
+            
+            if orchestrator and orchestrator.llm_service:
+                # Use the voice module if available
+                if orchestrator.voice_module:
+                    transcription = orchestrator.voice_module.transcribe_audio(temp_path)
+                else:
+                    # Fallback to direct LLM service
+                    transcription = orchestrator.llm_service.transcribe_audio(temp_path)
+                    
+                return jsonify({
+                    "status": "ok",
+                    "text": transcription
+                })
+            else:
+                # Fallback using OpenAI directly if orchestrator is not available
+                from openai import OpenAI
+                openai_client = OpenAI(api_key=os.environ.get("OPENAI_API_KEY"))
+                
+                with open(temp_path, "rb") as audio_file:
+                    response = openai_client.audio.transcriptions.create(
+                        model="whisper-1", 
+                        file=audio_file
+                    )
+                
+                return jsonify({
+                    "status": "ok",
+                    "text": response.text
+                })
+                
+        except Exception as e:
+            logger.error(f"Error transcribing audio: {e}")
+            return jsonify({"status": "error", "message": str(e)}), 500
+        finally:
+            # Clean up the temporary file
+            try:
+                os.unlink(temp_path)
+            except Exception as e:
+                logger.error(f"Error removing temporary file: {e}")
+    
+    @app.route('/api/process-image', methods=['POST'])
+    def process_image():
+        """Process and analyze an image."""
+        if 'image' not in request.files:
+            return jsonify({"status": "error", "message": "No image file provided"}), 400
+            
+        image_file = request.files['image']
+        if not image_file.filename:
+            return jsonify({"status": "error", "message": "No image file selected"}), 400
+            
+        # Validate file type
+        filename = secure_filename(image_file.filename)
+        file_ext = filename.rsplit('.', 1)[1].lower() if '.' in filename else ''
+        if file_ext not in ['jpg', 'jpeg', 'png', 'gif']:
+            return jsonify({"status": "error", "message": "Unsupported file format"}), 400
+            
+        try:
+            # Save the image temporarily
+            temp_file = tempfile.NamedTemporaryFile(delete=False, suffix=f'.{file_ext}')
+            temp_path = temp_file.name
+            image_file.save(temp_path)
+            temp_file.close()
+            
+            # Get the orchestrator from the app config
+            orchestrator = current_app.config.get('ORCHESTRATOR')
+            
+            # Convert image to base64 for API processing
+            with open(temp_path, "rb") as img_file:
+                base64_image = base64.b64encode(img_file.read()).decode('utf-8')
+            
+            # Generate a unique filename for serving the image
+            unique_filename = f"{uuid.uuid4()}.{file_ext}"
+            save_path = os.path.join('static', 'uploads', unique_filename)
+            os.makedirs(os.path.dirname(save_path), exist_ok=True)
+            
+            # Copy the temp file to the uploads directory
+            with open(temp_path, "rb") as src, open(save_path, "wb") as dst:
+                dst.write(src.read())
+            
+            # Generate public URL
+            image_url = f"/static/uploads/{unique_filename}"
+            
+            # Analyze the image
+            analysis = "Image uploaded successfully. Please describe what you see in this image."
+            
+            if orchestrator and orchestrator.llm_service:
+                try:
+                    # Use LLM service to analyze image
+                    analysis = orchestrator.llm_service.analyze_image(base64_image)
+                except Exception as analysis_err:
+                    logger.error(f"Error analyzing image: {analysis_err}")
+                    # Fallback message if analysis fails
+                    analysis = "I received your image but wasn't able to analyze it. How would you like me to help with this image?"
+            
+            return jsonify({
+                "status": "ok",
+                "image_url": image_url,
+                "analysis": analysis
+            })
+                
+        except Exception as e:
+            logger.error(f"Error processing image: {e}")
+            return jsonify({"status": "error", "message": str(e)}), 500
+        finally:
+            # Clean up the temporary file
+            try:
+                os.unlink(temp_path)
+            except Exception as e:
+                logger.error(f"Error removing temporary file: {e}")
+    
+    @app.route('/api/process-file', methods=['POST'])
+    def process_file():
+        """Process uploaded files."""
+        if 'file' not in request.files:
+            return jsonify({"status": "error", "message": "No file provided"}), 400
+            
+        file = request.files['file']
+        if not file.filename:
+            return jsonify({"status": "error", "message": "No file selected"}), 400
+            
+        # Validate and secure filename
+        filename = secure_filename(file.filename)
+        file_ext = filename.rsplit('.', 1)[1].lower() if '.' in filename else ''
+        
+        # Handle different file types
+        if file_ext in ['jpg', 'jpeg', 'png', 'gif']:
+            # Images
+            return process_image_file(file, filename, file_ext)
+        elif file_ext in ['txt']:
+            # Text files
+            return process_text_file(file)
+        elif file_ext in ['pdf', 'doc', 'docx']:
+            # Documents
+            return process_document_file(file, filename, file_ext)
+        else:
+            # Unsupported files
+            return jsonify({
+                "status": "error", 
+                "message": f"Unsupported file format: {file_ext}"
+            }), 400
+    
+    def process_image_file(file, filename, file_ext):
+        """Process image files."""
+        try:
+            # Generate a unique filename
+            unique_filename = f"{uuid.uuid4()}.{file_ext}"
+            save_path = os.path.join('static', 'uploads', unique_filename)
+            os.makedirs(os.path.dirname(save_path), exist_ok=True)
+            
+            # Save the file
+            file.save(save_path)
+            
+            # Generate URL for frontend
+            file_url = f"/static/uploads/{unique_filename}"
+            
+            return jsonify({
+                "status": "ok",
+                "type": "image",
+                "url": file_url
+            })
+        except Exception as e:
+            logger.error(f"Error processing image file: {e}")
+            return jsonify({"status": "error", "message": str(e)}), 500
+    
+    def process_text_file(file):
+        """Process text files."""
+        try:
+            content = file.read().decode('utf-8')
+            
+            return jsonify({
+                "status": "ok",
+                "type": "text",
+                "content": content
+            })
+        except UnicodeDecodeError:
+            try:
+                # Try different encoding
+                file.seek(0)
+                content = file.read().decode('latin-1')
+                
+                return jsonify({
+                    "status": "ok",
+                    "type": "text",
+                    "content": content
+                })
+            except Exception as e:
+                logger.error(f"Error decoding text file: {e}")
+                return jsonify({"status": "error", "message": "Could not decode text file"}), 500
+        except Exception as e:
+            logger.error(f"Error processing text file: {e}")
+            return jsonify({"status": "error", "message": str(e)}), 500
+    
+    def process_document_file(file, filename, file_ext):
+        """Process document files (placeholder - would need document parsing libraries)."""
+        try:
+            # Generate a unique filename
+            unique_filename = f"{uuid.uuid4()}.{file_ext}"
+            save_path = os.path.join('static', 'uploads', unique_filename)
+            os.makedirs(os.path.dirname(save_path), exist_ok=True)
+            
+            # Save the file
+            file.save(save_path)
+            
+            # Generate URL for frontend
+            file_url = f"/static/uploads/{unique_filename}"
+            
+            return jsonify({
+                "status": "ok",
+                "type": "document",
+                "url": file_url,
+                "message": "Document uploaded successfully. Please note that document parsing is limited."
+            })
+        except Exception as e:
+            logger.error(f"Error processing document file: {e}")
+            return jsonify({"status": "error", "message": str(e)}), 500
+    
+    @app.route('/api/web-search', methods=['GET'])
+    def web_search():
+        """Perform a web search and return results."""
+        query = request.args.get('query', '')
+        
+        if not query:
+            return jsonify({"status": "error", "message": "No search query provided"}), 400
+            
+        try:
+            # Use the web scraper to get content from relevant URLs
+            # This is a simplified implementation
+            search_results = []
+            
+            # In a real implementation, you would use a search API
+            # For demonstration, we'll use a placeholder approach with web scraping
+            # This would typically use Google Custom Search API or similar
+            
+            # Mock search results (in a real app, you'd integrate with a search API)
+            search_results = [
+                {
+                    "title": f"Search results for: {query}",
+                    "url": f"https://example.com/search?q={query}",
+                    "snippet": "To perform actual web searches, you would need to integrate with a search API such as Google Custom Search, Bing Search, or similar services. This would require API keys and proper configuration."
+                },
+                {
+                    "title": "Web Search Integration",
+                    "url": "https://example.com/integration",
+                    "snippet": "For a production implementation, consider integrating with a search API and implementing proper caching, rate limiting, and error handling for reliable search functionality."
+                }
+            ]
+            
+            # If you had an actual search API, you would process results here
+            
+            return jsonify({
+                "status": "ok",
+                "query": query,
+                "results": search_results
+            })
+                
+        except Exception as e:
+            logger.error(f"Error performing web search: {e}")
+            return jsonify({"status": "error", "message": str(e)}), 500
+            
+    logger.info("Multimedia API routes registered")
+
+
+def create_uploads_dir():
+    """Create the uploads directory if it doesn't exist."""
+    uploads_dir = os.path.join('static', 'uploads')
+    if not os.path.exists(uploads_dir):
+        os.makedirs(uploads_dir)
+        logger.info(f"Created uploads directory: {uploads_dir}")

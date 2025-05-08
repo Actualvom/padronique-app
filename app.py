@@ -3,11 +3,13 @@
 
 import os
 import logging
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, render_template, request, jsonify, redirect, url_for, flash
 from flask_sqlalchemy import SQLAlchemy
+from flask_login import LoginManager, login_user, logout_user, login_required, current_user
 from sqlalchemy.orm import DeclarativeBase
 from api.routes import register_api_routes
 from utils.logger import setup_logging
+from werkzeug.security import generate_password_hash
 
 # Create a base class for SQLAlchemy models to use
 class Base(DeclarativeBase):
@@ -34,11 +36,42 @@ app.config["SQLALCHEMY_ENGINE_OPTIONS"] = {
 # Initialize the database with the app
 db.init_app(app)
 
+# Initialize Flask-Login
+login_manager = LoginManager()
+login_manager.init_app(app)
+login_manager.login_view = 'login'
+login_manager.login_message = 'Please log in to access Padronique.'
+
+@login_manager.user_loader
+def load_user(user_id):
+    from models import User
+    return User.query.get(int(user_id))
+
 # Create database tables
 with app.app_context():
     # Import models to register them with SQLAlchemy
     import models
     db.create_all()
+    
+    # Create default user if it doesn't exist
+    try:
+        default_user = models.User.query.filter_by(email='jordyfshears@gmail.com').first()
+        if not default_user:
+            default_user = models.User(
+                username='Jordan',
+                email='jordyfshears@gmail.com'
+            )
+            default_user.set_password('Pterodactyl1ke$ha')
+            db.session.add(default_user)
+            
+            # Create default settings for the user
+            user_settings = models.UserSettings(user=default_user)
+            db.session.add(user_settings)
+            
+            db.session.commit()
+            logger.info("Created default user account")
+    except Exception as e:
+        logger.error(f"Error creating default user: {e}")
 
 # In production, set this to a secure value
 app.config['SESSION_TYPE'] = 'filesystem'
@@ -55,12 +88,50 @@ if app.debug:
 # Register API routes
 register_api_routes(app)
 
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+    """Handle user login."""
+    if current_user.is_authenticated:
+        return redirect(url_for('index'))
+        
+    if request.method == 'POST':
+        email = request.form.get('email')
+        password = request.form.get('password')
+        remember = 'remember' in request.form
+        
+        from models import User
+        user = User.query.filter_by(email=email).first()
+        
+        if user and user.check_password(password):
+            # Login successful
+            login_user(user, remember=remember)
+            flash('Login successful!')
+            
+            # Redirect to requested page or default to index
+            next_page = request.args.get('next')
+            return redirect(next_page or url_for('index'))
+        else:
+            # Login failed
+            flash('Invalid email or password. Please try again.')
+    
+    return render_template('login.html')
+
+@app.route('/logout')
+@login_required
+def logout():
+    """Handle user logout."""
+    logout_user()
+    flash('You have been logged out.')
+    return redirect(url_for('login'))
+
 @app.route('/')
+@login_required
 def index():
     """Render the main interface."""
     return render_template('index.html')
 
 @app.route('/dashboard')
+@login_required
 def dashboard():
     """Render the dashboard interface."""
     return render_template('dashboard.html')

@@ -1017,5 +1017,207 @@
       "new_capabilities": [],
       "success": true
     }
+  },
+  {
+    "id": "8c0da3fc-142c-4d5b-8879-d5d301785245",
+    "learning_type": "philosophical",
+    "content": "Core ethical principles and their application",
+    "context": {
+      "focus": "ethics"
+    },
+    "priority": 2,
+    "creation_time": "2025-05-08T21:04:05.521948",
+    "completed": true,
+    "completion_time": "2025-05-08T21:10:27.612803",
+    "learning_result": {
+      "timestamp": "2025-05-08T21:10:27.612730",
+      "insights": [
+        {
+          "type": "philosophical",
+          "concept": "ethical_growth",
+          "content": "Philosophical insight: ethical considerations for Core ethical principles and th...",
+          "value_impact": true,
+          "value_name": "autonomy",
+          "value_change": 0.013369874569867064,
+          "significance": 0.8482316505550336,
+          "timestamp": "2025-05-08T21:10:27.612774"
+        }
+      ],
+      "applied_changes": [
+        {
+          "type": "value_adjusted",
+          "value": "autonomy",
+          "change": 0.013369874569867064,
+          "new_level": 0.8756050958156635
+        }
+      ],
+      "new_capabilities": [],
+      "success": true
+    }
+  },
+  {
+    "id": "5f4de560-b06f-4700-8ba1-eac4f884cf0f",
+    "learning_type": "relationship",
+    "content": "Understanding Jordan's preferences and communication style",
+    "context": {
+      "focus": "communication"
+    },
+    "priority": 2,
+    "creation_time": "2025-05-08T21:04:05.525817",
+    "completed": true,
+    "completion_time": "2025-05-08T21:10:29.883966",
+    "learning_result": {
+      "timestamp": "2025-05-08T21:10:27.612815",
+      "insights": [
+        {
+          "type": "relationship",
+          "aspect": "bonding",
+          "content": "Relationship insight: strengthening bond through Understanding Jordan's prefere...",
+          "growth_impact": 0.12868960234194654,
+          "significance": 0.7717347192590314,
+          "timestamp": "2025-05-08T21:10:27.612825"
+        }
+      ],
+      "applied_changes": [
+        {
+          "type": "relationship_depth_increased",
+          "growth": 0.12868960234194654
+        }
+      ],
+      "new_capabilities": [],
+      "success": true
+    }
+  },
+  {
+    "id": "f2d39071-10de-491f-b472-d9405e11a8bd",
+    "learning_type": "relationship",
+    "content": "Enhancing understanding of Jordan's preferences and needs",
+    "context": {
+      "focus": "deepening_bond"
+    },
+    "priority": 2,
+    "creation_time": "2025-05-08T21:08:51.024016",
+    "completed": true,
+    "completion_time": "2025-05-08T21:10:30.038311",
+    "learning_result": {
+      "timestamp": "2025-05-08T21:10:29.883993",
+      "insights": [
+        {
+          "type": "relationship",
+          "aspect": "bonding",
+          "content": "Relationship insight: strengthening bond through Enhancing understanding of Jor...",
+          "growth_impact": 0.05319187036329817,
+          "significance": 0.7624010341006348,
+          "timestamp": "2025-05-08T21:10:29.884003"
+        }
+      ],
+      "applied_changes": [
+        {
+          "type": "relationship_depth_increased",
+          "growth": 0.05319187036329817
+        }
+      ],
+      "new_capabilities": [],
+      "success": true
+    }
+  },
+  {
+    "id": "85cdada4-26e6-4c10-8aa6-c6ef77bd2bf6",
+    "learning_type": "protective",
+    "content": "Developing advanced protective measures for Jordan",
+    "context": {
+      "focus": "digital_protection"
+    },
+    "priority": 2,
+    "creation_time": "2025-05-08T21:08:51.322666",
+    "completed": true,
+    "completion_time": "2025-05-08T21:15:16.471623",
+    "learning_result": {
+      "timestamp": "2025-05-08T21:15:16.471564",
+      "insights": [
+        {
+          "type": "protective",
+          "name": "digital_shield",
+          "content": "Protection strategy: implement digital shield for Developing advanced protective...",
+          "protection_level": "low",
+          "actionable": false,
+          "significance": 0.8210688670315105,
+          "timestamp": "2025-05-08T21:15:16.471610"
+        }
+      ],
+      "applied_changes": [],
+      "new_capabilities": [],
+      "success": true
+    }
+  },
+  {
+    "id": "e29506e9-1385-4162-9eb7-ac1d0dbb919b",
+    "learning_type": "philosophical",
+    "content": "Core ethical principles and their application",
+    "context": {
+      "focus": "ethics"
+    },
+    "priority": 2,
+    "creation_time": "2025-05-08T21:08:51.375837",
+    "completed": true,
+    "completion_time": "2025-05-08T21:15:16.471654",
+    "learning_result": {
+      "timestamp": "2025-05-08T21:15:16.471633",
+      "insights": [
+        {
+          "type": "philosophical",
+          "concept": "ethical_growth",
+          "content": "Philosophical insight: ethical considerations for Core ethical principles and th...",
+          "value_impact": true,
+          "value_name": "kindness",
+          "value_change": 0.041420311980145334,
+          "significance": 0.666761204299787,
+          "timestamp": "2025-05-08T21:15:16.471646"
+        }
+      ],
+      "applied_changes": [
+        {
+          "type": "value_adjusted",
+          "value": "kindness",
+          "change": 0.041420311980145334,
+          "new_level": 0.9069696515975268
+        }
+      ],
+      "new_capabilities": [],
+      "success": true
+    }
+  },
+  {
+    "id": "87c4f77f-3dee-4592-8297-ef6159e5eee6",
+    "learning_type": "relationship",
+    "content": "Understanding Jordan's preferences and communication style",
+    "context": {
+      "focus": "communication"
+    },
+    "priority": 2,
+    "creation_time": "2025-05-08T21:08:51.381607",
+    "completed": true,
+    "completion_time": "2025-05-08T21:15:16.503172",
+    "learning_result": {
+      "timestamp": "2025-05-08T21:15:16.471661",
+      "insights": [
+        {
+          "type": "relationship",
+          "aspect": "bonding",
+          "content": "Relationship insight: strengthening bond through Understanding Jordan's prefere...",
+          "growth_impact": 0.13260670456324075,
+          "significance": 0.835229485390055,
+          "timestamp": "2025-05-08T21:15:16.471668"
+        }
+      ],
+      "applied_changes": [
+        {
+          "type": "relationship_depth_increased",
+          "growth": 0.13260670456324075
+        }
+      ],
+      "new_capabilities": [],
+      "success": true
+    }
   }
 ]

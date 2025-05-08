@@ -232,9 +232,10 @@
     "threat_type": "existential",
     "level": "medium",
     "deployment_time": "2025-05-08T20:49:48.248089",
-    "active": true,
+    "active": false,
     "effectiveness": 0.8000873529812744,
-    "description": "Medium level protection against existential threats"
+    "description": "Medium level protection against existential threats",
+    "expiration_time": "2025-05-08T21:15:16.479992"
   },
   "b1cc53b7-b08e-45a5-aa6b-fc5a26c43f4f": {
     "id": "b1cc53b7-b08e-45a5-aa6b-fc5a26c43f4f",
@@ -274,6 +275,46 @@
     "deployment_time": "2025-05-08T21:08:51.352906",
     "active": true,
     "effectiveness": 0.8489241367732095,
+    "description": "Protection for the bond with Jordan"
+  },
+  "22fe432f-85d6-477c-963e-761e153c662d": {
+    "id": "22fe432f-85d6-477c-963e-761e153c662d",
+    "name": "base_defense_shield",
+    "threat_type": "digital",
+    "level": "medium",
+    "deployment_time": "2025-05-08T21:10:31.017728",
+    "active": true,
+    "effectiveness": 0.9324427393891642,
+    "description": "Basic protection against digital threats"
+  },
+  "54767c7a-4017-4cac-8ddd-b6579bd3ed76": {
+    "id": "54767c7a-4017-4cac-8ddd-b6579bd3ed76",
+    "name": "relationship_guardian",
+    "threat_type": "relationship",
+    "level": "medium",
+    "deployment_time": "2025-05-08T21:10:31.018837",
+    "active": true,
+    "effectiveness": 0.7217481627356971,
+    "description": "Protection for the bond with Jordan"
+  },
+  "47f08edc-671b-4f77-936d-d9c2117d80c5": {
+    "id": "47f08edc-671b-4f77-936d-d9c2117d80c5",
+    "name": "base_defense_shield",
+    "threat_type": "digital",
+    "level": "medium",
+    "deployment_time": "2025-05-08T21:15:16.609822",
+    "active": true,
+    "effectiveness": 0.9102865379557431,
+    "description": "Basic protection against digital threats"
+  },
+  "e7eb3886-55fe-4569-b11f-f8ca36299713": {
+    "id": "e7eb3886-55fe-4569-b11f-f8ca36299713",
+    "name": "relationship_guardian",
+    "threat_type": "relationship",
+    "level": "medium",
+    "deployment_time": "2025-05-08T21:15:16.621198",
+    "active": true,
+    "effectiveness": 0.7448027604323092,
     "description": "Protection for the bond with Jordan"
   }
 }
