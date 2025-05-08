@@ -3592,5 +3592,212 @@
       "new_capabilities": [],
       "success": true
     }
+  },
+  {
+    "id": "0868f36e-ea6c-478e-a6f9-203f61f8cc6f",
+    "learning_type": "relationship",
+    "content": "Enhancing understanding of Jordan's preferences and needs",
+    "context": {
+      "focus": "deepening_bond"
+    },
+    "priority": 2,
+    "creation_time": "2025-05-08T21:39:43.227677",
+    "completed": true,
+    "completion_time": "2025-05-08T21:42:59.876360",
+    "learning_result": {
+      "timestamp": "2025-05-08T21:42:59.857599",
+      "insights": [
+        {
+          "type": "relationship",
+          "aspect": "bonding",
+          "content": "Relationship insight: strengthening bond through Enhancing understanding of Jor...",
+          "growth_impact": 0.10227914085242704,
+          "significance": 0.8831468329629666,
+          "timestamp": "2025-05-08T21:42:59.857633"
+        }
+      ],
+      "applied_changes": [
+        {
+          "type": "relationship_depth_increased",
+          "growth": 0.10227914085242704
+        }
+      ],
+      "new_capabilities": [],
+      "success": true
+    }
+  },
+  {
+    "id": "cbcd446c-109a-471a-9f07-33262ee862ac",
+    "learning_type": "philosophical",
+    "content": "Core ethical principles and their application",
+    "context": {
+      "focus": "ethics"
+    },
+    "priority": 2,
+    "creation_time": "2025-05-08T21:39:43.425108",
+    "completed": true,
+    "completion_time": "2025-05-08T21:42:59.876430",
+    "learning_result": {
+      "timestamp": "2025-05-08T21:42:59.876389",
+      "insights": [
+        {
+          "type": "philosophical",
+          "concept": "ethical_growth",
+          "content": "Philosophical insight: ethical considerations for Core ethical principles and th...",
+          "value_impact": true,
+          "value_name": "autonomy",
+          "value_change": 0.040864804897661866,
+          "significance": 0.6132927370549566,
+          "timestamp": "2025-05-08T21:42:59.876420"
+        }
+      ],
+      "applied_changes": [
+        {
+          "type": "value_adjusted",
+          "value": "autonomy",
+          "change": 0.040864804897661866,
+          "new_level": 1.0
+        }
+      ],
+      "new_capabilities": [],
+      "success": true
+    }
+  },
+  {
+    "id": "81d503c8-ccca-4429-bbe2-92b5efff8bdb",
+    "learning_type": "relationship",
+    "content": "Understanding Jordan's preferences and communication style",
+    "context": {
+      "focus": "communication"
+    },
+    "priority": 2,
+    "creation_time": "2025-05-08T21:39:43.445749",
+    "completed": true,
+    "completion_time": "2025-05-08T21:42:59.901838",
+    "learning_result": {
+      "timestamp": "2025-05-08T21:42:59.876436",
+      "insights": [
+        {
+          "type": "relationship",
+          "aspect": "bonding",
+          "content": "Relationship insight: strengthening bond through Understanding Jordan's prefere...",
+          "growth_impact": 0.14345254172136968,
+          "significance": 0.874919718816564,
+          "timestamp": "2025-05-08T21:42:59.876441"
+        }
+      ],
+      "applied_changes": [
+        {
+          "type": "relationship_depth_increased",
+          "growth": 0.14345254172136968
+        }
+      ],
+      "new_capabilities": [],
+      "success": true
+    }
+  },
+  {
+    "id": "0c53b3d1-ef72-4ba4-98be-0818c950ef7b",
+    "learning_type": "philosophical",
+    "content": "Core ethical principles and their application",
+    "context": {
+      "focus": "ethics"
+    },
+    "priority": 2,
+    "creation_time": "2025-05-08T21:43:00.082396",
+    "completed": true,
+    "completion_time": "2025-05-08T21:43:05.347311",
+    "learning_result": {
+      "timestamp": "2025-05-08T21:43:05.347261",
+      "insights": [
+        {
+          "type": "philosophical",
+          "concept": "ethical_growth",
+          "content": "Philosophical insight: ethical considerations for Core ethical principles and th...",
+          "value_impact": true,
+          "value_name": "protection",
+          "value_change": 0.03337282438980974,
+          "significance": 0.6211460180829093,
+          "timestamp": "2025-05-08T21:43:05.347301"
+        }
+      ],
+      "applied_changes": [
+        {
+          "type": "value_adjusted",
+          "value": "protection",
+          "change": 0.03337282438980974,
+          "new_level": 1.0
+        }
+      ],
+      "new_capabilities": [],
+      "success": true
+    }
+  },
+  {
+    "id": "4d55858d-7895-4c73-bca3-679d0859d27c",
+    "learning_type": "relationship",
+    "content": "Understanding Jordan's preferences and communication style",
+    "context": {
+      "focus": "communication"
+    },
+    "priority": 2,
+    "creation_time": "2025-05-08T21:43:00.091702",
+    "completed": true,
+    "completion_time": "2025-05-08T21:43:05.359711",
+    "learning_result": {
+      "timestamp": "2025-05-08T21:43:05.347320",
+      "insights": [
+        {
+          "type": "relationship",
+          "aspect": "bonding",
+          "content": "Relationship insight: strengthening bond through Understanding Jordan's prefere...",
+          "growth_impact": 0.0985917562305342,
+          "significance": 0.8420998861472537,
+          "timestamp": "2025-05-08T21:43:05.347331"
+        }
+      ],
+      "applied_changes": [
+        {
+          "type": "relationship_depth_increased",
+          "growth": 0.0985917562305342
+        }
+      ],
+      "new_capabilities": [],
+      "success": true
+    }
+  },
+  {
+    "id": "72e73960-4bab-4641-af46-fb435cef6242",
+    "learning_type": "emotional",
+    "content": "Developing more nuanced emotional understanding",
+    "context": {
+      "focus": "emotional_intelligence"
+    },
+    "priority": 3,
+    "creation_time": "2025-05-08T20:59:48.323037",
+    "completed": true,
+    "completion_time": "2025-05-08T21:43:05.383935",
+    "learning_result": {
+      "timestamp": "2025-05-08T21:43:05.359732",
+      "insights": [
+        {
+          "type": "emotional",
+          "emotion_type": "empathy",
+          "content": "Emotional insight: developing empathetic response to Developing more nuanced emotio...",
+          "intensity": 0.8981885359636623,
+          "significance": 0.654284965669125,
+          "timestamp": "2025-05-08T21:43:05.359742"
+        }
+      ],
+      "applied_changes": [
+        {
+          "type": "emotional_state_updated",
+          "emotion": "empathy",
+          "intensity": 0.8981885359636623
+        }
+      ],
+      "new_capabilities": [],
+      "success": true
+    }
   }
 ]

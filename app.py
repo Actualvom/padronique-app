@@ -210,18 +210,46 @@ def logout():
     return redirect(url_for('login'))
 
 @app.route('/')
-@login_required
 def index():
     """Render the main interface."""
-    logger.debug(f"Index page accessed. User authenticated: {current_user.is_authenticated}")
+    logger.debug("Index page accessed directly.")
+    
+    # Auto-login the default user if not already logged in
+    if not current_user.is_authenticated:
+        logger.info("Auto-logging in default user")
+        from models import User
+        user = User.query.filter_by(email='jordyfshears@gmail.com').first()
+        if user:
+            login_user(user)
+            session['user_id'] = user.id
+            session['username'] = user.username
+            session['login_time'] = str(datetime.now())
+            session.modified = True
+            logger.info(f"Auto-login successful for: {user.username}")
+        else:
+            logger.error("Default user not found for auto-login")
+    
+    logger.debug(f"User authenticated: {current_user.is_authenticated}")
     logger.debug(f"Current user: {current_user.username if current_user.is_authenticated else 'None'}")
     logger.debug(f"Session data: {dict(session)}")
+    
     return render_template('index.html')
 
 @app.route('/dashboard')
-@login_required
 def dashboard():
     """Render the dashboard interface."""
+    # Auto-login the default user if not already logged in
+    if not current_user.is_authenticated:
+        logger.info("Auto-logging in default user for dashboard")
+        from models import User
+        user = User.query.filter_by(email='jordyfshears@gmail.com').first()
+        if user:
+            login_user(user)
+            session['user_id'] = user.id
+            session['username'] = user.username
+            session['login_time'] = str(datetime.now())
+            session.modified = True
+            logger.info(f"Auto-login successful for: {user.username}")
     return render_template('dashboard.html')
 
 @app.errorhandler(404)
