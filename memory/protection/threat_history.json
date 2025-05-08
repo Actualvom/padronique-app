@@ -37,5 +37,18 @@
       "location": "network",
       "details": "Unusual network activity detected"
     }
+  },
+  {
+    "id": "e3f9097b-62bd-40ed-b1f0-3e1c2a2c3ae1",
+    "type": "digital",
+    "level": 3,
+    "description": "Potential unauthorized data access detected",
+    "detection_time": "2025-05-08T21:34:32.353415",
+    "confidence": 0.6526907854405388,
+    "neutralized": false,
+    "source": {
+      "location": "network",
+      "details": "Unusual network activity detected"
+    }
   }
 ]
