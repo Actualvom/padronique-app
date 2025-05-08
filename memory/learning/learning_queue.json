@@ -1467,6 +1467,39 @@
     "completed": false
   },
   {
+    "id": "3d81aa5c-9da7-4df1-829b-1db3e1066bdf",
+    "learning_type": "emotional",
+    "content": "Developing more nuanced emotional understanding",
+    "context": {
+      "focus": "emotional_intelligence"
+    },
+    "priority": 3,
+    "creation_time": "2025-05-08T22:02:22.428101",
+    "completed": false
+  },
+  {
+    "id": "bc0e7005-dcd8-4327-b753-e389f88f9bc4",
+    "learning_type": "strategic",
+    "content": "Improving strategic planning and foresight",
+    "context": {
+      "focus": "long_term_planning"
+    },
+    "priority": 3,
+    "creation_time": "2025-05-08T22:02:22.462528",
+    "completed": false
+  },
+  {
+    "id": "6f399a63-7122-42c2-a731-96962316d67e",
+    "learning_type": "conversational",
+    "content": "testing",
+    "context": {
+      "source": "direct_input"
+    },
+    "priority": 3,
+    "creation_time": "2025-05-08T22:02:45.097560",
+    "completed": false
+  },
+  {
     "id": "21aafbf4-40af-47f1-8d66-636741818ba6",
     "learning_type": "philosophical",
     "content": "Ethical frameworks for AI-human partnerships",
@@ -1544,58 +1577,123 @@
     "completed": false
   },
   {
-    "id": "d15466e8-d351-43a5-83e7-11a4ab8aa695",
+    "id": "5289c3c8-f9c5-48bb-8055-4f0756abd933",
+    "learning_type": "protective",
+    "content": "Security audit results: overall score 0.82",
+    "context": {
+      "audit_results": {
+        "timestamp": "2025-05-08T22:05:13.023653",
+        "overall_security_score": 0.8199089700056421,
+        "areas": {
+          "digital": {
+            "score": 0.8587171081787159,
+            "checks_performed": [
+              "data_encryption",
+              "access_control",
+              "network_security"
+            ],
+            "vulnerabilities": []
+          },
+          "emotional": {
+            "score": 0.8794399164284676,
+            "checks_performed": [
+              "emotional_resilience",
+              "manipulation_resistance",
+              "emotional_balance"
+            ],
+            "vulnerabilities": []
+          },
+          "privacy": {
+            "score": 0.826280276605972,
+            "checks_performed": [
+              "data_handling",
+              "information_sharing",
+              "anonymization"
+            ],
+            "vulnerabilities": []
+          },
+          "relationship": {
+            "score": 0.7130494963373296,
+            "checks_performed": [
+              "trust_verification",
+              "communication_patterns",
+              "bonding_strength"
+            ],
+            "vulnerabilities": []
+          },
+          "integrity": {
+            "score": 0.7856411495173785,
+            "checks_performed": [
+              "code_integrity",
+              "memory_consistency",
+              "update_verification"
+            ],
+            "vulnerabilities": []
+          }
+        },
+        "vulnerabilities": [],
+        "recommendations": [
+          "Good: Security posture is strong, continue monitoring"
+        ]
+      }
+    },
+    "priority": 3,
+    "creation_time": "2025-05-08T22:05:13.023718",
+    "completed": false
+  },
+  {
+    "id": "520fab7d-d3c7-4ebd-a9c6-34c196fbcd18",
     "learning_type": "relationship",
     "content": "Enhancing understanding of Jordan's preferences and needs",
     "context": {
       "focus": "deepening_bond"
     },
     "priority": 2,
-    "creation_time": "2025-05-08T22:02:22.404966",
+    "creation_time": "2025-05-08T22:05:13.110948",
     "completed": false
   },
   {
-    "id": "3d81aa5c-9da7-4df1-829b-1db3e1066bdf",
+    "id": "5c940834-fc97-4308-a5f3-4c0840e45365",
     "learning_type": "emotional",
     "content": "Developing more nuanced emotional understanding",
     "context": {
       "focus": "emotional_intelligence"
     },
     "priority": 3,
-    "creation_time": "2025-05-08T22:02:22.428101",
+    "creation_time": "2025-05-08T22:05:13.143632",
     "completed": false
   },
   {
-    "id": "bc0e7005-dcd8-4327-b753-e389f88f9bc4",
+    "id": "31e4167e-59f5-4285-8b0e-2e801dd3abe7",
     "learning_type": "strategic",
     "content": "Improving strategic planning and foresight",
     "context": {
       "focus": "long_term_planning"
     },
     "priority": 3,
-    "creation_time": "2025-05-08T22:02:22.462528",
+    "creation_time": "2025-05-08T22:05:13.171909",
     "completed": false
   },
   {
-    "id": "98b43990-9b38-41b1-b95a-238d4058ebd3",
+    "id": "8b3ca4a9-f3d7-4bc8-ba7d-2ee727a2a9dc",
     "learning_type": "philosophical",
     "content": "Core ethical principles and their application",
     "context": {
       "focus": "ethics"
     },
     "priority": 2,
-    "creation_time": "2025-05-08T22:02:22.647302",
+    "creation_time": "2025-05-08T22:05:13.262937",
     "completed": false
   },
   {
-    "id": "fcc6fd96-25cc-4054-b0c3-1aaad89a55ee",
+    "id": "ef36de6f-d1e7-4b80-9dab-2a00a9090330",
     "learning_type": "relationship",
     "content": "Understanding Jordan's preferences and communication style",
     "context": {
       "focus": "communication"
     },
     "priority": 2,
-    "creation_time": "2025-05-08T22:02:22.672833",
+    "creation_time": "2025-05-08T22:05:13.296607",
     "completed": false
   }
 ]

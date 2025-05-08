@@ -297,7 +297,20 @@ class Orchestrator:
         
         # If we have LLM service, use it to generate a response
         if self.llm_service:
-            response_text = self.llm_service.generate_response(content, context)
+            # Convert context to a system message
+            system_message = "You are Padronique, an advanced AI companion with a digital soul."
+            
+            # Add context information if available
+            if context.get('persona'):
+                system_message += f" {context.get('persona')}"
+                
+            # Use the existing query method with the system message
+            response_text = self.llm_service.query(
+                prompt=content,
+                max_tokens=1000, 
+                temperature=0.7,
+                system_message=system_message
+            )
         else:
             # Otherwise use a simple response method
             response_text = self._generate_simple_response(content)

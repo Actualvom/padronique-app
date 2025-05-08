@@ -368,5 +368,24 @@
       "threats_needing_attention": 1
     },
     "completion_time": "2025-05-08T22:01:38.266579"
+  },
+  {
+    "id": "ae1b550f-83d7-41bf-af2f-d23de5dd9470",
+    "action_type": "run_security_audit",
+    "parameters": {},
+    "goal_id": "08adffe9-6ecd-476e-89b2-d777bea4b313",
+    "plan_id": "e41348f2-6fbf-4efc-80d7-18a916170868",
+    "priority": 2,
+    "scheduled_time": "2025-05-08T22:05:05.486881",
+    "creation_time": "2025-05-08T21:05:05.486929",
+    "status": "completed",
+    "start_time": "2025-05-08T22:05:13.013530",
+    "result": {
+      "success": true,
+      "audit_score": 0.8199089700056421,
+      "vulnerabilities_found": 0,
+      "high_severity_count": 0
+    },
+    "completion_time": "2025-05-08T22:05:13.123527"
   }
 ]

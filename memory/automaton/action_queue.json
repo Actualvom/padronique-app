@@ -26,17 +26,6 @@
     "status": "pending"
   },
   {
-    "id": "ae1b550f-83d7-41bf-af2f-d23de5dd9470",
-    "action_type": "run_security_audit",
-    "parameters": {},
-    "goal_id": "08adffe9-6ecd-476e-89b2-d777bea4b313",
-    "plan_id": "e41348f2-6fbf-4efc-80d7-18a916170868",
-    "priority": 2,
-    "scheduled_time": "2025-05-08T22:05:05.486881",
-    "creation_time": "2025-05-08T21:05:05.486929",
-    "status": "pending"
-  },
-  {
     "id": "943bc776-a535-4c00-ba99-f33987eb20b6",
     "action_type": "run_security_audit",
     "parameters": {},
@@ -5879,6 +5868,45 @@
     "status": "pending"
   },
   {
+    "id": "e6ce381d-61ac-4437-9cc4-f6fc320fad5a",
+    "action_type": "research_topic",
+    "parameters": {
+      "topic": "advanced digital protection",
+      "depth": "medium"
+    },
+    "goal_id": "f1867c77-511a-4d27-a3e4-b3a83224e292",
+    "plan_id": "00480c75-65a1-43fd-a57e-41c832a90594",
+    "priority": 3,
+    "scheduled_time": "2025-05-09T02:03:23.180814",
+    "creation_time": "2025-05-08T22:03:23.180864",
+    "status": "pending"
+  },
+  {
+    "id": "38d4da70-2065-4964-893b-f75235023e28",
+    "action_type": "analyze_conversation",
+    "parameters": {
+      "mode": "deep",
+      "focus": "preferences"
+    },
+    "goal_id": "f1867c77-511a-4d27-a3e4-b3a83224e292",
+    "plan_id": "00480c75-65a1-43fd-a57e-41c832a90594",
+    "priority": 3,
+    "scheduled_time": "2025-05-09T10:03:23.180814",
+    "creation_time": "2025-05-08T22:03:23.209479",
+    "status": "pending"
+  },
+  {
+    "id": "af697ce0-01ba-495f-9f6d-0cfe36dc7c3d",
+    "action_type": "integrate_learning",
+    "parameters": {},
+    "goal_id": "f1867c77-511a-4d27-a3e4-b3a83224e292",
+    "plan_id": "00480c75-65a1-43fd-a57e-41c832a90594",
+    "priority": 3,
+    "scheduled_time": "2025-05-10T22:03:23.180814",
+    "creation_time": "2025-05-08T22:03:23.261774",
+    "status": "pending"
+  },
+  {
     "id": "ddf96077-55d0-4a10-894b-08eff1c96d32",
     "action_type": "analyze_behavior",
     "parameters": {
@@ -6558,6 +6586,20 @@
     "priority": 4,
     "scheduled_time": "2025-05-09T22:02:22.777358",
     "creation_time": "2025-05-08T22:02:22.823144",
+    "status": "pending"
+  },
+  {
+    "id": "4b94614e-334c-4dea-b309-957b082999ed",
+    "action_type": "analyze_behavior",
+    "parameters": {
+      "behavior_type": "interaction",
+      "timeframe": "recent"
+    },
+    "goal_id": "f1867c77-511a-4d27-a3e4-b3a83224e292",
+    "plan_id": "00480c75-65a1-43fd-a57e-41c832a90594",
+    "priority": 4,
+    "scheduled_time": "2025-05-09T22:03:23.180814",
+    "creation_time": "2025-05-08T22:03:23.236393",
     "status": "pending"
   }
 ]

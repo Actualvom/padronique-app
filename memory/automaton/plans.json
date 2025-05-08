@@ -1855,7 +1855,8 @@
     ],
     "creation_time": "2025-05-08T21:05:05.486881",
     "status": "active",
-    "progress": 0.0
+    "progress": 0.0,
+    "last_updated": "2025-05-08T22:05:13.123553"
   },
   "7524fcd1-a237-407b-abf7-8d1306093e2c": {
     "id": "49425407-ed0c-4c1e-88bd-b0b843f312c3",
@@ -6739,6 +6740,58 @@
       }
     ],
     "creation_time": "2025-05-08T22:02:23.063506",
+    "status": "active",
+    "progress": 0.0
+  },
+  "00480c75-65a1-43fd-a57e-41c832a90594": {
+    "id": "ae7586e6-3457-4e9b-b553-516c031e26b8",
+    "goal_id": "f1867c77-511a-4d27-a3e4-b3a83224e292",
+    "name": "Systematic Learning Plan",
+    "description": "Expand knowledge and capabilities through research and analysis",
+    "steps": [
+      {
+        "step_id": "70f7fe22-bb01-45df-b5d4-f5f71829bdd8",
+        "name": "Research protection strategies",
+        "action_type": "research_topic",
+        "parameters": {
+          "topic": "advanced digital protection",
+          "depth": "medium"
+        },
+        "priority": 3,
+        "scheduled_time": "2025-05-09T02:03:23.180814"
+      },
+      {
+        "step_id": "b26bdfdc-77f2-4abc-848d-905c584c1031",
+        "name": "Analyze conversation patterns",
+        "action_type": "analyze_conversation",
+        "parameters": {
+          "mode": "deep",
+          "focus": "preferences"
+        },
+        "priority": 3,
+        "scheduled_time": "2025-05-09T10:03:23.180814"
+      },
+      {
+        "step_id": "b07af992-9820-4d04-abd6-96d222d4292d",
+        "name": "Analyze behavior patterns",
+        "action_type": "analyze_behavior",
+        "parameters": {
+          "behavior_type": "interaction",
+          "timeframe": "recent"
+        },
+        "priority": 4,
+        "scheduled_time": "2025-05-09T22:03:23.180814"
+      },
+      {
+        "step_id": "b7c8a9fd-88b9-439e-b977-b125a447e957",
+        "name": "Integrate learning outcomes",
+        "action_type": "integrate_learning",
+        "parameters": {},
+        "priority": 3,
+        "scheduled_time": "2025-05-10T22:03:23.180814"
+      }
+    ],
+    "creation_time": "2025-05-08T22:03:23.180814",
     "status": "active",
     "progress": 0.0
   }
