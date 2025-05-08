@@ -3076,5 +3076,249 @@
     "priority": 2,
     "creation_time": "2025-05-08T22:27:57.802007",
     "completed": false
+  },
+  {
+    "id": "c783b9a2-5c28-47fc-8a2b-edb0516360d0",
+    "learning_type": "protective",
+    "content": "Security audit results: overall score 0.78",
+    "context": {
+      "audit_results": {
+        "timestamp": "2025-05-08T22:28:57.872534",
+        "overall_security_score": 0.7827500360138973,
+        "areas": {
+          "digital": {
+            "score": 0.7408265371186422,
+            "checks_performed": [
+              "data_encryption",
+              "access_control",
+              "network_security"
+            ],
+            "vulnerabilities": []
+          },
+          "emotional": {
+            "score": 0.8942742619444322,
+            "checks_performed": [
+              "emotional_resilience",
+              "manipulation_resistance",
+              "emotional_balance"
+            ],
+            "vulnerabilities": []
+          },
+          "privacy": {
+            "score": 0.6722269747289631,
+            "checks_performed": [
+              "data_handling",
+              "information_sharing",
+              "anonymization"
+            ],
+            "vulnerabilities": []
+          },
+          "relationship": {
+            "score": 0.7879683518078936,
+            "checks_performed": [
+              "trust_verification",
+              "communication_patterns",
+              "bonding_strength"
+            ],
+            "vulnerabilities": []
+          },
+          "integrity": {
+            "score": 0.8302395081418681,
+            "checks_performed": [
+              "code_integrity",
+              "memory_consistency",
+              "update_verification"
+            ],
+            "vulnerabilities": []
+          }
+        },
+        "vulnerabilities": [],
+        "recommendations": [
+          "Good: Security posture is strong, continue monitoring",
+          "Focus on improving privacy security, which is the weakest area"
+        ]
+      }
+    },
+    "priority": 3,
+    "creation_time": "2025-05-08T22:28:57.872622",
+    "completed": false
+  },
+  {
+    "id": "f20bc65f-cc31-4c8d-887c-e64171ff9447",
+    "learning_type": "protective",
+    "content": "Security audit results: overall score 0.76",
+    "context": {
+      "audit_results": {
+        "timestamp": "2025-05-08T22:28:57.880889",
+        "overall_security_score": 0.7626449003509865,
+        "areas": {
+          "digital": {
+            "score": 0.8049929501705057,
+            "checks_performed": [
+              "data_encryption",
+              "access_control",
+              "network_security"
+            ],
+            "vulnerabilities": []
+          },
+          "emotional": {
+            "score": 0.6970493939727798,
+            "checks_performed": [
+              "emotional_resilience",
+              "manipulation_resistance",
+              "emotional_balance"
+            ],
+            "vulnerabilities": [
+              {
+                "id": "72f31bca-c829-4acb-8a1f-26a5c3baa239",
+                "area": "emotional",
+                "severity": "medium",
+                "description": "Potential vulnerability to advanced social engineering",
+                "recommendation": "Strengthen detection of emotional manipulation patterns"
+              }
+            ]
+          },
+          "privacy": {
+            "score": 0.6990903654986795,
+            "checks_performed": [
+              "data_handling",
+              "information_sharing",
+              "anonymization"
+            ],
+            "vulnerabilities": []
+          },
+          "relationship": {
+            "score": 0.8713111159099844,
+            "checks_performed": [
+              "trust_verification",
+              "communication_patterns",
+              "bonding_strength"
+            ],
+            "vulnerabilities": []
+          },
+          "integrity": {
+            "score": 0.7573602176378531,
+            "checks_performed": [
+              "code_integrity",
+              "memory_consistency",
+              "update_verification"
+            ],
+            "vulnerabilities": []
+          }
+        },
+        "vulnerabilities": [
+          {
+            "id": "72f31bca-c829-4acb-8a1f-26a5c3baa239",
+            "area": "emotional",
+            "severity": "medium",
+            "description": "Potential vulnerability to advanced social engineering",
+            "recommendation": "Strengthen detection of emotional manipulation patterns"
+          }
+        ],
+        "recommendations": [
+          "Good: Security posture is strong, continue monitoring",
+          "Focus on improving emotional security, which is the weakest area"
+        ]
+      }
+    },
+    "priority": 3,
+    "creation_time": "2025-05-08T22:28:57.880991",
+    "completed": false
+  },
+  {
+    "id": "69347ac3-da9c-43de-b35f-b37a7a01fa15",
+    "learning_type": "protective",
+    "content": "Security audit results: overall score 0.81",
+    "context": {
+      "audit_results": {
+        "timestamp": "2025-05-08T22:29:57.966080",
+        "overall_security_score": 0.808086851278821,
+        "areas": {
+          "digital": {
+            "score": 0.7474372069593,
+            "checks_performed": [
+              "data_encryption",
+              "access_control",
+              "network_security"
+            ],
+            "vulnerabilities": []
+          },
+          "emotional": {
+            "score": 0.7482283086375203,
+            "checks_performed": [
+              "emotional_resilience",
+              "manipulation_resistance",
+              "emotional_balance"
+            ],
+            "vulnerabilities": [
+              {
+                "id": "075c7c16-e7d1-47e3-88b5-1992cfec6824",
+                "area": "emotional",
+                "severity": "low",
+                "description": "Potential vulnerability to advanced social engineering",
+                "recommendation": "Strengthen detection of emotional manipulation patterns"
+              }
+            ]
+          },
+          "privacy": {
+            "score": 0.8899094958763379,
+            "checks_performed": [
+              "data_handling",
+              "information_sharing",
+              "anonymization"
+            ],
+            "vulnerabilities": [
+              {
+                "id": "e57815ee-be5e-4003-9cd6-90feddd32f57",
+                "area": "privacy",
+                "severity": "low",
+                "description": "Potential over-collection of unnecessary data",
+                "recommendation": "Implement stricter data minimization policies"
+              }
+            ]
+          },
+          "relationship": {
+            "score": 0.7131223619573024,
+            "checks_performed": [
+              "trust_verification",
+              "communication_patterns",
+              "bonding_strength"
+            ],
+            "vulnerabilities": []
+          },
+          "integrity": {
+            "score": 0.933158171713145,
+            "checks_performed": [
+              "code_integrity",
+              "memory_consistency",
+              "update_verification"
+            ],
+            "vulnerabilities": []
+          }
+        },
+        "vulnerabilities": [
+          {
+            "id": "075c7c16-e7d1-47e3-88b5-1992cfec6824",
+            "area": "emotional",
+            "severity": "low",
+            "description": "Potential vulnerability to advanced social engineering",
+            "recommendation": "Strengthen detection of emotional manipulation patterns"
+          },
+          {
+            "id": "e57815ee-be5e-4003-9cd6-90feddd32f57",
+            "area": "privacy",
+            "severity": "low",
+            "description": "Potential over-collection of unnecessary data",
+            "recommendation": "Implement stricter data minimization policies"
+          }
+        ],
+        "recommendations": [
+          "Good: Security posture is strong, continue monitoring"
+        ]
+      }
+    },
+    "priority": 3,
+    "creation_time": "2025-05-08T22:29:57.966615",
+    "completed": false
   }
 ]

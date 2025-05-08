@@ -44,7 +44,7 @@
     "creation_time": "2025-05-08T20:28:17.904072",
     "status": "active",
     "progress": 0.0,
-    "last_updated": "2025-05-08T21:29:14.198128"
+    "last_updated": "2025-05-08T22:28:57.885646"
   },
   "686d49ff-0141-4a95-a8ba-1a39fb65eb1b": {
     "id": "1375d9d5-de31-4aba-b76d-a4a23e610a66",
@@ -91,7 +91,7 @@
     "creation_time": "2025-05-08T20:28:17.904704",
     "status": "active",
     "progress": 0.0,
-    "last_updated": "2025-05-08T21:29:14.182729"
+    "last_updated": "2025-05-08T22:28:57.892386"
   },
   "2a96dab6-f5f1-41a8-846a-fbd42d0ea831": {
     "id": "11394dc1-582f-48a3-ab5f-91685da15d16",
@@ -3812,7 +3812,8 @@
     ],
     "creation_time": "2025-05-08T21:28:02.870611",
     "status": "active",
-    "progress": 0.0
+    "progress": 0.0,
+    "last_updated": "2025-05-08T22:28:57.928895"
   },
   "8ebc6024-818a-4c03-ad55-9d5c05c310fd": {
     "id": "3c3d9c0f-3556-4373-8a94-f2d97b4f830f",
@@ -3951,7 +3952,8 @@
     ],
     "creation_time": "2025-05-08T21:28:13.665238",
     "status": "active",
-    "progress": 0.0
+    "progress": 0.0,
+    "last_updated": "2025-05-08T22:28:57.960684"
   },
   "c47347d1-5f7e-4efd-a554-96e0f3b817f2": {
     "id": "864c2aa8-b6b0-4f95-8a49-b79086cd64d5",
@@ -8140,6 +8142,58 @@
       }
     ],
     "creation_time": "2025-05-08T22:28:57.642578",
+    "status": "active",
+    "progress": 0.0
+  },
+  "3db68cdc-1e24-4140-98af-5b83f4ced555": {
+    "id": "17da2c9a-2bbe-4ee3-8c35-ffdf5d6d8174",
+    "goal_id": "f7696270-93f9-4118-b1be-6db7df55e250",
+    "name": "Systematic Learning Plan",
+    "description": "Expand knowledge and capabilities through research and analysis",
+    "steps": [
+      {
+        "step_id": "781f9f18-9f68-4371-9211-19a61752037b",
+        "name": "Research protection strategies",
+        "action_type": "research_topic",
+        "parameters": {
+          "topic": "advanced digital protection",
+          "depth": "medium"
+        },
+        "priority": 3,
+        "scheduled_time": "2025-05-09T02:28:57.760058"
+      },
+      {
+        "step_id": "5dbab4f4-002d-4be0-99fb-beb5289c290c",
+        "name": "Analyze conversation patterns",
+        "action_type": "analyze_conversation",
+        "parameters": {
+          "mode": "deep",
+          "focus": "preferences"
+        },
+        "priority": 3,
+        "scheduled_time": "2025-05-09T10:28:57.760058"
+      },
+      {
+        "step_id": "6d042b58-b566-42a6-bd5e-fcd97a8a73bc",
+        "name": "Analyze behavior patterns",
+        "action_type": "analyze_behavior",
+        "parameters": {
+          "behavior_type": "interaction",
+          "timeframe": "recent"
+        },
+        "priority": 4,
+        "scheduled_time": "2025-05-09T22:28:57.760058"
+      },
+      {
+        "step_id": "3318c46e-a198-4102-aab7-67f137a28af8",
+        "name": "Integrate learning outcomes",
+        "action_type": "integrate_learning",
+        "parameters": {},
+        "priority": 3,
+        "scheduled_time": "2025-05-10T22:28:57.760058"
+      }
+    ],
+    "creation_time": "2025-05-08T22:28:57.760058",
     "status": "active",
     "progress": 0.0
   }

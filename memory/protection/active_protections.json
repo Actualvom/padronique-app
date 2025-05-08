@@ -1264,5 +1264,15 @@
     "active": true,
     "effectiveness": 0.9093381871317263,
     "description": "Protection for the bond with Jordan"
+  },
+  "74ea8104-f85c-4d1e-a14d-acf8648944ff": {
+    "id": "74ea8104-f85c-4d1e-a14d-acf8648944ff",
+    "name": "vuln_shield_4dd08089",
+    "threat_type": "integrity",
+    "level": "high",
+    "deployment_time": "2025-05-08T22:29:57.968216",
+    "active": true,
+    "effectiveness": 0.8318314643993996,
+    "description": "High level protection against integrity threats"
   }
 }
