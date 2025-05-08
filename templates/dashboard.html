@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Ignis AI Companion</title>
+    <link rel="stylesheet" href="https://cdn.replit.com/agent/bootstrap-agent-dark-theme.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg mb-4">
+        <div class="container">
+            <a class="navbar-brand system-name" href="/">
+                <i class="fas fa-brain me-2"></i>Ignis
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/"><i class="fas fa-home me-1"></i> Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/dashboard"><i class="fas fa-chart-bar me-1"></i> Dashboard</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <!-- Dashboard Header -->
+        <div class="system-banner text-center">
+            <h1 class="system-name">System Dashboard</h1>
+            <p class="system-version">Monitoring and Management</p>
+        </div>
+        
+        <!-- System Metrics -->
+        <div class="row mb-4">
+            <div class="col-md-3">
+                <div class="metric-card">
+                    <div class="metric-label">Uptime</div>
+                    <div class="metric-value" id="metric-uptime">00:00:00</div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="metric-card">
+                    <div class="metric-label">Active Memories</div>
+                    <div class="metric-value" id="metric-memories">0</div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="metric-card">
+                    <div class="metric-label">Active Modules</div>
+                    <div class="metric-value" id="metric-modules">0</div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="metric-card">
+                    <div class="metric-label">Processing Count</div>
+                    <div class="metric-value" id="metric-processing">0</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row">
+            <!-- Module Management -->
+            <div class="col-lg-7">
+                <div class="card module-card">
+                    <div class="module-header">
+                        <span><i class="fas fa-cogs me-2"></i>Module Management</span>
+                        <button class="btn btn-sm btn-outline-info" id="refresh-modules">
+                            <i class="fas fa-sync-alt"></i>
+                        </button>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-dark table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>Module</th>
+                                        <th>Status</th>
+                                        <th>Processing</th>
+                                        <th>Errors</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="modules-table">
+                                    <tr>
+                                        <td colspan="5" class="text-center">
+                                            <div class="spinner-border spinner-border-sm text-info" role="status">
+                                                <span class="visually-hidden">Loading...</span>
+                                            </div>
+                                            Loading modules...
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Module Details -->
+                <div class="card module-card mt-4" id="module-details-card" style="display: none;">
+                    <div class="module-header">
+                        <span><i class="fas fa-info-circle me-2"></i>Module Details: <span id="detail-module-name">-</span></span>
+                        <button class="btn btn-sm btn-outline-danger" id="close-details">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                    <div class="card-body">
+                        <div id="module-details-content">
+                            <!-- Module details will be loaded here -->
+                        </div>
+                        <div class="mt-3">
+                            <h6>Configuration</h6>
+                            <div id="module-config">
+                                <!-- Module configuration will be loaded here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Memory and Analytics -->
+            <div class="col-lg-5">
+                <!-- Memory Stats -->
+                <div class="card module-card">
+                    <div class="module-header">
+                        <span><i class="fas fa-memory me-2"></i>Memory Analytics</span>
+                    </div>
+                    <div class="card-body">
+                        <canvas id="memory-chart" height="200"></canvas>
+                        <div class="mt-3" id="memory-stats">
+                            <div class="d-flex justify-content-center">
+                                <div class="spinner-border text-info" role="status">
+                                    <span class="visually-hidden">Loading...</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Tag Cloud -->
+                <div class="card module-card mt-4">
+                    <div class="module-header">
+                        <span><i class="fas fa-tags me-2"></i>Memory Tags</span>
+                    </div>
+                    <div class="card-body">
+                        <div id="tag-cloud">
+                            <div class="d-flex justify-content-center">
+                                <div class="spinner-border text-info" role="status">
+                                    <span class="visually-hidden">Loading...</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Learning Progress -->
+                <div class="card module-card mt-4">
+                    <div class="module-header">
+                        <span><i class="fas fa-graduation-cap me-2"></i>Learning Progress</span>
+                    </div>
+                    <div class="card-body">
+                        <div id="learning-stats">
+                            <div class="d-flex justify-content-center">
+                                <div class="spinner-border text-info" role="status">
+                                    <span class="visually-hidden">Loading...</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Sandbox Testing Section -->
+        <div class="row mt-4">
+            <div class="col-12">
+                <div class="card module-card">
+                    <div class="module-header">
+                        <span><i class="fas fa-vial me-2"></i>Sandbox Testing</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <label for="sandbox-code" class="form-label">Test Code</label>
+                                <textarea id="sandbox-code" class="form-control code-editor" placeholder="# Enter Python code to test here"></textarea>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="sandbox-input" class="form-label">Input Data (JSON)</label>
+                                <textarea id="sandbox-input" class="form-control" rows="5" placeholder='{"key": "value"}'></textarea>
+                                <div class="mt-3">
+                                    <button id="run-sandbox" class="btn btn-info"><i class="fas fa-play me-2"></i>Run in Sandbox</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-4">
+                            <label class="form-label">Output</label>
+                            <div id="sandbox-output" class="sandbox-output">
+                                <!-- Sandbox output will appear here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <footer class="mt-5 text-center text-muted">
+            <p><small>Ignis AI Companion System &copy; 2023</small></p>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Helper function to format timestamps
+        function formatTimestamp(timestamp) {
+            const date = new Date(timestamp * 1000);
+            return date.toLocaleTimeString();
+        }
+        
+        // Helper function to format uptime
+        function formatUptime(seconds) {
+            const hours = Math.floor(seconds / 3600);
+            const minutes = Math.floor((seconds % 3600) / 60);
+            const secs = Math.floor(seconds % 60);
+            return `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
+        }
+        
+        // Initialize charts
+        let memoryChart = null;
+        
+        function initCharts() {
+            // Memory chart
+            const ctx = document.getElementById('memory-chart').getContext('2d');
+            memoryChart = new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Active', 'Expired'],
+                    datasets: [{
+                        data: [0, 0],
+                        backgroundColor: [
+                            'rgba(54, 162, 235, 0.6)',
+                            'rgba(255, 99, 132, 0.6)'
+                        ],
+                        borderColor: [
+                            'rgba(54, 162, 235, 1)',
+                            'rgba(255, 99, 132, 1)'
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                        },
+                        title: {
+                            display: true,
+                            text: 'Memory Distribution'
+                        }
+                    }
+                }
+            });
+        }
+        
+        // Update system metrics
+        function updateSystemMetrics() {
+            fetch('/api/status')
+                .then(response => response.json())
+                .then(data => {
+                    if (data.status === 'ok') {
+                        const stats = data.system;
+                        
+                        // Update uptime
+                        document.getElementById('metric-uptime').textContent = formatUptime(stats.uptime);
+                        
+                        // Update memory count
+                        document.getElementById('metric-memories').textContent = stats.memory.active_memories;
+                        
+                        // Update module count
+                        let activeModules = 0;
+                        let totalProcessing = 0;
+                        
+                        for (const [name, module] of Object.entries(stats.modules)) {
+                            if (module.active) {
+                                activeModules++;
+                            }
+                            totalProcessing += module.stats.processing_count;
+                        }
+                        
+                        document.getElementById('metric-modules').textContent = activeModules;
+                        document.getElementById('metric-processing').textContent = totalProcessing;
+                        
+                        // Update memory chart
+                        if (memoryChart) {
+                            memoryChart.data.datasets[0].data = [
+                                stats.memory.active_memories,
+                                stats.memory.expired_memories
+                            ];
+                            memoryChart.update();
+                        }
+                        
+                        // Update memory stats
+                        let memoryStatsHtml = `
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="mb-2">
+                                        <strong>Total Memories:</strong> ${stats.memory.total_memories}
+                                    </div>
+                                    <div class="mb-2">
+                                        <strong>Active Memories:</strong> ${stats.memory.active_memories}
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="mb-2">
+                                        <strong>Expired Memories:</strong> ${stats.memory.expired_memories}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-3">
+                                <h6>Memory Types</h6>
+                                <div class="row">
+                        `;
+                        
+                        for (const [type, count] of Object.entries(stats.memory.memory_types)) {
+                            memoryStatsHtml += `
+                                <div class="col-6 mb-1">
+                                    <small>${type}: ${count}</small>
+                                </div>
+                            `;
+                        }
+                        
+                        memoryStatsHtml += `
+                                </div>
+                            </div>
+                        `;
+                        
+                        document.getElementById('memory-stats').innerHTML = memoryStatsHtml;
+                        
+                        // Update tag cloud
+                        updateTagCloud(stats.memory.tags);
+                        
+                        // Update module table
+                        updateModuleTable(stats.modules);
+                    }
+                })
+                .catch(error => {
+                    console.error('Error fetching system status:', error);
+                });
+        }
+        
+        // Update tag cloud
+        function updateTagCloud(tagStats) {
+            if (!tagStats || !tagStats.popular_tags) {
+                document.getElementById('tag-cloud').innerHTML = 
+                    '<div class="text-center text-muted">No tags available</div>';
+                return;
+            }
+            
+            let tagsHtml = '';
+            tagStats.popular_tags.forEach(tag => {
+                const tagName = tag[0];
+                const count = tag[1];
+                const size = Math.max(1, Math.min(2, 0.8 + (count / 20))); // Scale between 0.8 and 2em
+                
+                tagsHtml += `
+                    <span class="memory-tag me-2 mb-2" style="font-size: ${size}em;" title="${count} memories">
+                        ${tagName} (${count})
+                    </span>
+                `;
+            });
+            
+            if (tagsHtml) {
+                document.getElementById('tag-cloud').innerHTML = tagsHtml;
+            } else {
+                document.getElementById('tag-cloud').innerHTML = 
+                    '<div class="text-center text-muted">No tags available</div>';
+            }
+        }
+        
+        // Update module table
+        function updateModuleTable(modules) {
+            let tableHtml = '';
+            
+            for (const [name, module] of Object.entries(modules)) {
+                const statusClass = module.active ? 'text-success' : 'text-danger';
+                const statusText = module.active ? 'Active' : 'Inactive';
+                const btnClass = module.active ? 'btn-danger' : 'btn-success';
+                const btnText = module.active ? 'Deactivate' : 'Activate';
+                
+                tableHtml += `
+                    <tr>
+                        <td class="text-capitalize">${name}</td>
+                        <td><span class="${statusClass}">${statusText}</span></td>
+                        <td>${module.stats.processing_count}</td>
+                        <td>${module.stats.error_count}</td>
+                        <td>
+                            <button class="btn btn-sm btn-info me-1 view-module" data-module="${name}">
+                                <i class="fas fa-info-circle"></i>
+                            </button>
+                            <button class="btn btn-sm ${btnClass} toggle-module" data-module="${name}" data-active="${module.active}">
+                                ${btnText}
+                            </button>
+                        </td>
+                    </tr>
+                `;
+            }
+            
+            document.getElementById('modules-table').innerHTML = tableHtml;
+            
+            // Add event listeners for module actions
+            document.querySelectorAll('.view-module').forEach(button => {
+                button.addEventListener('click', function() {
+                    const moduleName = this.getAttribute('data-module');
+                    viewModuleDetails(moduleName);
+                });
+            });
+            
+            document.querySelectorAll('.toggle-module').forEach(button => {
+                button.addEventListener('click', function() {
+                    const moduleName = this.getAttribute('data-module');
+                    const isActive = this.getAttribute('data-active') === 'true';
+                    toggleModule(moduleName, !isActive);
+                });
+            });
+        }
+        
+        // View module details
+        function viewModuleDetails(moduleName) {
+            fetch(`/api/modules/${moduleName}`)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.status === 'ok') {
+                        const module = data.module;
+                        
+                        // Update module name
+                        document.getElementById('detail-module-name').textContent = moduleName;
+                        
+                        // Update details content
+                        let detailsHtml = `
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="mb-2">
+                                        <strong>Status:</strong> 
+                                        <span class="${module.active ? 'text-success' : 'text-danger'}">
+                                            ${module.active ? 'Active' : 'Inactive'}
+                                        </span>
+                                    </div>
+                                    <div class="mb-2">
+                                        <strong>Processing Count:</strong> ${module.stats.processing_count}
+                                    </div>
+                                    <div class="mb-2">
+                                        <strong>Error Count:</strong> ${module.stats.error_count}
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="mb-2">
+                                        <strong>Last Used:</strong> 
+                                        ${module.stats.last_used ? formatTimestamp(module.stats.last_used) : 'Never'}
+                                    </div>
+                                    <div class="mb-2">
+                                        <strong>Avg. Processing Time:</strong> 
+                                        ${module.stats.avg_processing_time ? module.stats.avg_processing_time.toFixed(4) + 's' : 'N/A'}
+                                    </div>
+                                </div>
+                            </div>
+                        `;
+                        
+                        document.getElementById('module-details-content').innerHTML = detailsHtml;
+                        
+                        // Update config section
+                        let configHtml = '<pre class="bg-dark p-3 rounded"><code>';
+                        configHtml += JSON.stringify(module.config, null, 2);
+                        configHtml += '</code></pre>';
+                        
+                        document.getElementById('module-config').innerHTML = configHtml;
+                        
+                        // Show details card
+                        document.getElementById('module-details-card').style.display = 'block';
+                    } else {
+                        alert(`Error: ${data.message}`);
+                    }
+                })
+                .catch(error => {
+                    console.error(`Error fetching module details: ${error}`);
+                    alert('Error fetching module details. See console for details.');
+                });
+        }
+        
+        // Toggle module active state
+        function toggleModule(moduleName, active) {
+            fetch(`/api/modules/${moduleName}/toggle`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ active: active })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.status === 'ok') {
+                    // Refresh module data
+                    updateSystemMetrics();
+                    
+                    // If details are open for this module, refresh them
+                    if (document.getElementById('detail-module-name').textContent === moduleName) {
+                        viewModuleDetails(moduleName);
+                    }
+                } else {
+                    alert(`Error: ${data.message}`);
+                }
+            })
+            .catch(error => {
+                console.error(`Error toggling module: ${error}`);
+                alert('Error toggling module. See console for details.');
+            });
+        }
+        
+        // Update learning stats
+        function updateLearningStats() {
+            fetch('/api/modules/learning')
+                .then(response => response.json())
+                .then(data => {
+                    if (data.status === 'ok') {
+                        const module = data.module;
+                        
+                        if (!module) {
+                            document.getElementById('learning-stats').innerHTML = 
+                                '<div class="text-center text-muted">Learning module not available</div>';
+                            return;
+                        }
+                        
+                        // Get improvement areas from learning module
+                        let learningHtml = `
+                            <div class="mb-3">
+                                <div><strong>Learning Rate:</strong> ${module.config.learning_rate}</div>
+                                <div><strong>Method:</strong> ${module.config.reinforcement_method}</div>
+                                <div><strong>Status:</strong> 
+                                    <span class="${module.active ? 'text-success' : 'text-danger'}">
+                                        ${module.active ? 'Active' : 'Inactive'}
+                                    </span>
+                                </div>
+                            </div>
+                        `;
+                        
+                        // If the module has stats about improvement areas, show them
+                        if (module.stats && module.stats.improvement_areas) {
+                            const areas = module.stats.improvement_areas;
+                            
+                            learningHtml += `<h6>Improvement Areas</h6>`;
+                            
+                            if (areas.length === 0) {
+                                learningHtml += `<div class="text-muted">No improvement areas identified yet</div>`;
+                            } else {
+                                learningHtml += `<ul class="list-group list-group-flush">`;
+                                areas.forEach(area => {
+                                    learningHtml += `
+                                        <li class="list-group-item bg-dark">
+                                            <div><strong>${area.area}</strong></div>
+                                            <div class="small">
+                                                Performance: ${area.current_performance.toFixed(2)} / 
+                                                Target: ${area.overall_average.toFixed(2)}
+                                            </div>
+                                            <div class="progress mt-1" style="height: 6px;">
+                                                <div class="progress-bar bg-info" role="progressbar" 
+                                                    style="width: ${(area.current_performance / area.overall_average * 100).toFixed(0)}%">
+                                                </div>
+                                            </div>
+                                        </li>
+                                    `;
+                                });
+                                learningHtml += `</ul>`;
+                            }
+                        } else {
+                            learningHtml += `<div class="text-muted">Learning progress data not available</div>`;
+                        }
+                        
+                        document.getElementById('learning-stats').innerHTML = learningHtml;
+                    } else {
+                        document.getElementById('learning-stats').innerHTML = 
+                            `<div class="text-center text-danger">Error: ${data.message}</div>`;
+                    }
+                })
+                .catch(error => {
+                    console.error('Error fetching learning stats:', error);
+                    document.getElementById('learning-stats').innerHTML = 
+                        '<div class="text-center text-danger">Error fetching learning data</div>';
+                });
+        }
+        
+        // Run code in sandbox
+        function runInSandbox() {
+            const code = document.getElementById('sandbox-code').value.trim();
+            let inputs = {};
+            
+            // Parse input JSON if provided
+            const inputText = document.getElementById('sandbox-input').value.trim();
+            if (inputText) {
+                try {
+                    inputs = JSON.parse(inputText);
+                } catch (e) {
+                    document.getElementById('sandbox-output').innerHTML = 
+                        `<span class="text-danger">Error parsing input JSON: ${e.message}</span>`;
+                    return;
+                }
+            }
+            
+            // Show loading indicator
+            document.getElementById('sandbox-output').innerHTML = 
+                `<div class="d-flex align-items-center">
+                    <div class="spinner-border spinner-border-sm text-info me-2" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                    Running code in sandbox...
+                </div>`;
+            
+            // Send to API
+            fetch('/api/sandbox/test', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    code: code,
+                    inputs: inputs
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.status === 'ok') {
+                    const result = data.result;
+                    
+                    let outputHtml = '';
+                    if (result.success) {
+                        outputHtml += `<div class="text-success mb-2">✓ Execution successful (${result.execution_time.toFixed(3)}s)</div>`;
+                        
+                        // Show stdout
+                        if (result.stdout) {
+                            outputHtml += `<div class="mb-2"><strong>Standard Output:</strong></div>`;
+                            outputHtml += `<pre class="bg-black p-2 rounded text-light">${result.stdout}</pre>`;
+                        }
+                        
+                        // Show result
+                        outputHtml += `<div class="mb-2"><strong>Result:</strong></div>`;
+                        outputHtml += `<pre class="bg-black p-2 rounded text-light">${JSON.stringify(result.result, null, 2)}</pre>`;
+                    } else {
+                        outputHtml += `<div class="text-danger mb-2">✗ Execution failed</div>`;
+                        
+                        // Show error
+                        outputHtml += `<div class="mb-2"><strong>Error:</strong></div>`;
+                        outputHtml += `<pre class="bg-black p-2 rounded text-danger">${result.error}</pre>`;
+                        
+                        // Show traceback if available
+                        if (result.traceback) {
+                            outputHtml += `<div class="mb-2"><strong>Traceback:</strong></div>`;
+                            outputHtml += `<pre class="bg-black p-2 rounded text-danger">${result.traceback}</pre>`;
+                        }
+                        
+                        // Show stdout if available
+                        if (result.stdout) {
+                            outputHtml += `<div class="mb-2"><strong>Standard Output:</strong></div>`;
+                            outputHtml += `<pre class="bg-black p-2 rounded text-light">${result.stdout}</pre>`;
+                        }
+                        
+                        // Show stderr if available
+                        if (result.stderr) {
+                            outputHtml += `<div class="mb-2"><strong>Standard Error:</strong></div>`;
+                            outputHtml += `<pre class="bg-black p-2 rounded text-danger">${result.stderr}</pre>`;
+                        }
+                    }
+                    
+                    document.getElementById('sandbox-output').innerHTML = outputHtml;
+                } else {
+                    document.getElementById('sandbox-output').innerHTML = 
+                        `<div class="text-danger">Error: ${data.message}</div>`;
+                }
+            })
+            .catch(error => {
+                console.error('Error running sandbox code:', error);
+                document.getElementById('sandbox-output').innerHTML = 
+                    `<div class="text-danger">Error communicating with server: ${error.message}</div>`;
+            });
+        }
+        
+        // Initialize the page
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize charts
+            initCharts();
+            
+            // Set up event listeners
+            document.getElementById('refresh-modules').addEventListener('click', updateSystemMetrics);
+            document.getElementById('close-details').addEventListener('click', function() {
+                document.getElementById('module-details-card').style.display = 'none';
+            });
+            document.getElementById('run-sandbox').addEventListener('click', runInSandbox);
+            
+            // Initial data loading
+            updateSystemMetrics();
+            updateLearningStats();
+            
+            // Set interval to update system metrics
+            setInterval(updateSystemMetrics, 30000); // Every 30 seconds
+            setInterval(updateLearningStats, 60000); // Every minute
+        });
+    </script>
+</body>
+</html>

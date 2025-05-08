@@ -1,176 +1,203 @@
 #!/usr/bin/env python3
-"""
-orchestrator.py: Coordinates tasks among brain modules, adaptive updates,
-external communication, and self-preservation routines.
-"""
+# core/orchestrator.py - Core orchestrator for the AI Companion System
 
-import time
 import logging
 import importlib
-import pkgutil
-import brains
+import time
+from typing import Dict, List, Any, Optional
 
-logger = logging.getLogger("padronique.orchestrator")
+from memory.memory_manager import MemoryManager
+from core.security import SecurityManager
+from brain.module_base import BrainModule
+
+logger = logging.getLogger(__name__)
 
 class Orchestrator:
     """
-    Central coordinator for all Padronique brain modules and operations.
-    Maintains the event loop and dispatches tasks to appropriate modules.
+    Core orchestrator for the AI Companion System.
+    
+    The Orchestrator is responsible for:
+    1. Initializing and managing all brain modules
+    2. Coordinating communication between modules
+    3. Managing the memory system
+    4. Handling security and access control
+    5. Coordinating self-improvement through the learning module
     """
     
-    def __init__(self, digital_soul, config):
+    def __init__(self, config: Dict[str, Any]):
         """
         Initialize the Orchestrator.
         
         Args:
-            digital_soul: DigitalSoul instance for memory management
-            config: Configuration dictionary
+            config: Configuration dictionary loaded from config.yaml
         """
-        self.digital_soul = digital_soul
         self.config = config
-        self.interval = config.get('orchestrator_interval', 5)  # seconds between cycles
-        self.brains = {}
-        self._running = False
+        self.system_name = config['system']['name']
+        self.version = config['system']['version']
         
-        # Initialize and load brain modules
-        self._load_brains()
+        # Initialize memory manager
+        self.memory_manager = MemoryManager(config['memory'])
+        
+        # Initialize security manager
+        self.security_manager = SecurityManager(config['security'])
+        
+        # Dictionary to store brain modules
+        self.modules: Dict[str, BrainModule] = {}
+        
+        # Start time for uptime tracking
+        self.start_time = time.time()
+        
+        logger.info(f"Orchestrator initialized for {self.system_name} v{self.version}")
     
-    def _load_brains(self):
-        """Load all available brain modules dynamically."""
-        logger.info("Loading brain modules...")
+    def initialize_modules(self) -> None:
+        """Initialize all enabled brain modules from configuration."""
+        logger.info("Initializing brain modules...")
         
-        # Import common modules that other brains might depend on
-        from core.chameleon_skin import scan_environment, morph_identity
-        from core.reinforcement_learning import rl_update
-        from core.tech_update_monitor import check_external_updates
-        
-        # Store these in the orchestrator for access by brains
-        self.chameleon = {
-            "scan_environment": scan_environment,
-            "morph_identity": morph_identity
-        }
-        self.rl = {"update": rl_update}
-        self.tech_monitor = {"check_updates": check_external_updates}
-        
-        # Dynamically load all brain modules
-        for _, name, ispkg in pkgutil.iter_modules(brains.__path__):
-            if name != '__init__' and name != 'base_brain':
-                try:
-                    module = importlib.import_module(f'brains.{name}')
-                    
-                    # Look for main class in the module
-                    for attr_name in dir(module):
-                        attr = getattr(module, attr_name)
-                        if isinstance(attr, type) and attr_name.lower() == name.lower():
-                            brain_instance = attr()
-                            self.brains[name] = brain_instance
-                            logger.debug(f"Loaded brain module: {name}")
-                            break
-                    else:
-                        logger.warning(f"Could not find main class in brain module: {name}")
-                        
-                except Exception as e:
-                    logger.error(f"Error loading brain {name}: {e}")
-    
-    def start_loop(self):
-        """Start the main orchestrator loop."""
-        self._running = True
-        logger.info("Orchestrator loop starting")
-        
-        try:
-            while self._running:
-                self._cycle()
-                time.sleep(self.interval)
-        except Exception as e:
-            logger.error(f"Error in orchestrator loop: {e}")
-            self._running = False
-    
-    def stop_loop(self):
-        """Stop the orchestrator loop."""
-        self._running = False
-        logger.info("Orchestrator loop stopped")
-    
-    def _cycle(self):
-        """Run a single orchestrator cycle."""
-        logger.debug("Starting orchestrator cycle")
-        
-        # Run environment checks
-        self.chameleon["scan_environment"]()
-        self.chameleon["morph_identity"]()
-        
-        # Process input for each brain
-        for name, brain in self.brains.items():
+        for module_config in self.config['brain']['modules']:
+            name = module_config['name']
+            if not module_config.get('enabled', True):
+                logger.info(f"Module '{name}' is disabled, skipping")
+                continue
+            
             try:
-                result = brain.process_input("Cycle update")
-                logger.debug(f"{name}: {result}")
-            except Exception as e:
-                logger.error(f"Error in brain {name}: {e}")
-        
-        # Run reinforcement learning update
-        self.rl["update"]()
-        
-        # Check for external technology updates
-        update_info = self.tech_monitor["check_updates"]()
-        logger.debug(f"External update check: {update_info}")
+                # Dynamically import the module class
+                module_path = f"brain.{name}_module"
+                class_name = f"{name.capitalize()}Module"
+                
+                module = importlib.import_module(module_path)
+                module_class = getattr(module, class_name)
+                
+                # Instantiate the module
+                instance = module_class(module_config.get('config', {}), self.memory_manager)
+                self.register_module(name, instance)
+                logger.info(f"Module '{name}' initialized successfully")
+            except (ImportError, AttributeError) as e:
+                logger.error(f"Failed to initialize module '{name}': {e}")
     
-    def process_user_input(self, user_input):
+    def register_module(self, name: str, module: BrainModule) -> None:
         """
-        Process user input through all relevant brain modules.
+        Register a brain module with the orchestrator.
         
         Args:
-            user_input: String containing user's message
+            name: Name of the module
+            module: Module instance
+        """
+        self.modules[name] = module
+        logger.debug(f"Module '{name}' registered with orchestrator")
+    
+    def get_module(self, name: str) -> Optional[BrainModule]:
+        """
+        Get a brain module by name.
+        
+        Args:
+            name: Name of the module
             
         Returns:
-            String response to the user
+            The module instance if found, None otherwise
         """
-        logger.info(f"Processing user input: {user_input}")
+        return self.modules.get(name)
+    
+    def process_input(self, input_data: Dict[str, Any]) -> Dict[str, Any]:
+        """
+        Process input through the appropriate modules.
         
-        # Store user input in memory
-        self.digital_soul.add_memory(
-            "interaction", 
-            {"role": "user", "content": user_input},
-            tags=["interaction", "user_input"]
-        )
+        Args:
+            input_data: Input data with type and content
+            
+        Returns:
+            Response from the system
+        """
+        logger.debug(f"Processing input: {input_data}")
         
-        # Priority brains that should process this input
-        priority_brains = ["observer", "archivist", "messenger"]
-        responses = []
+        # Check security access
+        if not self.security_manager.authorize_request(input_data):
+            return {"error": "Unauthorized request"}
         
-        # Process with priority brains first
-        for name in priority_brains:
-            if name in self.brains:
-                try:
-                    response = self.brains[name].process_input(user_input)
-                    if response:
-                        responses.append(response)
-                except Exception as e:
-                    logger.error(f"Error processing input with {name}: {e}")
+        input_type = input_data.get('type', 'text')
+        content = input_data.get('content', '')
         
-        # Then process with other brains
-        for name, brain in self.brains.items():
-            if name not in priority_brains:
-                try:
-                    response = brain.process_input(user_input)
-                    if response:
-                        responses.append(response)
-                except Exception as e:
-                    logger.error(f"Error processing input with {name}: {e}")
+        # Start with perception module to process the input
+        perception = self.get_module('perception')
+        if not perception:
+            return {"error": "Perception module not available"}
         
-        # Let the weaver brain combine responses if available
-        if "weaver" in self.brains and responses:
-            try:
-                final_response = self.brains["weaver"].weave_responses(user_input, responses)
-            except Exception as e:
-                logger.error(f"Error weaving responses: {e}")
-                final_response = " ".join(responses[:2])  # Fallback
+        # Process the input through perception
+        perceived_data = perception.process({'type': input_type, 'content': content})
+        
+        # Use language module to understand the input
+        language = self.get_module('language')
+        if language:
+            understanding = language.process(perceived_data)
         else:
-            final_response = responses[0] if responses else "I'm processing that input."
+            understanding = perceived_data
         
-        # Store the response in memory
-        self.digital_soul.add_memory(
-            "interaction", 
-            {"role": "assistant", "content": final_response},
-            tags=["interaction", "assistant_response"]
-        )
+        # Use reasoning module to formulate a response
+        reasoning = self.get_module('reasoning')
+        if reasoning:
+            response_data = reasoning.process(understanding)
+        else:
+            response_data = understanding
         
-        return final_response
+        # Record interaction in memory
+        self.memory_manager.store_memory({
+            'type': 'interaction',
+            'input': input_data,
+            'response': response_data,
+            'timestamp': time.time()
+        }, tags=['interaction', input_type])
+        
+        # Use learning module for self-improvement
+        learning = self.get_module('learning')
+        if learning:
+            learning.process({
+                'input': input_data,
+                'understanding': understanding,
+                'response': response_data
+            })
+        
+        return response_data
+    
+    def get_system_status(self) -> Dict[str, Any]:
+        """
+        Get the current status of the system.
+        
+        Returns:
+            Dictionary with system status information
+        """
+        uptime = time.time() - self.start_time
+        
+        module_status = {}
+        for name, module in self.modules.items():
+            module_status[name] = {
+                'active': module.is_active(),
+                'last_used': module.last_used,
+                'stats': module.get_stats()
+            }
+        
+        memory_stats = self.memory_manager.get_stats()
+        
+        return {
+            'system_name': self.system_name,
+            'version': self.version,
+            'uptime': uptime,
+            'modules': module_status,
+            'memory': memory_stats
+        }
+    
+    def shutdown(self) -> None:
+        """Properly shut down the system, saving state if needed."""
+        logger.info("Shutting down orchestrator...")
+        
+        # Shutdown all modules
+        for name, module in self.modules.items():
+            try:
+                module.shutdown()
+                logger.info(f"Module '{name}' shut down successfully")
+            except Exception as e:
+                logger.error(f"Error shutting down module '{name}': {e}")
+        
+        # Save memory state
+        self.memory_manager.save_state()
+        logger.info("Memory state saved")
+        
+        logger.info("Orchestrator shut down complete")

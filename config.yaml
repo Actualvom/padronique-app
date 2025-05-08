@@ -1,0 +1,52 @@
+# config.yaml - Configuration for the AI Companion System
+
+system:
+  name: "Ignis"
+  version: "0.1.0"
+  log_level: "INFO"
+
+memory:
+  storage_path: "./data/memory"
+  encryption_enabled: true
+  max_memories: 10000
+  default_expiry_days: 365
+
+brain:
+  modules:
+    - name: "language"
+      enabled: true
+      config:
+        model_type: "transformer"
+        context_window: 2048
+    - name: "reasoning"
+      enabled: true
+      config:
+        reasoning_depth: 3
+        logical_frameworks: ["deductive", "inductive", "abductive"]
+    - name: "learning"
+      enabled: true
+      config:
+        learning_rate: 0.01
+        reinforcement_method: "simple_feedback"
+        batch_size: 32
+    - name: "perception"
+      enabled: true
+      config:
+        input_channels: ["text", "image"]
+        feature_extraction: "basic"
+
+api:
+  rate_limit: 100
+  timeout_seconds: 30
+  swift_bridge_enabled: true
+
+security:
+  encryption_key_rotation_days: 90
+  require_authentication: true
+  sensitive_data_tags: ["personal", "financial", "health", "credentials"]
+
+sandbox:
+  enabled: true
+  isolation_level: "process"
+  timeout_seconds: 10
+  max_memory_mb: 500
