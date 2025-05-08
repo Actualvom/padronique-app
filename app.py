@@ -8,6 +8,7 @@ from flask import Flask, render_template, request, jsonify, redirect, url_for, f
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager, login_user, logout_user, login_required, current_user
 from flask_wtf.csrf import CSRFProtect
+from flask_session import Session
 from urllib.parse import urlparse
 from sqlalchemy.orm import DeclarativeBase
 from api.routes import register_api_routes
@@ -93,19 +94,33 @@ with app.app_context():
     except Exception as e:
         logger.error(f"Error creating default user: {e}")
 
-# Configure sessions - using Flask's built-in session
-app.config['PERMANENT_SESSION_LIFETIME'] = timedelta(hours=1)
+# Configure sessions - using Flask-Session for persistence
+app.config['PERMANENT_SESSION_LIFETIME'] = timedelta(days=7)  # Longer session lifetime
 app.config['SESSION_COOKIE_SECURE'] = False  # Set to True in production with HTTPS
 app.config['SESSION_COOKIE_HTTPONLY'] = True 
 app.config['SESSION_COOKIE_SAMESITE'] = 'Lax'
 app.config['SESSION_REFRESH_EACH_REQUEST'] = True
 app.config['SESSION_USE_SIGNER'] = True
 
+# Use filesystem session for better persistence
+app.config['SESSION_TYPE'] = 'filesystem'
+app.config['SESSION_FILE_DIR'] = os.path.join(os.getcwd(), 'flask_session')
+app.config['SESSION_FILE_THRESHOLD'] = 500  # Store up to 500 sessions
+app.config['SESSION_PERMANENT'] = True
+app.config['SESSION_KEY_PREFIX'] = 'padronique_'
+
+# Create session directory if it doesn't exist
+os.makedirs(app.config['SESSION_FILE_DIR'], exist_ok=True)
+
+# Initialize Flask-Session
+Session(app)
+
 # Set remember cookie parameters (for Flask-Login)
-app.config['REMEMBER_COOKIE_DURATION'] = timedelta(hours=1)
+app.config['REMEMBER_COOKIE_DURATION'] = timedelta(days=7)  # Match session lifetime
 app.config['REMEMBER_COOKIE_SECURE'] = False  # Set to True in production with HTTPS
 app.config['REMEMBER_COOKIE_HTTPONLY'] = True
 app.config['REMEMBER_COOKIE_REFRESH_EACH_REQUEST'] = True
+app.config['REMEMBER_COOKIE_NAME'] = 'padronique_remember'  # Custom cookie name
 
 # Create an orchestrator instance but don't initialize yet
 # This will be initialized in main.py
