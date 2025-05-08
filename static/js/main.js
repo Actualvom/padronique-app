@@ -152,7 +152,12 @@ function initChat() {
                 
                 // Add AI response to chat
                 if (data.status === 'ok') {
-                    addMessageToChat('ai', data.response);
+                    // Check if response is an object with content property
+                    if (data.response && typeof data.response === 'object' && data.response.content) {
+                        addMessageToChat('ai', data.response.content);
+                    } else {
+                        addMessageToChat('ai', data.response);
+                    }
                 } else {
                     addMessageToChat('system', 'Sorry, I encountered an error processing your message.');
                 }

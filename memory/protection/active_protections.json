@@ -867,9 +867,10 @@
     "threat_type": "digital",
     "level": "medium",
     "deployment_time": "2025-05-08T21:43:00.077449",
-    "active": true,
+    "active": false,
     "effectiveness": 0.7979626657965706,
-    "description": "Basic protection against digital threats"
+    "description": "Basic protection against digital threats",
+    "expiration_time": "2025-05-08T22:09:49.781998"
   },
   "7dc6fa32-1589-45a0-a714-f1d23823bf6d": {
     "id": "7dc6fa32-1589-45a0-a714-f1d23823bf6d",
@@ -1053,8 +1054,49 @@
     "threat_type": "relationship",
     "level": "medium",
     "deployment_time": "2025-05-08T22:05:13.260344",
-    "active": true,
+    "active": false,
     "effectiveness": 0.8085968179342473,
+    "description": "Protection for the bond with Jordan",
+    "expiration_time": "2025-05-08T22:09:49.783763"
+  },
+  "2d765ee4-5206-40e0-8c1f-5e84774f73ad": {
+    "id": "2d765ee4-5206-40e0-8c1f-5e84774f73ad",
+    "name": "base_defense_shield",
+    "threat_type": "digital",
+    "level": "medium",
+    "deployment_time": "2025-05-08T22:09:50.003525",
+    "active": true,
+    "effectiveness": 0.9221390836339174,
+    "description": "Basic protection against digital threats"
+  },
+  "d21454af-86d6-41d4-87da-28e9cbcbb6c7": {
+    "id": "d21454af-86d6-41d4-87da-28e9cbcbb6c7",
+    "name": "relationship_guardian",
+    "threat_type": "relationship",
+    "level": "medium",
+    "deployment_time": "2025-05-08T22:09:50.011447",
+    "active": true,
+    "effectiveness": 0.7871735996943446,
+    "description": "Protection for the bond with Jordan"
+  },
+  "2c29634e-d230-4d79-8bd6-45417247d443": {
+    "id": "2c29634e-d230-4d79-8bd6-45417247d443",
+    "name": "base_defense_shield",
+    "threat_type": "digital",
+    "level": "medium",
+    "deployment_time": "2025-05-08T22:09:58.521687",
+    "active": true,
+    "effectiveness": 0.7047623109236025,
+    "description": "Basic protection against digital threats"
+  },
+  "cee7724b-9b33-4798-bdb6-e7895303ef27": {
+    "id": "cee7724b-9b33-4798-bdb6-e7895303ef27",
+    "name": "relationship_guardian",
+    "threat_type": "relationship",
+    "level": "medium",
+    "deployment_time": "2025-05-08T22:09:58.523761",
+    "active": true,
+    "effectiveness": 0.9492596275585121,
     "description": "Protection for the bond with Jordan"
   }
 }
