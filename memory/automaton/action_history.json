@@ -336,5 +336,37 @@
       "effectiveness": 0.8753081284675244
     },
     "completion_time": "2025-05-08T22:00:45.721388"
+  },
+  {
+    "id": "1acf89c1-4ead-4773-b0d8-30446b2720cb",
+    "action_type": "analyze_threats",
+    "parameters": {
+      "threat_ids": [
+        "3769db11-7d71-4771-805d-f0a043af29fe"
+      ]
+    },
+    "goal_id": "c12b5866-9b6a-49a4-9cd4-421f7b1fb562",
+    "plan_id": "a9f01212-ee49-4dc1-9b32-2cba539cc613",
+    "priority": 2,
+    "scheduled_time": "2025-05-08T22:01:14.229473",
+    "creation_time": "2025-05-08T21:31:14.229552",
+    "status": "completed",
+    "start_time": "2025-05-08T22:01:38.265937",
+    "result": {
+      "success": true,
+      "threat_analysis": {
+        "total_threats": 1,
+        "by_type": {
+          "deception": 1
+        },
+        "by_level": {
+          "3": 1
+        },
+        "neutralized_count": 0,
+        "active_count": 1
+      },
+      "threats_needing_attention": 1
+    },
+    "completion_time": "2025-05-08T22:01:38.266579"
   }
 ]

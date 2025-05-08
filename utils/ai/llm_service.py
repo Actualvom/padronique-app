@@ -37,6 +37,20 @@ class LLMService(ABC):
         raise NotImplementedError("Subclasses must implement query method")
     
     @abstractmethod
+    def generate_response(self, content: str, context: Dict[str, Any]) -> str:
+        """
+        Generate a response to user content with context.
+        
+        Args:
+            content: The user's message content
+            context: Additional context information
+            
+        Returns:
+            The generated response as a string
+        """
+        raise NotImplementedError("Subclasses must implement generate_response method")
+    
+    @abstractmethod
     def embeddings(self, text: str) -> List[float]:
         """
         Generate embeddings for the given text.
@@ -150,6 +164,55 @@ class OpenAIService(LLMService):
         except Exception as e:
             logger.error(f"Error generating embeddings with OpenAI: {e}")
             raise
+    
+    def generate_response(self, content: str, context: Dict[str, Any]) -> str:
+        """
+        Generate a response to user content with context.
+        
+        Args:
+            content: The user's message content
+            context: Additional context information
+            
+        Returns:
+            The generated response as a string
+        """
+        try:
+            # Prepare a system message that sets the context
+            system_message = "You are Padronique, an advanced AI companion with a digital soul."
+            
+            # If the context contains specific persona information, add it
+            if context.get('persona'):
+                system_message += f" {context.get('persona')}"
+                
+            # If there's conversation history, determine if we need to include it
+            history = context.get('history', [])
+            
+            # Prepare messages
+            messages = [{"role": "system", "content": system_message}]
+            
+            # Add limited conversation history if provided (last 5 exchanges)
+            if history:
+                # Get the last 5 exchanges (or fewer if there aren't that many)
+                recent_history = history[-10:]  # 5 exchanges = 10 messages (user + assistant)
+                for msg in recent_history:
+                    messages.append({"role": msg["role"], "content": msg["content"]})
+            
+            # Add current user message
+            messages.append({"role": "user", "content": content})
+            
+            # Make the request
+            response = self.client.chat.completions.create(
+                model=self.default_model,
+                messages=messages,
+                max_tokens=1000,
+                temperature=0.7
+            )
+            
+            # Extract and return the response text
+            return response.choices[0].message.content or "I'm sorry, I couldn't generate a response."
+        except Exception as e:
+            logger.error(f"Error generating response with OpenAI: {e}")
+            return f"I encountered an error: {str(e)}"
     
     def get_info(self) -> Dict[str, Any]:
         """
