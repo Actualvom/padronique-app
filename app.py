@@ -3,9 +3,10 @@
 
 import os
 import logging
-from flask import Flask, render_template, request, jsonify, redirect, url_for, flash
+from flask import Flask, render_template, request, jsonify, redirect, url_for, flash, session
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager, login_user, logout_user, login_required, current_user
+from flask_session import Session
 from sqlalchemy.orm import DeclarativeBase
 from api.routes import register_api_routes
 from utils.logger import setup_logging
@@ -75,9 +76,19 @@ with app.app_context():
     except Exception as e:
         logger.error(f"Error creating default user: {e}")
 
-# In production, set this to a secure value
+# Session configuration
+import tempfile
 app.config['SESSION_TYPE'] = 'filesystem'
+app.config['SESSION_FILE_DIR'] = tempfile.gettempdir()
+app.config['SESSION_PERMANENT'] = True
 app.config['PERMANENT_SESSION_LIFETIME'] = 3600  # 1 hour
+app.config['SESSION_COOKIE_SECURE'] = False  # Set to True in production with HTTPS
+app.config['SESSION_COOKIE_HTTPONLY'] = True
+app.config['SESSION_COOKIE_SAMESITE'] = 'Lax'
+app.config['SESSION_USE_SIGNER'] = True
+
+# Initialize Flask-Session
+Session(app)
 
 # Create an orchestrator instance but don't initialize yet
 # This will be initialized in main.py
@@ -115,8 +126,17 @@ def login():
         else:
             # Login successful
             login_user(user, remember=remember)
+            
+            # Set additional information in session
+            session['user_id'] = user.id
+            session['username'] = user.username
+            session.modified = True  # Ensure session is saved
+            
             flash('Login successful!', 'success')
             logger.info(f"User logged in successfully: {email}")
+            
+            # Debug session
+            logger.debug(f"Session after login: {session}")
             
             # Redirect to requested page or default to index
             next_page = request.args.get('next')

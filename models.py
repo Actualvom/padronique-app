@@ -23,9 +23,27 @@ class User(UserMixin, db.Model):
         self.password_hash = generate_password_hash(password)
         
     def check_password(self, password):
-        if not self.password_hash:
+        """
+        Check if the provided password matches the stored hash.
+        """
+        try:
+            # Handle case where password_hash is None or empty
+            if not self.password_hash:
+                return False
+                
+            # Get as string (for SQLAlchemy compatibility)
+            password_hash_str = str(self.password_hash)
+            
+            # Safety check
+            if not password_hash_str or len(password_hash_str) < 10:
+                return False
+                
+            # Check the password
+            return check_password_hash(password_hash_str, password)
+        except Exception as e:
+            # Log error and fail safe
+            print(f"Error checking password: {e}")
             return False
-        return check_password_hash(str(self.password_hash), password)
 
 
 class UserSettings(db.Model):
