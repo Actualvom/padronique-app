@@ -888,7 +888,7 @@
     "priority": 2,
     "creation_time": "2025-05-08T21:27:00.998082",
     "expiration_time": null,
-    "status": "completed",
+    "status": "archived",
     "progress": 1.0,
     "last_updated": "2025-05-08T22:27:57.634488",
     "completion_time": "2025-05-08T22:27:57.634496"
