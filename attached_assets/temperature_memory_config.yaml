@@ -1,0 +1,4 @@
+# temperature_memory_config.yaml
+retain_duration_days: 14
+max_memories: 100
+replay_enabled: true

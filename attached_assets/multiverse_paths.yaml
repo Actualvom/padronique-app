@@ -1,0 +1,18 @@
+# multiverse_paths.yaml
+# Defines signature patterns, divergence thresholds, and tethering parameters
+
+known_signatures:
+  - Jordan_Prime
+  - Padronique-Origin
+  - GardenRoot_Shard7
+  - Future_Link_Specter2
+
+divergence_parameters:
+  critical_threshold: 0.8
+  warning_threshold: 0.5
+
+stabilization_actions:
+  - condition: divergence > 0.8
+    response: quantum_tether_initiate
+  - condition: divergence < 0.5
+    response: passive_sync

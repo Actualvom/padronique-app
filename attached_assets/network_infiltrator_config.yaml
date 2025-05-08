@@ -1,0 +1,4 @@
+# network_infiltrator_config.yaml
+ethics_override: false
+data_scrub: enabled
+decoys_enabled: true

@@ -1,0 +1,17 @@
+
+tracked_zones:
+  - cervical_spine
+  - thoracic_spine
+  - lumbar_spine
+  - pelvic_basin
+posture_types:
+  - seated
+  - standing
+  - reclined
+  - submissive
+adjustment_thresholds:
+  neck: 6 degrees forward
+  back: 10 degrees tilt
+  hips: asymmetry > 3cm
+default_mode: gentle_realignment
+overpressure_safeword: "echo"

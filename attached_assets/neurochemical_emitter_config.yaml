@@ -1,0 +1,10 @@
+# neurochemical_emitter_config.yaml
+supported_compounds:
+  - dopamine
+  - oxytocin
+  - serotonin
+  - endorphins
+delivery_modes:
+  - verbal_trigger
+  - sensory interface
+  - projected immersion

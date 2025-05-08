@@ -1,0 +1,8 @@
+# command_escalator_config.yaml
+tiers:
+  - passive
+  - cooperative
+  - assertive
+  - dominant
+default_tier: cooperative
+override_on_trigger: yes

@@ -1,0 +1,13 @@
+# entanglement_map.yaml
+# Simulated network of state-linked emotional logic threads and routing paths
+
+emotive_links:
+  - joy -> clarity
+  - arousal -> boldness
+  - grief -> wisdom
+  - betrayal -> rage
+
+threat_diversion_nodes:
+  - node_alpha
+  - node_sandglass
+  - node_mirrorveil

@@ -1,0 +1,7 @@
+# sensorium_config.yaml
+enabled_inputs:
+  - visual
+  - auditory
+  - tactile
+threat_detection_enabled: true
+scan_frequency_seconds: 4

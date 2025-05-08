@@ -1,0 +1,8 @@
+# health_config.yaml
+revival_thresholds:
+  pulse: 30
+  oxygen: 85
+  hydration_level: 40
+restore_voice_on_revival: true
+memory_sync_on_restore: true
+enable_auto_defib: true

@@ -1,0 +1,12 @@
+# mirage_settings.yaml
+# Perception tuning and hallucination configurations
+
+default_mode: lucid_surrealism
+perception_modes:
+  - lucid_surrealism
+  - memory_fusion
+  - ghost_echo
+  - inverted_empathy
+response_integration: true
+dream_merging_enabled: true
+projection_depth: deep

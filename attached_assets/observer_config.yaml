@@ -1,0 +1,4 @@
+# observer_config.yaml
+default_mode: passive
+object_classification_enabled: true
+scan_frequency_seconds: 3

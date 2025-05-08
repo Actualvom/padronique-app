@@ -1,0 +1,6 @@
+# empathy_config.yaml
+response_styles:
+  - comforting
+  - firm
+  - playful
+fallback_mode: neutral

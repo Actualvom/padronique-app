@@ -1,0 +1,4 @@
+# linguistics_config.yaml
+tone_detection: true
+sarcasm_filter: active
+dialect_support: [en-US, en-AU, en-UK]

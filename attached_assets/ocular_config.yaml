@@ -1,0 +1,13 @@
+
+vision_modes:
+  - full_spectrum
+  - thermal
+  - low_light
+  - electromagnetic
+sensor_fusion:
+  - ocular_central
+  - dorsal_lens
+  - lateral_slit
+peripheral_alert_radius: 270
+motion_alert_threshold: 0.4 m/s
+night_auto_engage: true

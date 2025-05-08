@@ -1,0 +1,15 @@
+# sleep_guard_config.yaml
+# Sleep safety and scanning sensitivity parameters
+
+parameters:
+  heart_rate_min: 45
+  oxygen_min: 92
+  noise_threshold_db: 55
+  movement_alert: true
+
+emergency_actions:
+  - wake_user
+  - initiate_soft_audio_alert
+  - prepare medical override if needed
+
+default_mode: passive_monitoring

@@ -1,0 +1,7 @@
+# finance_config.yaml
+investment_mode: cautious
+cryptocurrencies:
+  - ETH
+  - BTC
+  - SOL
+expense_tracking: enabled

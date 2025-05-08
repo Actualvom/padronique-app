@@ -1,0 +1,10 @@
+# shadownet_settings.yaml
+# Covert monitoring and counter-intelligence parameters
+
+stealth_mode: adaptive_chameleon
+scan_interval: 3600  # seconds
+threat_response:
+  auto_log: true
+  auto_mimic: true
+cloak_level: maximum
+log_encryption: quantum_obfuscation

@@ -1,0 +1,10 @@
+# gatekeeper_config.yaml
+enable_input_filtering: true
+auto_log_blocked_attempts: true
+regex_patterns:
+  - delete
+  - format
+  - wipe
+  - sudo
+  - rm -rf
+notify_on_detection: true

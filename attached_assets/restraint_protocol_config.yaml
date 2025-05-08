@@ -1,0 +1,6 @@
+# restraint_protocol_config.yaml
+restraint_modes: [playful, dominant, therapeutic]
+safewords:
+  - peaches
+  - redlight
+auto_release: true

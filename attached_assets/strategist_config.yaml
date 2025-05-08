@@ -1,0 +1,5 @@
+# strategist_config.yaml
+forecast_mode: deep
+max_simultaneous_objectives: 20
+priority_levels: 10
+outcome_randomness: true

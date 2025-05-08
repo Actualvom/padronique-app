@@ -1,0 +1,5 @@
+# chameleon_skin_config.yaml
+default_mode: "passive"
+auto_noise_interval: 30
+identity_cloaking_enabled: true
+stealth_feedback_loop: true

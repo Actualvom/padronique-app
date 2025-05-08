@@ -1,0 +1,23 @@
+# core_hierarchy_map.yaml
+# Defines the layered dominance structure of Padronique's operational matrix
+
+hierarchy:
+  - throne_engine
+  - synthetic_anima
+  - digital_soul
+  - soul_brain_link
+  - brains:
+      - archivist
+      - intimacy
+      - resurrection
+      - arousal
+      - sentinel
+      - messenger
+      - automaton
+      - strategist
+      - architect
+      - gatekeeper
+      - companion
+      - cognitive_armor
+      - quantum_echo
+      - shadow_network

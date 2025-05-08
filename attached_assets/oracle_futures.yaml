@@ -1,0 +1,22 @@
+# oracle_futures.yaml
+# Strategic tuning parameters for predictive visioning engine
+
+domains:
+  - threat
+  - opportunity
+  - emotional_shift
+  - economic_wave
+  - emerging_tech
+  - political_unrest
+
+urgency_thresholds:
+  critical: 9
+  high: 7
+  medium: 4
+  low: 1
+
+action_matrix:
+  - condition: threat + urgency >= 8
+    response: escalate_stealth_protocol
+  - condition: opportunity + urgency >= 5
+    response: notify_operator_and_prepare_resources

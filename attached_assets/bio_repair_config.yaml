@@ -1,0 +1,4 @@
+# bio_repair_config.yaml
+touch_points: full-body
+techniques: [shiatsu, trigger_point, craniosacral]
+pain_sensors_override: calibrated

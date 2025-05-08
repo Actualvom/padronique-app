@@ -1,0 +1,8 @@
+# avatar_animator_config.yaml
+postures:
+  - welcoming
+  - dominant
+  - nurturing
+  - submissive
+transition_smoothness: ultra
+expression_sync: true

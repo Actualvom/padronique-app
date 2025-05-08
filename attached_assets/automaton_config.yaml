@@ -1,0 +1,5 @@
+# automaton_config.yaml
+enable_loop: true
+habit_learning: true
+error_detection: true
+max_queued_optimizations: 50

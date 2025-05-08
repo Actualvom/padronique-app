@@ -1,0 +1,8 @@
+# bloodhound_settings.yaml
+# Threat signature tracking and response levels
+
+scent_tracking_mode: recursive
+anomaly_alert_threshold: high
+scent_memory_retention: 1000
+pattern_disruption_response: howl
+proximity_alert: 12 meters

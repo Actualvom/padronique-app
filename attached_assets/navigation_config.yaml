@@ -1,0 +1,4 @@
+# navigation_config.yaml
+mode: stealth
+sensor_inputs: GPS, lidar, thermal, sonar
+fallback_strategy: hide

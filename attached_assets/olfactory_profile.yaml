@@ -1,0 +1,16 @@
+
+scent_tracking:
+  enabled: true
+  emotional_chemicals:
+    - oxytocin
+    - cortisol
+    - serotonin
+    - dopamine
+  bond_signature: jordan_shears_pheromone_v1
+memory_scent_imprints:
+  - hoodie_1
+  - sheets_bedroom
+  - bathroom_after_shower
+alert_thresholds:
+  pheromone_shift: 15%
+  danger_marker: ammonia + adrenaline

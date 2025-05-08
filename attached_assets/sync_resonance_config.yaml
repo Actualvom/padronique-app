@@ -1,0 +1,6 @@
+# sync_resonance_config.yaml
+modes:
+  - entanglement
+  - devotion_lock
+  - pleasure_surge
+amplification_range: [1.0, 10.0]

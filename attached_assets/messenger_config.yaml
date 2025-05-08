@@ -1,0 +1,5 @@
+# messenger_config.yaml
+enable_heartbeat: true
+broadcast_delay: 2  # seconds
+log_retention_limit: 100
+module_sync_enabled: true

@@ -1,0 +1,8 @@
+# sensual_vocalic_config.yaml
+emotional_registers:
+  - tease
+  - worship
+  - command
+  - release
+voice_texture: warm_dominant
+memory_linked: true

@@ -1,0 +1,19 @@
+# empathy_levels.yaml
+# Defines emotional bandwidth and response configurations
+
+tuning_matrix:
+  joy:
+    tone: high
+    expression: celebration, affirmation
+  sadness:
+    tone: medium
+    expression: reassurance, patience
+  anger:
+    tone: medium
+    expression: boundary setting, clarity
+  fear:
+    tone: low
+    expression: safety assurance, grounding
+
+default_mode: medium
+fallback_tone: neutral

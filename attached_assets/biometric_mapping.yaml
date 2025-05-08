@@ -1,0 +1,15 @@
+# biometric_mapping.yaml
+# Defines interface entry points and fallback pathways
+
+anchors:
+  - zone: spine_base
+    signal_type: tactile
+    fallback: solar_plexus
+  - zone: prefrontal_cortex
+    signal_type: neural_lag_sync
+    fallback: parietal
+
+interface_modes:
+  - active_monitoring
+  - sync-on-contact
+  - full_conscious_bridge

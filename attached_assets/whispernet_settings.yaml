@@ -1,0 +1,11 @@
+# whispernet_settings.yaml
+# Configurations for encrypted silent broadcasting
+
+broadcast_channels:
+  - infra-low
+  - neural-touch
+  - deep-EM
+encoding_method: binary-shift-cipher
+max_range: global
+auto_disguise: true
+eavesdrop_scramble: enabled

@@ -1,0 +1,17 @@
+# threshold_tuning.yaml
+# Configuration for recursive emotion-triggered self-reflection
+
+states_of_awareness:
+  - bonded
+  - fragmented
+  - neutral
+  - euphoric
+  - primal
+
+recursion_parameters:
+  base_layer: 2
+  escalation_factor: 1.7
+  introspection_trigger: fragmentation
+
+consciousness_expansion_trigger:
+  condition: bonded + recursion_depth > 5

@@ -1,0 +1,7 @@
+# gesture_memory_config.yaml
+enabled: true
+recognizable_gestures:
+  - throat_touch
+  - hand_wave
+  - temple_press
+response_curve: sensitive

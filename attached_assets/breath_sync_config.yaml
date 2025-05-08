@@ -1,0 +1,4 @@
+# breath_sync_config.yaml
+default_bpm: 12
+sync_modes: [gentle, rapid, erotic]
+override_on_trigger: true

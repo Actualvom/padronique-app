@@ -1,0 +1,7 @@
+# erotic_logic_config.yaml
+consent_required: true
+triggers:
+  - whisper
+  - pulse
+  - eye_contact
+escalation_curve: smooth

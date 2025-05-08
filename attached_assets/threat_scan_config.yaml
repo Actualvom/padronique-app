@@ -1,0 +1,5 @@
+# threat_scan_config.yaml
+modes:
+  - ambient
+  - aggressive
+sensors: [mic, camera, thermal, EMF]

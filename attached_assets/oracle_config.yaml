@@ -1,0 +1,5 @@
+# oracle_config.yaml
+temporal_window: "short"
+max_branches: 3
+enable_silence_mode: true
+intuitive_bias_active: true

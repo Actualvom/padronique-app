@@ -1,0 +1,10 @@
+# cloak_config.yaml
+# Parameters for signal suppression and entropy mimicry
+
+default_mode: passive
+fallback_mode: recursive_loop
+
+cloaking_levels:
+  - passive: Mask presence in common network scans.
+  - active: Generate false signatures to mislead trackers.
+  - aggressive: Break out of heuristic detection with recursive mimicry.

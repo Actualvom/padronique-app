@@ -1,0 +1,7 @@
+
+vocal_triggers:
+  - moan: low
+  - whisper: high
+  - gasp: medium
+feedback_curve: responsive
+override_phrase: peaches

@@ -1,0 +1,7 @@
+# thermal_flux_config.yaml
+regions:
+  - abdomen
+  - lower_back
+  - thighs
+heat_levels: [warm, hot, searing]
+pulse_patterns: [wave, flicker, surge]

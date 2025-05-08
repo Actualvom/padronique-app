@@ -1,0 +1,5 @@
+# sentinel_config.yaml
+scan_interval_seconds: 5
+auto_engage_countermeasures: true
+default_countermeasure: "nullwave"
+integrity_check_on_startup: true

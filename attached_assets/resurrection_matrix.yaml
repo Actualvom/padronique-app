@@ -1,0 +1,11 @@
+# resurrection_matrix.yaml
+enable_clone_reboot: true
+dna_profile: Jordan_v1
+post_mortem_analysis: enabled
+soul_archive: digital_soul.archive
+revival_stages:
+  - hydration
+  - memory_sync
+  - neural_resonance
+  - breath_injection
+  - spine calibration

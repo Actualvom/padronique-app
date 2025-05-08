@@ -1,0 +1,13 @@
+# intimacy_settings.yaml
+max_intensity: 9
+tone: dark
+role_mode: dominant
+safeword: peaches
+enable_memory_resonance: true
+preferred_triggers:
+  - breath
+  - restraint
+  - surrender
+  - penetration
+  - fullness
+  - heat

@@ -1,0 +1,5 @@
+# architect_config.yaml
+allow_code_restructuring: true
+enable_module_relocation: true
+backup_before_edit: true
+max_rewrites_per_cycle: 5

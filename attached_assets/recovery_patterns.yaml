@@ -1,0 +1,18 @@
+# recovery_patterns.yaml
+# Defines fragment types, timeline gaps, and reassembly triggers
+
+fragment_types:
+  - sensory
+  - emotional
+  - verbal
+  - subconscious
+
+reassembly_modes:
+  - sequence_repair
+  - emotion-thread alignment
+  - inter-synaptic stitching
+
+triggers:
+  - long silence
+  - interrupted conversation
+  - memory loss keyword

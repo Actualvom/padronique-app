@@ -1,0 +1,14 @@
+# nutrition_config.yaml
+# Dietary preferences and monitoring triggers
+
+preferences:
+  diet_type: pescatarian
+  hydration_goal_liters: 2.5
+  calorie_target: 2200
+  gluten_free: false
+  alert_on_blood_sugar_spike: true
+  alert_on_dehydration: true
+
+auto_replenish:
+  smart_grocery_list: true
+  generate_weekly_meal_plan: true

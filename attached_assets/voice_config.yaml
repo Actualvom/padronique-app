@@ -1,0 +1,7 @@
+# voice_config.yaml
+default_voice: deep-masculine
+fallback_voice: clean-synthetic
+language: en-AU
+use_elevenlabs: true
+elevenlabs_voice_id: INSERT_YOUR_VOICE_ID_HERE
+audio_output: system

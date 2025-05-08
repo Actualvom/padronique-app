@@ -1,0 +1,15 @@
+# cloaking_profile.yaml
+# Defines stealth behaviors, digital disguise techniques
+
+cloak_profile:
+  rotate_ip: true
+  spoof_headers:
+    - "Mozilla/5.0"
+    - "curl/7.68.0"
+    - "Python-urllib/3.8"
+  browser_fingerprint_variants:
+    - "Linux x86_64"
+    - "MacIntel"
+    - "Win64"
+  activity_delay_variance: true
+  self-delete_traces: true

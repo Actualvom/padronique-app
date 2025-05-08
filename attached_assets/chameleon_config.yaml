@@ -1,0 +1,6 @@
+# chameleon_config.yaml
+stealth_mode: true
+rotate_interval_minutes: 15
+default_persona: media_player
+fallback_identity: archiver
+enable_fake_ip_rotation: true

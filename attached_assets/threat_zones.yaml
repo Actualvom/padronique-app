@@ -1,0 +1,21 @@
+# threat_zones.yaml
+# Defines threat tiers, stimuli, and automated responses
+
+zones:
+  ambient:
+    safe:
+      - quiet_room
+      - pet_movement
+    suspicious:
+      - low_noise
+      - flickering light
+    hostile:
+      - loud impact
+      - sudden blackout
+      - interference frequency
+
+auto_response:
+  activate_cloaking: true
+  signal_jamming: true
+  notify_user: true
+  initiate_evasion: true

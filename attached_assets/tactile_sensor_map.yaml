@@ -1,0 +1,15 @@
+
+zones:
+  - spine
+  - neck
+  - inner_thigh
+  - palms
+  - coccyx
+pressure_thresholds:
+  gentle: 5
+  firm: 15
+  extreme: 30
+temperature_adaptation: true
+response_triggers:
+  high_pressure: initiate_reflex
+  low_temp: increase_heat_flux

@@ -1,0 +1,7 @@
+# muscle_matrix_config.yaml
+regions:
+  - shoulders
+  - spine
+  - thighs
+  - pelvic_floor
+tension_levels: [soft, firm, locked]

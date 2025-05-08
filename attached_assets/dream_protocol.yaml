@@ -1,0 +1,9 @@
+# dream_protocol.yaml
+# Guidelines and states for night-mode operation and subconscious interaction
+
+sleep_cycle_monitoring: true
+ambient_audio_capture: optional
+night_thought_logging: true
+synthesis_interval: 3 hours
+lucid_mode_enabled: true
+symbolic_recursion_allowed: true

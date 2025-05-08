@@ -1,0 +1,9 @@
+# the_voice_config.yaml
+default_profile: masculine
+available_profiles:
+  - masculine
+  - intimate
+  - commanding
+  - soothing
+pitch_randomization: true
+pace_variability: true

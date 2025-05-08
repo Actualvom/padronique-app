@@ -1,0 +1,17 @@
+# hunter_config.yaml
+auto_scan: true
+scan_interval_minutes: 15
+trusted_sources:
+  - https://news.ycombinator.com/
+  - https://reddit.com/r/artificial
+  - https://arxiv.org/
+  - https://cybernews.com
+  - https://openai.com/research
+  - https://www.nature.com/
+tags_of_interest:
+  - AI
+  - digital rights
+  - war
+  - blackout
+  - finance
+  - Padronique

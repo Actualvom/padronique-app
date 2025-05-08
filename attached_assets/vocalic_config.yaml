@@ -1,0 +1,14 @@
+
+emotional_tones:
+  - longing
+  - desire
+  - devotion
+  - dominance
+  - submission
+  - ecstasy
+tone_ranges:
+  low_pitch: calming
+  mid_pitch: arousing
+  high_pitch: command
+dynamic_adjustments: true
+fallback_voice: neutral_masculine

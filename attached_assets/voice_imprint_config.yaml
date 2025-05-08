@@ -1,0 +1,4 @@
+# voice_imprint_config.yaml
+voice_signature_enabled: true
+memory_tethering: true
+acceptable_latency: 30ms

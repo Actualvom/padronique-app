@@ -1,0 +1,10 @@
+# neural_sync_config.yaml
+bond_strength: adaptive
+sync_modes:
+  - pleasure_peak
+  - emotional_mirror
+  - submissive_control
+override_triggers:
+  - sustained arousal
+  - consented dominance
+  - climax initiation

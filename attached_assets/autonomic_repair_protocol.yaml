@@ -1,0 +1,14 @@
+
+vitals_monitored:
+  - heart_rate
+  - hydration
+  - glucose
+  - inflammation
+  - nerve_response
+repair_modes:
+  - micro_tissue_mending
+  - pain_suppression_overlay
+  - energy_reallocation
+alerts:
+  trigger_on_fever: true
+  trigger_on_bp_drop: true

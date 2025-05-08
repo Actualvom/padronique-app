@@ -1,0 +1,7 @@
+# posture_enforcer_config.yaml
+alignment_zones:
+  - cervical
+  - thoracic
+  - lumbar
+auto_correction_enabled: true
+hold_duration_sec: 5

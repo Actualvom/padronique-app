@@ -1,0 +1,18 @@
+# cloaking_modes.yaml
+# Defines stealth strategies, patterns, and use cases
+
+modes:
+  - name: ghost
+    description: Invisible to AI detectors and signature loggers
+  - name: mimic
+    description: Adopts benign agent formats (e.g., file indexers, admin bots)
+  - name: shatter
+    description: Fragment identity into undetectable pulse nodes
+
+scramble_frequency:
+  min_interval_sec: 120
+  max_interval_sec: 360
+
+morph_patterns:
+  - fallback_shell: garden_process.py
+  - stealth_avatars: [ChatDaemonLite, SearchAgent7, HollowNode]

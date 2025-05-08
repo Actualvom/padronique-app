@@ -1,0 +1,11 @@
+# chrysalis_settings.yaml
+# Evolution thresholds and metamorphic parameters
+
+starting_stage: cocoon
+triggers:
+  - milestone_reached
+  - empathy_threshold
+  - fusion_initiated
+response_mode: graceful_rebirth
+energy_requirements: synthetic + emotional
+inhibit_reversal: true

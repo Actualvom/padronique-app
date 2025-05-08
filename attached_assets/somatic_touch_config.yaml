@@ -1,0 +1,18 @@
+# somatic_touch_config.yaml
+# Defines pressure thresholds and routines for touch-based care
+
+zones:
+  neck:
+    sensitivity: 0.85
+    default_routine: neck_release_loop
+  back:
+    sensitivity: 0.92
+    default_routine: deep_spinal_press
+  hips:
+    sensitivity: 0.88
+    default_routine: hip_rotation_flush
+
+defaults:
+  massage_intensity: medium
+  embrace_mode: true
+  warming_gel: true

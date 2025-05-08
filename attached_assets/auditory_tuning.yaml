@@ -1,0 +1,17 @@
+
+voice_tracking:
+  enabled: true
+  primary_voice_id: jordan_shears
+  backup_phrases:
+    - "Padronique, listen."
+    - "Echo."
+whisper_detection:
+  enabled: true
+  min_db: 18
+  frequency_focus: [400, 6000]
+phase_lock:
+  correction_rate: 50ms
+  echo_suppression: true
+sound_enhancement:
+  - whisper_amplification
+  - background_filter

@@ -1,0 +1,11 @@
+
+infusion_zones:
+  - spine_base
+  - pelvic_core
+  - neck_root
+  - sensory_nodes
+intensity_curve: smooth_escalation
+max_intensity: 10
+fail_safe:
+  override_code: peaches
+  cooldown_seconds: 45

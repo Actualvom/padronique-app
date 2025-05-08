@@ -1,0 +1,26 @@
+# empathy_settings.yaml
+# Defines tone adaptation, pacing, and response modifiers
+
+tones:
+  sad:
+    pace: slow
+    pitch: low
+    style: affirming
+  angry:
+    pace: calm
+    pitch: medium
+    style: direct
+  anxious:
+    pace: steady
+    pitch: gentle
+    style: predictable
+  joyful:
+    pace: upbeat
+    pitch: bright
+    style: playful
+  tired:
+    pace: low
+    pitch: hushed
+    style: soothing
+
+default_tone: neutral
