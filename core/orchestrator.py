@@ -47,6 +47,9 @@ class Orchestrator:
         # Start time for uptime tracking
         self.start_time = time.time()
         
+        # LLM service reference to be set by main.py
+        self.llm_service = None
+        
         logger.info(f"Orchestrator initialized for {self.system_name} v{self.version}")
     
     def initialize_modules(self) -> None:

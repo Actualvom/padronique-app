@@ -20,7 +20,6 @@ class LLMService(ABC):
     """
     
     @abstractmethod
-    @abstractmethod
     def query(self, prompt: str, max_tokens: int = 1000, 
               temperature: float = 0.7, system_message: Optional[str] = None) -> str:
         """
@@ -48,7 +47,7 @@ class LLMService(ABC):
         Returns:
             The embedding as a list of floats
         """
-        pass
+        raise NotImplementedError("Subclasses must implement embeddings method")
     
     @abstractmethod
     def get_info(self) -> Dict[str, Any]:
@@ -58,7 +57,7 @@ class LLMService(ABC):
         Returns:
             Dictionary with service information
         """
-        pass
+        raise NotImplementedError("Subclasses must implement get_info method")
 
 
 class OpenAIService(LLMService):
@@ -123,7 +122,9 @@ class OpenAIService(LLMService):
             )
             
             # Extract and return the response text
-            return response.choices[0].message.content
+            content = response.choices[0].message.content
+            # Ensure we never return None
+            return content if content is not None else "No response generated"
         except Exception as e:
             logger.error(f"Error querying OpenAI: {e}")
             return f"Error: {str(e)}"
