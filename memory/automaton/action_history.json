@@ -313,5 +313,28 @@
       "high_severity_count": 0
     },
     "completion_time": "2025-05-08T21:46:06.781943"
+  },
+  {
+    "id": "56828a77-ace7-42a9-b35f-a7968fe21545",
+    "action_type": "deploy_protection",
+    "parameters": {
+      "protection_name": "recovery_shield_deception",
+      "threat_type": "deception",
+      "level": "high"
+    },
+    "goal_id": "f7c8f53f-420e-4ca3-b3ae-59bf8e7054ee",
+    "plan_id": "77965c6c-1e59-435f-9e96-aeb35a37c5a3",
+    "priority": 2,
+    "scheduled_time": "2025-05-08T21:59:48.576840",
+    "creation_time": "2025-05-08T20:59:48.584340",
+    "status": "completed",
+    "start_time": "2025-05-08T22:00:45.714480",
+    "result": {
+      "success": true,
+      "protection_id": "21020dbe-aa64-4d74-a60a-11c201ff415e",
+      "protection_name": "recovery_shield_deception",
+      "effectiveness": 0.8753081284675244
+    },
+    "completion_time": "2025-05-08T22:00:45.721388"
   }
 ]

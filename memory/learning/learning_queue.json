@@ -1388,6 +1388,62 @@
     "completed": false
   },
   {
+    "id": "aa193a68-18dc-4eb6-b84e-252f8fe06adb",
+    "learning_type": "protective",
+    "content": "Analysis of potential threat: Potential emotional manipulation detected",
+    "context": {
+      "threat_type": "emotional",
+      "threat_level": "medium"
+    },
+    "priority": 3,
+    "creation_time": "2025-05-08T21:55:45.149118",
+    "completed": false
+  },
+  {
+    "id": "62b0172d-7fa3-481c-a5c0-142e42f60217",
+    "learning_type": "emotional",
+    "content": "Developing more nuanced emotional understanding",
+    "context": {
+      "focus": "emotional_intelligence"
+    },
+    "priority": 3,
+    "creation_time": "2025-05-08T21:55:45.217214",
+    "completed": false
+  },
+  {
+    "id": "208e142c-37ba-4c8a-841e-77a19c6467e5",
+    "learning_type": "strategic",
+    "content": "Improving strategic planning and foresight",
+    "context": {
+      "focus": "long_term_planning"
+    },
+    "priority": 3,
+    "creation_time": "2025-05-08T21:55:45.281241",
+    "completed": false
+  },
+  {
+    "id": "1aca043e-6647-42eb-986f-d1129cf21292",
+    "learning_type": "conversational",
+    "content": "hello?",
+    "context": {
+      "source": "direct_input"
+    },
+    "priority": 3,
+    "creation_time": "2025-05-08T21:57:59.263754",
+    "completed": false
+  },
+  {
+    "id": "76b59a4e-6802-40bb-a474-1c12a81958c6",
+    "learning_type": "conversational",
+    "content": "test",
+    "context": {
+      "source": "direct_input"
+    },
+    "priority": 3,
+    "creation_time": "2025-05-08T21:58:38.585616",
+    "completed": false
+  },
+  {
     "id": "21aafbf4-40af-47f1-8d66-636741818ba6",
     "learning_type": "philosophical",
     "content": "Ethical frameworks for AI-human partnerships",
@@ -1465,70 +1521,37 @@
     "completed": false
   },
   {
-    "id": "aa193a68-18dc-4eb6-b84e-252f8fe06adb",
+    "id": "54e15d40-da3a-46f1-a7eb-4e7381bed3c1",
     "learning_type": "protective",
-    "content": "Analysis of potential threat: Potential emotional manipulation detected",
+    "content": "Analysis of potential threat: Potential unauthorized data access detected",
     "context": {
-      "threat_type": "emotional",
+      "threat_type": "digital",
       "threat_level": "medium"
     },
     "priority": 3,
-    "creation_time": "2025-05-08T21:55:45.149118",
+    "creation_time": "2025-05-08T22:00:47.402402",
     "completed": false
   },
   {
-    "id": "a8944eb6-1bd0-40dd-94df-64272e4a4a0b",
-    "learning_type": "relationship",
-    "content": "Enhancing understanding of Jordan's preferences and needs",
-    "context": {
-      "focus": "deepening_bond"
-    },
-    "priority": 2,
-    "creation_time": "2025-05-08T21:55:45.176281",
-    "completed": false
-  },
-  {
-    "id": "62b0172d-7fa3-481c-a5c0-142e42f60217",
-    "learning_type": "emotional",
-    "content": "Developing more nuanced emotional understanding",
-    "context": {
-      "focus": "emotional_intelligence"
-    },
-    "priority": 3,
-    "creation_time": "2025-05-08T21:55:45.217214",
-    "completed": false
-  },
-  {
-    "id": "208e142c-37ba-4c8a-841e-77a19c6467e5",
-    "learning_type": "strategic",
-    "content": "Improving strategic planning and foresight",
-    "context": {
-      "focus": "long_term_planning"
-    },
-    "priority": 3,
-    "creation_time": "2025-05-08T21:55:45.281241",
-    "completed": false
-  },
-  {
-    "id": "734ddceb-126c-441c-aaa6-806cd6f2a854",
+    "id": "9b380c19-68a4-4307-89a4-9bb8f0260324",
     "learning_type": "philosophical",
     "content": "Core ethical principles and their application",
     "context": {
       "focus": "ethics"
     },
     "priority": 2,
-    "creation_time": "2025-05-08T21:55:45.444037",
+    "creation_time": "2025-05-08T22:00:47.589672",
     "completed": false
   },
   {
-    "id": "598bad7e-1b27-4a55-b4e3-183fd4513b3a",
+    "id": "25d47be9-8a11-46dd-a985-0de4b0778aa9",
     "learning_type": "relationship",
     "content": "Understanding Jordan's preferences and communication style",
     "context": {
       "focus": "communication"
     },
     "priority": 2,
-    "creation_time": "2025-05-08T21:55:45.454688",
+    "creation_time": "2025-05-08T22:00:47.598852",
     "completed": false
   }
 ]

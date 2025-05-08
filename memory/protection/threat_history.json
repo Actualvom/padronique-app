@@ -76,5 +76,18 @@
       "location": "conversation",
       "details": "Pattern of subtle emotional manipulation detected"
     }
+  },
+  {
+    "id": "3246fcac-6973-4fc1-9197-10f127184c6a",
+    "type": "digital",
+    "level": 3,
+    "description": "Potential unauthorized data access detected",
+    "detection_time": "2025-05-08T22:00:47.402357",
+    "confidence": 0.696998833215501,
+    "neutralized": false,
+    "source": {
+      "location": "network",
+      "details": "Unusual network activity detected"
+    }
   }
 ]
