@@ -15,6 +15,10 @@ logger = logging.getLogger(__name__)
 
 def initialize_system():
     """Initialize the AI Companion System."""
+    # Start the automatic backup manager
+    from memory.backup_manager import get_backup_manager
+    backup_manager = get_backup_manager()
+    backup_manager.start_scheduled_backups()
     logger.info("Initializing AI Companion System...")
     
     # Load configuration

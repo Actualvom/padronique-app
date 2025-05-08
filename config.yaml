@@ -1,64 +1,65 @@
-# config.yaml - Configuration for the AI Companion System
-
 system:
-  name: "Padronique"
-  version: "0.1.0"
-  log_level: "INFO"
+  name: Padronique
+  version: 1.0.0
+  description: An advanced AI companion system with memory, specialized brain modules, and self-improvement capabilities
+  developers:
+    - User
+  default_language: en
 
 memory:
-  storage_path: "./data/memory"
-  encryption_enabled: true
-  max_memories: 10000
-  default_expiry_days: 365
-
-brain:
-  modules:
-    - name: "language"
-      enabled: true
-      config:
-        model_type: "transformer"
-        context_window: 2048
-    - name: "reasoning"
-      enabled: true
-      config:
-        reasoning_depth: 3
-        logical_frameworks: ["deductive", "inductive", "abductive"]
-    - name: "learning"
-      enabled: true
-      config:
-        learning_rate: 0.01
-        reinforcement_method: "simple_feedback"
-        batch_size: 32
-    - name: "perception"
-      enabled: true
-      config:
-        input_channels: ["text", "image"]
-        feature_extraction: "basic"
-    - name: "external_comm"
-      enabled: true
-      config:
-        security_level: "moderate"
-        rate_limit_interval: 300
-
-api:
-  rate_limit: 100
-  timeout_seconds: 30
-  swift_bridge_enabled: true
+  max_memories: -1  # -1 indicates unlimited memory capacity
+  retention_policy: infinite  # No expiration for memories
+  min_importance_threshold: 0.1  # Minimum importance score for memories to be stored (0.0-1.0)
+  auto_backup:
+    enabled: true
+    interval_minutes: 30
+    max_backups: 5
+    backup_location: "./memory/backups/"
+  
+language:
+  default_model: gpt-4o
+  fallback_model: gpt-3.5-turbo
+  temperature: 0.7
+  max_tokens: 1000
+  presence_penalty: 0.0
+  frequency_penalty: 0.0
 
 security:
-  encryption_key_rotation_days: 90
-  require_authentication: true
-  sensitive_data_tags: ["personal", "financial", "health", "credentials"]
-
-sandbox:
-  enabled: true
-  isolation_level: "process"
-  timeout_seconds: 10
-  max_memory_mb: 500
+  encryption:
+    enabled: true
+    sensitive_data_only: true  # Only encrypt sensitive personal information
+  data_retention:
+    local_storage_only: true  # No cloud storage of data
+    user_deletion_rights: true  # User can request data deletion
+    
+ui:
+  theme: dark
+  accent_color: blue
+  font_size: medium
+  enable_animations: true
   
-ai:
-  provider: "openai"
-  default_model: "gpt-4o"
-  embedding_model: "text-embedding-3-large"
-  max_tokens: 1000
-  temperature: 0.7
+modules:
+  language:
+    enabled: true
+    priority: 10
+    description: "Natural language understanding and generation"
+  
+  reasoning:
+    enabled: true
+    priority: 9
+    description: "Logical reasoning and problem-solving capabilities"
+  
+  learning:
+    enabled: true
+    priority: 8
+    description: "Learning from interactions and improving responses"
+  
+  perception:
+    enabled: true
+    priority: 7
+    description: "Processing and understanding user-provided media"
+  
+  external_comm:
+    enabled: true
+    priority: 6
+    description: "Communication with external systems and APIs"

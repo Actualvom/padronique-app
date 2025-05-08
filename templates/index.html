@@ -3,520 +3,367 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Padronique</title>
+    <title>Padronique AI Companion</title>
     <link rel="stylesheet" href="https://cdn.replit.com/agent/bootstrap-agent-dark-theme.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/confirmation-dialogs.css') }}">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg mb-4">
-        <div class="container">
-            <a class="navbar-brand system-name" href="/">
-                <i class="fas fa-brain me-2"></i>Padronique
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="/"><i class="fas fa-home me-1"></i> Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/dashboard"><i class="fas fa-chart-bar me-1"></i> Dashboard</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <div class="container">
-        <!-- Particle effects for futuristic look -->
-        <div id="particle-container"></div>
-        
-        <!-- System Banner -->
-        <div class="system-banner text-center">
-            <!-- Decorative hexagon elements -->
-            <div class="hexagon-decoration hexagon-1"></div>
-            <div class="hexagon-decoration hexagon-2"></div>
-            
-            <h1 class="system-name">Padronique</h1>
-            <p class="system-version">v0.1.0</p>
-            <p class="mt-3">Advanced AI companion with memory, specialized brain modules, and adaptive intelligence.</p>
-        </div>
-        
-        <div class="row">
-            <!-- Main Interface Section -->
-            <div class="col-lg-8">
-                <!-- Chat Interface -->
-                <div class="card module-card">
-                    <div class="module-header">
-                        <span><i class="fas fa-comment-dots me-2"></i>Digital Soul Interface</span>
-                        <div>
-                            <span class="status-indicator status-active"></span>
-                            <small>Connected</small>
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <div class="chat-container">
-                            <div class="chat-messages" id="chat-messages">
-                                <div class="message message-system">
-                                    <div>Hello! I'm Padronique, your adaptive AI companion. How may I assist you today?</div>
-                                    <div class="message-time">Just now</div>
-                                </div>
-                            </div>
-                            <div class="chat-input">
-                                <input type="text" class="form-control" id="chat-input" placeholder="Type your message...">
-                                <button class="btn btn-info" id="send-btn">
-                                    <i class="fas fa-paper-plane"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Memory Vault -->
-                <div class="card module-card mt-4">
-                    <div class="module-header">
-                        <span><i class="fas fa-memory me-2"></i>Memory Vault</span>
-                        <button class="btn btn-sm btn-outline-info" id="refresh-memories">
-                            <i class="fas fa-sync-alt"></i>
-                        </button>
-                    </div>
-                    <div class="card-body">
-                        <!-- Holographic effect container -->
-                        <div class="holographic-container">
-                            <div class="circuit-lines"></div>
-                        </div>
-                        
-                        <div class="memory-list" id="memory-list">
-                            <div class="d-flex justify-content-center">
-                                <div class="spinner-border text-info" role="status">
-                                    <span class="visually-hidden">Loading...</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    <div class="app-container">
+        <!-- Left Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <h1 class="logo">Padronique</h1>
+                <div class="tagline">Your AI Companion</div>
             </div>
             
-            <!-- Side Panel -->
-            <div class="col-lg-4">
-                <!-- Brain Module Status -->
-                <div class="card module-card">
-                    <div class="module-header">
-                        <span><i class="fas fa-microchip me-2"></i>Neural Network Status</span>
-                        <button class="btn btn-sm btn-outline-info" id="refresh-modules">
-                            <i class="fas fa-sync-alt"></i>
-                        </button>
-                    </div>
-                    <div class="card-body">
-                        <div id="modules-container">
-                            <div class="d-flex justify-content-center">
-                                <div class="spinner-border text-info" role="status">
-                                    <span class="visually-hidden">Loading...</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            <!-- Navigation -->
+            <nav class="sidebar-nav">
+                <div class="nav-item active" data-page="chat">
+                    <i class="fas fa-comment-alt"></i>
+                    <span>Chat</span>
                 </div>
-                
-                <!-- System Statistics -->
-                <div class="card module-card mt-4">
-                    <div class="module-header">
-                        <span><i class="fas fa-tachometer-alt me-2"></i>System Diagnostics</span>
-                        <span id="system-uptime">00:00:00</span>
-                    </div>
-                    <div class="card-body">
-                        <div id="system-stats">
-                            <div class="d-flex justify-content-center">
-                                <div class="spinner-border text-info" role="status">
-                                    <span class="visually-hidden">Loading...</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="nav-item" data-page="memory">
+                    <i class="fas fa-brain"></i>
+                    <span>Memory</span>
                 </div>
-                
-                <!-- Quick Actions -->
-                <div class="card module-card mt-4">
-                    <div class="module-header">
-                        <span><i class="fas fa-bolt me-2"></i>Quick Actions</span>
+                <div class="nav-item" data-page="dashboard">
+                    <i class="fas fa-chart-network"></i>
+                    <span>Dashboard</span>
+                </div>
+                <div class="nav-item" data-page="settings">
+                    <i class="fas fa-cog"></i>
+                    <span>Settings</span>
+                </div>
+            </nav>
+            
+            <!-- User Section -->
+            <div class="user-section">
+                <div class="user-info">
+                    <div class="user-avatar">
+                        <i class="fas fa-user"></i>
                     </div>
-                    <div class="card-body">
-                        <div class="d-grid gap-2">
-                            <button class="btn-quantum" id="clear-memory">
-                                <i class="fas fa-eraser me-2"></i>Clear Chat History
-                            </button>
-                            <button class="btn-quantum" id="system-reset">
-                                <i class="fas fa-undo me-2"></i>Reset System
-                            </button>
-                            <button class="btn-quantum" id="export-data">
-                                <i class="fas fa-download me-2"></i>Export Memory Archive
-                            </button>
-                        </div>
-                    </div>
+                    <div class="user-name">User</div>
+                </div>
+                <div class="user-status">
+                    <span class="status-indicator online"></span>
+                    <span class="status-text">Online</span>
                 </div>
             </div>
         </div>
         
-        <footer class="mt-5 text-center text-muted">
-            <p><small>Padronique AI System &copy; 2025</small></p>
-        </footer>
-    </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        // Create particle effects for futuristic look
-        function createParticles() {
-            const container = document.getElementById('particle-container');
-            const particleCount = 30;
-            
-            for (let i = 0; i < particleCount; i++) {
-                const particle = document.createElement('div');
-                particle.classList.add('particle');
-                
-                // Random positioning
-                const x = Math.random() * 100;
-                const y = Math.random() * 100;
-                
-                particle.style.left = `${x}%`;
-                particle.style.top = `${y}%`;
-                
-                // Random size variation
-                const size = Math.random() * 4 + 2;
-                particle.style.width = `${size}px`;
-                particle.style.height = `${size}px`;
-                
-                // Random animation delay
-                const delay = Math.random() * 5;
-                particle.style.animationDelay = `${delay}s`;
-                
-                container.appendChild(particle);
-            }
-        }
-        
-        // Helper function to format timestamps
-        function formatTimestamp(timestamp) {
-            const date = new Date(timestamp * 1000);
-            return date.toLocaleTimeString();
-        }
-        
-        // Helper function to format uptime
-        function formatUptime(seconds) {
-            const hours = Math.floor(seconds / 3600);
-            const minutes = Math.floor((seconds % 3600) / 60);
-            const secs = Math.floor(seconds % 60);
-            return `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
-        }
-        
-        // Update system status
-        function updateSystemStatus() {
-            fetch('/api/status')
-                .then(response => response.json())
-                .then(data => {
-                    if (data.status === 'ok') {
-                        const stats = data.system;
-                        
-                        // Update uptime
-                        document.getElementById('system-uptime').textContent = formatUptime(stats.uptime);
-                        
-                        // Update system stats
-                        let statsHtml = `
-                            <div class="row">
-                                <div class="col-6">
-                                    <div class="mb-3">
-                                        <div class="fw-bold">System Name</div>
-                                        <div>${stats.system_name}</div>
-                                    </div>
-                                </div>
-                                <div class="col-6">
-                                    <div class="mb-3">
-                                        <div class="fw-bold">Version</div>
-                                        <div>${stats.version}</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="mb-3">
-                                <div class="fw-bold">Memory Stats</div>
-                                <div class="small">Total: ${stats.memory.total_memories}, Active: ${stats.memory.active_memories}</div>
-                            </div>
-                        `;
-                        
-                        document.getElementById('system-stats').innerHTML = statsHtml;
-                        
-                        // Update modules
-                        updateModules(stats.modules);
-                    }
-                })
-                .catch(error => {
-                    console.error('Error fetching system status:', error);
-                });
-        }
-        
-        // Update brain modules
-        function updateModules(modules) {
-            let modulesHtml = '';
-            
-            for (const [name, module] of Object.entries(modules)) {
-                const statusClass = module.active ? 'module-active' : 'module-inactive';
-                const statusIndicator = module.active ? 'status-active' : 'status-inactive';
-                
-                modulesHtml += `
-                    <div class="mb-3 pb-3 border-bottom">
-                        <div class="d-flex justify-content-between align-items-center mb-2">
-                            <h5 class="mb-0 text-capitalize">${name}</h5>
-                            <div>
-                                <span class="status-indicator ${statusIndicator}"></span>
-                                <span class="${statusClass}">${module.active ? 'Active' : 'Inactive'}</span>
-                            </div>
-                        </div>
-                        <div class="small">
-                            <div>Processed: ${module.stats.processing_count}</div>
-                            <div>Errors: ${module.stats.error_count}</div>
-                            <div>Last used: ${module.last_used ? formatTimestamp(module.last_used) : 'Never'}</div>
-                        </div>
-                    </div>
-                `;
-            }
-            
-            document.getElementById('modules-container').innerHTML = modulesHtml;
-        }
-        
-        // Load recent memories
-        function loadRecentMemories() {
-            fetch('/api/memory?limit=5')
-                .then(response => response.json())
-                .then(data => {
-                    if (data.status === 'ok') {
-                        const memories = data.memories;
-                        let memoriesHtml = '';
-                        
-                        if (memories.length === 0) {
-                            memoriesHtml = '<div class="text-center text-muted">No memories found</div>';
-                        } else {
-                            memories.forEach(memory => {
-                                // Format memory content
-                                let content = '';
-                                if (memory.type === 'interaction') {
-                                    content = `<div><strong>Input:</strong> ${memory.input ? memory.input.content : ''}</div>`;
-                                } else if (memory.content) {
-                                    content = `<div>${memory.content}</div>`;
-                                } else {
-                                    content = `<div>Memory of type: ${memory.type}</div>`;
-                                }
-                                
-                                // Format tags
-                                let tagsHtml = '';
-                                if (memory.tags && memory.tags.length) {
-                                    memory.tags.forEach(tag => {
-                                        tagsHtml += `<span class="memory-tag">${tag}</span>`;
-                                    });
-                                }
-                                
-                                memoriesHtml += `
-                                    <div class="memory-item" data-memory-id="${memory.id}">
-                                        ${content}
-                                        <div class="mt-2">
-                                            ${tagsHtml}
-                                            <small class="text-muted d-block mt-1">
-                                                ${memory.created ? formatTimestamp(memory.created) : 'No timestamp'}
-                                            </small>
-                                        </div>
-                                    </div>
-                                `;
-                            });
-                        }
-                        
-                        document.getElementById('memory-list').innerHTML = memoriesHtml;
-                    }
-                })
-                .catch(error => {
-                    console.error('Error loading memories:', error);
-                    document.getElementById('memory-list').innerHTML = 
-                        '<div class="text-center text-danger">Error loading memories</div>';
-                });
-        }
-        
-        // Send message to the AI
-        function sendMessage() {
-            const inputElement = document.getElementById('chat-input');
-            const message = inputElement.value.trim();
-            
-            if (!message) return;
-            
-            // Clear input
-            inputElement.value = '';
-            
-            // Add user message to chat
-            const chatMessages = document.getElementById('chat-messages');
-            const timestamp = new Date().toLocaleTimeString();
-            
-            chatMessages.innerHTML += `
-                <div class="message message-user">
-                    <div>${message}</div>
-                    <div class="message-time">${timestamp}</div>
-                </div>
-            `;
-            
-            // Scroll to bottom
-            chatMessages.scrollTop = chatMessages.scrollHeight;
-            
-            // Show thinking indicator
-            chatMessages.innerHTML += `
-                <div class="message message-system" id="thinking-indicator">
-                    <div>Thinking<span class="typing-dots">...</span></div>
-                </div>
-            `;
-            chatMessages.scrollTop = chatMessages.scrollHeight;
-            
-            // Animate thinking dots
-            const dots = document.querySelector('.typing-dots');
-            let count = 0;
-            const typingAnimation = setInterval(() => {
-                count = (count + 1) % 4;
-                dots.textContent = '.'.repeat(count);
-            }, 300);
-            
-            // Send message to API
-            fetch('/api/process', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({
-                    type: 'text',
-                    content: message
-                })
-            })
-            .then(response => response.json())
-            .then(data => {
-                // Clear typing indicator
-                clearInterval(typingAnimation);
-                document.getElementById('thinking-indicator').remove();
-                
-                if (data.status === 'ok') {
-                    // Add AI response to chat
-                    chatMessages.innerHTML += `
-                        <div class="message message-system">
-                            <div>${data.response}</div>
-                            <div class="message-time">${new Date().toLocaleTimeString()}</div>
-                        </div>
-                    `;
+        <!-- Main Content Area -->
+        <div class="main-content">
+            <!-- Chat Page -->
+            <div class="page active" id="chat-page">
+                <div class="page-header">
+                    <h2>Chat</h2>
                     
-                    // Refresh memories
-                    loadRecentMemories();
-                } else {
-                    // Show error
-                    chatMessages.innerHTML += `
-                        <div class="message message-system">
-                            <div class="text-danger">Error processing your request: ${data.error || 'Unknown error'}</div>
-                            <div class="message-time">${new Date().toLocaleTimeString()}</div>
+                    <!-- Action buttons moved to dropdown menu -->
+                    <div class="header-actions">
+                        <div class="dropdown">
+                            <button class="btn btn-outline-secondary" type="button" id="chatActionsDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fas fa-ellipsis-v"></i>
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="chatActionsDropdown">
+                                <!-- Safe actions -->
+                                <li><h6 class="dropdown-header">Quick Actions</h6></li>
+                                <li>
+                                    <button class="dropdown-item safe-action" id="exportMemoryBtn">
+                                        <i class="fas fa-file-export"></i> Export Memory Archive
+                                    </button>
+                                </li>
+                                <li><hr class="dropdown-divider"></li>
+                                
+                                <!-- Destructive actions with warning label -->
+                                <li><h6 class="dropdown-header text-danger">Danger Zone</h6></li>
+                                <li>
+                                    <button class="dropdown-item text-danger" id="clearChatBtn">
+                                        <i class="fas fa-trash-alt"></i> Clear Chat History
+                                    </button>
+                                </li>
+                                <li>
+                                    <button class="dropdown-item text-danger" id="resetSystemBtn">
+                                        <i class="fas fa-sync-alt"></i> Reset System
+                                    </button>
+                                </li>
+                            </ul>
                         </div>
-                    `;
-                }
-                
-                // Scroll to bottom
-                chatMessages.scrollTop = chatMessages.scrollHeight;
-            })
-            .catch(error => {
-                // Clear typing indicator
-                clearInterval(typingAnimation);
-                document.getElementById('thinking-indicator').remove();
-                
-                // Show error
-                chatMessages.innerHTML += `
-                    <div class="message message-system">
-                        <div class="text-danger">Network error while processing your request. Please try again.</div>
-                        <div class="message-time">${new Date().toLocaleTimeString()}</div>
                     </div>
-                `;
+                </div>
                 
-                // Scroll to bottom
-                chatMessages.scrollTop = chatMessages.scrollHeight;
-                
-                console.error('Error processing message:', error);
-            });
-        }
-        
-        // Initialize the UI
-        document.addEventListener('DOMContentLoaded', function() {
-            // Create particle effects
-            createParticles();
-            
-            // Initialize system status
-            updateSystemStatus();
-            
-            // Load recent memories
-            loadRecentMemories();
-            
-            // Set up periodic updates
-            setInterval(updateSystemStatus, 30000); // Every 30 seconds
-            
-            // Add event listeners
-            document.getElementById('send-btn').addEventListener('click', sendMessage);
-            
-            document.getElementById('chat-input').addEventListener('keypress', function(e) {
-                if (e.key === 'Enter') {
-                    sendMessage();
-                }
-            });
-            
-            document.getElementById('refresh-modules').addEventListener('click', updateSystemStatus);
-            document.getElementById('refresh-memories').addEventListener('click', loadRecentMemories);
-            
-            // Quick action buttons
-            document.getElementById('clear-memory').addEventListener('click', function() {
-                const chatMessages = document.getElementById('chat-messages');
-                chatMessages.innerHTML = `
-                    <div class="message message-system">
-                        <div>Chat history cleared. How may I assist you today?</div>
-                        <div class="message-time">${new Date().toLocaleTimeString()}</div>
+                <div class="chat-container">
+                    <div class="chat-messages" id="chat-messages">
+                        <!-- Welcome message -->
+                        <div class="message system">
+                            <div class="message-content">
+                                <p>Welcome to Padronique AI Companion. How can I assist you today?</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Messages will be added here dynamically -->
                     </div>
-                `;
-            });
+                    
+                    <div class="chat-input-container">
+                        <div class="input-group">
+                            <button class="btn btn-outline-secondary" type="button" id="attachBtn">
+                                <i class="fas fa-paperclip"></i>
+                            </button>
+                            <input type="text" class="form-control" id="messageInput" placeholder="Type your message...">
+                            <button class="btn btn-primary" type="button" id="sendBtn">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
             
-            document.getElementById('system-reset').addEventListener('click', function() {
-                if (confirm('Are you sure you want to reset the system? This will clear all temporary data.')) {
-                    fetch('/api/reset', {
-                        method: 'POST'
-                    })
-                    .then(response => response.json())
-                    .then(data => {
-                        if (data.status === 'ok') {
-                            alert('System reset successful.');
-                            window.location.reload();
-                        } else {
-                            alert(`Error: ${data.error || 'Unknown error'}`);
-                        }
-                    })
-                    .catch(error => {
-                        console.error('Error resetting system:', error);
-                        alert('An error occurred while resetting the system.');
-                    });
-                }
-            });
+            <!-- Memory Page -->
+            <div class="page" id="memory-page">
+                <div class="page-header">
+                    <h2>Memory</h2>
+                    <div class="header-actions">
+                        <button class="btn btn-outline-secondary" id="refreshMemoryBtn">
+                            <i class="fas fa-sync"></i>
+                        </button>
+                        <div class="dropdown">
+                            <button class="btn btn-outline-secondary" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fas fa-filter"></i>
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li><h6 class="dropdown-header">Filter by</h6></li>
+                                <li><button class="dropdown-item" data-filter="all">All Memories</button></li>
+                                <li><button class="dropdown-item" data-filter="important">Important</button></li>
+                                <li><button class="dropdown-item" data-filter="conversation">Conversations</button></li>
+                                <li><button class="dropdown-item" data-filter="fact">Facts</button></li>
+                                <li><button class="dropdown-item" data-filter="preference">Preferences</button></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="memory-search">
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="memorySearchInput" placeholder="Search memories...">
+                        <button class="btn btn-primary" type="button" id="memorySearchBtn">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="memory-container">
+                    <div class="memory-grid" id="memory-grid">
+                        <!-- Memory items will be added here dynamically -->
+                        <div class="memory-placeholder">
+                            <i class="fas fa-brain"></i>
+                            <p>No memories to display</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
             
-            document.getElementById('export-data').addEventListener('click', function() {
-                fetch('/api/memory/export')
-                    .then(response => response.blob())
-                    .then(blob => {
-                        const url = window.URL.createObjectURL(blob);
-                        const a = document.createElement('a');
-                        a.style.display = 'none';
-                        a.href = url;
-                        a.download = `padronique_memory_export_${new Date().toISOString().split('T')[0]}.json`;
-                        document.body.appendChild(a);
-                        a.click();
-                        window.URL.revokeObjectURL(url);
-                    })
-                    .catch(error => {
-                        console.error('Error exporting data:', error);
-                        alert('An error occurred while exporting data.');
-                    });
-            });
-        });
-    </script>
+            <!-- Dashboard Page -->
+            <div class="page" id="dashboard-page">
+                <div class="page-header">
+                    <h2>System Dashboard</h2>
+                    <div class="header-actions">
+                        <button class="btn btn-outline-secondary" id="refreshDashboardBtn">
+                            <i class="fas fa-sync"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="dashboard-container">
+                    <!-- System Status Overview -->
+                    <div class="system-status-container">
+                        <div class="section-header">
+                            <h3>System Status</h3>
+                            <div class="system-status-indicator online">
+                                <span class="status-text">Online</span>
+                            </div>
+                        </div>
+                        
+                        <div class="info-cards">
+                            <div class="info-card">
+                                <div class="info-card-title">Uptime</div>
+                                <div class="info-card-value" id="system-uptime">--:--:--</div>
+                            </div>
+                            <div class="info-card">
+                                <div class="info-card-title">Version</div>
+                                <div class="info-card-value" id="system-version">-.-.-</div>
+                            </div>
+                            <div class="info-card">
+                                <div class="info-card-title">Total Memories</div>
+                                <div class="info-card-value" id="memory-count">--</div>
+                            </div>
+                            <div class="info-card">
+                                <div class="info-card-title">Active Brains</div>
+                                <div class="info-card-value" id="active-brains">--</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Brain Modules Overview -->
+                    <div class="brain-modules-container">
+                        <div class="section-header">
+                            <h3>Brain Modules</h3>
+                        </div>
+                        
+                        <div class="brain-modules-grid" id="brain-modules-grid">
+                            <!-- Brain modules will be added here dynamically -->
+                        </div>
+                    </div>
+                    
+                    <!-- Recent Activity -->
+                    <div class="recent-activity-container">
+                        <div class="section-header">
+                            <h3>Recent Activity</h3>
+                        </div>
+                        
+                        <div class="activity-list" id="activity-list">
+                            <!-- Activity items will be added here dynamically -->
+                            <div class="activity-placeholder">
+                                <i class="fas fa-clock"></i>
+                                <p>No recent activity to display</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Settings Page -->
+            <div class="page" id="settings-page">
+                <div class="page-header">
+                    <h2>Settings</h2>
+                </div>
+                
+                <div class="settings-container">
+                    <!-- Personalization -->
+                    <div class="settings-section">
+                        <h3 class="settings-section-title">Personalization</h3>
+                        
+                        <div class="settings-item">
+                            <div class="settings-item-label">User Name</div>
+                            <div class="settings-item-input">
+                                <input type="text" class="form-control" id="userNameInput" placeholder="Your Name">
+                            </div>
+                        </div>
+                        
+                        <div class="settings-item">
+                            <div class="settings-item-label">Theme</div>
+                            <div class="settings-item-select">
+                                <select class="form-select" id="themeSelect">
+                                    <option value="dark">Dark (Default)</option>
+                                    <option value="light">Light</option>
+                                    <option value="system">System Preference</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Privacy -->
+                    <div class="settings-section">
+                        <h3 class="settings-section-title">Privacy</h3>
+                        
+                        <div class="settings-item">
+                            <div class="settings-item-label">Data Collection</div>
+                            <div class="settings-item-toggle">
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" id="dataCollectionToggle" checked>
+                                    <label class="form-check-label" for="dataCollectionToggle">Allow data collection for improved responses</label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="settings-item">
+                            <div class="settings-item-label">Memory Retention</div>
+                            <div class="settings-item-info">
+                                <div class="form-text">
+                                    <i class="fas fa-infinity"></i> Infinite - All memories are preserved indefinitely
+                                </div>
+                                <div class="form-text text-info">
+                                    <i class="fas fa-shield-alt"></i> Automatic backup system is enabled
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Brain Module Settings -->
+                    <div class="settings-section">
+                        <h3 class="settings-section-title">Brain Modules</h3>
+                        
+                        <div class="module-settings-list" id="moduleSettingsList">
+                            <!-- Module settings will be added here dynamically -->
+                        </div>
+                    </div>
+                    
+                    <!-- Advanced Options -->
+                    <div class="settings-section">
+                        <h3 class="settings-section-title">Advanced</h3>
+                        
+                        <div class="settings-item">
+                            <div class="settings-item-label">External Connections</div>
+                            <div class="settings-item-toggle">
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" id="externalConnectionsToggle" checked>
+                                    <label class="form-check-label" for="externalConnectionsToggle">Allow external API connections</label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="settings-item">
+                            <div class="settings-item-label">Debug Mode</div>
+                            <div class="settings-item-toggle">
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" id="debugModeToggle">
+                                    <label class="form-check-label" for="debugModeToggle">Enable debug mode</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Danger Zone (moved to the bottom and visually separated) -->
+                    <div class="settings-section danger-zone">
+                        <h3 class="settings-section-title text-danger">Danger Zone</h3>
+                        <div class="alert alert-danger">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            <span>These actions are irreversible and will permanently delete data.</span>
+                        </div>
+                        
+                        <div class="settings-danger-item">
+                            <div class="settings-danger-info">
+                                <div class="settings-danger-title">Clear Chat History</div>
+                                <div class="settings-danger-description">This will permanently delete all your chat messages.</div>
+                            </div>
+                            <button class="btn btn-outline-danger" id="clearChatSettingsBtn">Clear History</button>
+                        </div>
+                        
+                        <div class="settings-danger-item">
+                            <div class="settings-danger-info">
+                                <div class="settings-danger-title">Export Memory Archive</div>
+                                <div class="settings-danger-description">Download a backup of all system memories and chat history.</div>
+                            </div>
+                            <button class="btn btn-outline-info" id="exportMemorySettingsBtn">Export</button>
+                        </div>
+                        
+                        <div class="settings-danger-item">
+                            <div class="settings-danger-info">
+                                <div class="settings-danger-title">Reset System</div>
+                                <div class="settings-danger-description">This will reset Padronique to its default state, deleting all memories, preferences, and history.</div>
+                            </div>
+                            <button class="btn btn-outline-danger" id="resetSystemSettingsBtn">Reset System</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ url_for('static', filename='js/api-client.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/confirmation-dialogs.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
 </body>
 </html>
