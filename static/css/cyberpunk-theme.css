@@ -380,6 +380,8 @@ body {
 .message p {
     margin: 0;
     line-height: 1.5;
+    white-space: normal;
+    word-break: break-word;
 }
 
 .message.ai p {
@@ -388,6 +390,8 @@ body {
 
 .message.user p {
     color: var(--text-primary);
+    white-space: normal;
+    word-break: break-word;
 }
 
 .message.system p {

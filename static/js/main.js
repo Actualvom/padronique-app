@@ -179,6 +179,8 @@ function initChat() {
         contentElement.className = 'message-content';
         
         const textElement = document.createElement('p');
+        textElement.style.whiteSpace = 'normal'; // Force normal text wrapping
+        textElement.style.wordBreak = 'break-word'; // Allow word breaking if needed
         
         // Handle different types of messages
         if (message === null || message === undefined) {
