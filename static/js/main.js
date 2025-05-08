@@ -50,9 +50,27 @@ function initModules() {
         console.warn('File Handler not available or fileUploadBtn not found');
     }
     
+    // Camera Interface
+    if (window.CameraInterface && document.getElementById('cameraBtn')) {
+        window.cameraInterface = new CameraInterface();
+        console.log('Camera Interface initialized');
+    } else {
+        console.warn('Camera Interface not available or cameraBtn not found');
+    }
+    
+    // Web Search
+    if (window.WebSearch && document.getElementById('webSearchBtn')) {
+        window.webSearch = new WebSearch();
+        console.log('Web Search initialized');
+    } else {
+        console.warn('Web Search not available or webSearchBtn not found');
+    }
+    
     // Make sendMessage global for module use
     if (typeof sendMessage === 'function') {
         window.sendMessage = sendMessage;
+    } else {
+        console.warn('sendMessage function not available for module integration');
     }
 }
 
