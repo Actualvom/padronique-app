@@ -100,6 +100,8 @@ body {
     box-shadow: inset -10px 0 20px rgba(0, 0, 0, 0.2), 5px 0 15px rgba(0, 0, 0, 0.1);
     position: relative;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
 .sidebar:before {
@@ -152,7 +154,15 @@ body {
 
 /* Navigation */
 .sidebar-nav {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
+}
+
+/* Settings Item */
+.settings-item {
+    margin-top: auto;
+    margin-bottom: 1rem;
+    border-top: 1px solid var(--border-hologram);
+    padding-top: 1rem;
 }
 
 .nav-item {
@@ -244,6 +254,7 @@ body {
     align-items: center;
     position: relative;
     box-shadow: var(--header-glow);
+    background: linear-gradient(180deg, var(--background-secondary) 0%, var(--background-main) 100%);
 }
 
 .page-header h2 {
@@ -270,7 +281,8 @@ body {
 .chat-container {
     display: flex;
     flex-direction: column;
-    height: calc(100vh - 140px);
+    height: calc(100vh - 120px);
+    min-height: 500px;
 }
 
 .chat-messages {

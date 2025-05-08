@@ -127,7 +127,20 @@ function initChat() {
         contentElement.className = 'message-content';
         
         const textElement = document.createElement('p');
-        textElement.textContent = message;
+        
+        // Handle different types of messages
+        if (message === null || message === undefined) {
+            textElement.textContent = "No response received.";
+        } else if (typeof message === 'object') {
+            // If message is an object, stringify it properly
+            try {
+                textElement.textContent = JSON.stringify(message, null, 2);
+            } catch (e) {
+                textElement.textContent = "Received an object that couldn't be displayed properly.";
+            }
+        } else {
+            textElement.textContent = message;
+        }
         
         contentElement.appendChild(textElement);
         messageElement.appendChild(contentElement);

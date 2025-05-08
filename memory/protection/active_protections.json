@@ -836,9 +836,10 @@
     "threat_type": "digital",
     "level": "medium",
     "deployment_time": "2025-05-08T21:39:43.405681",
-    "active": true,
+    "active": false,
     "effectiveness": 0.9178592051313859,
-    "description": "Basic protection against digital threats"
+    "description": "Basic protection against digital threats",
+    "expiration_time": "2025-05-08T21:54:33.569808"
   },
   "8078bac6-0457-425a-ac35-d9085a0cba64": {
     "id": "8078bac6-0457-425a-ac35-d9085a0cba64",
@@ -896,9 +897,10 @@
     "threat_type": "digital",
     "level": "medium",
     "deployment_time": "2025-05-08T21:52:37.328310",
-    "active": true,
+    "active": false,
     "effectiveness": 0.8127461260588639,
-    "description": "Basic protection against digital threats"
+    "description": "Basic protection against digital threats",
+    "expiration_time": "2025-05-08T21:54:33.569971"
   },
   "3609114d-641c-4b24-92a6-4d6efa3962ba": {
     "id": "3609114d-641c-4b24-92a6-4d6efa3962ba",
@@ -906,8 +908,29 @@
     "threat_type": "relationship",
     "level": "medium",
     "deployment_time": "2025-05-08T21:52:37.332400",
-    "active": true,
+    "active": false,
     "effectiveness": 0.9098908076306924,
+    "description": "Protection for the bond with Jordan",
+    "expiration_time": "2025-05-08T21:54:33.571702"
+  },
+  "59077553-4770-444e-95a1-a473ee84a493": {
+    "id": "59077553-4770-444e-95a1-a473ee84a493",
+    "name": "base_defense_shield",
+    "threat_type": "digital",
+    "level": "medium",
+    "deployment_time": "2025-05-08T21:54:33.743950",
+    "active": true,
+    "effectiveness": 0.8944055163585716,
+    "description": "Basic protection against digital threats"
+  },
+  "97bb6af9-6901-487b-9d8a-567d6cfebf54": {
+    "id": "97bb6af9-6901-487b-9d8a-567d6cfebf54",
+    "name": "relationship_guardian",
+    "threat_type": "relationship",
+    "level": "medium",
+    "deployment_time": "2025-05-08T21:54:33.745912",
+    "active": true,
+    "effectiveness": 0.8522499362886211,
     "description": "Protection for the bond with Jordan"
   }
 }
