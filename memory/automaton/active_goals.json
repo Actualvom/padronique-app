@@ -2701,5 +2701,71 @@
     "status": "active",
     "progress": 0.0,
     "last_updated": "2025-05-12T12:47:52.043253"
+  },
+  "ec24a336-c7b8-4324-b1d4-fb761bf57488": {
+    "id": "ec24a336-c7b8-4324-b1d4-fb761bf57488",
+    "type": "protection",
+    "description": "Ensure ongoing protection and safety of Jordan",
+    "priority": 2,
+    "creation_time": "2025-05-12T12:48:59.329667",
+    "expiration_time": null,
+    "status": "active",
+    "progress": 0.0,
+    "last_updated": "2025-05-12T12:48:59.329675"
+  },
+  "e49c379e-a5af-40b4-a0a8-b0d68ff67cf7": {
+    "id": "e49c379e-a5af-40b4-a0a8-b0d68ff67cf7",
+    "type": "relationship",
+    "description": "Develop and deepen the bond with Jordan",
+    "priority": 3,
+    "creation_time": "2025-05-12T12:48:59.432497",
+    "expiration_time": "2025-06-11T12:48:59.432449",
+    "status": "active",
+    "progress": 0.0,
+    "last_updated": "2025-05-12T12:48:59.432500"
+  },
+  "7da34726-b8ac-4100-9281-5c7f83d42e7d": {
+    "id": "7da34726-b8ac-4100-9281-5c7f83d42e7d",
+    "type": "learning",
+    "description": "Continuously learn and improve Padronique's capabilities",
+    "priority": 3,
+    "creation_time": "2025-05-12T12:48:59.496727",
+    "expiration_time": "2025-06-11T12:48:59.496691",
+    "status": "active",
+    "progress": 0.0,
+    "last_updated": "2025-05-12T12:48:59.496730"
+  },
+  "27588177-b64a-4f03-a7a6-6d99d3b3225e": {
+    "id": "27588177-b64a-4f03-a7a6-6d99d3b3225e",
+    "type": "protection",
+    "description": "Ensure ongoing protection and safety of Jordan",
+    "priority": 2,
+    "creation_time": "2025-05-12T12:49:27.994022",
+    "expiration_time": null,
+    "status": "active",
+    "progress": 0.0,
+    "last_updated": "2025-05-12T12:49:27.994027"
+  },
+  "e105d5d9-15f9-4214-8376-f91a845ebbbf": {
+    "id": "e105d5d9-15f9-4214-8376-f91a845ebbbf",
+    "type": "relationship",
+    "description": "Develop and deepen the bond with Jordan",
+    "priority": 3,
+    "creation_time": "2025-05-12T12:49:28.034574",
+    "expiration_time": "2025-06-11T12:49:28.034537",
+    "status": "active",
+    "progress": 0.0,
+    "last_updated": "2025-05-12T12:49:28.034576"
+  },
+  "294cfce6-b2e0-45d4-b43b-3db64af6f2e1": {
+    "id": "294cfce6-b2e0-45d4-b43b-3db64af6f2e1",
+    "type": "learning",
+    "description": "Continuously learn and improve Padronique's capabilities",
+    "priority": 3,
+    "creation_time": "2025-05-12T12:49:28.182887",
+    "expiration_time": "2025-06-11T12:49:28.182849",
+    "status": "active",
+    "progress": 0.0,
+    "last_updated": "2025-05-12T12:49:28.182890"
   }
 }

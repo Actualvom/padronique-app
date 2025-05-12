@@ -23,11 +23,17 @@ def register_multimedia_routes(app):
     @app.route('/api/transcribe', methods=['POST'])
     def transcribe_audio():
         """Transcribe audio to text using OpenAI."""
+        logger.info("Transcribe audio API endpoint called")
+        
         if 'audio' not in request.files:
+            logger.warning("No audio file provided in request")
             return jsonify({"status": "error", "message": "No audio file provided"}), 400
             
         audio_file = request.files['audio']
+        logger.info(f"Received audio file: {audio_file.filename}, content type: {audio_file.content_type}")
+        
         if not audio_file.filename:
+            logger.warning("Empty filename received")
             return jsonify({"status": "error", "message": "No audio file selected"}), 400
             
         # Create a temporary file to store the audio
@@ -36,32 +42,56 @@ def register_multimedia_routes(app):
         audio_file.save(temp_path)
         temp_file.close()
         
+        # Log file details
+        file_size = os.path.getsize(temp_path)
+        logger.info(f"Audio saved to temporary file: {temp_path}, size: {file_size} bytes")
+        
         try:
+            # Check for OpenAI API key
+            if not os.environ.get("OPENAI_API_KEY"):
+                logger.error("OPENAI_API_KEY environment variable is not set")
+                return jsonify({"status": "error", "message": "OpenAI API key not configured"}), 500
+            
             # Get the orchestrator from the app config
+            logger.info("Retrieving orchestrator from app config")
             orchestrator = current_app.config.get('ORCHESTRATOR')
             
             if orchestrator and orchestrator.llm_service:
+                logger.info("Using orchestrator for transcription")
+                
                 # Use the voice module if available
                 if orchestrator.voice_module:
+                    logger.info("Using voice module for transcription")
                     transcription = orchestrator.voice_module.transcribe_audio(temp_path)
                 else:
                     # Fallback to direct LLM service
+                    logger.info("Voice module not available, using LLM service directly")
                     transcription = orchestrator.llm_service.transcribe_audio(temp_path)
-                    
+                
+                logger.info(f"Transcription successful, text length: {len(transcription)}")
                 return jsonify({
                     "status": "ok",
                     "text": transcription
                 })
             else:
                 # Fallback using OpenAI directly if orchestrator is not available
+                logger.info("Orchestrator not available, using OpenAI directly")
                 from openai import OpenAI
+                
+                logger.info("Initializing OpenAI client")
                 openai_client = OpenAI(api_key=os.environ.get("OPENAI_API_KEY"))
                 
+                logger.info("Sending audio file to OpenAI for transcription")
                 with open(temp_path, "rb") as audio_file:
-                    response = openai_client.audio.transcriptions.create(
-                        model="whisper-1", 
-                        file=audio_file
-                    )
+                    try:
+                        response = openai_client.audio.transcriptions.create(
+                            model="whisper-1", 
+                            file=audio_file
+                        )
+                        logger.info(f"OpenAI transcription successful, text length: {len(response.text)}")
+                    except Exception as e:
+                        logger.error(f"OpenAI transcription failed: {e}")
+                        raise
                 
                 return jsonify({
                     "status": "ok",
@@ -69,12 +99,14 @@ def register_multimedia_routes(app):
                 })
                 
         except Exception as e:
-            logger.error(f"Error transcribing audio: {e}")
+            logger.error(f"Error transcribing audio: {str(e)}")
+            logger.exception("Detailed transcription error:")
             return jsonify({"status": "error", "message": str(e)}), 500
         finally:
             # Clean up the temporary file
             try:
                 os.unlink(temp_path)
+                logger.info(f"Temporary file {temp_path} deleted")
             except Exception as e:
                 logger.error(f"Error removing temporary file: {e}")
     

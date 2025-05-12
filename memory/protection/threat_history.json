@@ -141,5 +141,18 @@
       "location": "conversation",
       "details": "Pattern of subtle emotional manipulation detected"
     }
+  },
+  {
+    "id": "13d36988-42f9-4aba-a8e9-4d25652b4a01",
+    "type": "emotional",
+    "level": 3,
+    "description": "Potential emotional manipulation detected",
+    "detection_time": "2025-05-12T12:48:59.260070",
+    "confidence": 0.6995612316427913,
+    "neutralized": false,
+    "source": {
+      "location": "conversation",
+      "details": "Pattern of subtle emotional manipulation detected"
+    }
   }
 ]
