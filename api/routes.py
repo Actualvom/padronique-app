@@ -4,11 +4,13 @@
 import logging
 import time
 import json
+import os
 from typing import Dict, Any
 
 from flask import Blueprint, request, jsonify, current_app
 
 from memory.memory_manager import MemoryManager
+from api.multimedia import register_multimedia_routes, create_uploads_dir
 
 logger = logging.getLogger(__name__)
 
@@ -18,6 +20,13 @@ api_bp = Blueprint('api', __name__, url_prefix='/api')
 def register_api_routes(app):
     """Register API routes with the Flask app."""
     app.register_blueprint(api_bp)
+    
+    # Register multimedia routes
+    register_multimedia_routes(app)
+    
+    # Create uploads directory
+    create_uploads_dir()
+    
     logger.info("API routes registered")
 
 

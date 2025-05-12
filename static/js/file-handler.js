@@ -29,41 +29,64 @@ class FileHandler {
      * Trigger file input dialog
      */
     triggerFileInput() {
+        console.log('Triggering file input dialog...');
+        if (!this.fileInput) {
+            console.error('File input element not found! Check if the element with ID "fileInput" exists.');
+            return;
+        }
         this.fileInput.click();
+        console.log('File input dialog triggered');
     }
     
     /**
      * Handle file selection
      */
     async handleFileSelection(event) {
+        console.log('File selected, handling selection...');
+        
         const file = event.target.files[0];
         
         if (!file) {
+            console.warn('No file selected');
             return;
         }
         
+        console.log('File selected:', file.name, 'type:', file.type, 'size:', file.size, 'bytes');
+        
         // Check file size
         if (file.size > this.maxFileSizeMB * 1024 * 1024) {
+            console.warn(`File size (${(file.size / (1024 * 1024)).toFixed(2)}MB) exceeds the maximum limit of ${this.maxFileSizeMB}MB`);
             alert(`File size exceeds the maximum limit of ${this.maxFileSizeMB}MB`);
             this.fileInput.value = '';
             return;
         }
         
         try {
+            console.log('Processing file...');
             await this.processFile(file);
         } catch (error) {
             console.error('Error processing file:', error);
+            console.error('Error details:', {
+                message: error.message,
+                stack: error.stack,
+                fileName: file.name,
+                fileType: file.type,
+                fileSize: file.size
+            });
             alert('Failed to process file. Please try again with a different file.');
         }
         
         // Reset file input
         this.fileInput.value = '';
+        console.log('File input reset');
     }
     
     /**
      * Process the selected file
      */
     async processFile(file) {
+        console.log('Processing file:', file.name);
+        
         // Create FormData for the API request
         const formData = new FormData();
         formData.append('file', file);
@@ -72,17 +95,24 @@ class FileHandler {
         this.addLoadingMessage(`Uploading and processing ${file.name}...`);
         
         try {
+            console.log('Sending file to server at /api/process-file...');
+            
             // Send to API for processing
             const response = await fetch('/api/process-file', {
                 method: 'POST',
                 body: formData
             });
             
+            console.log('Server response status:', response.status);
+            
             if (!response.ok) {
-                throw new Error(`API error: ${response.status}`);
+                const errorText = await response.text();
+                console.error('Server error response:', errorText);
+                throw new Error(`API error: ${response.status} - ${errorText}`);
             }
             
             const data = await response.json();
+            console.log('File processing response:', data);
             
             // Remove loading message
             this.removeLoadingMessage();
@@ -90,20 +120,28 @@ class FileHandler {
             if (data.status === 'ok') {
                 // Add file to chat
                 this.addFileToChat(file.name, file.type, data.content || data.url);
+                console.log('File added to chat, content/URL:', data.content || data.url);
                 
                 // Send message to process the file
                 this.sendFileAnalysisRequest(file.name, file.type);
+                console.log('File analysis request sent');
             } else {
-                throw new Error('File processing failed');
+                throw new Error(`File processing failed: ${data.message || 'No error details available'}`);
             }
         } catch (error) {
             console.error('Error processing file:', error);
+            console.error('Error details:', {
+                message: error.message,
+                stack: error.stack,
+                fileName: file.name,
+                fileType: file.type
+            });
             
             // Remove loading message
             this.removeLoadingMessage();
             
             // Add error message
-            this.addErrorMessage(`Failed to process ${file.name}`);
+            this.addErrorMessage(`Failed to process ${file.name}. Error: ${error.message}`);
         }
     }
     

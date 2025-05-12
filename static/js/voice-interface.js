@@ -88,6 +88,19 @@ class VoiceInterface {
      */
     stopRecording() {
         if (this.mediaRecorder && this.isRecording) {
+            console.log('Stopping voice recording...');
+            
+            // Create a promise that will resolve when dataavailable fires
+            const dataPromise = new Promise((resolve) => {
+                this.mediaRecorder.addEventListener('dataavailable', (event) => {
+                    if (event.data.size > 0) {
+                        this.audioChunks.push(event.data);
+                    }
+                    resolve(); // Resolve promise when data is available
+                });
+            });
+            
+            // Stop recording
             this.mediaRecorder.stop();
             this.isRecording = false;
             
@@ -99,6 +112,12 @@ class VoiceInterface {
                 this.stream.getTracks().forEach(track => track.stop());
                 this.stream = null;
             }
+            
+            // Wait for data to be available then process
+            dataPromise.then(() => {
+                console.log('Audio data received, chunks:', this.audioChunks.length);
+                this.processAudio();
+            });
             
             console.log('Voice recording stopped');
         }
@@ -132,7 +151,10 @@ class VoiceInterface {
      * Process recorded audio
      */
     async processAudio() {
+        console.log('Processing audio...');
+        
         if (this.audioChunks.length === 0) {
+            console.warn('No audio chunks available. Canceling recording.');
             this.cancelRecording();
             return;
         }
@@ -140,6 +162,8 @@ class VoiceInterface {
         try {
             // Create audio blob and file
             const audioBlob = new Blob(this.audioChunks, { type: 'audio/webm' });
+            console.log('Audio blob created, size:', audioBlob.size, 'bytes');
+            
             const audioFile = new File([audioBlob], 'voice-message.webm', { type: 'audio/webm' });
             
             // Create FormData for the API request
@@ -149,23 +173,31 @@ class VoiceInterface {
             // Update UI
             document.querySelector('.voice-status').textContent = 'Transcribing...';
             
+            console.log('Sending audio to server for transcription...');
+            
             // Send to API for transcription
             const response = await fetch('/api/transcribe', {
                 method: 'POST',
                 body: formData
             });
             
+            console.log('Server response status:', response.status);
+            
             if (!response.ok) {
-                throw new Error(`API error: ${response.status}`);
+                const errorText = await response.text();
+                console.error('Server error response:', errorText);
+                throw new Error(`API error: ${response.status} - ${errorText}`);
             }
             
             const data = await response.json();
+            console.log('Transcription response:', data);
             
             if (data.status === 'ok' && data.text) {
                 // Show preview with transcribed text
                 this.previewText.textContent = data.text;
                 this.voicePreview.style.display = 'block';
                 document.querySelector('.voice-status').textContent = 'Voice message ready';
+                console.log('Transcription successful:', data.text);
             } else {
                 throw new Error('Transcription failed or returned empty text');
             }
@@ -176,6 +208,13 @@ class VoiceInterface {
             // Show retry button
             this.voicePreview.style.display = 'block';
             this.previewText.textContent = 'Sorry, there was an error transcribing your voice message. Please try again.';
+            
+            // Add error details to console
+            console.error('Detailed error information:', {
+                message: error.message,
+                stack: error.stack,
+                audioChunksLength: this.audioChunks.length
+            });
         }
     }
     

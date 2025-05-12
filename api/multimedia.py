@@ -306,3 +306,16 @@ def create_uploads_dir():
     if not os.path.exists(uploads_dir):
         os.makedirs(uploads_dir)
         logger.info(f"Created uploads directory: {uploads_dir}")
+    else:
+        logger.info(f"Uploads directory already exists at: {uploads_dir}")
+    
+    # Ensure the directory has proper permissions
+    try:
+        os.chmod(uploads_dir, 0o755)  # rwxr-xr-x
+        logger.info("Set permissions on uploads directory")
+    except Exception as e:
+        logger.warning(f"Could not set permissions on uploads directory: {e}")
+        
+    # Log the details of the uploads directory
+    logger.info(f"Uploads directory absolute path: {os.path.abspath(uploads_dir)}")
+    logger.info(f"Uploads directory exists: {os.path.exists(uploads_dir)}")

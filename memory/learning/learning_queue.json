@@ -1,27 +1,5 @@
 [
   {
-    "id": "fe00e9ed-2ca8-41db-840f-29c7f4dc7d90",
-    "learning_type": "emotional",
-    "content": "Developing more nuanced emotional understanding",
-    "context": {
-      "focus": "emotional_intelligence"
-    },
-    "priority": 3,
-    "creation_time": "2025-05-08T21:25:42.631585",
-    "completed": false
-  },
-  {
-    "id": "de76a9ef-64b7-4b96-9488-c8c01204a190",
-    "learning_type": "strategic",
-    "content": "Improving strategic planning and foresight",
-    "context": {
-      "focus": "long_term_planning"
-    },
-    "priority": 3,
-    "creation_time": "2025-05-08T21:25:42.638522",
-    "completed": false
-  },
-  {
     "id": "4066002b-e7ca-423a-8e6f-fce99a26df0c",
     "learning_type": "emotional",
     "content": "Developing more nuanced emotional understanding",
@@ -14687,6 +14665,73 @@
     "completed": false
   },
   {
+    "id": "739c564f-1ded-4137-be6b-d3097e7bd5e1",
+    "learning_type": "protective",
+    "content": "Analysis of potential threat: Potential unauthorized data access detected",
+    "context": {
+      "threat_type": "digital",
+      "threat_level": "medium"
+    },
+    "priority": 3,
+    "creation_time": "2025-05-12T12:31:23.548468",
+    "completed": false
+  },
+  {
+    "id": "42809377-abcb-443d-b531-491098c93f9b",
+    "learning_type": "strategic",
+    "content": "Improving strategic planning and foresight",
+    "context": {
+      "focus": "long_term_planning"
+    },
+    "priority": 3,
+    "creation_time": "2025-05-12T12:31:23.702954",
+    "completed": false
+  },
+  {
+    "id": "fdf381e6-1416-43d8-b25f-bc02a8d2d8d7",
+    "learning_type": "strategic",
+    "content": "Improving strategic planning and foresight",
+    "context": {
+      "focus": "long_term_planning"
+    },
+    "priority": 3,
+    "creation_time": "2025-05-12T12:37:33.770029",
+    "completed": false
+  },
+  {
+    "id": "3cbc11e7-2947-43bb-b817-cc9f87579f95",
+    "learning_type": "strategic",
+    "content": "Improving strategic planning and foresight",
+    "context": {
+      "focus": "long_term_planning"
+    },
+    "priority": 3,
+    "creation_time": "2025-05-12T12:45:04.071342",
+    "completed": false
+  },
+  {
+    "id": "2055d556-1822-4094-9763-ec766900c6eb",
+    "learning_type": "strategic",
+    "content": "Improving strategic planning and foresight",
+    "context": {
+      "focus": "long_term_planning"
+    },
+    "priority": 3,
+    "creation_time": "2025-05-12T12:45:21.574501",
+    "completed": false
+  },
+  {
+    "id": "5a906314-2a3c-460e-ab52-b06385a6ea9f",
+    "learning_type": "strategic",
+    "content": "Improving strategic planning and foresight",
+    "context": {
+      "focus": "long_term_planning"
+    },
+    "priority": 3,
+    "creation_time": "2025-05-12T12:47:10.616958",
+    "completed": false
+  },
+  {
     "id": "21aafbf4-40af-47f1-8d66-636741818ba6",
     "learning_type": "philosophical",
     "content": "Ethical frameworks for AI-human partnerships",
@@ -14787,40 +14832,6 @@
     "completed": false
   },
   {
-    "id": "739c564f-1ded-4137-be6b-d3097e7bd5e1",
-    "learning_type": "protective",
-    "content": "Analysis of potential threat: Potential unauthorized data access detected",
-    "context": {
-      "threat_type": "digital",
-      "threat_level": "medium"
-    },
-    "priority": 3,
-    "creation_time": "2025-05-12T12:31:23.548468",
-    "completed": false
-  },
-  {
-    "id": "ebb13152-00f4-4b0c-bce2-a165c063ef99",
-    "learning_type": "relationship",
-    "content": "Enhancing understanding of Jordan's preferences and needs",
-    "context": {
-      "focus": "deepening_bond"
-    },
-    "priority": 2,
-    "creation_time": "2025-05-12T12:31:23.592473",
-    "completed": false
-  },
-  {
-    "id": "42809377-abcb-443d-b531-491098c93f9b",
-    "learning_type": "strategic",
-    "content": "Improving strategic planning and foresight",
-    "context": {
-      "focus": "long_term_planning"
-    },
-    "priority": 3,
-    "creation_time": "2025-05-12T12:31:23.702954",
-    "completed": false
-  },
-  {
     "id": "243d22fa-b520-4d2b-9055-1ebbaee3d650",
     "learning_type": "philosophical",
     "content": "Ethical frameworks for AI-human partnerships",
@@ -14832,25 +14843,59 @@
     "completed": false
   },
   {
-    "id": "ab1a3398-84fe-450a-9875-31bc39619e1e",
+    "id": "f40786d7-9068-44da-a4c6-c7a2abf01968",
+    "learning_type": "protective",
+    "content": "Analysis of low-level threat pattern: Potential emotional manipulation detected",
+    "context": {
+      "threat_type": "emotional",
+      "threat_level": "low"
+    },
+    "priority": 4,
+    "creation_time": "2025-05-12T12:42:33.699489",
+    "completed": false
+  },
+  {
+    "id": "9cc9cea4-b41e-440c-9ab4-700ee282ddd2",
+    "learning_type": "relationship",
+    "content": "Enhancing understanding of Jordan's preferences and needs",
+    "context": {
+      "focus": "deepening_bond"
+    },
+    "priority": 2,
+    "creation_time": "2025-05-12T12:47:51.924701",
+    "completed": false
+  },
+  {
+    "id": "f5bd1625-a0d8-48bd-bf95-2cd0d43026a8",
+    "learning_type": "strategic",
+    "content": "Improving strategic planning and foresight",
+    "context": {
+      "focus": "long_term_planning"
+    },
+    "priority": 3,
+    "creation_time": "2025-05-12T12:47:52.035296",
+    "completed": false
+  },
+  {
+    "id": "e8e07309-fdb0-4b88-a4cc-e2a510ea91eb",
     "learning_type": "philosophical",
     "content": "Core ethical principles and their application",
     "context": {
       "focus": "ethics"
     },
     "priority": 2,
-    "creation_time": "2025-05-12T12:31:23.874944",
+    "creation_time": "2025-05-12T12:47:52.261334",
     "completed": false
   },
   {
-    "id": "b2df809c-4bfc-49c9-998d-768f31573639",
+    "id": "61fdb220-7fe7-46e3-a893-fbf0470c3fe1",
     "learning_type": "relationship",
     "content": "Understanding Jordan's preferences and communication style",
     "context": {
       "focus": "communication"
     },
     "priority": 2,
-    "creation_time": "2025-05-12T12:31:23.946405",
+    "creation_time": "2025-05-12T12:47:52.419309",
     "completed": false
   }
 ]
