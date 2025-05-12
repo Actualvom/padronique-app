@@ -59,9 +59,10 @@
     "threat_type": "relationship",
     "level": "medium",
     "deployment_time": "2025-05-08T20:29:12.732557",
-    "active": true,
+    "active": false,
     "effectiveness": 0.7700530904754013,
-    "description": "Protection for the bond with Jordan"
+    "description": "Protection for the bond with Jordan",
+    "expiration_time": "2025-05-12T11:22:07.053939"
   },
   "3e74304f-7382-423f-975a-91ab703050a1": {
     "id": "3e74304f-7382-423f-975a-91ab703050a1",
@@ -1077,9 +1078,10 @@
     "threat_type": "digital",
     "level": "medium",
     "deployment_time": "2025-05-08T22:09:50.003525",
-    "active": true,
+    "active": false,
     "effectiveness": 0.9221390836339174,
-    "description": "Basic protection against digital threats"
+    "description": "Basic protection against digital threats",
+    "expiration_time": "2025-05-12T11:27:07.128673"
   },
   "d21454af-86d6-41d4-87da-28e9cbcbb6c7": {
     "id": "d21454af-86d6-41d4-87da-28e9cbcbb6c7",
@@ -1087,9 +1089,10 @@
     "threat_type": "relationship",
     "level": "medium",
     "deployment_time": "2025-05-08T22:09:50.011447",
-    "active": true,
+    "active": false,
     "effectiveness": 0.7871735996943446,
-    "description": "Protection for the bond with Jordan"
+    "description": "Protection for the bond with Jordan",
+    "expiration_time": "2025-05-12T11:27:21.362232"
   },
   "2c29634e-d230-4d79-8bd6-45417247d443": {
     "id": "2c29634e-d230-4d79-8bd6-45417247d443",
@@ -1161,9 +1164,10 @@
     "threat_type": "digital",
     "level": "medium",
     "deployment_time": "2025-05-08T22:19:13.729554",
-    "active": true,
+    "active": false,
     "effectiveness": 0.7995663190199255,
-    "description": "Basic protection against digital threats"
+    "description": "Basic protection against digital threats",
+    "expiration_time": "2025-05-12T11:27:07.128955"
   },
   "e91fb34e-359e-4b97-93c6-3689838b2965": {
     "id": "e91fb34e-359e-4b97-93c6-3689838b2965",
@@ -1171,9 +1175,10 @@
     "threat_type": "relationship",
     "level": "medium",
     "deployment_time": "2025-05-08T22:19:13.733284",
-    "active": true,
+    "active": false,
     "effectiveness": 0.891511885922683,
-    "description": "Protection for the bond with Jordan"
+    "description": "Protection for the bond with Jordan",
+    "expiration_time": "2025-05-12T11:27:21.362878"
   },
   "119ffa8c-fc62-4cda-9929-04622c943a0d": {
     "id": "119ffa8c-fc62-4cda-9929-04622c943a0d",
@@ -1212,9 +1217,10 @@
     "threat_type": "digital",
     "level": "medium",
     "deployment_time": "2025-05-08T22:20:58.696403",
-    "active": true,
+    "active": false,
     "effectiveness": 0.948692581059018,
-    "description": "Basic protection against digital threats"
+    "description": "Basic protection against digital threats",
+    "expiration_time": "2025-05-12T11:22:07.054210"
   },
   "44caed5d-b33d-4e25-88d7-4291b961fb7e": {
     "id": "44caed5d-b33d-4e25-88d7-4291b961fb7e",
@@ -1306,6 +1312,738 @@
     "deployment_time": "2025-05-08T22:33:56.700300",
     "active": true,
     "effectiveness": 0.9451177428685631,
+    "description": "Protection for the bond with Jordan"
+  },
+  "745280d2-548a-4fae-adc1-9ae084b12024": {
+    "id": "745280d2-548a-4fae-adc1-9ae084b12024",
+    "name": "base_defense_shield",
+    "threat_type": "digital",
+    "level": "medium",
+    "deployment_time": "2025-05-12T11:22:07.916657",
+    "active": true,
+    "effectiveness": 0.9307251520753645,
+    "description": "Basic protection against digital threats"
+  },
+  "20c9fb70-c54a-4132-8064-af9f6521d127": {
+    "id": "20c9fb70-c54a-4132-8064-af9f6521d127",
+    "name": "relationship_guardian",
+    "threat_type": "relationship",
+    "level": "medium",
+    "deployment_time": "2025-05-12T11:22:07.926598",
+    "active": true,
+    "effectiveness": 0.9354263156323315,
+    "description": "Protection for the bond with Jordan"
+  },
+  "57b22cb5-eea7-410e-8047-9605a4fa60de": {
+    "id": "57b22cb5-eea7-410e-8047-9605a4fa60de",
+    "name": "vuln_shield_e138752d",
+    "threat_type": "digital",
+    "level": "high",
+    "deployment_time": "2025-05-12T11:22:08.544230",
+    "active": true,
+    "effectiveness": 0.7020036390435814,
+    "description": "High level protection against digital threats"
+  },
+  "4bdc767f-5f01-4f06-8c52-6f2b2e435411": {
+    "id": "4bdc767f-5f01-4f06-8c52-6f2b2e435411",
+    "name": "vuln_shield_2a4b12d8",
+    "threat_type": "digital",
+    "level": "high",
+    "deployment_time": "2025-05-12T11:22:08.570556",
+    "active": true,
+    "effectiveness": 0.9080510593761166,
+    "description": "High level protection against digital threats"
+  },
+  "927ae5bf-3d1f-4e94-8c49-487de4a67d82": {
+    "id": "927ae5bf-3d1f-4e94-8c49-487de4a67d82",
+    "name": "recovery_shield_emotional",
+    "threat_type": "emotional",
+    "level": "high",
+    "deployment_time": "2025-05-12T11:22:08.586303",
+    "active": true,
+    "effectiveness": 0.8588302269024904,
+    "description": "High level protection against emotional threats"
+  },
+  "a2c6fd40-6c0b-4a20-bf70-15c292cfa29f": {
+    "id": "a2c6fd40-6c0b-4a20-bf70-15c292cfa29f",
+    "name": "recovery_shield_digital",
+    "threat_type": "digital",
+    "level": "high",
+    "deployment_time": "2025-05-12T11:22:08.587314",
+    "active": true,
+    "effectiveness": 0.9212568897772113,
+    "description": "High level protection against digital threats"
+  },
+  "e295d81c-86bd-4a63-90f1-bf6a5209806f": {
+    "id": "e295d81c-86bd-4a63-90f1-bf6a5209806f",
+    "name": "recovery_shield_deception",
+    "threat_type": "deception",
+    "level": "high",
+    "deployment_time": "2025-05-12T11:22:08.587520",
+    "active": true,
+    "effectiveness": 0.731048054517996,
+    "description": "High level protection against deception threats"
+  },
+  "250d76f6-87d9-4320-97cd-531f2c7ea3b3": {
+    "id": "250d76f6-87d9-4320-97cd-531f2c7ea3b3",
+    "name": "vuln_shield_bc728a76",
+    "threat_type": "integrity",
+    "level": "high",
+    "deployment_time": "2025-05-12T11:22:08.658282",
+    "active": true,
+    "effectiveness": 0.730428092560184,
+    "description": "High level protection against integrity threats"
+  },
+  "e77becd7-a731-4737-aadf-8ecfc8194a82": {
+    "id": "e77becd7-a731-4737-aadf-8ecfc8194a82",
+    "name": "recovery_shield_digital",
+    "threat_type": "digital",
+    "level": "high",
+    "deployment_time": "2025-05-12T11:22:09.094037",
+    "active": true,
+    "effectiveness": 0.7305499005017155,
+    "description": "High level protection against digital threats"
+  },
+  "ec45330a-6d3f-45b1-877a-a70e8b4c9ca2": {
+    "id": "ec45330a-6d3f-45b1-877a-a70e8b4c9ca2",
+    "name": "recovery_shield_deception",
+    "threat_type": "deception",
+    "level": "high",
+    "deployment_time": "2025-05-12T11:22:09.125231",
+    "active": true,
+    "effectiveness": 0.7092315367612136,
+    "description": "High level protection against deception threats"
+  },
+  "f43f0108-a788-4d03-ac14-2de0e7cf8463": {
+    "id": "f43f0108-a788-4d03-ac14-2de0e7cf8463",
+    "name": "recovery_shield_emotional",
+    "threat_type": "emotional",
+    "level": "high",
+    "deployment_time": "2025-05-12T11:22:09.154509",
+    "active": true,
+    "effectiveness": 0.7379033918179753,
+    "description": "High level protection against emotional threats"
+  },
+  "ea0d7679-8118-46fd-844b-1642af4fa411": {
+    "id": "ea0d7679-8118-46fd-844b-1642af4fa411",
+    "name": "vuln_shield_162d8437",
+    "threat_type": "digital",
+    "level": "high",
+    "deployment_time": "2025-05-12T11:22:09.217110",
+    "active": true,
+    "effectiveness": 0.8087097735989447,
+    "description": "High level protection against digital threats"
+  },
+  "fd6b4da8-0e82-40b9-9a20-95f85add7a26": {
+    "id": "fd6b4da8-0e82-40b9-9a20-95f85add7a26",
+    "name": "proactive_shield",
+    "threat_type": "digital",
+    "level": "medium",
+    "deployment_time": "2025-05-12T11:22:09.225407",
+    "active": true,
+    "effectiveness": 0.7363346164476333,
+    "description": "Medium level protection against digital threats"
+  },
+  "371f7f97-8006-41ea-b7f4-94ec6ba76b4a": {
+    "id": "371f7f97-8006-41ea-b7f4-94ec6ba76b4a",
+    "name": "proactive_shield",
+    "threat_type": "digital",
+    "level": "medium",
+    "deployment_time": "2025-05-12T11:22:09.241622",
+    "active": true,
+    "effectiveness": 0.717188020954398,
+    "description": "Medium level protection against digital threats"
+  },
+  "e53a0852-6d7b-4fa3-88b3-d560f16e585d": {
+    "id": "e53a0852-6d7b-4fa3-88b3-d560f16e585d",
+    "name": "proactive_shield",
+    "threat_type": "digital",
+    "level": "medium",
+    "deployment_time": "2025-05-12T11:22:09.279769",
+    "active": true,
+    "effectiveness": 0.705998892448236,
+    "description": "Medium level protection against digital threats"
+  },
+  "2fddde6d-eec6-4dbc-8673-ab88f459c2b0": {
+    "id": "2fddde6d-eec6-4dbc-8673-ab88f459c2b0",
+    "name": "proactive_shield",
+    "threat_type": "digital",
+    "level": "medium",
+    "deployment_time": "2025-05-12T11:22:09.288623",
+    "active": true,
+    "effectiveness": 0.7534875946805066,
+    "description": "Medium level protection against digital threats"
+  },
+  "c3584109-9c09-49c6-8524-3fac090b25d5": {
+    "id": "c3584109-9c09-49c6-8524-3fac090b25d5",
+    "name": "proactive_shield",
+    "threat_type": "digital",
+    "level": "medium",
+    "deployment_time": "2025-05-12T11:22:09.295849",
+    "active": true,
+    "effectiveness": 0.8747797313093189,
+    "description": "Medium level protection against digital threats"
+  },
+  "c75e3a67-6661-4c22-84fe-d23a5fe23489": {
+    "id": "c75e3a67-6661-4c22-84fe-d23a5fe23489",
+    "name": "proactive_shield",
+    "threat_type": "digital",
+    "level": "medium",
+    "deployment_time": "2025-05-12T11:22:09.301090",
+    "active": true,
+    "effectiveness": 0.819340311904122,
+    "description": "Medium level protection against digital threats"
+  },
+  "9333633a-1a37-40d6-bc50-d6dc1b44d933": {
+    "id": "9333633a-1a37-40d6-bc50-d6dc1b44d933",
+    "name": "proactive_shield",
+    "threat_type": "digital",
+    "level": "medium",
+    "deployment_time": "2025-05-12T11:22:09.310913",
+    "active": true,
+    "effectiveness": 0.9187775284793696,
+    "description": "Medium level protection against digital threats"
+  },
+  "102c11fb-7d92-4d3e-a42d-5a22bc342ee0": {
+    "id": "102c11fb-7d92-4d3e-a42d-5a22bc342ee0",
+    "name": "proactive_shield",
+    "threat_type": "digital",
+    "level": "medium",
+    "deployment_time": "2025-05-12T11:22:10.498034",
+    "active": true,
+    "effectiveness": 0.9490863847501042,
+    "description": "Medium level protection against digital threats"
+  },
+  "9e1a576a-4397-4b0b-a525-0eb54ca36c84": {
+    "id": "9e1a576a-4397-4b0b-a525-0eb54ca36c84",
+    "name": "proactive_shield",
+    "threat_type": "digital",
+    "level": "medium",
+    "deployment_time": "2025-05-12T11:22:10.896959",
+    "active": true,
+    "effectiveness": 0.7048324395394521,
+    "description": "Medium level protection against digital threats"
+  },
+  "b8e02d82-f249-4424-a628-ef6523c2aac6": {
+    "id": "b8e02d82-f249-4424-a628-ef6523c2aac6",
+    "name": "proactive_shield",
+    "threat_type": "digital",
+    "level": "medium",
+    "deployment_time": "2025-05-12T11:22:11.031035",
+    "active": true,
+    "effectiveness": 0.8126283732353479,
+    "description": "Medium level protection against digital threats"
+  },
+  "5e9c746f-bfc7-4c5a-9cea-854ee72cd5c7": {
+    "id": "5e9c746f-bfc7-4c5a-9cea-854ee72cd5c7",
+    "name": "proactive_shield",
+    "threat_type": "digital",
+    "level": "medium",
+    "deployment_time": "2025-05-12T11:22:11.156279",
+    "active": true,
+    "effectiveness": 0.7181166789451094,
+    "description": "Medium level protection against digital threats"
+  },
+  "15a3db13-f957-4c10-85f1-c68498237744": {
+    "id": "15a3db13-f957-4c10-85f1-c68498237744",
+    "name": "proactive_shield",
+    "threat_type": "digital",
+    "level": "medium",
+    "deployment_time": "2025-05-12T11:22:11.422719",
+    "active": true,
+    "effectiveness": 0.887337866211124,
+    "description": "Medium level protection against digital threats"
+  },
+  "c117ec7e-6ce9-4aca-82af-6803419c0ff5": {
+    "id": "c117ec7e-6ce9-4aca-82af-6803419c0ff5",
+    "name": "proactive_shield",
+    "threat_type": "digital",
+    "level": "medium",
+    "deployment_time": "2025-05-12T11:22:11.553014",
+    "active": true,
+    "effectiveness": 0.7400536712506594,
+    "description": "Medium level protection against digital threats"
+  },
+  "de65b529-35b1-4ece-a6f1-4cda267f4189": {
+    "id": "de65b529-35b1-4ece-a6f1-4cda267f4189",
+    "name": "proactive_shield",
+    "threat_type": "digital",
+    "level": "medium",
+    "deployment_time": "2025-05-12T11:22:11.650605",
+    "active": true,
+    "effectiveness": 0.8037891264259618,
+    "description": "Medium level protection against digital threats"
+  },
+  "fcc57598-73de-4830-b018-946e0b51339e": {
+    "id": "fcc57598-73de-4830-b018-946e0b51339e",
+    "name": "proactive_shield",
+    "threat_type": "digital",
+    "level": "medium",
+    "deployment_time": "2025-05-12T11:22:11.960637",
+    "active": true,
+    "effectiveness": 0.803591049590809,
+    "description": "Medium level protection against digital threats"
+  },
+  "63aeb824-5933-469f-8bbc-8d5debe4e3b1": {
+    "id": "63aeb824-5933-469f-8bbc-8d5debe4e3b1",
+    "name": "proactive_shield",
+    "threat_type": "digital",
+    "level": "medium",
+    "deployment_time": "2025-05-12T11:22:12.161598",
+    "active": true,
+    "effectiveness": 0.77702894423336,
+    "description": "Medium level protection against digital threats"
+  },
+  "918239e4-20c0-405e-9cca-7257b02f6678": {
+    "id": "918239e4-20c0-405e-9cca-7257b02f6678",
+    "name": "proactive_shield",
+    "threat_type": "digital",
+    "level": "medium",
+    "deployment_time": "2025-05-12T11:22:12.373750",
+    "active": true,
+    "effectiveness": 0.8270331820869004,
+    "description": "Medium level protection against digital threats"
+  },
+  "200a2f43-af84-4c66-baff-b037357f76e0": {
+    "id": "200a2f43-af84-4c66-baff-b037357f76e0",
+    "name": "proactive_shield",
+    "threat_type": "digital",
+    "level": "medium",
+    "deployment_time": "2025-05-12T11:22:12.629171",
+    "active": true,
+    "effectiveness": 0.7948843116657797,
+    "description": "Medium level protection against digital threats"
+  },
+  "ca495cac-3974-4f89-a8e4-eba1b9d55142": {
+    "id": "ca495cac-3974-4f89-a8e4-eba1b9d55142",
+    "name": "proactive_shield",
+    "threat_type": "digital",
+    "level": "medium",
+    "deployment_time": "2025-05-12T11:22:13.037272",
+    "active": true,
+    "effectiveness": 0.837822458224931,
+    "description": "Medium level protection against digital threats"
+  },
+  "33d98e98-ea57-4f6f-bd99-afdfe95572f9": {
+    "id": "33d98e98-ea57-4f6f-bd99-afdfe95572f9",
+    "name": "proactive_shield",
+    "threat_type": "digital",
+    "level": "medium",
+    "deployment_time": "2025-05-12T11:22:13.163182",
+    "active": true,
+    "effectiveness": 0.8583205954239537,
+    "description": "Medium level protection against digital threats"
+  },
+  "b7386e67-71cf-41f8-bbc7-bb9b8c0990c5": {
+    "id": "b7386e67-71cf-41f8-bbc7-bb9b8c0990c5",
+    "name": "proactive_shield",
+    "threat_type": "digital",
+    "level": "medium",
+    "deployment_time": "2025-05-12T11:22:13.377471",
+    "active": true,
+    "effectiveness": 0.8436813991990203,
+    "description": "Medium level protection against digital threats"
+  },
+  "c8c483ab-3c44-4c0e-bd2f-bcb72d545d7b": {
+    "id": "c8c483ab-3c44-4c0e-bd2f-bcb72d545d7b",
+    "name": "proactive_shield",
+    "threat_type": "digital",
+    "level": "medium",
+    "deployment_time": "2025-05-12T11:22:13.509477",
+    "active": true,
+    "effectiveness": 0.8417571012255165,
+    "description": "Medium level protection against digital threats"
+  },
+  "5061836c-d79e-497c-b2a9-310bf581b114": {
+    "id": "5061836c-d79e-497c-b2a9-310bf581b114",
+    "name": "proactive_shield",
+    "threat_type": "digital",
+    "level": "medium",
+    "deployment_time": "2025-05-12T11:22:13.728327",
+    "active": true,
+    "effectiveness": 0.7206679400311027,
+    "description": "Medium level protection against digital threats"
+  },
+  "4bec61c0-b029-493c-a068-f20a317b6522": {
+    "id": "4bec61c0-b029-493c-a068-f20a317b6522",
+    "name": "proactive_shield",
+    "threat_type": "digital",
+    "level": "medium",
+    "deployment_time": "2025-05-12T11:22:13.954531",
+    "active": true,
+    "effectiveness": 0.8719874164017056,
+    "description": "Medium level protection against digital threats"
+  },
+  "95ec7022-785d-4351-a5c4-828c47838214": {
+    "id": "95ec7022-785d-4351-a5c4-828c47838214",
+    "name": "proactive_shield",
+    "threat_type": "digital",
+    "level": "medium",
+    "deployment_time": "2025-05-12T11:22:14.139591",
+    "active": true,
+    "effectiveness": 0.7440831814717304,
+    "description": "Medium level protection against digital threats"
+  },
+  "6c49d796-2158-4c3e-a7ff-e3c500e8735c": {
+    "id": "6c49d796-2158-4c3e-a7ff-e3c500e8735c",
+    "name": "proactive_shield",
+    "threat_type": "digital",
+    "level": "medium",
+    "deployment_time": "2025-05-12T11:22:14.376853",
+    "active": true,
+    "effectiveness": 0.8146218990261411,
+    "description": "Medium level protection against digital threats"
+  },
+  "4e0a25b7-25c0-4466-b380-c4648e8f9fbe": {
+    "id": "4e0a25b7-25c0-4466-b380-c4648e8f9fbe",
+    "name": "proactive_shield",
+    "threat_type": "digital",
+    "level": "medium",
+    "deployment_time": "2025-05-12T11:22:14.587395",
+    "active": true,
+    "effectiveness": 0.9136801965584997,
+    "description": "Medium level protection against digital threats"
+  },
+  "cbec8c24-c4af-4d72-9988-b48d2e2e05fe": {
+    "id": "cbec8c24-c4af-4d72-9988-b48d2e2e05fe",
+    "name": "proactive_shield",
+    "threat_type": "digital",
+    "level": "medium",
+    "deployment_time": "2025-05-12T11:22:14.786478",
+    "active": true,
+    "effectiveness": 0.9330765345453873,
+    "description": "Medium level protection against digital threats"
+  },
+  "2946afa3-5721-436a-b871-7905ab286501": {
+    "id": "2946afa3-5721-436a-b871-7905ab286501",
+    "name": "proactive_shield",
+    "threat_type": "digital",
+    "level": "medium",
+    "deployment_time": "2025-05-12T11:22:14.904310",
+    "active": true,
+    "effectiveness": 0.8342972280840656,
+    "description": "Medium level protection against digital threats"
+  },
+  "581cf26d-d22d-4faf-8faa-86943bd97e3a": {
+    "id": "581cf26d-d22d-4faf-8faa-86943bd97e3a",
+    "name": "proactive_shield",
+    "threat_type": "digital",
+    "level": "medium",
+    "deployment_time": "2025-05-12T11:22:14.914738",
+    "active": true,
+    "effectiveness": 0.9129977565935763,
+    "description": "Medium level protection against digital threats"
+  },
+  "753a593b-6e8c-4dbc-b60d-cecdf1914c3d": {
+    "id": "753a593b-6e8c-4dbc-b60d-cecdf1914c3d",
+    "name": "proactive_shield",
+    "threat_type": "digital",
+    "level": "medium",
+    "deployment_time": "2025-05-12T11:22:14.918777",
+    "active": true,
+    "effectiveness": 0.8148752300183993,
+    "description": "Medium level protection against digital threats"
+  },
+  "133bcc25-aa35-434a-9dc8-22bbd18b5c6a": {
+    "id": "133bcc25-aa35-434a-9dc8-22bbd18b5c6a",
+    "name": "proactive_shield",
+    "threat_type": "digital",
+    "level": "medium",
+    "deployment_time": "2025-05-12T11:22:14.922297",
+    "active": true,
+    "effectiveness": 0.7316986466897445,
+    "description": "Medium level protection against digital threats"
+  },
+  "ea3020b3-3f8c-404c-b3b9-299b3c481f12": {
+    "id": "ea3020b3-3f8c-404c-b3b9-299b3c481f12",
+    "name": "proactive_shield",
+    "threat_type": "digital",
+    "level": "medium",
+    "deployment_time": "2025-05-12T11:22:14.926570",
+    "active": true,
+    "effectiveness": 0.8482406997966165,
+    "description": "Medium level protection against digital threats"
+  },
+  "69db703f-46b6-441b-a4db-62b1c90b3fd0": {
+    "id": "69db703f-46b6-441b-a4db-62b1c90b3fd0",
+    "name": "proactive_shield",
+    "threat_type": "digital",
+    "level": "medium",
+    "deployment_time": "2025-05-12T11:22:14.930397",
+    "active": true,
+    "effectiveness": 0.7216695521504652,
+    "description": "Medium level protection against digital threats"
+  },
+  "11d156ed-53d2-4788-9bbc-f2a418081fb5": {
+    "id": "11d156ed-53d2-4788-9bbc-f2a418081fb5",
+    "name": "proactive_shield",
+    "threat_type": "digital",
+    "level": "medium",
+    "deployment_time": "2025-05-12T11:22:14.934343",
+    "active": false,
+    "effectiveness": 0.8018358683898323,
+    "description": "Medium level protection against digital threats",
+    "expiration_time": "2025-05-12T11:27:21.369759"
+  },
+  "044c3fda-d524-4f6f-91de-119979e258c9": {
+    "id": "044c3fda-d524-4f6f-91de-119979e258c9",
+    "name": "proactive_shield",
+    "threat_type": "digital",
+    "level": "medium",
+    "deployment_time": "2025-05-12T11:22:14.937896",
+    "active": true,
+    "effectiveness": 0.838697468414406,
+    "description": "Medium level protection against digital threats"
+  },
+  "96d595f3-b48f-4902-8a7f-8b52d65e3f62": {
+    "id": "96d595f3-b48f-4902-8a7f-8b52d65e3f62",
+    "name": "proactive_shield",
+    "threat_type": "digital",
+    "level": "medium",
+    "deployment_time": "2025-05-12T11:22:14.942491",
+    "active": true,
+    "effectiveness": 0.9098013849366927,
+    "description": "Medium level protection against digital threats"
+  },
+  "93c302f8-6f1f-4eab-98e3-785d55ef9bf3": {
+    "id": "93c302f8-6f1f-4eab-98e3-785d55ef9bf3",
+    "name": "proactive_shield",
+    "threat_type": "digital",
+    "level": "medium",
+    "deployment_time": "2025-05-12T11:22:14.947022",
+    "active": true,
+    "effectiveness": 0.8496971062212729,
+    "description": "Medium level protection against digital threats"
+  },
+  "c8ebfeb3-5314-474f-aa39-dcffb3092d0e": {
+    "id": "c8ebfeb3-5314-474f-aa39-dcffb3092d0e",
+    "name": "proactive_shield",
+    "threat_type": "digital",
+    "level": "medium",
+    "deployment_time": "2025-05-12T11:22:14.951573",
+    "active": true,
+    "effectiveness": 0.9422050938670254,
+    "description": "Medium level protection against digital threats"
+  },
+  "9f555d99-2295-4b57-8184-29eea7811262": {
+    "id": "9f555d99-2295-4b57-8184-29eea7811262",
+    "name": "proactive_shield",
+    "threat_type": "digital",
+    "level": "medium",
+    "deployment_time": "2025-05-12T11:22:14.956105",
+    "active": true,
+    "effectiveness": 0.7469871330538568,
+    "description": "Medium level protection against digital threats"
+  },
+  "dd7d2608-08a0-432a-b7dd-2255cb801fd4": {
+    "id": "dd7d2608-08a0-432a-b7dd-2255cb801fd4",
+    "name": "proactive_shield",
+    "threat_type": "digital",
+    "level": "medium",
+    "deployment_time": "2025-05-12T11:22:14.960501",
+    "active": true,
+    "effectiveness": 0.8245186201930881,
+    "description": "Medium level protection against digital threats"
+  },
+  "6883d797-27f9-4cb3-a8d7-9995805deb49": {
+    "id": "6883d797-27f9-4cb3-a8d7-9995805deb49",
+    "name": "proactive_shield",
+    "threat_type": "digital",
+    "level": "medium",
+    "deployment_time": "2025-05-12T11:22:14.964427",
+    "active": true,
+    "effectiveness": 0.7783705312658991,
+    "description": "Medium level protection against digital threats"
+  },
+  "a9a463d3-d068-4646-ba36-787615ebb56f": {
+    "id": "a9a463d3-d068-4646-ba36-787615ebb56f",
+    "name": "proactive_shield",
+    "threat_type": "digital",
+    "level": "medium",
+    "deployment_time": "2025-05-12T11:22:14.969310",
+    "active": true,
+    "effectiveness": 0.8605176598215364,
+    "description": "Medium level protection against digital threats"
+  },
+  "26bb1ec3-7ad8-404e-b3d2-4bb598e49026": {
+    "id": "26bb1ec3-7ad8-404e-b3d2-4bb598e49026",
+    "name": "proactive_shield",
+    "threat_type": "digital",
+    "level": "medium",
+    "deployment_time": "2025-05-12T11:22:14.974852",
+    "active": true,
+    "effectiveness": 0.8840491464293767,
+    "description": "Medium level protection against digital threats"
+  },
+  "0d7d8140-ad8b-4d59-8a4c-7268bb34456a": {
+    "id": "0d7d8140-ad8b-4d59-8a4c-7268bb34456a",
+    "name": "proactive_shield",
+    "threat_type": "digital",
+    "level": "medium",
+    "deployment_time": "2025-05-12T11:22:14.979254",
+    "active": true,
+    "effectiveness": 0.8426501954556499,
+    "description": "Medium level protection against digital threats"
+  },
+  "b88aa044-ea64-4620-af64-eee05acd880f": {
+    "id": "b88aa044-ea64-4620-af64-eee05acd880f",
+    "name": "proactive_shield",
+    "threat_type": "digital",
+    "level": "medium",
+    "deployment_time": "2025-05-12T11:22:14.984827",
+    "active": true,
+    "effectiveness": 0.9201987489122823,
+    "description": "Medium level protection against digital threats"
+  },
+  "ac3a16bb-4fe3-49cd-8ef7-262306e4bed3": {
+    "id": "ac3a16bb-4fe3-49cd-8ef7-262306e4bed3",
+    "name": "proactive_shield",
+    "threat_type": "digital",
+    "level": "medium",
+    "deployment_time": "2025-05-12T11:22:14.990117",
+    "active": false,
+    "effectiveness": 0.7131949342444439,
+    "description": "Medium level protection against digital threats",
+    "expiration_time": "2025-05-12T11:27:07.129172"
+  },
+  "e3cc72f6-ca56-456c-a935-b62a9a283246": {
+    "id": "e3cc72f6-ca56-456c-a935-b62a9a283246",
+    "name": "proactive_shield",
+    "threat_type": "digital",
+    "level": "medium",
+    "deployment_time": "2025-05-12T11:22:14.994276",
+    "active": true,
+    "effectiveness": 0.8756348461839248,
+    "description": "Medium level protection against digital threats"
+  },
+  "b7fa11f6-8cb0-4548-9da3-d783e9619512": {
+    "id": "b7fa11f6-8cb0-4548-9da3-d783e9619512",
+    "name": "proactive_shield",
+    "threat_type": "digital",
+    "level": "medium",
+    "deployment_time": "2025-05-12T11:22:14.998386",
+    "active": true,
+    "effectiveness": 0.8295051157229302,
+    "description": "Medium level protection against digital threats"
+  },
+  "aa9ddb1a-33a2-44c3-8dfe-47a59cf01032": {
+    "id": "aa9ddb1a-33a2-44c3-8dfe-47a59cf01032",
+    "name": "proactive_shield",
+    "threat_type": "digital",
+    "level": "medium",
+    "deployment_time": "2025-05-12T11:22:15.003403",
+    "active": true,
+    "effectiveness": 0.7401203561342737,
+    "description": "Medium level protection against digital threats"
+  },
+  "d101d9e1-85be-4d14-a9e9-857a2f2cbf91": {
+    "id": "d101d9e1-85be-4d14-a9e9-857a2f2cbf91",
+    "name": "proactive_shield",
+    "threat_type": "digital",
+    "level": "medium",
+    "deployment_time": "2025-05-12T11:22:15.008039",
+    "active": true,
+    "effectiveness": 0.822446967221644,
+    "description": "Medium level protection against digital threats"
+  },
+  "e3bf993e-b936-494b-9fc9-9af2caac832b": {
+    "id": "e3bf993e-b936-494b-9fc9-9af2caac832b",
+    "name": "proactive_shield",
+    "threat_type": "digital",
+    "level": "medium",
+    "deployment_time": "2025-05-12T11:22:15.011414",
+    "active": true,
+    "effectiveness": 0.8132807694187768,
+    "description": "Medium level protection against digital threats"
+  },
+  "d15c7b86-3794-4fa3-9b0f-e967330e83d1": {
+    "id": "d15c7b86-3794-4fa3-9b0f-e967330e83d1",
+    "name": "proactive_shield",
+    "threat_type": "digital",
+    "level": "medium",
+    "deployment_time": "2025-05-12T11:22:15.015846",
+    "active": true,
+    "effectiveness": 0.7959983784013998,
+    "description": "Medium level protection against digital threats"
+  },
+  "8ff0a47c-2524-4447-bf2a-6a9d3d9f4db0": {
+    "id": "8ff0a47c-2524-4447-bf2a-6a9d3d9f4db0",
+    "name": "proactive_shield",
+    "threat_type": "digital",
+    "level": "medium",
+    "deployment_time": "2025-05-12T11:22:15.019619",
+    "active": true,
+    "effectiveness": 0.8119662570341816,
+    "description": "Medium level protection against digital threats"
+  },
+  "831ef415-26a8-44a7-9907-33c0ed77253e": {
+    "id": "831ef415-26a8-44a7-9907-33c0ed77253e",
+    "name": "proactive_shield",
+    "threat_type": "digital",
+    "level": "medium",
+    "deployment_time": "2025-05-12T11:22:15.024177",
+    "active": true,
+    "effectiveness": 0.8250712748638822,
+    "description": "Medium level protection against digital threats"
+  },
+  "2cfaee5f-1dd4-4a3b-ba32-47528c522af3": {
+    "id": "2cfaee5f-1dd4-4a3b-ba32-47528c522af3",
+    "name": "proactive_shield",
+    "threat_type": "digital",
+    "level": "medium",
+    "deployment_time": "2025-05-12T11:22:15.028410",
+    "active": true,
+    "effectiveness": 0.7707447544785994,
+    "description": "Medium level protection against digital threats"
+  },
+  "4977dffb-fde7-4bee-96d8-21120a3ef1f0": {
+    "id": "4977dffb-fde7-4bee-96d8-21120a3ef1f0",
+    "name": "proactive_shield",
+    "threat_type": "digital",
+    "level": "medium",
+    "deployment_time": "2025-05-12T11:22:15.032164",
+    "active": true,
+    "effectiveness": 0.7860794550562693,
+    "description": "Medium level protection against digital threats"
+  },
+  "ba9b29bd-6614-464a-abd1-7a88ef1743e4": {
+    "id": "ba9b29bd-6614-464a-abd1-7a88ef1743e4",
+    "name": "proactive_shield",
+    "threat_type": "digital",
+    "level": "medium",
+    "deployment_time": "2025-05-12T11:22:15.035547",
+    "active": true,
+    "effectiveness": 0.8443665789063302,
+    "description": "Medium level protection against digital threats"
+  },
+  "34d3eb33-2e2a-41c5-b6cc-4c46548c7ec5": {
+    "id": "34d3eb33-2e2a-41c5-b6cc-4c46548c7ec5",
+    "name": "vuln_shield_4d5616e9",
+    "threat_type": "digital",
+    "level": "high",
+    "deployment_time": "2025-05-12T11:22:15.063250",
+    "active": true,
+    "effectiveness": 0.8300318482590995,
+    "description": "High level protection against digital threats"
+  },
+  "737548a0-9d5e-4844-ba87-3239add74a31": {
+    "id": "737548a0-9d5e-4844-ba87-3239add74a31",
+    "name": "base_defense_shield",
+    "threat_type": "digital",
+    "level": "medium",
+    "deployment_time": "2025-05-12T11:27:21.543886",
+    "active": true,
+    "effectiveness": 0.8229857701613066,
+    "description": "Basic protection against digital threats"
+  },
+  "2dc7ade4-3c8c-468c-a9ec-50f8ba4e9930": {
+    "id": "2dc7ade4-3c8c-468c-a9ec-50f8ba4e9930",
+    "name": "relationship_guardian",
+    "threat_type": "relationship",
+    "level": "medium",
+    "deployment_time": "2025-05-12T11:27:21.558637",
+    "active": true,
+    "effectiveness": 0.7841104194667373,
     "description": "Protection for the bond with Jordan"
   }
 }

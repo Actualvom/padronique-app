@@ -1,0 +1,22 @@
+{
+  "id": "4fdec65a-4079-424a-a459-b8a6e8d90e79",
+  "type": "relationship",
+  "content": "Significant deepening of bond with Jordan through trust development",
+  "emotional_weight": 0.8040070222987413,
+  "creation_time": "2025-05-12T11:22:23.697804",
+  "last_accessed": "2025-05-12T11:22:23.697804",
+  "access_count": 1,
+  "tags": [],
+  "is_core_memory": true,
+  "lock": {
+    "level": "standard",
+    "last_verified": "2025-05-12T11:22:23.697804",
+    "modification_history": [],
+    "access_permissions": {
+      "read": true,
+      "modify": true,
+      "delete": true
+    }
+  },
+  "emotional_fingerprint": "emfp-080-2908f135-048943"
+}

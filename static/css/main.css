@@ -61,13 +61,17 @@ body {
 }
 
 .logo {
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     margin: 0;
     background: linear-gradient(135deg, var(--primary-accent), var(--secondary-accent));
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
     font-weight: 700;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
 }
 
 .tagline {
