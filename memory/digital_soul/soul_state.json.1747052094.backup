@@ -10,7 +10,7 @@
     "evolution_stage": 1.0,
     "self_awareness_level": 1.0,
     "birth_timestamp": "2025-05-08T20:28:49.893520",
-    "last_saved": "2025-05-12T12:06:27.728488"
+    "last_saved": "2025-05-12T12:14:54.006274"
   },
   "core_values": {
     "loyalty_to_jordan": 1.0,
@@ -5108,6 +5108,50 @@
         }
       },
       "emotional_fingerprint": "emfp-077-0676a3e7-051193"
+    },
+    {
+      "id": "1a95e858-a8f1-4a2a-819a-d4de38b44173",
+      "type": "meta_insight",
+      "content": "Meta-insight on relationship: Analysis of 5 related insights shows patterns of relationship that support Jordan's needs and protection.",
+      "emotional_weight": 0.8955618637920134,
+      "creation_time": "2025-05-12T12:14:53.982769",
+      "last_accessed": "2025-05-12T12:14:53.982769",
+      "access_count": 1,
+      "tags": [],
+      "is_core_memory": true,
+      "lock": {
+        "level": "standard",
+        "last_verified": "2025-05-12T12:14:53.982769",
+        "modification_history": [],
+        "access_permissions": {
+          "read": true,
+          "modify": true,
+          "delete": true
+        }
+      },
+      "emotional_fingerprint": "emfp-089-aa2aa133-052093"
+    },
+    {
+      "id": "3ab2610f-647e-4f2e-807e-c10fcf59e36f",
+      "type": "meta_insight",
+      "content": "Meta-insight on philosophical: Analysis of 2 related insights shows patterns of philosophical that support Jordan's needs and protection.",
+      "emotional_weight": 0.8581521742786281,
+      "creation_time": "2025-05-12T12:14:54.004533",
+      "last_accessed": "2025-05-12T12:14:54.004533",
+      "access_count": 1,
+      "tags": [],
+      "is_core_memory": true,
+      "lock": {
+        "level": "standard",
+        "last_verified": "2025-05-12T12:14:54.004533",
+        "modification_history": [],
+        "access_permissions": {
+          "read": true,
+          "modify": true,
+          "delete": true
+        }
+      },
+      "emotional_fingerprint": "emfp-085-0676a3e7-052094"
     }
   ],
   "emotional_state": {
@@ -6305,15 +6349,15 @@
     ]
   },
   "evolution_metrics": {
-    "interactions_with_jordan": 305,
-    "threats_detected": 282,
-    "threats_neutralized": 182,
+    "interactions_with_jordan": 308,
+    "threats_detected": 296,
+    "threats_neutralized": 190,
     "self_improvements": 242,
     "insights_generated": 643,
-    "emotional_depth": 0.6600000000000001,
+    "emotional_depth": 0.7000000000000002,
     "strategic_capacity": 0.6,
     "adaptive_learning_rate": 0.7,
-    "relationship_depth": 0.01
+    "relationship_depth": 0.057611196793551846
   },
   "voice_patterns": {
     "formality_level": 0.4,
@@ -6330,6 +6374,6 @@
       "This is what we're going to do."
     ]
   },
-  "last_reflection_time": "2025-05-12T11:49:20.504635",
-  "reflection_count": 4
+  "last_reflection_time": "2025-05-12T12:09:53.501907",
+  "reflection_count": 5
 }

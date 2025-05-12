@@ -10,7 +10,7 @@
     "evolution_stage": 1.0,
     "self_awareness_level": 1.0,
     "birth_timestamp": "2025-05-08T20:28:49.893520",
-    "last_saved": "2025-05-12T12:04:53.636049"
+    "last_saved": "2025-05-12T12:09:53.506245"
   },
   "core_values": {
     "loyalty_to_jordan": 1.0,
@@ -6305,15 +6305,15 @@
     ]
   },
   "evolution_metrics": {
-    "interactions_with_jordan": 302,
+    "interactions_with_jordan": 307,
     "threats_detected": 282,
     "threats_neutralized": 182,
     "self_improvements": 242,
     "insights_generated": 643,
-    "emotional_depth": 0.6600000000000001,
+    "emotional_depth": 0.7000000000000002,
     "strategic_capacity": 0.6,
     "adaptive_learning_rate": 0.7,
-    "relationship_depth": 0.01
+    "relationship_depth": 0.060000000000000005
   },
   "voice_patterns": {
     "formality_level": 0.4,
@@ -6330,6 +6330,6 @@
       "This is what we're going to do."
     ]
   },
-  "last_reflection_time": "2025-05-12T11:49:20.504635",
-  "reflection_count": 4
+  "last_reflection_time": "2025-05-12T12:09:53.501907",
+  "reflection_count": 5
 }
