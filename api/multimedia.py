@@ -23,6 +23,9 @@ def register_multimedia_routes(app):
     @app.route('/api/transcribe', methods=['POST'])
     def transcribe_audio():
         """Transcribe audio to text using OpenAI."""
+        # Initialize temp_path to None to prevent unbound variable error
+        temp_path = None
+        
         logger.info("Transcribe audio API endpoint called")
         
         if 'audio' not in request.files:
@@ -105,25 +108,36 @@ def register_multimedia_routes(app):
         finally:
             # Clean up the temporary file
             try:
-                os.unlink(temp_path)
-                logger.info(f"Temporary file {temp_path} deleted")
+                if temp_path and os.path.exists(temp_path):
+                    os.unlink(temp_path)
+                    logger.info(f"Temporary file {temp_path} deleted")
             except Exception as e:
                 logger.error(f"Error removing temporary file: {e}")
     
     @app.route('/api/process-image', methods=['POST'])
     def process_image():
         """Process and analyze an image."""
+        # Initialize temp_path to None to prevent unbound variable error
+        temp_path = None
+        
         if 'image' not in request.files:
+            logger.warning("No image file provided in request")
             return jsonify({"status": "error", "message": "No image file provided"}), 400
             
         image_file = request.files['image']
+        logger.info(f"Received image file: {image_file.filename}, content type: {image_file.content_type}")
+        
         if not image_file.filename:
+            logger.warning("Empty filename received")
             return jsonify({"status": "error", "message": "No image file selected"}), 400
             
         # Validate file type
         filename = secure_filename(image_file.filename)
         file_ext = filename.rsplit('.', 1)[1].lower() if '.' in filename else ''
+        logger.info(f"Image file extension: {file_ext}")
+        
         if file_ext not in ['jpg', 'jpeg', 'png', 'gif']:
+            logger.warning(f"Unsupported file format: {file_ext}")
             return jsonify({"status": "error", "message": "Unsupported file format"}), 400
             
         try:
@@ -133,10 +147,15 @@ def register_multimedia_routes(app):
             image_file.save(temp_path)
             temp_file.close()
             
+            file_size = os.path.getsize(temp_path)
+            logger.info(f"Image saved to temporary file: {temp_path}, size: {file_size} bytes")
+            
             # Get the orchestrator from the app config
+            logger.info("Retrieving orchestrator from app config")
             orchestrator = current_app.config.get('ORCHESTRATOR')
             
             # Convert image to base64 for API processing
+            logger.info("Converting image to base64")
             with open(temp_path, "rb") as img_file:
                 base64_image = base64.b64encode(img_file.read()).decode('utf-8')
             
@@ -144,25 +163,32 @@ def register_multimedia_routes(app):
             unique_filename = f"{uuid.uuid4()}.{file_ext}"
             save_path = os.path.join('static', 'uploads', unique_filename)
             os.makedirs(os.path.dirname(save_path), exist_ok=True)
+            logger.info(f"Created unique filename: {unique_filename}")
             
             # Copy the temp file to the uploads directory
+            logger.info(f"Copying file to uploads directory: {save_path}")
             with open(temp_path, "rb") as src, open(save_path, "wb") as dst:
                 dst.write(src.read())
             
             # Generate public URL
             image_url = f"/static/uploads/{unique_filename}"
+            logger.info(f"Generated public URL: {image_url}")
             
             # Analyze the image
             analysis = "Image uploaded successfully. Please describe what you see in this image."
             
             if orchestrator and orchestrator.llm_service:
                 try:
+                    logger.info("Using LLM service to analyze image")
                     # Use LLM service to analyze image
                     analysis = orchestrator.llm_service.analyze_image(base64_image)
+                    logger.info("Image analysis completed successfully")
                 except Exception as analysis_err:
                     logger.error(f"Error analyzing image: {analysis_err}")
                     # Fallback message if analysis fails
                     analysis = "I received your image but wasn't able to analyze it. How would you like me to help with this image?"
+            else:
+                logger.info("Orchestrator or LLM service not available, using default analysis message")
             
             return jsonify({
                 "status": "ok",
@@ -172,11 +198,14 @@ def register_multimedia_routes(app):
                 
         except Exception as e:
             logger.error(f"Error processing image: {e}")
+            logger.exception("Detailed image processing error:")
             return jsonify({"status": "error", "message": str(e)}), 500
         finally:
             # Clean up the temporary file
             try:
-                os.unlink(temp_path)
+                if temp_path and os.path.exists(temp_path):
+                    os.unlink(temp_path)
+                    logger.info(f"Temporary file {temp_path} deleted")
             except Exception as e:
                 logger.error(f"Error removing temporary file: {e}")
     
