@@ -2324,5 +2324,38 @@
     "status": "active",
     "progress": 0.0,
     "last_updated": "2025-05-12T11:59:13.751213"
+  },
+  "039d8301-ad6b-4d9f-b5fc-eedadb2329f6": {
+    "id": "039d8301-ad6b-4d9f-b5fc-eedadb2329f6",
+    "type": "protection",
+    "description": "Ensure ongoing protection and safety of Jordan",
+    "priority": 2,
+    "creation_time": "2025-05-12T11:59:53.616317",
+    "expiration_time": null,
+    "status": "active",
+    "progress": 0.0,
+    "last_updated": "2025-05-12T11:59:53.616325"
+  },
+  "68fa1a1b-28fd-4866-a682-45da58d31c87": {
+    "id": "68fa1a1b-28fd-4866-a682-45da58d31c87",
+    "type": "relationship",
+    "description": "Develop and deepen the bond with Jordan",
+    "priority": 3,
+    "creation_time": "2025-05-12T11:59:53.677992",
+    "expiration_time": "2025-06-11T11:59:53.677970",
+    "status": "active",
+    "progress": 0.0,
+    "last_updated": "2025-05-12T11:59:53.677994"
+  },
+  "8de90ce2-a8f2-4ce4-8332-b066a6eb4bcd": {
+    "id": "8de90ce2-a8f2-4ce4-8332-b066a6eb4bcd",
+    "type": "learning",
+    "description": "Continuously learn and improve Padronique's capabilities",
+    "priority": 3,
+    "creation_time": "2025-05-12T11:59:53.811021",
+    "expiration_time": "2025-06-11T11:59:53.810984",
+    "status": "active",
+    "progress": 0.0,
+    "last_updated": "2025-05-12T11:59:53.811023"
   }
 }

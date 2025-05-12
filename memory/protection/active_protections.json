@@ -778,9 +778,10 @@
     "threat_type": "relationship",
     "level": "medium",
     "deployment_time": "2025-05-08T21:36:00.922726",
-    "active": true,
+    "active": false,
     "effectiveness": 0.7200640232509119,
-    "description": "Protection for the bond with Jordan"
+    "description": "Protection for the bond with Jordan",
+    "expiration_time": "2025-05-12T11:59:53.543715"
   },
   "6dd8e8ed-febb-4ee5-92d2-f1d24e62ee3b": {
     "id": "6dd8e8ed-febb-4ee5-92d2-f1d24e62ee3b",
@@ -864,9 +865,10 @@
     "threat_type": "relationship",
     "level": "medium",
     "deployment_time": "2025-05-08T21:39:43.408254",
-    "active": true,
+    "active": false,
     "effectiveness": 0.7335347698362416,
-    "description": "Protection for the bond with Jordan"
+    "description": "Protection for the bond with Jordan",
+    "expiration_time": "2025-05-12T11:59:53.543958"
   },
   "6ec7f144-98dd-4670-a9e6-7feb85df9cdb": {
     "id": "6ec7f144-98dd-4670-a9e6-7feb85df9cdb",
@@ -1611,9 +1613,10 @@
     "threat_type": "digital",
     "level": "medium",
     "deployment_time": "2025-05-12T11:22:12.373750",
-    "active": true,
+    "active": false,
     "effectiveness": 0.8270331820869004,
-    "description": "Medium level protection against digital threats"
+    "description": "Medium level protection against digital threats",
+    "expiration_time": "2025-05-12T11:59:53.544119"
   },
   "200a2f43-af84-4c66-baff-b037357f76e0": {
     "id": "200a2f43-af84-4c66-baff-b037357f76e0",
@@ -2109,6 +2112,26 @@
     "deployment_time": "2025-05-12T11:59:13.811551",
     "active": true,
     "effectiveness": 0.8297965513645269,
+    "description": "Protection for the bond with Jordan"
+  },
+  "9a597136-e0fc-4b92-9cab-1ff313ca934e": {
+    "id": "9a597136-e0fc-4b92-9cab-1ff313ca934e",
+    "name": "base_defense_shield",
+    "threat_type": "digital",
+    "level": "medium",
+    "deployment_time": "2025-05-12T11:59:53.911548",
+    "active": true,
+    "effectiveness": 0.8440166433532472,
+    "description": "Basic protection against digital threats"
+  },
+  "c3e67ff1-3834-457e-925a-43e563e5fc97": {
+    "id": "c3e67ff1-3834-457e-925a-43e563e5fc97",
+    "name": "relationship_guardian",
+    "threat_type": "relationship",
+    "level": "medium",
+    "deployment_time": "2025-05-12T11:59:53.918374",
+    "active": true,
+    "effectiveness": 0.70234615565637,
     "description": "Protection for the bond with Jordan"
   }
 }

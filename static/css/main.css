@@ -31,6 +31,7 @@ body {
 .app-container {
     display: flex;
     height: 100vh;
+    width: 100vw;
     position: fixed;
     top: 0;
     left: 0;
@@ -188,7 +189,7 @@ body {
 
 /* Main Content Area */
 .main-content {
-    flex-grow: 1;
+    flex: 1;
     overflow-y: auto;
     position: relative;
     margin-left: var(--sidebar-width);
@@ -196,6 +197,7 @@ body {
     transition: margin-left 0.2s ease, width 0.2s ease;
     display: flex;
     flex-direction: column;
+    padding: 0;
 }
 
 .page {
@@ -220,6 +222,7 @@ body {
     position: sticky;
     top: 0;
     z-index: 10;
+    width: 100%;
 }
 
 .page-header h2 {
@@ -234,11 +237,12 @@ body {
 
 /* Chat Page */
 .chat-container {
-    flex-grow: 1;
+    flex: 1;
     display: flex;
     flex-direction: column;
-    padding: 20px;
+    padding: 0 20px;
     overflow-y: auto;
+    width: 100%;
 }
 
 .chat-messages {
