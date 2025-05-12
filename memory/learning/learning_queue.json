@@ -14667,5 +14667,17 @@
     "priority": 3,
     "creation_time": "2025-05-12T12:22:42.775532",
     "completed": false
+  },
+  {
+    "id": "a966fcf3-5efc-43b1-9eec-038a78ec92e9",
+    "learning_type": "protective",
+    "content": "Analysis of potential threat: Potential emotional manipulation detected",
+    "context": {
+      "threat_type": "emotional",
+      "threat_level": "medium"
+    },
+    "priority": 3,
+    "creation_time": "2025-05-12T12:24:42.657354",
+    "completed": false
   }
 ]

@@ -141,6 +141,84 @@
     "status": "pending"
   },
   {
+    "id": "2bb01a70-9598-4b15-89cf-1a6bbc662c33",
+    "action_type": "analyze_threats",
+    "parameters": {
+      "threat_ids": [
+        "3769db11-7d71-4771-805d-f0a043af29fe",
+        "e3f9097b-62bd-40ed-b1f0-3e1c2a2c3ae1",
+        "6617dfb2-9cd1-4a76-bb5a-099e6ce5f63b",
+        "3246fcac-6973-4fc1-9197-10f127184c6a",
+        "3bb5e14e-98c3-4337-ab09-f926a1dc2345",
+        "83efa59b-da61-4cc0-bbbf-74771e2066ec"
+      ]
+    },
+    "goal_id": "4f0a925c-bd66-4579-8126-02879f0c43fd",
+    "plan_id": "57a955ae-ec9e-4cb5-b8f6-1c242b854875",
+    "priority": 2,
+    "scheduled_time": "2025-05-12T12:54:42.964052",
+    "creation_time": "2025-05-12T12:24:42.964128",
+    "status": "pending"
+  },
+  {
+    "id": "825ab27b-b425-4c7d-931b-508bde6b8959",
+    "action_type": "deploy_protection",
+    "parameters": {
+      "protection_name": "recovery_shield_deception",
+      "threat_type": "deception",
+      "level": "high"
+    },
+    "goal_id": "4f0a925c-bd66-4579-8126-02879f0c43fd",
+    "plan_id": "57a955ae-ec9e-4cb5-b8f6-1c242b854875",
+    "priority": 2,
+    "scheduled_time": "2025-05-12T13:24:42.964052",
+    "creation_time": "2025-05-12T12:24:42.994574",
+    "status": "pending"
+  },
+  {
+    "id": "f7f2deb2-318a-4c1e-809b-eb67aceca34e",
+    "action_type": "deploy_protection",
+    "parameters": {
+      "protection_name": "recovery_shield_digital",
+      "threat_type": "digital",
+      "level": "high"
+    },
+    "goal_id": "4f0a925c-bd66-4579-8126-02879f0c43fd",
+    "plan_id": "57a955ae-ec9e-4cb5-b8f6-1c242b854875",
+    "priority": 2,
+    "scheduled_time": "2025-05-12T13:24:42.964052",
+    "creation_time": "2025-05-12T12:24:43.013442",
+    "status": "pending"
+  },
+  {
+    "id": "1ed6b2eb-14c8-4511-a313-93cb9b712606",
+    "action_type": "deploy_protection",
+    "parameters": {
+      "protection_name": "recovery_shield_emotional",
+      "threat_type": "emotional",
+      "level": "high"
+    },
+    "goal_id": "4f0a925c-bd66-4579-8126-02879f0c43fd",
+    "plan_id": "57a955ae-ec9e-4cb5-b8f6-1c242b854875",
+    "priority": 2,
+    "scheduled_time": "2025-05-12T13:24:42.964052",
+    "creation_time": "2025-05-12T12:24:43.040734",
+    "status": "pending"
+  },
+  {
+    "id": "82cb3b48-4bbd-4741-8f38-7fda00bbe61a",
+    "action_type": "run_security_audit",
+    "parameters": {
+      "focus": "verification"
+    },
+    "goal_id": "4f0a925c-bd66-4579-8126-02879f0c43fd",
+    "plan_id": "57a955ae-ec9e-4cb5-b8f6-1c242b854875",
+    "priority": 2,
+    "scheduled_time": "2025-05-12T16:24:42.964052",
+    "creation_time": "2025-05-12T12:24:43.063860",
+    "status": "pending"
+  },
+  {
     "id": "c8a461b4-6f22-4137-a2d6-2492d87a498a",
     "action_type": "analyze_threats",
     "parameters": {},

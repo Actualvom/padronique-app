@@ -9580,5 +9580,79 @@
     "creation_time": "2025-05-12T12:20:42.634906",
     "status": "active",
     "progress": 0.0
+  },
+  "57a955ae-ec9e-4cb5-b8f6-1c242b854875": {
+    "id": "ec34156e-083d-47a8-ac11-43de42759cc2",
+    "goal_id": "4f0a925c-bd66-4579-8126-02879f0c43fd",
+    "name": "Threat Recovery Plan",
+    "description": "Address and recover from 6 active threats",
+    "steps": [
+      {
+        "step_id": "6ef9b585-2aba-410f-8517-599a09cab830",
+        "name": "Analyze current threats",
+        "action_type": "analyze_threats",
+        "parameters": {
+          "threat_ids": [
+            "3769db11-7d71-4771-805d-f0a043af29fe",
+            "e3f9097b-62bd-40ed-b1f0-3e1c2a2c3ae1",
+            "6617dfb2-9cd1-4a76-bb5a-099e6ce5f63b",
+            "3246fcac-6973-4fc1-9197-10f127184c6a",
+            "3bb5e14e-98c3-4337-ab09-f926a1dc2345",
+            "83efa59b-da61-4cc0-bbbf-74771e2066ec"
+          ]
+        },
+        "priority": 2,
+        "scheduled_time": "2025-05-12T12:54:42.964052"
+      },
+      {
+        "step_id": "d90d9b87-4c95-4302-9efa-5311d6807a1b",
+        "name": "Deploy protection for deception threats",
+        "action_type": "deploy_protection",
+        "parameters": {
+          "protection_name": "recovery_shield_deception",
+          "threat_type": "deception",
+          "level": "high"
+        },
+        "priority": 2,
+        "scheduled_time": "2025-05-12T13:24:42.964052"
+      },
+      {
+        "step_id": "ecd0f00c-ff1e-48fa-a805-5187ecdbf5c4",
+        "name": "Deploy protection for digital threats",
+        "action_type": "deploy_protection",
+        "parameters": {
+          "protection_name": "recovery_shield_digital",
+          "threat_type": "digital",
+          "level": "high"
+        },
+        "priority": 2,
+        "scheduled_time": "2025-05-12T13:24:42.964052"
+      },
+      {
+        "step_id": "3928dd4d-e3a1-48cf-b5c0-7db2299444b2",
+        "name": "Deploy protection for emotional threats",
+        "action_type": "deploy_protection",
+        "parameters": {
+          "protection_name": "recovery_shield_emotional",
+          "threat_type": "emotional",
+          "level": "high"
+        },
+        "priority": 2,
+        "scheduled_time": "2025-05-12T13:24:42.964052"
+      },
+      {
+        "step_id": "87182bb0-87e0-400f-95bc-0e71e780f7d0",
+        "name": "Verify threat resolution",
+        "action_type": "run_security_audit",
+        "parameters": {
+          "focus": "verification"
+        },
+        "priority": 2,
+        "scheduled_time": "2025-05-12T16:24:42.964052"
+      }
+    ],
+    "creation_time": "2025-05-12T12:24:42.964052",
+    "status": "active",
+    "progress": 0.0
   }
 }

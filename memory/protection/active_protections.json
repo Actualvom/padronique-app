@@ -114,9 +114,10 @@
     "threat_type": "digital",
     "level": "medium",
     "deployment_time": "2025-05-08T20:31:33.185472",
-    "active": true,
+    "active": false,
     "effectiveness": 0.9131603414868047,
-    "description": "Basic protection against digital threats"
+    "description": "Basic protection against digital threats",
+    "expiration_time": "2025-05-12T12:24:42.688770"
   },
   "3a984a22-efbf-40ad-8282-97ab0fbb3cf8": {
     "id": "3a984a22-efbf-40ad-8282-97ab0fbb3cf8",
@@ -1322,9 +1323,10 @@
     "threat_type": "relationship",
     "level": "medium",
     "deployment_time": "2025-05-08T22:33:56.700300",
-    "active": true,
+    "active": false,
     "effectiveness": 0.9451177428685631,
-    "description": "Protection for the bond with Jordan"
+    "description": "Protection for the bond with Jordan",
+    "expiration_time": "2025-05-12T12:24:42.688904"
   },
   "745280d2-548a-4fae-adc1-9ae084b12024": {
     "id": "745280d2-548a-4fae-adc1-9ae084b12024",
@@ -1352,9 +1354,10 @@
     "threat_type": "digital",
     "level": "high",
     "deployment_time": "2025-05-12T11:22:08.544230",
-    "active": true,
+    "active": false,
     "effectiveness": 0.7020036390435814,
-    "description": "High level protection against digital threats"
+    "description": "High level protection against digital threats",
+    "expiration_time": "2025-05-12T12:24:42.689021"
   },
   "4bdc767f-5f01-4f06-8c52-6f2b2e435411": {
     "id": "4bdc767f-5f01-4f06-8c52-6f2b2e435411",
@@ -1818,9 +1821,10 @@
     "threat_type": "digital",
     "level": "medium",
     "deployment_time": "2025-05-12T11:22:14.937896",
-    "active": true,
+    "active": false,
     "effectiveness": 0.838697468414406,
-    "description": "Medium level protection against digital threats"
+    "description": "Medium level protection against digital threats",
+    "expiration_time": "2025-05-12T12:24:42.689166"
   },
   "96d595f3-b48f-4902-8a7f-8b52d65e3f62": {
     "id": "96d595f3-b48f-4902-8a7f-8b52d65e3f62",
@@ -2070,9 +2074,10 @@
     "threat_type": "digital",
     "level": "medium",
     "deployment_time": "2025-05-12T11:27:21.543886",
-    "active": true,
+    "active": false,
     "effectiveness": 0.8229857701613066,
-    "description": "Basic protection against digital threats"
+    "description": "Basic protection against digital threats",
+    "expiration_time": "2025-05-12T12:24:42.689375"
   },
   "2dc7ade4-3c8c-468c-a9ec-50f8ba4e9930": {
     "id": "2dc7ade4-3c8c-468c-a9ec-50f8ba4e9930",
