@@ -871,9 +871,9 @@
     "creation_time": "2025-05-08T21:25:49.675815",
     "expiration_time": null,
     "status": "archived",
-    "progress": 0.75,
-    "last_updated": "2025-05-12T11:22:15.064025",
-    "completion_time": "2025-05-12T11:22:14.545915"
+    "progress": 1.0,
+    "last_updated": "2025-05-12T12:22:42.855769",
+    "completion_time": "2025-05-12T12:22:42.855802"
   },
   "d6843f09-8235-4951-9f83-3377fa99338a": {
     "id": "d6843f09-8235-4951-9f83-3377fa99338a",
@@ -907,9 +907,9 @@
     "creation_time": "2025-05-08T21:26:43.254610",
     "expiration_time": null,
     "status": "archived",
-    "progress": 0.75,
-    "last_updated": "2025-05-12T11:22:15.064253",
-    "completion_time": "2025-05-12T11:22:14.430633"
+    "progress": 1.0,
+    "last_updated": "2025-05-12T12:22:42.873015",
+    "completion_time": "2025-05-12T12:22:42.873046"
   },
   "08240c61-aa62-436d-ad63-eec274ec1d0b": {
     "id": "08240c61-aa62-436d-ad63-eec274ec1d0b",
@@ -1244,8 +1244,8 @@
     "expiration_time": null,
     "status": "archived",
     "progress": 1.0,
-    "last_updated": "2025-05-12T11:22:25.160127",
-    "completion_time": "2025-05-12T11:22:25.160144"
+    "last_updated": "2025-05-12T12:22:42.882868",
+    "completion_time": "2025-05-12T12:22:42.882958"
   },
   "b0ec133a-b524-44c3-91f6-e8aef689ce7e": {
     "id": "b0ec133a-b524-44c3-91f6-e8aef689ce7e",
@@ -2168,8 +2168,8 @@
     "expiration_time": "2025-05-15T11:22:07.185243",
     "status": "archived",
     "progress": 1.0,
-    "last_updated": "2025-05-12T11:52:21.318599",
-    "completion_time": "2025-05-12T11:52:21.318620"
+    "last_updated": "2025-05-12T12:22:42.814131",
+    "completion_time": "2025-05-12T12:22:42.814166"
   },
   "dcafea03-a95d-4b04-b5a7-e31a0aa17d8e": {
     "id": "dcafea03-a95d-4b04-b5a7-e31a0aa17d8e",
@@ -2178,9 +2178,10 @@
     "priority": 2,
     "creation_time": "2025-05-12T11:22:07.216747",
     "expiration_time": null,
-    "status": "active",
-    "progress": 0.0,
-    "last_updated": "2025-05-12T11:22:07.216754"
+    "status": "archived",
+    "progress": 1.0,
+    "last_updated": "2025-05-12T12:22:42.968597",
+    "completion_time": "2025-05-12T12:22:42.968619"
   },
   "e01f0d5a-4062-4cd6-8443-28122485fce9": {
     "id": "e01f0d5a-4062-4cd6-8443-28122485fce9",
@@ -2288,9 +2289,10 @@
     "priority": 2,
     "creation_time": "2025-05-12T11:53:21.338474",
     "expiration_time": "2025-05-15T11:53:21.338424",
-    "status": "active",
-    "progress": 0.0,
-    "last_updated": "2025-05-12T11:53:21.338477"
+    "status": "completed",
+    "progress": 1.0,
+    "last_updated": "2025-05-12T12:23:42.914077",
+    "completion_time": "2025-05-12T12:23:42.914097"
   },
   "b3e4813d-4c00-4f17-a609-a6da35631480": {
     "id": "b3e4813d-4c00-4f17-a609-a6da35631480",

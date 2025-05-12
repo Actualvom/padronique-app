@@ -911,3 +911,12 @@ html, body {
     font-weight: bold;
     padding-top: 0.5rem;
 }
+
+/* Viewport Height Fixes */
+html, body { height: 100% !important; margin: 0 !important; padding: 0 !important; }
+.app-container { display: flex !important; height: 100vh !important; }
+.main-content { flex: 1 !important; display: flex !important; flex-direction: column !important; }
+.page { flex: 1 !important; display: flex !important; flex-direction: column !important; }
+.chat-container { flex: 1 !important; display: flex !important; flex-direction: column !important; }
+.chat-messages { flex: 1 !important; overflow-y: auto !important; }
+.chat-input-container { flex-shrink: 0 !important; }
