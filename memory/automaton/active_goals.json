@@ -2289,7 +2289,7 @@
     "priority": 2,
     "creation_time": "2025-05-12T11:53:21.338474",
     "expiration_time": "2025-05-15T11:53:21.338424",
-    "status": "archived",
+    "status": "completed",
     "progress": 1.0,
     "last_updated": "2025-05-12T12:23:42.914077",
     "completion_time": "2025-05-12T12:23:42.914097"
@@ -2392,16 +2392,5 @@
     "status": "active",
     "progress": 0.0,
     "last_updated": "2025-05-12T12:19:42.666826"
-  },
-  "4f0a925c-bd66-4579-8126-02879f0c43fd": {
-    "id": "4f0a925c-bd66-4579-8126-02879f0c43fd",
-    "type": "recovery",
-    "description": "Recover from detected threats and vulnerabilities",
-    "priority": 2,
-    "creation_time": "2025-05-12T12:24:42.932004",
-    "expiration_time": "2025-05-15T12:24:42.931967",
-    "status": "active",
-    "progress": 0.0,
-    "last_updated": "2025-05-12T12:24:42.932006"
   }
 }

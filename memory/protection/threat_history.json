@@ -115,18 +115,5 @@
       "location": "network",
       "details": "Unusual network activity detected"
     }
-  },
-  {
-    "id": "83efa59b-da61-4cc0-bbbf-74771e2066ec",
-    "type": "emotional",
-    "level": 3,
-    "description": "Potential emotional manipulation detected",
-    "detection_time": "2025-05-12T12:24:42.657308",
-    "confidence": 0.5573101438257736,
-    "neutralized": false,
-    "source": {
-      "location": "conversation",
-      "details": "Pattern of subtle emotional manipulation detected"
-    }
   }
 ]
