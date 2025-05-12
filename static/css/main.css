@@ -29,9 +29,10 @@ body {
 
 /* App Container */
 .app-container {
-    display: flex;
+    display: grid;
+    grid-template-columns: var(--sidebar-width) 1fr;
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     position: fixed;
     top: 0;
     left: 0;
@@ -42,7 +43,6 @@ body {
 
 /* Left Sidebar */
 .sidebar {
-    width: var(--sidebar-width);
     min-width: 180px;
     max-width: 400px;
     background-color: var(--bg-darker);
@@ -50,11 +50,9 @@ body {
     display: flex;
     flex-direction: column;
     overflow-y: auto;
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
     z-index: 100;
+    grid-column: 1;
+    position: relative;
 }
 
 .sidebar-resizer {
@@ -189,15 +187,13 @@ body {
 
 /* Main Content Area */
 .main-content {
-    flex: 1;
     overflow-y: auto;
     position: relative;
-    margin-left: var(--sidebar-width);
-    width: calc(100% - var(--sidebar-width));
-    transition: margin-left 0.2s ease, width 0.2s ease;
     display: flex;
     flex-direction: column;
     padding: 0;
+    grid-column: 2;
+    transition: all 0.2s ease;
 }
 
 .page {
@@ -209,6 +205,8 @@ body {
 
 .page.active {
     display: flex;
+    width: 100%;
+    height: 100%;
 }
 
 .page-header {

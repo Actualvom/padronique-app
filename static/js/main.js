@@ -842,10 +842,9 @@ function initResizableElements() {
                 if (width >= 180 && width <= 400) {
                     sidebar.style.width = `${width}px`;
                     
-                    // Update main content margin
+                    // Update CSS variable for the grid layout
                     document.documentElement.style.setProperty('--sidebar-width', `${width}px`);
-                    mainContent.style.marginLeft = `${width}px`;
-                    mainContent.style.width = `calc(100% - ${width}px)`;
+                    document.querySelector('.app-container').style.gridTemplateColumns = `${width}px 1fr`;
                 }
             }
         }
