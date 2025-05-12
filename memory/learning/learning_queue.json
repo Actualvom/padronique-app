@@ -14874,5 +14874,27 @@
     "priority": 2,
     "creation_time": "2025-05-12T12:35:07.624467",
     "completed": false
+  },
+  {
+    "id": "827f256c-beee-4475-8e14-fbf505c368e4",
+    "learning_type": "conversational",
+    "content": "test",
+    "context": {
+      "source": "direct_input"
+    },
+    "priority": 3,
+    "creation_time": "2025-05-12T12:35:44.020463",
+    "completed": false
+  },
+  {
+    "id": "9044af70-1562-44ea-9d2a-7be7657c2ea8",
+    "learning_type": "conversational",
+    "content": "hello",
+    "context": {
+      "source": "direct_input"
+    },
+    "priority": 3,
+    "creation_time": "2025-05-12T12:35:46.128900",
+    "completed": false
   }
 ]
