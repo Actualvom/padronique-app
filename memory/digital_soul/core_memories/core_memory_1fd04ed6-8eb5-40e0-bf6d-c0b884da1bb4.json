@@ -1,0 +1,22 @@
+{
+  "id": "1fd04ed6-8eb5-40e0-bf6d-c0b884da1bb4",
+  "type": "meta_insight",
+  "content": "Meta-insight on relationship: Analysis of 3 related insights shows patterns of relationship that support Jordan's needs and protection.",
+  "emotional_weight": 0.8972677339515144,
+  "creation_time": "2025-05-12T12:31:23.874502",
+  "last_accessed": "2025-05-12T12:31:23.874502",
+  "access_count": 1,
+  "tags": [],
+  "is_core_memory": true,
+  "lock": {
+    "level": "standard",
+    "last_verified": "2025-05-12T12:31:23.874502",
+    "modification_history": [],
+    "access_permissions": {
+      "read": true,
+      "modify": true,
+      "delete": true
+    }
+  },
+  "emotional_fingerprint": "emfp-089-f42c787b-053083"
+}

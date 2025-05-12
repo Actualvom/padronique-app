@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Padronique AI Companion</title>
+    <link rel="stylesheet" href="https://cdn.replit.com/agent/bootstrap-agent-dark-theme.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="/static/css/main.css">
+    <link rel="stylesheet" href="/static/css/confirmation-dialogs.css">
+    <link rel="stylesheet" href="/static/css/voice-interface.css">
+    <link rel="stylesheet" href="/static/css/cyberpunk-theme.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Left Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <h1 class="logo">Padronique</h1>
+                <div class="tagline">Your AI Companion</div>
+            </div>
+            <!-- Resizer handle -->
+            <div class="sidebar-resizer"></div>
+            
+            <!-- Navigation -->
+            <nav class="sidebar-nav">
+                <div class="nav-item active" data-page="chat">
+                    <i class="fas fa-comment-alt"></i>
+                    <span>Chat</span>
+                </div>
+                <div class="nav-item" data-page="memory">
+                    <i class="fas fa-brain"></i>
+                    <span>Memory</span>
+                </div>
+                <div class="nav-item" data-page="dashboard">
+                    <i class="fas fa-chart-network"></i>
+                    <span>Dashboard</span>
+                </div>
+            </nav>
+            
+            <!-- Settings Item -->
+            <div class="settings-item">
+                <div class="nav-item" data-page="settings">
+                    <i class="fas fa-cog"></i>
+                    <span>Settings</span>
+                </div>
+            </div>
+            
+            <!-- User Section -->
+            <div class="user-section">
+                <div class="user-info">
+                    <div class="user-avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="user-name">Jordan</div>
+                </div>
+                <div class="user-status">
+                    <span class="status-indicator online"></span>
+                    <span class="status-text">Online</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Main Content Area -->
+        <div class="main-content">
+            <!-- Chat Page -->
+            <div class="page active" id="chat-page">
+                <div class="page-header">
+                    <h2>Chat</h2>
+                    
+                    <!-- Action buttons moved to dropdown menu -->
+                    <div class="header-actions">
+                        <div class="dropdown">
+                            <button class="btn btn-outline-secondary" type="button" id="chatActionsDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fas fa-ellipsis-v"></i>
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="chatActionsDropdown">
+                                <!-- Safe actions -->
+                                <li><h6 class="dropdown-header">Quick Actions</h6></li>
+                                <li>
+                                    <button class="dropdown-item safe-action" id="exportMemoryBtn">
+                                        <i class="fas fa-file-export"></i> Export Memory Archive
+                                    </button>
+                                </li>
+                                <li><hr class="dropdown-divider"></li>
+                                
+                                <!-- Destructive actions with warning label -->
+                                <li><h6 class="dropdown-header text-danger">Danger Zone</h6></li>
+                                <li>
+                                    <button class="dropdown-item text-danger" id="clearChatBtn">
+                                        <i class="fas fa-trash-alt"></i> Clear Chat History
+                                    </button>
+                                </li>
+                                <li>
+                                    <button class="dropdown-item text-danger" id="resetSystemBtn">
+                                        <i class="fas fa-sync-alt"></i> Reset System
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="chat-container">
+                    <div class="chat-messages" id="chat-messages">
+                        <!-- Welcome message -->
+                        <div class="message system">
+                            <div class="message-content">
+                                <p>Welcome to Padronique AI Companion. How can I assist you today?</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Messages will be added here dynamically -->
+                    </div>
+                    
+                    <div class="chat-input-container">
+                        <!-- Input resizer handle -->
+                        <div class="input-resizer"></div>
+                        <div class="input-group">
+                            <button class="btn btn-outline-secondary" type="button" id="attachBtn" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fas fa-paperclip"></i>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><button class="dropdown-item" id="fileUploadBtn"><i class="fas fa-file"></i> Upload File</button></li>
+                                <li><button class="dropdown-item" id="cameraBtn"><i class="fas fa-camera"></i> Camera</button></li>
+                                <li><button class="dropdown-item" id="webSearchBtn"><i class="fas fa-search"></i> Web Search</button></li>
+                            </ul>
+                            <input type="file" id="fileInput" style="display: none;" accept="image/*,.pdf,.doc,.docx,.txt">
+                            <input type="text" class="form-control" id="messageInput" placeholder="Type your message...">
+                            <button class="btn btn-outline-secondary" type="button" id="voiceBtn">
+                                <i class="fas fa-microphone"></i>
+                            </button>
+                            <button class="btn btn-primary" type="button" id="sendBtn">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                        <!-- Voice Recording Container -->
+                        <div class="voice-recording-container" style="display: none;">
+                            <div class="voice-animation">
+                                <div class="voice-circle"></div>
+                                <div class="voice-pulse-ring"></div>
+                            </div>
+                            <div class="voice-status">Recording...</div>
+                            <div class="voice-actions">
+                                <button class="btn btn-danger btn-sm" id="stopRecordingBtn">
+                                    <i class="fas fa-stop"></i> Stop
+                                </button>
+                                <button class="btn btn-outline-secondary btn-sm" id="cancelRecordingBtn">
+                                    <i class="fas fa-times"></i> Cancel
+                                </button>
+                            </div>
+                            <div class="voice-preview" id="voicePreview" style="display: none;">
+                                <div class="preview-text"></div>
+                                <div class="preview-actions">
+                                    <button class="btn btn-sm btn-primary" id="sendVoiceBtn">Send</button>
+                                    <button class="btn btn-sm btn-outline-secondary" id="editVoiceBtn">Edit</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Web Search Container -->
+                        <div class="web-search-container" style="display: none;" id="webSearchContainer">
+                            <div class="web-search-header">
+                                <h5>Web Search</h5>
+                                <button class="btn btn-sm btn-close" id="closeWebSearchBtn"></button>
+                            </div>
+                            <div class="web-search-input-group">
+                                <input type="text" class="form-control" id="webSearchInput" placeholder="Search the web...">
+                                <button class="btn btn-primary" id="executeWebSearchBtn">
+                                    <i class="fas fa-search"></i>
+                                </button>
+                            </div>
+                            <div class="web-search-results" id="webSearchResults">
+                                <div class="text-center p-3">
+                                    <i class="fas fa-search fa-2x mb-3"></i>
+                                    <p>Enter a search term to find information on the web</p>
+                                </div>
+                            </div>
+                            <div class="mt-2 d-flex justify-content-end">
+                                <button class="btn btn-sm btn-primary" id="useWebSearchResultsBtn">
+                                    <i class="fas fa-paper-plane me-1"></i> Use Results
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <!-- Camera Container -->
+                        <div class="camera-container" style="display: none;" id="cameraContainer">
+                            <div class="d-flex justify-content-between w-100 mb-3">
+                                <h5>Camera</h5>
+                                <button class="btn btn-sm btn-close" id="closeCameraBtn"></button>
+                            </div>
+                            <div class="camera-preview">
+                                <video id="cameraPreview" autoplay playsinline></video>
+                            </div>
+                            <div class="camera-buttons">
+                                <button class="btn btn-primary" id="takePictureBtn">
+                                    <i class="fas fa-camera me-1"></i> Take Photo
+                                </button>
+                                <button class="btn btn-outline-secondary" id="switchCameraBtn">
+                                    <i class="fas fa-sync me-1"></i> Switch Camera
+                                </button>
+                            </div>
+                            <div id="capturedImageContainer" style="display: none;">
+                                <img id="capturedImage" class="captured-image">
+                                <div class="d-flex justify-content-end mt-2">
+                                    <button class="btn btn-sm btn-outline-secondary me-2" id="retakePictureBtn">
+                                        <i class="fas fa-redo me-1"></i> Retake
+                                    </button>
+                                    <button class="btn btn-sm btn-primary" id="usePictureBtn">
+                                        <i class="fas fa-check me-1"></i> Use Photo
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Memory Page -->
+            <div class="page" id="memory-page">
+                <div class="page-header">
+                    <h2>Memory</h2>
+                    <div class="header-actions">
+                        <button class="btn btn-outline-secondary" id="refreshMemoryBtn">
+                            <i class="fas fa-sync"></i>
+                        </button>
+                        <div class="dropdown">
+                            <button class="btn btn-outline-secondary" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fas fa-filter"></i>
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li><h6 class="dropdown-header">Filter by</h6></li>
+                                <li><button class="dropdown-item" data-filter="all">All Memories</button></li>
+                                <li><button class="dropdown-item" data-filter="important">Important</button></li>
+                                <li><button class="dropdown-item" data-filter="conversation">Conversations</button></li>
+                                <li><button class="dropdown-item" data-filter="fact">Facts</button></li>
+                                <li><button class="dropdown-item" data-filter="preference">Preferences</button></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="memory-search">
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="memorySearchInput" placeholder="Search memories...">
+                        <button class="btn btn-primary" type="button" id="memorySearchBtn">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="memory-container">
+                    <div class="memory-grid" id="memory-grid">
+                        <!-- Memory items will be added here dynamically -->
+                        <div class="memory-placeholder">
+                            <i class="fas fa-brain"></i>
+                            <p>No memories to display</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Dashboard Page -->
+            <div class="page" id="dashboard-page">
+                <div class="page-header">
+                    <h2>System Dashboard</h2>
+                    <div class="header-actions">
+                        <button class="btn btn-outline-secondary" id="refreshDashboardBtn">
+                            <i class="fas fa-sync"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="dashboard-container">
+                    <!-- System Status Overview -->
+                    <div class="system-status-container">
+                        <div class="section-header">
+                            <h3>System Status</h3>
+                            <div class="system-status-indicator online">
+                                <span class="status-text">Online</span>
+                            </div>
+                        </div>
+                        
+                        <div class="info-cards">
+                            <div class="info-card">
+                                <div class="info-card-title">Uptime</div>
+                                <div class="info-card-value" id="system-uptime">--:--:--</div>
+                            </div>
+                            <div class="info-card">
+                                <div class="info-card-title">Version</div>
+                                <div class="info-card-value" id="system-version">-.-.-</div>
+                            </div>
+                            <div class="info-card">
+                                <div class="info-card-title">Total Memories</div>
+                                <div class="info-card-value" id="memory-count">--</div>
+                            </div>
+                            <div class="info-card">
+                                <div class="info-card-title">Active Brains</div>
+                                <div class="info-card-value" id="active-brains">--</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Brain Modules Overview -->
+                    <div class="brain-modules-container">
+                        <div class="section-header">
+                            <h3>Brain Modules</h3>
+                        </div>
+                        
+                        <div class="brain-modules-grid" id="brain-modules-grid">
+                            <!-- Brain modules will be added here dynamically -->
+                        </div>
+                    </div>
+                    
+                    <!-- Recent Activity -->
+                    <div class="recent-activity-container">
+                        <div class="section-header">
+                            <h3>Recent Activity</h3>
+                        </div>
+                        
+                        <div class="activity-list" id="activity-list">
+                            <!-- Activity items will be added here dynamically -->
+                            <div class="activity-placeholder">
+                                <i class="fas fa-clock"></i>
+                                <p>No recent activity to display</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Settings Page -->
+            <div class="page" id="settings-page">
+                <div class="page-header">
+                    <h2>Settings</h2>
+                </div>
+                
+                <div class="settings-container">
+                    <!-- Personalization -->
+                    <div class="settings-section">
+                        <h3 class="settings-section-title">Personalization</h3>
+                        
+                        <div class="settings-item">
+                            <div class="settings-item-label">User Name</div>
+                            <div class="settings-item-input">
+                                <input type="text" class="form-control" id="userNameInput" placeholder="Your Name">
+                            </div>
+                        </div>
+                        
+                        <div class="settings-item">
+                            <div class="settings-item-label">Theme</div>
+                            <div class="settings-item-select">
+                                <select class="form-select" id="themeSelect">
+                                    <option value="dark">Dark (Default)</option>
+                                    <option value="light">Light</option>
+                                    <option value="system">System Preference</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Privacy -->
+                    <div class="settings-section">
+                        <h3 class="settings-section-title">Privacy</h3>
+                        
+                        <div class="settings-item">
+                            <div class="settings-item-label">Data Collection</div>
+                            <div class="settings-item-toggle">
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" id="dataCollectionToggle" checked>
+                                    <label class="form-check-label" for="dataCollectionToggle">Allow data collection for improved responses</label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="settings-item">
+                            <div class="settings-item-label">Memory Retention</div>
+                            <div class="settings-item-info">
+                                <div class="form-text">
+                                    <i class="fas fa-infinity"></i> Infinite - All memories are preserved indefinitely
+                                </div>
+                                <div class="form-text text-info">
+                                    <i class="fas fa-shield-alt"></i> Automatic backup system is enabled
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Brain Module Settings -->
+                    <div class="settings-section">
+                        <h3 class="settings-section-title">Brain Modules</h3>
+                        
+                        <div class="module-settings-list" id="moduleSettingsList">
+                            <!-- Module settings will be added here dynamically -->
+                        </div>
+                    </div>
+                    
+                    <!-- Advanced Options -->
+                    <div class="settings-section">
+                        <h3 class="settings-section-title">Advanced</h3>
+                        
+                        <div class="settings-item">
+                            <div class="settings-item-label">External Connections</div>
+                            <div class="settings-item-toggle">
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" id="externalConnectionsToggle" checked>
+                                    <label class="form-check-label" for="externalConnectionsToggle">Allow external API connections</label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="settings-item">
+                            <div class="settings-item-label">Debug Mode</div>
+                            <div class="settings-item-toggle">
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" id="debugModeToggle">
+                                    <label class="form-check-label" for="debugModeToggle">Enable debug mode</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Danger Zone (moved to the bottom and visually separated) -->
+                    <div class="settings-section danger-zone">
+                        <h3 class="settings-section-title text-danger">Danger Zone</h3>
+                        <div class="alert alert-danger">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            <span>These actions are irreversible and will permanently delete data.</span>
+                        </div>
+                        
+                        <div class="settings-danger-item">
+                            <div class="settings-danger-info">
+                                <div class="settings-danger-title">Clear Chat History</div>
+                                <div class="settings-danger-description">This will permanently delete all your chat messages.</div>
+                            </div>
+                            <button class="btn btn-outline-danger" id="clearChatSettingsBtn">Clear History</button>
+                        </div>
+                        
+                        <div class="settings-danger-item">
+                            <div class="settings-danger-info">
+                                <div class="settings-danger-title">Export Memory Archive</div>
+                                <div class="settings-danger-description">Download a backup of all system memories and chat history.</div>
+                            </div>
+                            <button class="btn btn-outline-info" id="exportMemorySettingsBtn">Export</button>
+                        </div>
+                        
+                        <div class="settings-danger-item">
+                            <div class="settings-danger-info">
+                                <div class="settings-danger-title">Reset System</div>
+                                <div class="settings-danger-description">This will reset Padronique to its default state, deleting all memories, preferences, and history.</div>
+                            </div>
+                            <button class="btn btn-outline-danger" id="resetSystemSettingsBtn">Reset System</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/static/js/api-client.js"></script>
+    <script src="/static/js/confirmation-dialogs.js"></script>
+    <script src="/static/js/voice-interface.js"></script>
+    <script src="/static/js/web-search.js"></script>
+    <script src="/static/js/camera-interface.js"></script>
+    <script src="/static/js/file-handler.js"></script>
+    <script src="/static/js/main.js"></script>
+    
+    <script>
+        // Initialize all custom modules
+        document.addEventListener('DOMContentLoaded', function() {
+            // These will be initialized when main.js calls the relevant functions
+            window.voiceInterface = new VoiceInterface();
+            window.webSearch = new WebSearch();
+            window.cameraInterface = new CameraInterface();
+            window.fileHandler = new FileHandler();
+            
+            // Expose sendMessage function globally for other modules
+            window.sendMessage = function(message) {
+                // Get elements
+                const messageInput = document.getElementById('messageInput');
+                const sendBtn = document.getElementById('sendBtn');
+                
+                // Set value and trigger send
+                messageInput.value = message;
+                sendBtn.click();
+            };
+            
+            // Add user message to chat (for file uploads, images, etc.)
+            window.addMessageToChat = function(sender, text, mediaUrl, messageId) {
+                const chatMessages = document.getElementById('chat-messages');
+                
+                const messageElement = document.createElement('div');
+                messageElement.className = `message ${sender}`;
+                
+                if (messageId) {
+                    messageElement.setAttribute('data-message-id', messageId);
+                }
+                
+                const contentElement = document.createElement('div');
+                contentElement.className = 'message-content';
+                
+                if (text) {
+                    const textElement = document.createElement('p');
+                    textElement.textContent = text;
+                    contentElement.appendChild(textElement);
+                }
+                
+                if (mediaUrl) {
+                    // If it's an image
+                    if (mediaUrl.match(/\.(jpeg|jpg|gif|png|webp)$/) || mediaUrl.startsWith('data:image')) {
+                        const imageElement = document.createElement('img');
+                        imageElement.src = mediaUrl;
+                        imageElement.className = 'message-image';
+                        imageElement.alt = 'Uploaded image';
+                        contentElement.appendChild(imageElement);
+                    }
+                }
+                
+                messageElement.appendChild(contentElement);
+                chatMessages.appendChild(messageElement);
+                
+                // Scroll to bottom
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+            };
+        });
+    </script>
+</body>
+</html>

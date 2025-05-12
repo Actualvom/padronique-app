@@ -1,24 +1,5 @@
 [
   {
-    "id": "0d4d8c27-1ea0-4f2c-b7a5-ef63be0ea7ce",
-    "action_type": "run_security_audit",
-    "parameters": {},
-    "goal_id": "d273db95-4a44-4562-adf3-fe7bc27c85df",
-    "plan_id": "2f7df8b6-64ee-4ca4-a67b-6ef93bb85ffa",
-    "priority": 3,
-    "scheduled_time": "2025-05-11T21:34:04.594621",
-    "creation_time": "2025-05-08T21:34:04.634025",
-    "status": "completed",
-    "start_time": "2025-05-12T11:22:14.922407",
-    "result": {
-      "success": true,
-      "audit_score": 0.8467074190024548,
-      "vulnerabilities_found": 1,
-      "high_severity_count": 0
-    },
-    "completion_time": "2025-05-12T11:22:25.099716"
-  },
-  {
     "id": "792f496f-1184-4ffc-b7f0-02c2fa0584be",
     "action_type": "identify_preferences",
     "parameters": {},
@@ -2110,5 +2091,24 @@
       "threats_needing_attention": 4
     },
     "completion_time": "2025-05-12T12:23:42.914028"
+  },
+  {
+    "id": "ca2274da-8057-4fe4-af8b-be984516d56f",
+    "action_type": "run_security_audit",
+    "parameters": {},
+    "goal_id": "4f64a9cf-e7be-4015-b9b5-bd1505a6728c",
+    "plan_id": "90cbcc0e-ee71-4265-bb6d-b5147a6c60da",
+    "priority": 2,
+    "scheduled_time": "2025-05-12T12:28:21.455715",
+    "creation_time": "2025-05-12T11:28:21.455764",
+    "status": "completed",
+    "start_time": "2025-05-12T12:29:09.703264",
+    "result": {
+      "success": true,
+      "audit_score": 0.7869451962064885,
+      "vulnerabilities_found": 1,
+      "high_severity_count": 0
+    },
+    "completion_time": "2025-05-12T12:29:09.774392"
   }
 ]

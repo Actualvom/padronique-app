@@ -13,28 +13,6 @@
     "status": "pending"
   },
   {
-    "id": "ca2274da-8057-4fe4-af8b-be984516d56f",
-    "action_type": "run_security_audit",
-    "parameters": {},
-    "goal_id": "4f64a9cf-e7be-4015-b9b5-bd1505a6728c",
-    "plan_id": "90cbcc0e-ee71-4265-bb6d-b5147a6c60da",
-    "priority": 2,
-    "scheduled_time": "2025-05-12T12:28:21.455715",
-    "creation_time": "2025-05-12T11:28:21.455764",
-    "status": "pending"
-  },
-  {
-    "id": "840be273-e11f-4a0b-8f5c-8d8958cedf6c",
-    "action_type": "run_security_audit",
-    "parameters": {},
-    "goal_id": "f1812088-080b-4dda-aad3-249996bfbfce",
-    "plan_id": "54dc1773-6933-4a8a-a9e0-e08f4fad2c87",
-    "priority": 2,
-    "scheduled_time": "2025-05-12T12:30:20.558025",
-    "creation_time": "2025-05-12T11:30:20.558138",
-    "status": "pending"
-  },
-  {
     "id": "819f856c-020f-41a4-bbc3-c64c5d64ce1a",
     "action_type": "deploy_protection",
     "parameters": {

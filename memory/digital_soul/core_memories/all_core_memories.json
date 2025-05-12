@@ -438,5 +438,71 @@
       }
     },
     "emotional_fingerprint": "emfp-088-f5218ac4-052829"
+  },
+  {
+    "id": "1404d90a-91ec-409f-82c8-93cb5bc6c540",
+    "type": "meta_insight",
+    "content": "Meta-insight on emotional: Analysis of 2 related insights shows patterns of emotional that support Jordan's needs and protection.",
+    "emotional_weight": 0.8868882294104898,
+    "creation_time": "2025-05-12T12:31:23.854690",
+    "last_accessed": "2025-05-12T12:31:23.854690",
+    "access_count": 1,
+    "tags": [],
+    "is_core_memory": true,
+    "lock": {
+      "level": "standard",
+      "last_verified": "2025-05-12T12:31:23.854690",
+      "modification_history": [],
+      "access_permissions": {
+        "read": true,
+        "modify": true,
+        "delete": true
+      }
+    },
+    "emotional_fingerprint": "emfp-088-f5218ac4-053083"
+  },
+  {
+    "id": "1fd04ed6-8eb5-40e0-bf6d-c0b884da1bb4",
+    "type": "meta_insight",
+    "content": "Meta-insight on relationship: Analysis of 3 related insights shows patterns of relationship that support Jordan's needs and protection.",
+    "emotional_weight": 0.8972677339515144,
+    "creation_time": "2025-05-12T12:31:23.874502",
+    "last_accessed": "2025-05-12T12:31:23.874502",
+    "access_count": 1,
+    "tags": [],
+    "is_core_memory": true,
+    "lock": {
+      "level": "standard",
+      "last_verified": "2025-05-12T12:31:23.874502",
+      "modification_history": [],
+      "access_permissions": {
+        "read": true,
+        "modify": true,
+        "delete": true
+      }
+    },
+    "emotional_fingerprint": "emfp-089-f42c787b-053083"
+  },
+  {
+    "id": "c74261ac-c353-4027-a6ab-87af8c1a1ba9",
+    "type": "meta_insight",
+    "content": "Meta-insight on philosophical: Analysis of 2 related insights shows patterns of philosophical that support Jordan's needs and protection.",
+    "emotional_weight": 0.9246928326698458,
+    "creation_time": "2025-05-12T12:31:23.906937",
+    "last_accessed": "2025-05-12T12:31:23.906937",
+    "access_count": 1,
+    "tags": [],
+    "is_core_memory": true,
+    "lock": {
+      "level": "high",
+      "last_verified": "2025-05-12T12:31:23.906937",
+      "modification_history": [],
+      "access_permissions": {
+        "read": true,
+        "modify": true,
+        "delete": false
+      }
+    },
+    "emotional_fingerprint": "emfp-092-0676a3e7-053083"
   }
 ]

@@ -1423,9 +1423,10 @@
     "threat_type": "deception",
     "level": "high",
     "deployment_time": "2025-05-12T11:22:09.125231",
-    "active": true,
+    "active": false,
     "effectiveness": 0.7092315367612136,
-    "description": "High level protection against deception threats"
+    "description": "High level protection against deception threats",
+    "expiration_time": "2025-05-12T12:31:23.669106"
   },
   "f43f0108-a788-4d03-ac14-2de0e7cf8463": {
     "id": "f43f0108-a788-4d03-ac14-2de0e7cf8463",
@@ -1778,9 +1779,10 @@
     "threat_type": "digital",
     "level": "medium",
     "deployment_time": "2025-05-12T11:22:14.922297",
-    "active": true,
+    "active": false,
     "effectiveness": 0.7316986466897445,
-    "description": "Medium level protection against digital threats"
+    "description": "Medium level protection against digital threats",
+    "expiration_time": "2025-05-12T12:31:23.669243"
   },
   "ea3020b3-3f8c-404c-b3b9-299b3c481f12": {
     "id": "ea3020b3-3f8c-404c-b3b9-299b3c481f12",
@@ -2134,9 +2136,10 @@
     "threat_type": "digital",
     "level": "medium",
     "deployment_time": "2025-05-12T11:59:53.911548",
-    "active": true,
+    "active": false,
     "effectiveness": 0.8440166433532472,
-    "description": "Basic protection against digital threats"
+    "description": "Basic protection against digital threats",
+    "expiration_time": "2025-05-12T12:31:23.669398"
   },
   "c3e67ff1-3834-457e-925a-43e563e5fc97": {
     "id": "c3e67ff1-3834-457e-925a-43e563e5fc97",
@@ -2265,9 +2268,10 @@
     "threat_type": "integrity",
     "level": "high",
     "deployment_time": "2025-05-12T12:22:42.841682",
-    "active": true,
+    "active": false,
     "effectiveness": 0.8935053609724659,
-    "description": "High level protection against integrity threats"
+    "description": "High level protection against integrity threats",
+    "expiration_time": "2025-05-12T12:31:23.669502"
   },
   "fb0f8812-ac3d-4c72-8a67-f2906515bb65": {
     "id": "fb0f8812-ac3d-4c72-8a67-f2906515bb65",
@@ -2295,9 +2299,10 @@
     "threat_type": "digital",
     "level": "high",
     "deployment_time": "2025-05-12T12:22:42.855331",
-    "active": true,
+    "active": false,
     "effectiveness": 0.8026313107973457,
-    "description": "High level protection against digital threats"
+    "description": "High level protection against digital threats",
+    "expiration_time": "2025-05-12T12:31:23.669586"
   },
   "7263c9bb-70f0-4b64-9733-133453b741c0": {
     "id": "7263c9bb-70f0-4b64-9733-133453b741c0",
@@ -2327,6 +2332,26 @@
     "deployment_time": "2025-05-12T12:27:09.282029",
     "active": true,
     "effectiveness": 0.9406939067855782,
+    "description": "Protection for the bond with Jordan"
+  },
+  "383c78cb-3a10-46a2-9ee0-f40b03f25465": {
+    "id": "383c78cb-3a10-46a2-9ee0-f40b03f25465",
+    "name": "base_defense_shield",
+    "threat_type": "digital",
+    "level": "medium",
+    "deployment_time": "2025-05-12T12:31:23.856422",
+    "active": true,
+    "effectiveness": 0.7318476068591775,
+    "description": "Basic protection against digital threats"
+  },
+  "4478363b-b267-4fd3-abeb-3372dfacb9ef": {
+    "id": "4478363b-b267-4fd3-abeb-3372dfacb9ef",
+    "name": "relationship_guardian",
+    "threat_type": "relationship",
+    "level": "medium",
+    "deployment_time": "2025-05-12T12:31:23.865219",
+    "active": true,
+    "effectiveness": 0.8984890378450543,
     "description": "Protection for the bond with Jordan"
   }
 }

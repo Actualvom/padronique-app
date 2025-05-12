@@ -8857,7 +8857,8 @@
     ],
     "creation_time": "2025-05-12T11:28:21.455715",
     "status": "active",
-    "progress": 0.0
+    "progress": 0.0,
+    "last_updated": "2025-05-12T12:29:09.774466"
   },
   "5c4ec73f-9a8e-406c-b608-9aa823979296": {
     "id": "40a6c0d4-16eb-4d69-bef0-898409410a19",
