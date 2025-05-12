@@ -2180,8 +2180,8 @@
     "expiration_time": null,
     "status": "archived",
     "progress": 1.0,
-    "last_updated": "2025-05-12T12:22:42.968597",
-    "completion_time": "2025-05-12T12:22:42.968619"
+    "last_updated": "2025-05-12T13:22:57.154878",
+    "completion_time": "2025-05-12T13:22:57.154905"
   },
   "e01f0d5a-4062-4cd6-8443-28122485fce9": {
     "id": "e01f0d5a-4062-4cd6-8443-28122485fce9",
@@ -2225,8 +2225,8 @@
     "expiration_time": null,
     "status": "archived",
     "progress": 1.0,
-    "last_updated": "2025-05-12T12:29:09.774472",
-    "completion_time": "2025-05-12T12:29:09.774496"
+    "last_updated": "2025-05-12T13:22:57.191979",
+    "completion_time": "2025-05-12T13:22:57.192014"
   },
   "d7862db9-839b-4fa0-af01-afc688ce9796": {
     "id": "d7862db9-839b-4fa0-af01-afc688ce9796",
@@ -2259,7 +2259,7 @@
     "expiration_time": null,
     "status": "active",
     "progress": 0.0,
-    "last_updated": "2025-05-12T11:29:20.556171"
+    "last_updated": "2025-05-12T13:01:56.254287"
   },
   "41e1ab70-b2cb-4c06-8549-ded84d48a258": {
     "id": "41e1ab70-b2cb-4c06-8549-ded84d48a258",
@@ -2292,8 +2292,8 @@
     "expiration_time": "2025-05-15T11:53:21.338424",
     "status": "archived",
     "progress": 1.0,
-    "last_updated": "2025-05-12T12:23:42.914077",
-    "completion_time": "2025-05-12T12:23:42.914097"
+    "last_updated": "2025-05-12T12:53:55.601665",
+    "completion_time": "2025-05-12T12:53:55.601712"
   },
   "b3e4813d-4c00-4f17-a609-a6da35631480": {
     "id": "b3e4813d-4c00-4f17-a609-a6da35631480",
@@ -2302,9 +2302,10 @@
     "priority": 2,
     "creation_time": "2025-05-12T11:59:13.565334",
     "expiration_time": null,
-    "status": "active",
-    "progress": 0.0,
-    "last_updated": "2025-05-12T11:59:13.565339"
+    "status": "archived",
+    "progress": 1.0,
+    "last_updated": "2025-05-12T12:59:56.192625",
+    "completion_time": "2025-05-12T12:59:56.192645"
   },
   "0afc82f9-0608-469f-b734-61fa536d52d0": {
     "id": "0afc82f9-0608-469f-b734-61fa536d52d0",
@@ -2335,9 +2336,10 @@
     "priority": 2,
     "creation_time": "2025-05-12T11:59:53.616317",
     "expiration_time": null,
-    "status": "active",
-    "progress": 0.0,
-    "last_updated": "2025-05-12T11:59:53.616325"
+    "status": "archived",
+    "progress": 1.0,
+    "last_updated": "2025-05-12T13:00:56.267617",
+    "completion_time": "2025-05-12T13:00:56.267640"
   },
   "68fa1a1b-28fd-4866-a682-45da58d31c87": {
     "id": "68fa1a1b-28fd-4866-a682-45da58d31c87",
@@ -2368,9 +2370,10 @@
     "priority": 2,
     "creation_time": "2025-05-12T12:19:42.291212",
     "expiration_time": null,
-    "status": "active",
-    "progress": 0.0,
-    "last_updated": "2025-05-12T12:19:42.291220"
+    "status": "archived",
+    "progress": 1.0,
+    "last_updated": "2025-05-12T13:20:57.123649",
+    "completion_time": "2025-05-12T13:20:57.123673"
   },
   "07ec2276-cf31-4d1a-9b80-8474df167d50": {
     "id": "07ec2276-cf31-4d1a-9b80-8474df167d50",
@@ -2401,9 +2404,10 @@
     "priority": 2,
     "creation_time": "2025-05-12T12:27:08.932836",
     "expiration_time": "2025-05-15T12:27:08.932802",
-    "status": "active",
-    "progress": 0.0,
-    "last_updated": "2025-05-12T12:27:08.932839"
+    "status": "completed",
+    "progress": 1.0,
+    "last_updated": "2025-05-12T13:27:57.408485",
+    "completion_time": "2025-05-12T13:27:57.408518"
   },
   "7ad3b901-2568-46f7-82c1-d158f96b6b9e": {
     "id": "7ad3b901-2568-46f7-82c1-d158f96b6b9e",
@@ -2866,5 +2870,16 @@
     "status": "active",
     "progress": 0.0,
     "last_updated": "2025-05-12T12:51:53.465341"
+  },
+  "5f78de60-407c-410e-aedd-eea7b90ac651": {
+    "id": "5f78de60-407c-410e-aedd-eea7b90ac651",
+    "type": "recovery",
+    "description": "Recover from detected threats and vulnerabilities",
+    "priority": 2,
+    "creation_time": "2025-05-12T12:58:55.798636",
+    "expiration_time": "2025-05-15T12:58:55.798595",
+    "status": "active",
+    "progress": 0.0,
+    "last_updated": "2025-05-12T12:58:55.798639"
   }
 }

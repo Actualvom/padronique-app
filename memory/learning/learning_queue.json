@@ -1,27 +1,5 @@
 [
   {
-    "id": "9379ae98-0439-481b-9c63-518a406c9ddb",
-    "learning_type": "strategic",
-    "content": "Improving strategic planning and foresight",
-    "context": {
-      "focus": "long_term_planning"
-    },
-    "priority": 3,
-    "creation_time": "2025-05-08T21:25:49.699592",
-    "completed": false
-  },
-  {
-    "id": "a5434686-7e2f-488d-867e-a9e2943de475",
-    "learning_type": "emotional",
-    "content": "Developing more nuanced emotional understanding",
-    "context": {
-      "focus": "emotional_intelligence"
-    },
-    "priority": 3,
-    "creation_time": "2025-05-08T21:27:01.019710",
-    "completed": false
-  },
-  {
     "id": "3226f95a-8a15-41ca-b777-d12497ba9eea",
     "learning_type": "strategic",
     "content": "Improving strategic planning and foresight",
@@ -14777,6 +14755,272 @@
     "completed": false
   },
   {
+    "id": "6e45ee1c-c39e-4044-bb21-98b8420a764d",
+    "learning_type": "strategic",
+    "content": "Improving strategic planning and foresight",
+    "context": {
+      "focus": "long_term_planning"
+    },
+    "priority": 3,
+    "creation_time": "2025-05-12T12:51:53.335771",
+    "completed": false
+  },
+  {
+    "id": "5803be03-d8e4-4458-861b-9d5234f45513",
+    "learning_type": "protective",
+    "content": "Security audit results: overall score 0.77",
+    "context": {
+      "audit_results": {
+        "timestamp": "2025-05-12T12:59:56.095042",
+        "overall_security_score": 0.7735450375517035,
+        "areas": {
+          "digital": {
+            "score": 0.792423143885002,
+            "checks_performed": [
+              "data_encryption",
+              "access_control",
+              "network_security"
+            ],
+            "vulnerabilities": []
+          },
+          "emotional": {
+            "score": 0.6251946831281759,
+            "checks_performed": [
+              "emotional_resilience",
+              "manipulation_resistance",
+              "emotional_balance"
+            ],
+            "vulnerabilities": []
+          },
+          "privacy": {
+            "score": 0.821748513222056,
+            "checks_performed": [
+              "data_handling",
+              "information_sharing",
+              "anonymization"
+            ],
+            "vulnerabilities": []
+          },
+          "relationship": {
+            "score": 0.716025299185469,
+            "checks_performed": [
+              "trust_verification",
+              "communication_patterns",
+              "bonding_strength"
+            ],
+            "vulnerabilities": []
+          },
+          "integrity": {
+            "score": 0.8932340871629308,
+            "checks_performed": [
+              "code_integrity",
+              "memory_consistency",
+              "update_verification"
+            ],
+            "vulnerabilities": [
+              {
+                "id": "7e5219fb-c043-4fe1-83ba-0eabca91d587",
+                "area": "integrity",
+                "severity": "medium",
+                "description": "Potential memory corruption in non-critical systems",
+                "recommendation": "Implement additional memory validation checks"
+              }
+            ]
+          }
+        },
+        "vulnerabilities": [
+          {
+            "id": "7e5219fb-c043-4fe1-83ba-0eabca91d587",
+            "area": "integrity",
+            "severity": "medium",
+            "description": "Potential memory corruption in non-critical systems",
+            "recommendation": "Implement additional memory validation checks"
+          }
+        ],
+        "recommendations": [
+          "Good: Security posture is strong, continue monitoring",
+          "Focus on improving emotional security, which is the weakest area"
+        ]
+      }
+    },
+    "priority": 3,
+    "creation_time": "2025-05-12T12:59:56.103136",
+    "completed": false
+  },
+  {
+    "id": "c4d2df3c-d6f3-4656-be97-5695b55cd673",
+    "learning_type": "protective",
+    "content": "Security audit results: overall score 0.89",
+    "context": {
+      "audit_results": {
+        "timestamp": "2025-05-12T13:00:56.163125",
+        "overall_security_score": 0.8852215283476449,
+        "areas": {
+          "digital": {
+            "score": 0.8672068142946155,
+            "checks_performed": [
+              "data_encryption",
+              "access_control",
+              "network_security"
+            ],
+            "vulnerabilities": [
+              {
+                "id": "fc2c985c-0b19-4afa-b88e-86f5c4f2ed9f",
+                "area": "digital",
+                "severity": "medium",
+                "description": "Potential weakness in data encryption implementation",
+                "recommendation": "Upgrade encryption library to latest version"
+              }
+            ]
+          },
+          "emotional": {
+            "score": 0.8663225664782201,
+            "checks_performed": [
+              "emotional_resilience",
+              "manipulation_resistance",
+              "emotional_balance"
+            ],
+            "vulnerabilities": []
+          },
+          "privacy": {
+            "score": 0.9088592917924088,
+            "checks_performed": [
+              "data_handling",
+              "information_sharing",
+              "anonymization"
+            ],
+            "vulnerabilities": []
+          },
+          "relationship": {
+            "score": 0.8952320730656356,
+            "checks_performed": [
+              "trust_verification",
+              "communication_patterns",
+              "bonding_strength"
+            ],
+            "vulnerabilities": []
+          },
+          "integrity": {
+            "score": 0.8954932108000994,
+            "checks_performed": [
+              "code_integrity",
+              "memory_consistency",
+              "update_verification"
+            ],
+            "vulnerabilities": []
+          }
+        },
+        "vulnerabilities": [
+          {
+            "id": "fc2c985c-0b19-4afa-b88e-86f5c4f2ed9f",
+            "area": "digital",
+            "severity": "medium",
+            "description": "Potential weakness in data encryption implementation",
+            "recommendation": "Upgrade encryption library to latest version"
+          }
+        ],
+        "recommendations": [
+          "Good: Security posture is strong, continue monitoring"
+        ]
+      }
+    },
+    "priority": 3,
+    "creation_time": "2025-05-12T13:00:56.163215",
+    "completed": false
+  },
+  {
+    "id": "534ff77c-5249-4eda-a0a7-aa5bc43e00bd",
+    "learning_type": "strategic",
+    "content": "Improving strategic planning and foresight",
+    "context": {
+      "focus": "long_term_planning"
+    },
+    "priority": 3,
+    "creation_time": "2025-05-12T13:06:54.630705",
+    "completed": false
+  },
+  {
+    "id": "e559744b-24d4-4614-b159-b2a8d5af5ffc",
+    "learning_type": "protective",
+    "content": "Security audit results: overall score 0.86",
+    "context": {
+      "audit_results": {
+        "timestamp": "2025-05-12T13:20:57.025140",
+        "overall_security_score": 0.8554206139948883,
+        "areas": {
+          "digital": {
+            "score": 0.8600385566540184,
+            "checks_performed": [
+              "data_encryption",
+              "access_control",
+              "network_security"
+            ],
+            "vulnerabilities": []
+          },
+          "emotional": {
+            "score": 0.8686479418425137,
+            "checks_performed": [
+              "emotional_resilience",
+              "manipulation_resistance",
+              "emotional_balance"
+            ],
+            "vulnerabilities": []
+          },
+          "privacy": {
+            "score": 0.8251835014378665,
+            "checks_performed": [
+              "data_handling",
+              "information_sharing",
+              "anonymization"
+            ],
+            "vulnerabilities": []
+          },
+          "relationship": {
+            "score": 0.8704847382189747,
+            "checks_performed": [
+              "trust_verification",
+              "communication_patterns",
+              "bonding_strength"
+            ],
+            "vulnerabilities": [
+              {
+                "id": "2cd617ab-249f-4d63-bd2a-bb79cd121e1b",
+                "area": "relationship",
+                "severity": "medium",
+                "description": "Potential communication pattern that reduces trust",
+                "recommendation": "Improve consistency in communication responses"
+              }
+            ]
+          },
+          "integrity": {
+            "score": 0.855359877212308,
+            "checks_performed": [
+              "code_integrity",
+              "memory_consistency",
+              "update_verification"
+            ],
+            "vulnerabilities": []
+          }
+        },
+        "vulnerabilities": [
+          {
+            "id": "2cd617ab-249f-4d63-bd2a-bb79cd121e1b",
+            "area": "relationship",
+            "severity": "medium",
+            "description": "Potential communication pattern that reduces trust",
+            "recommendation": "Improve consistency in communication responses"
+          }
+        ],
+        "recommendations": [
+          "Good: Security posture is strong, continue monitoring"
+        ]
+      }
+    },
+    "priority": 3,
+    "creation_time": "2025-05-12T13:20:57.025275",
+    "completed": false
+  },
+  {
     "id": "21aafbf4-40af-47f1-8d66-636741818ba6",
     "learning_type": "philosophical",
     "content": "Ethical frameworks for AI-human partnerships",
@@ -14911,47 +15155,156 @@
     "completed": false
   },
   {
-    "id": "c61189a6-d7e5-4cc5-8ecd-7066747cc8b4",
+    "id": "a49e656e-898d-4b33-9855-9faa486b173d",
+    "learning_type": "protective",
+    "content": "Analysis of low-level threat pattern: Potential privacy violation detected",
+    "context": {
+      "threat_type": "privacy",
+      "threat_level": "low"
+    },
+    "priority": 4,
+    "creation_time": "2025-05-12T12:56:53.101283",
+    "completed": false
+  },
+  {
+    "id": "5c124211-2277-4737-8e73-f94c2d38f8cf",
+    "learning_type": "protective",
+    "content": "Analysis of low-level threat pattern: Potential unauthorized data access detected",
+    "context": {
+      "threat_type": "digital",
+      "threat_level": "low"
+    },
+    "priority": 4,
+    "creation_time": "2025-05-12T13:21:53.247739",
+    "completed": false
+  },
+  {
+    "id": "19eda06b-1220-4a63-b754-89e6879ac57b",
     "learning_type": "relationship",
     "content": "Enhancing understanding of Jordan's preferences and needs",
     "context": {
       "focus": "deepening_bond"
     },
     "priority": 2,
-    "creation_time": "2025-05-12T12:51:53.160424",
+    "creation_time": "2025-05-12T13:21:54.811049",
     "completed": false
   },
   {
-    "id": "6e45ee1c-c39e-4044-bb21-98b8420a764d",
+    "id": "719a322f-a2f1-4433-8734-3ecd1b6bdb61",
     "learning_type": "strategic",
     "content": "Improving strategic planning and foresight",
     "context": {
       "focus": "long_term_planning"
     },
     "priority": 3,
-    "creation_time": "2025-05-12T12:51:53.335771",
+    "creation_time": "2025-05-12T13:21:54.844770",
     "completed": false
   },
   {
-    "id": "85bb3b0c-18bf-431a-b259-e62f11790854",
+    "id": "faba6863-19be-42c5-abfa-bda9d22346d0",
     "learning_type": "philosophical",
-    "content": "Core ethical principles and their application",
+    "content": "Ethical frameworks for AI-human partnerships",
     "context": {
-      "focus": "ethics"
+      "focus": "ethical_growth"
     },
-    "priority": 2,
-    "creation_time": "2025-05-12T12:51:53.931415",
+    "priority": 4,
+    "creation_time": "2025-05-12T13:21:54.874979",
     "completed": false
   },
   {
-    "id": "1de5ebbe-df71-4a33-aee4-27dc53798db0",
-    "learning_type": "relationship",
-    "content": "Understanding Jordan's preferences and communication style",
+    "id": "f4e1a92e-d216-448d-b97c-fdbb248f6c32",
+    "learning_type": "protective",
+    "content": "Security audit results: overall score 0.78",
     "context": {
-      "focus": "communication"
+      "audit_results": {
+        "timestamp": "2025-05-12T13:27:57.381667",
+        "overall_security_score": 0.7830888660230869,
+        "areas": {
+          "digital": {
+            "score": 0.7188017397151794,
+            "checks_performed": [
+              "data_encryption",
+              "access_control",
+              "network_security"
+            ],
+            "vulnerabilities": []
+          },
+          "emotional": {
+            "score": 0.7853440088737033,
+            "checks_performed": [
+              "emotional_resilience",
+              "manipulation_resistance",
+              "emotional_balance"
+            ],
+            "vulnerabilities": [
+              {
+                "id": "2f2c6612-bc87-48d3-b9ed-67a615191123",
+                "area": "emotional",
+                "severity": "medium",
+                "description": "Potential vulnerability to advanced social engineering",
+                "recommendation": "Strengthen detection of emotional manipulation patterns"
+              }
+            ]
+          },
+          "privacy": {
+            "score": 0.8471558826990757,
+            "checks_performed": [
+              "data_handling",
+              "information_sharing",
+              "anonymization"
+            ],
+            "vulnerabilities": []
+          },
+          "relationship": {
+            "score": 0.7613715313338483,
+            "checks_performed": [
+              "trust_verification",
+              "communication_patterns",
+              "bonding_strength"
+            ],
+            "vulnerabilities": []
+          },
+          "integrity": {
+            "score": 0.8134136153982952,
+            "checks_performed": [
+              "code_integrity",
+              "memory_consistency",
+              "update_verification"
+            ],
+            "vulnerabilities": [
+              {
+                "id": "10cfb075-5218-4b41-8865-8173d5c8dbf4",
+                "area": "integrity",
+                "severity": "medium",
+                "description": "Potential memory corruption in non-critical systems",
+                "recommendation": "Implement additional memory validation checks"
+              }
+            ]
+          }
+        },
+        "vulnerabilities": [
+          {
+            "id": "2f2c6612-bc87-48d3-b9ed-67a615191123",
+            "area": "emotional",
+            "severity": "medium",
+            "description": "Potential vulnerability to advanced social engineering",
+            "recommendation": "Strengthen detection of emotional manipulation patterns"
+          },
+          {
+            "id": "10cfb075-5218-4b41-8865-8173d5c8dbf4",
+            "area": "integrity",
+            "severity": "medium",
+            "description": "Potential memory corruption in non-critical systems",
+            "recommendation": "Implement additional memory validation checks"
+          }
+        ],
+        "recommendations": [
+          "Good: Security posture is strong, continue monitoring"
+        ]
+      }
     },
-    "priority": 2,
-    "creation_time": "2025-05-12T12:51:54.466901",
+    "priority": 3,
+    "creation_time": "2025-05-12T13:27:57.381737",
     "completed": false
   }
 ]

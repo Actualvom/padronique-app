@@ -1,14 +1,30 @@
 {
-  "840be273-e11f-4a0b-8f5c-8d8958cedf6c": {
-    "id": "840be273-e11f-4a0b-8f5c-8d8958cedf6c",
+  "332db059-32b6-4c7d-bb26-fcf82808f92a": {
+    "id": "332db059-32b6-4c7d-bb26-fcf82808f92a",
+    "action_type": "deploy_protection",
+    "parameters": {
+      "protection_name": "recovery_shield_emotional",
+      "threat_type": "emotional",
+      "level": "high"
+    },
+    "goal_id": "3fd58819-74b9-44ac-88dd-66cc82e152a5",
+    "plan_id": "02ad693c-fcc8-46a5-b09a-914992a05de1",
+    "priority": 2,
+    "scheduled_time": "2025-05-12T13:27:08.949642",
+    "creation_time": "2025-05-12T12:27:09.129587",
+    "status": "in_progress",
+    "start_time": "2025-05-12T13:27:57.378358"
+  },
+  "001e1ede-1e2a-4485-be40-f3d8b4e3d275": {
+    "id": "001e1ede-1e2a-4485-be40-f3d8b4e3d275",
     "action_type": "run_security_audit",
     "parameters": {},
-    "goal_id": "f1812088-080b-4dda-aad3-249996bfbfce",
-    "plan_id": "54dc1773-6933-4a8a-a9e0-e08f4fad2c87",
+    "goal_id": "7ad3b901-2568-46f7-82c1-d158f96b6b9e",
+    "plan_id": "df00893e-4f66-4a08-895c-b94bd6206196",
     "priority": 2,
-    "scheduled_time": "2025-05-12T12:30:20.558025",
-    "creation_time": "2025-05-12T11:30:20.558138",
+    "scheduled_time": "2025-05-12T13:27:09.317320",
+    "creation_time": "2025-05-12T12:27:09.317399",
     "status": "in_progress",
-    "start_time": "2025-05-12T12:31:09.786769"
+    "start_time": "2025-05-12T13:27:57.381293"
   }
 }

@@ -154,5 +154,31 @@
       "location": "conversation",
       "details": "Pattern of subtle emotional manipulation detected"
     }
+  },
+  {
+    "id": "ddeb027a-28e6-46af-a12a-c4128c2d4219",
+    "type": "privacy",
+    "level": 4,
+    "description": "Potential privacy violation detected",
+    "detection_time": "2025-05-12T12:56:53.101252",
+    "confidence": 0.723962766644562,
+    "neutralized": false,
+    "source": {
+      "location": "data_flow",
+      "details": "Unexpected data collection activity detected"
+    }
+  },
+  {
+    "id": "dbd85bef-ea72-48e1-a33a-2a99934d5f99",
+    "type": "digital",
+    "level": 4,
+    "description": "Potential unauthorized data access detected",
+    "detection_time": "2025-05-12T13:21:53.247709",
+    "confidence": 0.8399662701206754,
+    "neutralized": false,
+    "source": {
+      "location": "network",
+      "details": "Unusual network activity detected"
+    }
   }
 ]

@@ -8678,7 +8678,7 @@
     "creation_time": "2025-05-12T11:22:08.198269",
     "status": "active",
     "progress": 0.0,
-    "last_updated": "2025-05-12T12:22:42.968591"
+    "last_updated": "2025-05-12T13:22:57.154816"
   },
   "bf6af9ed-1f95-4eda-bb2d-6bfc12ca82d6": {
     "id": "a34f9c3b-6a7d-4b2d-9023-da820372f8c9",
@@ -8997,7 +8997,8 @@
     ],
     "creation_time": "2025-05-12T11:30:20.558025",
     "status": "active",
-    "progress": 0.0
+    "progress": 0.0,
+    "last_updated": "2025-05-12T13:01:56.254282"
   },
   "91a20151-1a2c-4f3b-b70c-ec14f4e76d91": {
     "id": "e24e6ee9-88a1-4317-928c-d4ab42d79dfa",
@@ -9163,7 +9164,7 @@
     "creation_time": "2025-05-12T11:53:21.358574",
     "status": "active",
     "progress": 0.0,
-    "last_updated": "2025-05-12T12:23:42.914071"
+    "last_updated": "2025-05-12T12:53:55.601659"
   },
   "e15cc2f8-ff4a-45f0-bcaf-36e432f09bfc": {
     "id": "8bc57a31-25d7-4187-998e-cb957930f923",
@@ -9209,7 +9210,8 @@
     ],
     "creation_time": "2025-05-12T11:59:53.644686",
     "status": "active",
-    "progress": 0.0
+    "progress": 0.0,
+    "last_updated": "2025-05-12T12:59:56.192618"
   },
   "83fd4c08-c0a8-4143-bd4b-94f12c50572b": {
     "id": "02df43dd-6f24-4ee2-8e44-e6dacef3dfb1",
@@ -9348,7 +9350,8 @@
     ],
     "creation_time": "2025-05-12T12:00:54.311316",
     "status": "active",
-    "progress": 0.0
+    "progress": 0.0,
+    "last_updated": "2025-05-12T13:00:56.267610"
   },
   "dd7cc441-a2b5-4e48-9e6c-336e51438332": {
     "id": "514b07ec-09c8-472f-9d3c-b4426eb5885a",
@@ -9487,7 +9490,8 @@
     ],
     "creation_time": "2025-05-12T12:20:42.465994",
     "status": "active",
-    "progress": 0.0
+    "progress": 0.0,
+    "last_updated": "2025-05-12T13:20:57.123639"
   },
   "f0b4a0e6-d6d5-4b53-832f-b55bc1601790": {
     "id": "c4c7de95-00e5-4df0-b703-f25b6aa576f9",
@@ -9653,7 +9657,8 @@
     ],
     "creation_time": "2025-05-12T12:27:08.949642",
     "status": "active",
-    "progress": 0.0
+    "progress": 0.0,
+    "last_updated": "2025-05-12T13:27:57.433815"
   },
   "df00893e-4f66-4a08-895c-b94bd6206196": {
     "id": "404d7a4d-7c7c-4895-83bd-b30adc8d01c7",
@@ -11459,6 +11464,234 @@
       }
     ],
     "creation_time": "2025-05-12T12:51:54.718020",
+    "status": "active",
+    "progress": 0.0
+  },
+  "023554a1-3f48-42ac-89e1-25152e4550a7": {
+    "id": "72053222-03f2-4459-ac40-6ade064987f4",
+    "goal_id": "170ad6df-c18b-4b09-80a9-1916440180bd",
+    "name": "Ongoing Protection Plan",
+    "description": "Ensure continuous protection through regular security audits and threat analysis",
+    "steps": [
+      {
+        "step_id": "afb40351-6847-4b5a-8b01-5d4406d5103b",
+        "name": "Run comprehensive security audit",
+        "action_type": "run_security_audit",
+        "parameters": {},
+        "priority": 2,
+        "scheduled_time": "2025-05-12T13:52:55.228905"
+      },
+      {
+        "step_id": "cfb23205-f5d1-4de9-a498-92f96bb46dba",
+        "name": "Analyze current threats",
+        "action_type": "analyze_threats",
+        "parameters": {},
+        "priority": 3,
+        "scheduled_time": "2025-05-12T14:52:55.228905"
+      },
+      {
+        "step_id": "1975e335-c41f-464a-a879-4f16b68c2f79",
+        "name": "Deploy protection measures",
+        "action_type": "deploy_protection",
+        "parameters": {
+          "protection_name": "proactive_shield",
+          "threat_type": "digital"
+        },
+        "priority": 3,
+        "scheduled_time": "2025-05-12T15:52:55.228905"
+      },
+      {
+        "step_id": "f7d34c9a-7d1a-412f-af80-4b7b29cb4fbd",
+        "name": "Run follow-up security audit",
+        "action_type": "run_security_audit",
+        "parameters": {},
+        "priority": 3,
+        "scheduled_time": "2025-05-15T12:52:55.228905"
+      }
+    ],
+    "creation_time": "2025-05-12T12:52:55.228905",
+    "status": "active",
+    "progress": 0.0
+  },
+  "b041b644-55df-4c23-b138-479ed15e4382": {
+    "id": "1d455457-e229-4ac3-842a-7bc0d7bceb57",
+    "goal_id": "a65bdf55-2150-4227-b2db-db4d34b3568d",
+    "name": "Bond Strengthening Plan",
+    "description": "Deepen the relationship bond with Jordan through understanding and connection",
+    "steps": [
+      {
+        "step_id": "f48987c9-8440-40f1-9981-f11e45568da8",
+        "name": "Analyze relationship patterns",
+        "action_type": "analyze_relationship",
+        "parameters": {
+          "focus": "depth",
+          "timeframe": "all"
+        },
+        "priority": 3,
+        "scheduled_time": "2025-05-12T18:52:55.345790"
+      },
+      {
+        "step_id": "1c3f67b1-d2e1-43e5-aecb-3bee515b79e9",
+        "name": "Identify preference patterns",
+        "action_type": "identify_preferences",
+        "parameters": {},
+        "priority": 3,
+        "scheduled_time": "2025-05-13T06:52:55.345790"
+      },
+      {
+        "step_id": "0d3f1356-83cd-45db-a5e3-bd42ed13c1d5",
+        "name": "Develop relationship bond",
+        "action_type": "develop_bond",
+        "parameters": {
+          "approach": "personalized",
+          "focus": "trust"
+        },
+        "priority": 3,
+        "scheduled_time": "2025-05-14T00:52:55.345790"
+      }
+    ],
+    "creation_time": "2025-05-12T12:52:55.345790",
+    "status": "active",
+    "progress": 0.0
+  },
+  "50f66c4a-b466-4ff8-9674-fb4462589994": {
+    "id": "990b225d-9a74-4b9b-b46c-51fc31b53c06",
+    "goal_id": "ed30145f-8360-4a73-8282-de1fb4f1f4f2",
+    "name": "Systematic Learning Plan",
+    "description": "Expand knowledge and capabilities through research and analysis",
+    "steps": [
+      {
+        "step_id": "a7b1785b-d54b-49a2-b101-12b579cdfbdd",
+        "name": "Research protection strategies",
+        "action_type": "research_topic",
+        "parameters": {
+          "topic": "advanced digital protection",
+          "depth": "medium"
+        },
+        "priority": 3,
+        "scheduled_time": "2025-05-12T16:52:55.436200"
+      },
+      {
+        "step_id": "6b49a871-1dd6-40e6-8359-d86cef5fd63d",
+        "name": "Analyze conversation patterns",
+        "action_type": "analyze_conversation",
+        "parameters": {
+          "mode": "deep",
+          "focus": "preferences"
+        },
+        "priority": 3,
+        "scheduled_time": "2025-05-13T00:52:55.436200"
+      },
+      {
+        "step_id": "e554c18c-abec-4c64-9b70-9573fd36cf6a",
+        "name": "Analyze behavior patterns",
+        "action_type": "analyze_behavior",
+        "parameters": {
+          "behavior_type": "interaction",
+          "timeframe": "recent"
+        },
+        "priority": 4,
+        "scheduled_time": "2025-05-13T12:52:55.436200"
+      },
+      {
+        "step_id": "982d7434-30b7-47d6-bee6-4bc7fa503259",
+        "name": "Integrate learning outcomes",
+        "action_type": "integrate_learning",
+        "parameters": {},
+        "priority": 3,
+        "scheduled_time": "2025-05-14T12:52:55.436200"
+      }
+    ],
+    "creation_time": "2025-05-12T12:52:55.436200",
+    "status": "active",
+    "progress": 0.0
+  },
+  "8d4ad0b6-6dbc-4d4a-92ad-da64d7cd7d68": {
+    "id": "853ba4b5-8ead-46e6-98ee-40219f3e7d58",
+    "goal_id": "5f78de60-407c-410e-aedd-eea7b90ac651",
+    "name": "Threat Recovery Plan",
+    "description": "Address and recover from 9 active threats",
+    "steps": [
+      {
+        "step_id": "33b9ae98-03d5-457f-a902-b8cae749f9d9",
+        "name": "Analyze current threats",
+        "action_type": "analyze_threats",
+        "parameters": {
+          "threat_ids": [
+            "3769db11-7d71-4771-805d-f0a043af29fe",
+            "e3f9097b-62bd-40ed-b1f0-3e1c2a2c3ae1",
+            "6617dfb2-9cd1-4a76-bb5a-099e6ce5f63b",
+            "3246fcac-6973-4fc1-9197-10f127184c6a",
+            "3bb5e14e-98c3-4337-ab09-f926a1dc2345",
+            "636a0b36-28b9-49cd-afab-99e2f434e1ac",
+            "48b7d593-e1cf-41d2-8b50-66d50dbfce30",
+            "13d36988-42f9-4aba-a8e9-4d25652b4a01",
+            "ddeb027a-28e6-46af-a12a-c4128c2d4219"
+          ]
+        },
+        "priority": 2,
+        "scheduled_time": "2025-05-12T13:28:55.845983"
+      },
+      {
+        "step_id": "0f0d1459-93b0-4287-bd8d-5118b20d6b18",
+        "name": "Deploy protection for deception threats",
+        "action_type": "deploy_protection",
+        "parameters": {
+          "protection_name": "recovery_shield_deception",
+          "threat_type": "deception",
+          "level": "high"
+        },
+        "priority": 2,
+        "scheduled_time": "2025-05-12T13:58:55.845983"
+      },
+      {
+        "step_id": "e0dd35fe-3e0c-42d2-9304-eb17f9cd5a47",
+        "name": "Deploy protection for privacy threats",
+        "action_type": "deploy_protection",
+        "parameters": {
+          "protection_name": "recovery_shield_privacy",
+          "threat_type": "privacy",
+          "level": "high"
+        },
+        "priority": 2,
+        "scheduled_time": "2025-05-12T13:58:55.845983"
+      },
+      {
+        "step_id": "3608dd8d-7f0f-4fce-824e-23d646282c4e",
+        "name": "Deploy protection for digital threats",
+        "action_type": "deploy_protection",
+        "parameters": {
+          "protection_name": "recovery_shield_digital",
+          "threat_type": "digital",
+          "level": "high"
+        },
+        "priority": 2,
+        "scheduled_time": "2025-05-12T13:58:55.845983"
+      },
+      {
+        "step_id": "9c53eb7d-eda9-4a72-a33f-6dc34d55ae1f",
+        "name": "Deploy protection for emotional threats",
+        "action_type": "deploy_protection",
+        "parameters": {
+          "protection_name": "recovery_shield_emotional",
+          "threat_type": "emotional",
+          "level": "high"
+        },
+        "priority": 2,
+        "scheduled_time": "2025-05-12T13:58:55.845983"
+      },
+      {
+        "step_id": "af19ee5a-1a1e-4007-ab1e-81a8ee1b2ac3",
+        "name": "Verify threat resolution",
+        "action_type": "run_security_audit",
+        "parameters": {
+          "focus": "verification"
+        },
+        "priority": 2,
+        "scheduled_time": "2025-05-12T16:58:55.845983"
+      }
+    ],
+    "creation_time": "2025-05-12T12:58:55.845983",
     "status": "active",
     "progress": 0.0
   }
