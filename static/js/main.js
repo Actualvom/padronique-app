@@ -18,6 +18,9 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize settings
     initSettings();
     
+    // Initialize resizable sidebar and input
+    initResizableElements();
+    
     // Initialize confirmation dialogs for destructive actions
     initConfirmationDialogs();
     
@@ -801,4 +804,135 @@ function formatTimeAgo(date) {
     
     const diffInDays = Math.floor(diffInHours / 24);
     return `${diffInDays} day${diffInDays > 1 ? 's' : ''} ago`;
+}
+
+/**
+ * Initialize resizable sidebar and input elements
+ */
+function initResizableElements() {
+    // Sidebar resizing
+    const sidebar = document.querySelector('.sidebar');
+    const sidebarResizer = document.querySelector('.sidebar-resizer');
+    const mainContent = document.querySelector('.main-content');
+    
+    if (sidebar && sidebarResizer && mainContent) {
+        let isResizingSidebar = false;
+        let originalWidth;
+        let originalX;
+        
+        sidebarResizer.addEventListener('mousedown', function(e) {
+            isResizingSidebar = true;
+            originalWidth = parseInt(document.defaultView.getComputedStyle(sidebar).width, 10);
+            originalX = e.clientX;
+            sidebarResizer.classList.add('active');
+            
+            // Prevent text selection during resize
+            document.body.style.userSelect = 'none';
+            
+            // Add event listeners for mouse movement and release
+            document.addEventListener('mousemove', handleSidebarResize);
+            document.addEventListener('mouseup', stopSidebarResize);
+        });
+        
+        function handleSidebarResize(e) {
+            if (isResizingSidebar) {
+                const width = originalWidth + (e.clientX - originalX);
+                
+                // Apply min and max constraints
+                if (width >= 180 && width <= 400) {
+                    sidebar.style.width = `${width}px`;
+                    
+                    // Update main content margin
+                    document.documentElement.style.setProperty('--sidebar-width', `${width}px`);
+                    mainContent.style.marginLeft = `${width}px`;
+                    mainContent.style.width = `calc(100% - ${width}px)`;
+                }
+            }
+        }
+        
+        function stopSidebarResize() {
+            isResizingSidebar = false;
+            sidebarResizer.classList.remove('active');
+            document.body.style.userSelect = '';
+            
+            // Save sidebar width to localStorage for persistence
+            const currentWidth = parseInt(document.defaultView.getComputedStyle(sidebar).width, 10);
+            localStorage.setItem('padronique_sidebar_width', currentWidth);
+            
+            // Remove event listeners
+            document.removeEventListener('mousemove', handleSidebarResize);
+            document.removeEventListener('mouseup', stopSidebarResize);
+        }
+        
+        // Load saved sidebar width from localStorage if available
+        const savedSidebarWidth = localStorage.getItem('padronique_sidebar_width');
+        if (savedSidebarWidth) {
+            const width = parseInt(savedSidebarWidth, 10);
+            if (width >= 180 && width <= 400) {
+                sidebar.style.width = `${width}px`;
+                document.documentElement.style.setProperty('--sidebar-width', `${width}px`);
+                mainContent.style.marginLeft = `${width}px`;
+                mainContent.style.width = `calc(100% - ${width}px)`;
+            }
+        }
+    }
+    
+    // Input container resizing
+    const chatInputContainer = document.querySelector('.chat-input-container');
+    const inputResizer = document.querySelector('.input-resizer');
+    
+    if (chatInputContainer && inputResizer) {
+        let isResizingInput = false;
+        let originalHeight;
+        let originalY;
+        
+        inputResizer.addEventListener('mousedown', function(e) {
+            isResizingInput = true;
+            originalHeight = parseInt(document.defaultView.getComputedStyle(chatInputContainer).height, 10);
+            originalY = e.clientY;
+            inputResizer.classList.add('active');
+            
+            // Prevent text selection during resize
+            document.body.style.userSelect = 'none';
+            
+            // Add event listeners for mouse movement and release
+            document.addEventListener('mousemove', handleInputResize);
+            document.addEventListener('mouseup', stopInputResize);
+        });
+        
+        function handleInputResize(e) {
+            if (isResizingInput) {
+                // Note: moving up decreases the height (reverse direction)
+                const height = originalHeight - (e.clientY - originalY);
+                
+                // Apply min and max constraints
+                if (height >= 60 && height <= 200) {
+                    chatInputContainer.style.height = `${height}px`;
+                }
+            }
+        }
+        
+        function stopInputResize() {
+            isResizingInput = false;
+            inputResizer.classList.remove('active');
+            document.body.style.userSelect = '';
+            
+            // Save input height to localStorage for persistence
+            const currentHeight = parseInt(document.defaultView.getComputedStyle(chatInputContainer).height, 10);
+            localStorage.setItem('padronique_input_height', currentHeight);
+            
+            // Remove event listeners
+            document.removeEventListener('mousemove', handleInputResize);
+            document.removeEventListener('mouseup', stopInputResize);
+        }
+        
+        // Load saved input height from localStorage if available
+        const savedInputHeight = localStorage.getItem('padronique_input_height');
+        if (savedInputHeight) {
+            const height = parseInt(savedInputHeight, 10);
+            if (height >= 60 && height <= 200) {
+                chatInputContainer.style.height = `${height}px`;
+            }
+        }
+    }
 }
