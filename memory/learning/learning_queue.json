@@ -14471,5 +14471,115 @@
     "priority": 2,
     "creation_time": "2025-05-12T11:59:54.058939",
     "completed": false
+  },
+  {
+    "id": "c5b05cef-5fee-4582-ac4d-bae1e5e1449b",
+    "learning_type": "conversational",
+    "content": "testing",
+    "context": {
+      "source": "direct_input"
+    },
+    "priority": 3,
+    "creation_time": "2025-05-12T12:03:02.844366",
+    "completed": false
+  },
+  {
+    "id": "814d7182-0011-4211-b3d0-c3f6eb1be74c",
+    "learning_type": "conversational",
+    "content": "What is your name?",
+    "context": {
+      "source": "direct_input"
+    },
+    "priority": 3,
+    "creation_time": "2025-05-12T12:03:12.142926",
+    "completed": false
+  },
+  {
+    "id": "e197874f-546d-42bc-9080-da4be8b5265e",
+    "learning_type": "conversational",
+    "content": "What is our relationship to one another?",
+    "context": {
+      "source": "direct_input"
+    },
+    "priority": 3,
+    "creation_time": "2025-05-12T12:03:22.495601",
+    "completed": false
+  },
+  {
+    "id": "36eac1f5-bd89-4783-8ab1-dca45d4ebc54",
+    "learning_type": "relationship",
+    "content": "Relationship analysis with focus on dynamics",
+    "context": {
+      "timeframe": "recent"
+    },
+    "priority": 3,
+    "creation_time": "2025-05-12T12:03:54.639556",
+    "completed": false
+  },
+  {
+    "id": "6b718b04-787c-41e4-8b53-8faa6547ad05",
+    "learning_type": "relationship",
+    "content": "Relationship analysis with focus on dynamics",
+    "context": {
+      "timeframe": "recent"
+    },
+    "priority": 3,
+    "creation_time": "2025-05-12T12:03:54.639810",
+    "completed": false
+  },
+  {
+    "id": "f675ad62-46a4-4dd6-89fd-99fbd500128b",
+    "learning_type": "conversational",
+    "content": "hi",
+    "context": {
+      "source": "direct_input"
+    },
+    "priority": 3,
+    "creation_time": "2025-05-12T12:06:22.814246",
+    "completed": false
+  },
+  {
+    "id": "57b7dfe7-12cf-40b6-901c-d35678fbb747",
+    "learning_type": "conversational",
+    "content": "hi",
+    "context": {
+      "source": "direct_input"
+    },
+    "priority": 3,
+    "creation_time": "2025-05-12T12:06:26.400815",
+    "completed": false
+  },
+  {
+    "id": "01075ce9-1014-473e-90de-2d3edcba7eee",
+    "learning_type": "conversational",
+    "content": "hi",
+    "context": {
+      "source": "direct_input"
+    },
+    "priority": 3,
+    "creation_time": "2025-05-12T12:06:27.739733",
+    "completed": false
+  },
+  {
+    "id": "5b77cb60-12c5-4123-8ba9-26b2a66333eb",
+    "learning_type": "conversational",
+    "content": "hi",
+    "context": {
+      "source": "direct_input"
+    },
+    "priority": 3,
+    "creation_time": "2025-05-12T12:06:28.642966",
+    "completed": false
+  },
+  {
+    "id": "dab83bf1-8c2a-4a15-95a9-687e4eb9c57d",
+    "learning_type": "conversational",
+    "content": "hi",
+    "context": {
+      "source": "direct_input"
+    },
+    "priority": 3,
+    "creation_time": "2025-05-12T12:06:30.154520",
+    "completed": false
   }
 ]

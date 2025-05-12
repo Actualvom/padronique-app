@@ -1,51 +1,5 @@
 [
   {
-    "id": "0cb4970e-0c55-4c0e-924b-c243781b6c7f",
-    "action_type": "analyze_behavior",
-    "parameters": {
-      "behavior_type": "interaction",
-      "timeframe": "recent"
-    },
-    "goal_id": "5ff4d14b-2cac-4b12-a36c-f8e2a67f031c",
-    "plan_id": "723eaed7-2a00-4840-93ce-c8e69ae220d1",
-    "priority": 4,
-    "scheduled_time": "2025-05-09T21:27:01.266000",
-    "creation_time": "2025-05-08T21:27:01.291266",
-    "status": "completed",
-    "start_time": "2025-05-12T11:22:15.050970",
-    "result": {
-      "success": true,
-      "behavior_type": "interaction",
-      "timeframe": "recent",
-      "learning_item_id": "9eb3de45-9bb2-4f07-9f9e-d49bc30b3cf2",
-      "patterns_detected": 3
-    },
-    "completion_time": "2025-05-12T11:22:23.958132"
-  },
-  {
-    "id": "50dba20d-33b3-44fa-9aea-73b083229da2",
-    "action_type": "analyze_conversation",
-    "parameters": {
-      "mode": "deep",
-      "focus": "preferences"
-    },
-    "goal_id": "75527d69-4293-4c0f-99c9-6710f6ee8c13",
-    "plan_id": "fbb62f14-718f-42e1-8262-9a6dd217eeb9",
-    "priority": 3,
-    "scheduled_time": "2025-05-09T09:32:45.091621",
-    "creation_time": "2025-05-08T21:32:45.109042",
-    "status": "completed",
-    "start_time": "2025-05-12T11:22:14.917295",
-    "result": {
-      "success": true,
-      "analysis_mode": "deep",
-      "focus": "preferences",
-      "learning_item_id": "6d32a21e-a53e-4d29-85df-4379b616153e",
-      "insights_count": 1
-    },
-    "completion_time": "2025-05-12T11:22:23.958577"
-  },
-  {
     "id": "61d94496-09c2-415b-8896-26baad1e1e0e",
     "action_type": "analyze_relationship",
     "parameters": {
@@ -2068,5 +2022,51 @@
       "threats_needing_attention": 4
     },
     "completion_time": "2025-05-12T11:52:21.318547"
+  },
+  {
+    "id": "bd723cd2-c44a-462c-ab60-86e16c83af8c",
+    "action_type": "analyze_relationship",
+    "parameters": {
+      "focus": "dynamics",
+      "timeframe": "recent"
+    },
+    "goal_id": null,
+    "plan_id": null,
+    "priority": 3,
+    "scheduled_time": "2025-05-12T12:03:12.714129",
+    "creation_time": "2025-05-12T12:03:12.714182",
+    "status": "completed",
+    "start_time": "2025-05-12T12:03:54.638176",
+    "result": {
+      "success": true,
+      "focus": "dynamics",
+      "timeframe": "recent",
+      "learning_item_id": "36eac1f5-bd89-4783-8ab1-dca45d4ebc54",
+      "relationship_insights": 2
+    },
+    "completion_time": "2025-05-12T12:03:54.782607"
+  },
+  {
+    "id": "03728da0-babb-4efe-add6-2b1323bf1ab0",
+    "action_type": "analyze_relationship",
+    "parameters": {
+      "focus": "dynamics",
+      "timeframe": "recent"
+    },
+    "goal_id": null,
+    "plan_id": null,
+    "priority": 3,
+    "scheduled_time": "2025-05-12T12:03:23.960848",
+    "creation_time": "2025-05-12T12:03:23.960898",
+    "status": "completed",
+    "start_time": "2025-05-12T12:03:54.639250",
+    "result": {
+      "success": true,
+      "focus": "dynamics",
+      "timeframe": "recent",
+      "learning_item_id": "6b718b04-787c-41e4-8b53-8faa6547ad05",
+      "relationship_insights": 2
+    },
+    "completion_time": "2025-05-12T12:03:54.801545"
   }
 ]
