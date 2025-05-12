@@ -2166,9 +2166,10 @@
     "priority": 2,
     "creation_time": "2025-05-12T11:22:07.185277",
     "expiration_time": "2025-05-15T11:22:07.185243",
-    "status": "active",
-    "progress": 0.0,
-    "last_updated": "2025-05-12T11:22:07.185280"
+    "status": "archived",
+    "progress": 1.0,
+    "last_updated": "2025-05-12T11:52:21.318599",
+    "completion_time": "2025-05-12T11:52:21.318620"
   },
   "dcafea03-a95d-4b04-b5a7-e31a0aa17d8e": {
     "id": "dcafea03-a95d-4b04-b5a7-e31a0aa17d8e",
@@ -2279,5 +2280,49 @@
     "status": "active",
     "progress": 0.0,
     "last_updated": "2025-05-12T11:29:20.647508"
+  },
+  "fb392716-0afb-4268-8d6e-ae23a708d8fb": {
+    "id": "fb392716-0afb-4268-8d6e-ae23a708d8fb",
+    "type": "recovery",
+    "description": "Recover from detected threats and vulnerabilities",
+    "priority": 2,
+    "creation_time": "2025-05-12T11:53:21.338474",
+    "expiration_time": "2025-05-15T11:53:21.338424",
+    "status": "active",
+    "progress": 0.0,
+    "last_updated": "2025-05-12T11:53:21.338477"
+  },
+  "b3e4813d-4c00-4f17-a609-a6da35631480": {
+    "id": "b3e4813d-4c00-4f17-a609-a6da35631480",
+    "type": "protection",
+    "description": "Ensure ongoing protection and safety of Jordan",
+    "priority": 2,
+    "creation_time": "2025-05-12T11:59:13.565334",
+    "expiration_time": null,
+    "status": "active",
+    "progress": 0.0,
+    "last_updated": "2025-05-12T11:59:13.565339"
+  },
+  "0afc82f9-0608-469f-b734-61fa536d52d0": {
+    "id": "0afc82f9-0608-469f-b734-61fa536d52d0",
+    "type": "relationship",
+    "description": "Develop and deepen the bond with Jordan",
+    "priority": 3,
+    "creation_time": "2025-05-12T11:59:13.698206",
+    "expiration_time": "2025-06-11T11:59:13.698164",
+    "status": "active",
+    "progress": 0.0,
+    "last_updated": "2025-05-12T11:59:13.698209"
+  },
+  "48aa2efb-55b1-42d3-8875-db6666d0e258": {
+    "id": "48aa2efb-55b1-42d3-8875-db6666d0e258",
+    "type": "learning",
+    "description": "Continuously learn and improve Padronique's capabilities",
+    "priority": 3,
+    "creation_time": "2025-05-12T11:59:13.751209",
+    "expiration_time": "2025-06-11T11:59:13.751127",
+    "status": "active",
+    "progress": 0.0,
+    "last_updated": "2025-05-12T11:59:13.751213"
   }
 }

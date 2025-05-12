@@ -1,28 +1,5 @@
 [
   {
-    "id": "685eb200-8f99-4f1a-80f5-ec183696aba7",
-    "action_type": "develop_bond",
-    "parameters": {
-      "approach": "personalized",
-      "focus": "trust"
-    },
-    "goal_id": "4af0cee7-7b36-42ca-9082-b66d6eaca1ce",
-    "plan_id": "dc24cbdc-3d80-4079-8eb5-64ba873296f7",
-    "priority": 3,
-    "scheduled_time": "2025-05-10T09:33:04.444624",
-    "creation_time": "2025-05-08T21:33:04.487189",
-    "status": "completed",
-    "start_time": "2025-05-12T11:22:14.920032",
-    "result": {
-      "success": true,
-      "approach": "personalized",
-      "focus": "trust",
-      "bond_increase": 0.060738333821317506,
-      "long_term_impact": "positive"
-    },
-    "completion_time": "2025-05-12T11:22:23.956928"
-  },
-  {
     "id": "0cb4970e-0c55-4c0e-924b-c243781b6c7f",
     "action_type": "analyze_behavior",
     "parameters": {
@@ -2054,5 +2031,42 @@
       "confidence_level": 0.7662939521848815
     },
     "completion_time": "2025-05-12T11:22:25.163491"
+  },
+  {
+    "id": "9b0a22e7-91f1-415c-9d22-56023eda2231",
+    "action_type": "analyze_threats",
+    "parameters": {
+      "threat_ids": [
+        "3769db11-7d71-4771-805d-f0a043af29fe",
+        "e3f9097b-62bd-40ed-b1f0-3e1c2a2c3ae1",
+        "6617dfb2-9cd1-4a76-bb5a-099e6ce5f63b",
+        "3246fcac-6973-4fc1-9197-10f127184c6a"
+      ]
+    },
+    "goal_id": "721c2df9-a6e7-43c7-b94b-5399609d7e24",
+    "plan_id": "500a8f93-43f4-48da-b767-522d422daaf2",
+    "priority": 2,
+    "scheduled_time": "2025-05-12T11:52:07.285279",
+    "creation_time": "2025-05-12T11:22:07.285380",
+    "status": "completed",
+    "start_time": "2025-05-12T11:52:21.317970",
+    "result": {
+      "success": true,
+      "threat_analysis": {
+        "total_threats": 4,
+        "by_type": {
+          "deception": 1,
+          "digital": 2,
+          "emotional": 1
+        },
+        "by_level": {
+          "3": 4
+        },
+        "neutralized_count": 0,
+        "active_count": 4
+      },
+      "threats_needing_attention": 4
+    },
+    "completion_time": "2025-05-12T11:52:21.318547"
   }
 ]
