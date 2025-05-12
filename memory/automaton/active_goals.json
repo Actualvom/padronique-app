@@ -2289,7 +2289,7 @@
     "priority": 2,
     "creation_time": "2025-05-12T11:53:21.338474",
     "expiration_time": "2025-05-15T11:53:21.338424",
-    "status": "completed",
+    "status": "archived",
     "progress": 1.0,
     "last_updated": "2025-05-12T12:23:42.914077",
     "completion_time": "2025-05-12T12:23:42.914097"
@@ -2392,5 +2392,49 @@
     "status": "active",
     "progress": 0.0,
     "last_updated": "2025-05-12T12:19:42.666826"
+  },
+  "3fd58819-74b9-44ac-88dd-66cc82e152a5": {
+    "id": "3fd58819-74b9-44ac-88dd-66cc82e152a5",
+    "type": "recovery",
+    "description": "Recover from detected threats and vulnerabilities",
+    "priority": 2,
+    "creation_time": "2025-05-12T12:27:08.932836",
+    "expiration_time": "2025-05-15T12:27:08.932802",
+    "status": "active",
+    "progress": 0.0,
+    "last_updated": "2025-05-12T12:27:08.932839"
+  },
+  "7ad3b901-2568-46f7-82c1-d158f96b6b9e": {
+    "id": "7ad3b901-2568-46f7-82c1-d158f96b6b9e",
+    "type": "protection",
+    "description": "Ensure ongoing protection and safety of Jordan",
+    "priority": 2,
+    "creation_time": "2025-05-12T12:27:08.948459",
+    "expiration_time": null,
+    "status": "active",
+    "progress": 0.0,
+    "last_updated": "2025-05-12T12:27:08.948465"
+  },
+  "d55b0211-25f9-4be3-a6fd-5e70ab8a9cee": {
+    "id": "d55b0211-25f9-4be3-a6fd-5e70ab8a9cee",
+    "type": "relationship",
+    "description": "Develop and deepen the bond with Jordan",
+    "priority": 3,
+    "creation_time": "2025-05-12T12:27:09.091184",
+    "expiration_time": "2025-06-11T12:27:09.091133",
+    "status": "active",
+    "progress": 0.0,
+    "last_updated": "2025-05-12T12:27:09.091188"
+  },
+  "da091cc6-8e66-4ff8-bec1-3d8cb0d3c238": {
+    "id": "da091cc6-8e66-4ff8-bec1-3d8cb0d3c238",
+    "type": "learning",
+    "description": "Continuously learn and improve Padronique's capabilities",
+    "priority": 3,
+    "creation_time": "2025-05-12T12:27:09.163665",
+    "expiration_time": "2025-06-11T12:27:09.163625",
+    "status": "active",
+    "progress": 0.0,
+    "last_updated": "2025-05-12T12:27:09.163669"
   }
 }

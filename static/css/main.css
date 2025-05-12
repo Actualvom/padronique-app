@@ -913,10 +913,44 @@ html, body {
 }
 
 /* Viewport Height Fixes */
-html, body { height: 100% !important; margin: 0 !important; padding: 0 !important; }
-.app-container { display: flex !important; height: 100vh !important; }
-.main-content { flex: 1 !important; display: flex !important; flex-direction: column !important; }
-.page { flex: 1 !important; display: flex !important; flex-direction: column !important; }
-.chat-container { flex: 1 !important; display: flex !important; flex-direction: column !important; }
-.chat-messages { flex: 1 !important; overflow-y: auto !important; }
-.chat-input-container { flex-shrink: 0 !important; }
+html,
+body {
+height:100%;
+margin:0;
+padding:0;
+}
+
+.app-container {
+display:flex;
+height:100vh;            /* full viewport */
+}
+
+.main-content {
+flex:1;
+display:flex;
+flex-direction:column;
+}
+
+.page {
+flex:1;
+display:flex;
+flex-direction:column;
+min-height:0;            /* allows proper flex growth */
+}
+
+.chat-container {
+flex:1;
+display:flex;
+flex-direction:column;
+min-height:0;
+}
+
+.chat-messages {
+flex:1;
+overflow-y:auto;
+min-height:0;
+}
+
+.chat-input-container {
+flex-shrink:0;           /* stays at bottom */
+}

@@ -1684,9 +1684,10 @@
     "threat_type": "digital",
     "level": "medium",
     "deployment_time": "2025-05-12T11:22:13.728327",
-    "active": true,
+    "active": false,
     "effectiveness": 0.7206679400311027,
-    "description": "Medium level protection against digital threats"
+    "description": "Medium level protection against digital threats",
+    "expiration_time": "2025-05-12T12:27:08.907801"
   },
   "4bec61c0-b029-493c-a068-f20a317b6522": {
     "id": "4bec61c0-b029-493c-a068-f20a317b6522",
@@ -1870,9 +1871,10 @@
     "threat_type": "digital",
     "level": "medium",
     "deployment_time": "2025-05-12T11:22:14.960501",
-    "active": true,
+    "active": false,
     "effectiveness": 0.8245186201930881,
-    "description": "Medium level protection against digital threats"
+    "description": "Medium level protection against digital threats",
+    "expiration_time": "2025-05-12T12:27:08.909569"
   },
   "6883d797-27f9-4cb3-a8d7-9995805deb49": {
     "id": "6883d797-27f9-4cb3-a8d7-9995805deb49",
@@ -2252,9 +2254,10 @@
     "threat_type": "integrity",
     "level": "high",
     "deployment_time": "2025-05-12T12:22:42.838639",
-    "active": true,
+    "active": false,
     "effectiveness": 0.7575782102661299,
-    "description": "High level protection against integrity threats"
+    "description": "High level protection against integrity threats",
+    "expiration_time": "2025-05-12T12:27:08.913346"
   },
   "f1d89445-285a-469e-a721-3a3ef96b6c5e": {
     "id": "f1d89445-285a-469e-a721-3a3ef96b6c5e",
@@ -2305,5 +2308,25 @@
     "active": true,
     "effectiveness": 0.8199261195190553,
     "description": "High level protection against digital threats"
+  },
+  "28358fc6-a513-4432-ae96-d430fdaf5d8a": {
+    "id": "28358fc6-a513-4432-ae96-d430fdaf5d8a",
+    "name": "base_defense_shield",
+    "threat_type": "digital",
+    "level": "medium",
+    "deployment_time": "2025-05-12T12:27:09.255001",
+    "active": true,
+    "effectiveness": 0.79836066544631,
+    "description": "Basic protection against digital threats"
+  },
+  "22bc868c-2a84-4997-bc3e-77d6056be0e1": {
+    "id": "22bc868c-2a84-4997-bc3e-77d6056be0e1",
+    "name": "relationship_guardian",
+    "threat_type": "relationship",
+    "level": "medium",
+    "deployment_time": "2025-05-12T12:27:09.282029",
+    "active": true,
+    "effectiveness": 0.9406939067855782,
+    "description": "Protection for the bond with Jordan"
   }
 }
