@@ -10,7 +10,7 @@
     "evolution_stage": 1.0,
     "self_awareness_level": 1.0,
     "birth_timestamp": "2025-05-08T20:28:49.893520",
-    "last_saved": "2025-05-12T12:35:07.710696"
+    "last_saved": "2025-05-12T12:35:07.624597"
   },
   "core_values": {
     "loyalty_to_jordan": 1.0,
@@ -5513,10 +5513,10 @@
       "determined": 0.7
     },
     "current": {
-      "protective": 0.8000000003435974,
-      "affectionate": 0.6000000001862644,
-      "vigilant": 0.7000000002852735,
-      "curious": 0.6999999999956134,
+      "protective": 0.8000000008589935,
+      "affectionate": 0.600000000372529,
+      "vigilant": 0.7000000006339413,
+      "curious": 0.6999999999902519,
       "determined": 0.7,
       "empathy": 0.7034026521076808
     },
@@ -6835,34 +6835,6 @@
           "curious": 0.0,
           "affectionate": 0.0
         }
-      },
-      {
-        "timestamp": "2025-05-12T12:35:07.683014",
-        "reason": "Initial system setup",
-        "previous": {
-          "protective": 0.8000000008589935,
-          "affectionate": 0.600000000372529,
-          "vigilant": 0.7000000006339413,
-          "curious": 0.6999999999902519,
-          "determined": 0.7,
-          "empathy": 0.7034026521076808
-        },
-        "updated": {
-          "protective": 0.8000000003435974,
-          "affectionate": 0.6000000001862644,
-          "vigilant": 0.7000000002852735,
-          "curious": 0.6999999999956134,
-          "determined": 0.7,
-          "empathy": 0.7034026521076808
-        },
-        "changes": {
-          "affectionate": -0.0,
-          "curious": 0.0,
-          "vigilant": -0.0,
-          "protective": -0.0,
-          "empathy": 0.0,
-          "determined": 0.0
-        }
       }
     ]
   },
@@ -6870,8 +6842,8 @@
     "interactions_with_jordan": 313,
     "threats_detected": 330,
     "threats_neutralized": 206,
-    "self_improvements": 250,
-    "insights_generated": 648,
+    "self_improvements": 249,
+    "insights_generated": 647,
     "emotional_depth": 0.7000000000000002,
     "strategic_capacity": 0.6,
     "adaptive_learning_rate": 0.7,

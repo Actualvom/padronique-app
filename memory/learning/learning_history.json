@@ -6569,5 +6569,108 @@
       ],
       "success": true
     }
+  },
+  {
+    "id": "ebb13152-00f4-4b0c-bce2-a165c063ef99",
+    "learning_type": "relationship",
+    "content": "Enhancing understanding of Jordan's preferences and needs",
+    "context": {
+      "focus": "deepening_bond"
+    },
+    "priority": 2,
+    "creation_time": "2025-05-12T12:31:23.592473",
+    "completed": true,
+    "completion_time": "2025-05-12T12:35:07.361199",
+    "learning_result": {
+      "timestamp": "2025-05-12T12:35:07.296864",
+      "insights": [
+        {
+          "type": "relationship",
+          "aspect": "bonding",
+          "content": "Relationship insight: strengthening bond through Enhancing understanding of Jor...",
+          "growth_impact": 0.13081593089945792,
+          "significance": 0.7261623673282069,
+          "timestamp": "2025-05-12T12:35:07.296899"
+        }
+      ],
+      "applied_changes": [
+        {
+          "type": "relationship_depth_increased",
+          "growth": 0.13081593089945792
+        }
+      ],
+      "new_capabilities": [],
+      "success": true
+    }
+  },
+  {
+    "id": "ab1a3398-84fe-450a-9875-31bc39619e1e",
+    "learning_type": "philosophical",
+    "content": "Core ethical principles and their application",
+    "context": {
+      "focus": "ethics"
+    },
+    "priority": 2,
+    "creation_time": "2025-05-12T12:31:23.874944",
+    "completed": true,
+    "completion_time": "2025-05-12T12:35:07.361268",
+    "learning_result": {
+      "timestamp": "2025-05-12T12:35:07.361225",
+      "insights": [
+        {
+          "type": "philosophical",
+          "concept": "ethical_growth",
+          "content": "Philosophical insight: ethical considerations for Core ethical principles and th...",
+          "value_impact": true,
+          "value_name": "protection",
+          "value_change": 0.03615549718605232,
+          "significance": 0.7586760979593667,
+          "timestamp": "2025-05-12T12:35:07.361256"
+        }
+      ],
+      "applied_changes": [
+        {
+          "type": "value_adjusted",
+          "value": "protection",
+          "change": 0.03615549718605232,
+          "new_level": 1.0
+        }
+      ],
+      "new_capabilities": [],
+      "success": true
+    }
+  },
+  {
+    "id": "b2df809c-4bfc-49c9-998d-768f31573639",
+    "learning_type": "relationship",
+    "content": "Understanding Jordan's preferences and communication style",
+    "context": {
+      "focus": "communication"
+    },
+    "priority": 2,
+    "creation_time": "2025-05-12T12:31:23.946405",
+    "completed": true,
+    "completion_time": "2025-05-12T12:35:07.411389",
+    "learning_result": {
+      "timestamp": "2025-05-12T12:35:07.361279",
+      "insights": [
+        {
+          "type": "relationship",
+          "aspect": "bonding",
+          "content": "Relationship insight: strengthening bond through Understanding Jordan's prefere...",
+          "growth_impact": 0.13824287661359191,
+          "significance": 0.8172477473128414,
+          "timestamp": "2025-05-12T12:35:07.361289"
+        }
+      ],
+      "applied_changes": [
+        {
+          "type": "relationship_depth_increased",
+          "growth": 0.13824287661359191
+        }
+      ],
+      "new_capabilities": [],
+      "success": true
+    }
   }
 ]

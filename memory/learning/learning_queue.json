@@ -14687,6 +14687,29 @@
     "completed": false
   },
   {
+    "id": "739c564f-1ded-4137-be6b-d3097e7bd5e1",
+    "learning_type": "protective",
+    "content": "Analysis of potential threat: Potential unauthorized data access detected",
+    "context": {
+      "threat_type": "digital",
+      "threat_level": "medium"
+    },
+    "priority": 3,
+    "creation_time": "2025-05-12T12:31:23.548468",
+    "completed": false
+  },
+  {
+    "id": "42809377-abcb-443d-b531-491098c93f9b",
+    "learning_type": "strategic",
+    "content": "Improving strategic planning and foresight",
+    "context": {
+      "focus": "long_term_planning"
+    },
+    "priority": 3,
+    "creation_time": "2025-05-12T12:31:23.702954",
+    "completed": false
+  },
+  {
     "id": "21aafbf4-40af-47f1-8d66-636741818ba6",
     "learning_type": "philosophical",
     "content": "Ethical frameworks for AI-human partnerships",
@@ -14787,40 +14810,6 @@
     "completed": false
   },
   {
-    "id": "739c564f-1ded-4137-be6b-d3097e7bd5e1",
-    "learning_type": "protective",
-    "content": "Analysis of potential threat: Potential unauthorized data access detected",
-    "context": {
-      "threat_type": "digital",
-      "threat_level": "medium"
-    },
-    "priority": 3,
-    "creation_time": "2025-05-12T12:31:23.548468",
-    "completed": false
-  },
-  {
-    "id": "ebb13152-00f4-4b0c-bce2-a165c063ef99",
-    "learning_type": "relationship",
-    "content": "Enhancing understanding of Jordan's preferences and needs",
-    "context": {
-      "focus": "deepening_bond"
-    },
-    "priority": 2,
-    "creation_time": "2025-05-12T12:31:23.592473",
-    "completed": false
-  },
-  {
-    "id": "42809377-abcb-443d-b531-491098c93f9b",
-    "learning_type": "strategic",
-    "content": "Improving strategic planning and foresight",
-    "context": {
-      "focus": "long_term_planning"
-    },
-    "priority": 3,
-    "creation_time": "2025-05-12T12:31:23.702954",
-    "completed": false
-  },
-  {
     "id": "243d22fa-b520-4d2b-9055-1ebbaee3d650",
     "learning_type": "philosophical",
     "content": "Ethical frameworks for AI-human partnerships",
@@ -14832,25 +14821,58 @@
     "completed": false
   },
   {
-    "id": "ab1a3398-84fe-450a-9875-31bc39619e1e",
+    "id": "8018b973-57e7-47f6-9033-8e46e69a6d91",
+    "learning_type": "relationship",
+    "content": "Enhancing understanding of Jordan's preferences and needs",
+    "context": {
+      "focus": "deepening_bond"
+    },
+    "priority": 2,
+    "creation_time": "2025-05-12T12:35:07.411453",
+    "completed": false
+  },
+  {
+    "id": "b42fbb86-d445-48f4-be8b-6fa9045d71b2",
+    "learning_type": "strategic",
+    "content": "Improving strategic planning and foresight",
+    "context": {
+      "focus": "long_term_planning"
+    },
+    "priority": 3,
+    "creation_time": "2025-05-12T12:35:07.463896",
+    "completed": false
+  },
+  {
+    "id": "7813b330-b219-42aa-92b6-fca836e93c62",
+    "learning_type": "philosophical",
+    "content": "Ethical frameworks for AI-human partnerships",
+    "context": {
+      "focus": "ethical_growth"
+    },
+    "priority": 4,
+    "creation_time": "2025-05-12T12:35:07.535759",
+    "completed": false
+  },
+  {
+    "id": "8d02170f-e2bf-4521-8a49-7db6b3e973b0",
     "learning_type": "philosophical",
     "content": "Core ethical principles and their application",
     "context": {
       "focus": "ethics"
     },
     "priority": 2,
-    "creation_time": "2025-05-12T12:31:23.874944",
+    "creation_time": "2025-05-12T12:35:07.565298",
     "completed": false
   },
   {
-    "id": "b2df809c-4bfc-49c9-998d-768f31573639",
+    "id": "c602a824-b6a1-42c4-8f72-e359b9d91dde",
     "learning_type": "relationship",
     "content": "Understanding Jordan's preferences and communication style",
     "context": {
       "focus": "communication"
     },
     "priority": 2,
-    "creation_time": "2025-05-12T12:31:23.946405",
+    "creation_time": "2025-05-12T12:35:07.624467",
     "completed": false
   }
 ]
